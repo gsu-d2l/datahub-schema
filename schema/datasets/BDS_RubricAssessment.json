@@ -1,0 +1,128 @@
+{
+    "type": "BDS",
+    "name": "Rubric Assessment",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4535-rubrics-data-sets#rubric-assessment",
+    "description": "The Rubric Assessment Brightspace Data Set returns rubric outcomes that are associated with a competency. Includes incomplete rubric assessments, which have a null LevelAchieved value. Returned Fields",
+    "columns": [
+        {
+            "name": "RubricId",
+            "description": "Unique rubric identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.8 - Updated key"
+        },
+        {
+            "name": "Score",
+            "description": "Rubric score. Field can be null.",
+            "type": "decimal",
+            "size": "36, 2",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "AssessedByUserId",
+            "description": "Rubric assessed by. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "AssessmentDate",
+            "description": "Date the rubric was assessed (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "IsCompleted",
+            "description": "Is rubric assessment complete.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "ActivityType",
+            "description": "Activity type associated with the rubric. Field can be null.",
+            "type": "nvarchar",
+            "size": "50",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "ActivityObjectId",
+            "description": "Identifier of the activity associated with the rubric. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "DateCreated",
+            "description": "Date rubric was created (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "AssessmentId",
+            "description": "Unique assessment ID.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "LevelAchievedId",
+            "description": "Unique rubric level achieved identifier. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        }
+    ]
+}

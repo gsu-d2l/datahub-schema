@@ -1,0 +1,28 @@
+{
+    "type": "BDS",
+    "name": "Organizational Unit Ancestors",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4529-organizational-units-data-sets#organizational-unit-ancestors",
+    "description": "The Organizational Unit Ancestors Brightspace Data Set returns a list of all the org units and the corresponding ancestors for an org unit. An ancestor is defined as a parent of an org unit. Returned Fields",
+    "columns": [
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "AncestorOrgUnitId",
+            "description": "Parent org unit identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        }
+    ]
+}

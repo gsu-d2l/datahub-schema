@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="fallbackPageContent">
+<main>
+<section>
+<div class="mainColumn">
+<article>
+<h2 data-id="sis-course-merge-log">SIS Course Merge Log</h2>
+<p>The SIS Course Merge Log Brightspace Data Set returns a list of attempts to merge or unmerge course offerings using the SIS Course Merge tool.</p>
+<p>This data set only captures data from July 2023 onwards.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>8.6</td>
+<td style="width: 125px;">
+<p>BatchId</p>
+                    </td>
+<td>
+<p>The batch ID for this job.</p>
+                    </td>
+<td style="width: 125px;">
+<p>uniqueidentifier</p>
+                    </td>
+<td style="width: 125px;">
+<p>16</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>8.6</td>
+<td style="width: 125px;">
+<p>JobType</p>
+                    </td>
+<td>
+<p>What type of job was requested: Merge or Unmerge.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>32</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>8.6</td>
+<td style="width: 125px;">Status</td>
+<td>
+<p>The status of the job: Started, CompletedWithErrors, Completed, or Failed.</p>
+                    </td>
+<td style="width: 125px;">nvarchar</td>
+<td style="width: 125px;">32</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>8.6</td>
+<td style="width: 125px;">OriginalTargetOrgUnitId</td>
+<td>The target course which the source courses are merged or were originally merged into.</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>8.6</td>
+<td style="width: 125px;">OriginalSourceOrgUnitId</td>
+<td>The source course which is being merged or was previously merged into the target.</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td>PK, FK</td>
+                </tr><tr align="left" valign="top"><td>8.6</td>
+<td style="width: 125px;">SourceSystemId</td>
+<td>The ID of the source system that this course belongs to.</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>8.6</td>
+<td style="width: 125px;">NumberOfCoursesInBatch</td>
+<td>
+<p>The total number of source courses with the same batch ID being attempted to merge or unmerge. Only shown for course merge jobs with the "Started" status.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>8.6</td>
+<td style="width: 125px;">UserId</td>
+<td>The user who requested the merge or unmerge.</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>8.6</td>
+<td style="width: 125px;">ErrorType</td>
+<td>
+<p>The type of error that occurred. Possible values:</p>
+<ul><li>
+<p>SourceSystemDisabled</p>
+                            </li>
+<li>
+<p>OrgUnitDeleted</p>
+                            </li>
+<li>
+<p>CourseHasMultipleMappingsToSameSIS</p>
+                            </li>
+<li>
+<p>UserNoLongerExists</p>
+                            </li>
+<li>
+<p>CourseHasMultipleSourceSystems</p>
+                            </li>
+<li>
+<p>CourseHasSectionAssociation</p>
+                            </li>
+<li>
+<p>LostBatch</p>
+                            </li>
+<li>
+<p>SourceCourseNotMerged</p>
+                            </li>
+<li>
+<p>IncorrectPendingState</p>
+                            </li>
+<li>
+<p>SameSourceAndTarget</p>
+                            </li>
+<li>
+<p>TargetAlreadyMerged</p>
+                            </li>
+<li>
+<p>CourseNotUnmerged</p>
+                            </li>
+<li>
+<p>OrgUnitNotCourseOffering</p>
+                            </li>
+<li>
+<p>UnexpectedError</p>
+                            </li>
+                        </ul><p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">nvarchar</td>
+<td style="width: 125px;">48</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>8.6</td>
+<td style="width: 125px;">Timestamp</td>
+<td>
+<p>The date and time when the merge or unmerge event occurred (UTC).</p>
+                    </td>
+<td style="width: 125px;">datetime2</td>
+<td style="width: 125px;">8</td>
+<td>PK</td>
+                </tr></tbody></table>
+</article>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>

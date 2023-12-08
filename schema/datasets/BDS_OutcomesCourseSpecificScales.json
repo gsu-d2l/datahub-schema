@@ -1,0 +1,88 @@
+{
+    "type": "BDS",
+    "name": "Outcomes Course Specific Scales",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4796-outcomes-data-sets#outcomes-course-specific-scales",
+    "description": "The Outcomes Course Specific Scales Brightspace Data Set provides details on which achievement scales and achievement thresholds are being used in each of your courses. The only available data for course specific achievement scales is from May 2023 onwards.",
+    "columns": [
+        {
+            "name": "OrgUnitId",
+            "description": "ID of the org unit this registry is associated with.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "8.9"
+        },
+        {
+            "name": "RegistryId",
+            "description": "ID of the current registry.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "8.9"
+        },
+        {
+            "name": "ScaleId",
+            "description": "ID of the scale set as the LOA for the current registry.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "8.9"
+        },
+        {
+            "name": "AchievementThreshold",
+            "description": "Level ID representing the threshold of achievement for this registry. Field can be null.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "8.9"
+        },
+        {
+            "name": "CreatedDate",
+            "description": "Date when this item was originally created (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.9"
+        },
+        {
+            "name": "LastModifiedDate",
+            "description": "Date when this item was last modified. Contains created date upon creation and deleted date for deleted items (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.9"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "ID of user who last modified, created, or deleted this item. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "8.9"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Whether this item has been deleted.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.9"
+        }
+    ]
+}

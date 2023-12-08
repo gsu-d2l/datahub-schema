@@ -1,0 +1,78 @@
+{
+    "type": "BDS",
+    "name": "Accommodations Profile Log",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4752-accommodations-data-sets#accommodations-profile-log",
+    "description": "The Accommodations Profile Log Brightspace Data Set returns all accommodations that have been created for learners in an org unit. Note: Learner accommodations contain sensitive information.",
+    "columns": [
+        {
+            "name": "AccommodatedUserId",
+            "description": "Unique user identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.10"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.10"
+        },
+        {
+            "name": "QuizTimeLimitMultiplier",
+            "description": "Amount of Time Multiplier for a quiz. Field can be null.",
+            "type": "decimal",
+            "size": "5,2",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "6.13 \/ 7.1 - Updated column size"
+        },
+        {
+            "name": "QuizTimeLimitExtraTime",
+            "description": "Amount of extra time allowed. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "6.10"
+        },
+        {
+            "name": "QuizControlAlwaysAllowRightClick",
+            "description": "Indicates if the accommodation includes Always Include RightClick. Field can be null.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "6.10"
+        },
+        {
+            "name": "ModifiedBy",
+            "description": "Unique identifier of the user who last modified the accommodation.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.10"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date the accommodation was updated (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.10"
+        }
+    ]
+}

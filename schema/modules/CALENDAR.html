@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="fallbackPageContent">
+<main>
+<section>
+<div class="mainColumn">
+<article>
+<h2 data-id="calendar-events">Calendar Events</h2>
+<p>The Calendar Events Brightspace Data Set returns a list of calendar events and their details for your org units.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>ScheduleId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique identifier of the scheduled event</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>OrgUnitId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique org unit identifier. For course-level events, the org unit ID displays.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>UserId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique user identifier. For user-level events, the user ID displays.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 134px;">
+<p>Title</p>
+                    </td>
+<td style="width: 134px;">
+<p>Calendar event title.</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>256</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>StartDate</p>
+                    </td>
+<td style="width: 134px;">
+<p>Calendar event start date.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>EndDate</p>
+                    </td>
+<td style="width: 134px;">
+<p>Calendar event end date.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>TimeZoneIdentifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>Time zone identifier.</p>
+                    </td>
+<td style="width: 134px;">
+<p>varchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>256</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>IsAllDayEvent</p>
+                    </td>
+<td style="width: 134px;">
+<p>Is all day event</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 134px;">
+<p>RecurrenceType</p>
+                    </td>
+<td style="width: 134px;">
+<p>Calendar recurrence type: None, Daily, Weekly, Monthly, Yearly.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>varchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>7</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>RecurrenceInterval</p>
+                    </td>
+<td style="width: 134px;">
+<p>Calendar recurrence interval.</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>CreatedByUserId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Created by user ID.</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>LastModified</p>
+                    </td>
+<td style="width: 134px;">
+<p>Last modified date and time.</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 134px;">
+<p>EventObjectTypeName</p>
+                    </td>
+<td style="width: 134px;">
+<p>If event is associated with an object, displays the object type name.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>200</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>ObjectLookupId1</p>
+                    </td>
+<td style="width: 134px;">
+<p>Shows primary look-up object ID of the associated object.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>ObjectLookupId2</p>
+                    </td>
+<td style="width: 134px;">
+<p>Shows secondary look-up object ID of the associated object.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr></tbody></table>
+</article>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+{
+    "type": "BDS",
+    "name": "TurnItIn Submissions",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4767-assignments-data-sets#turnitin-submissions",
+    "description": "The TurnItIn Submissions Brightspace Data Set returns details of assignment submissions shared with TurnItIn version 2.",
+    "columns": [
+        {
+            "name": "DropboxId",
+            "description": "Unique assignment identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "3.6 \/ 4.1"
+        },
+        {
+            "name": "SubmissionId",
+            "description": "Unique assignment submission identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "8.9 - Changed Key"
+        },
+        {
+            "name": "FileId",
+            "description": "Unique file identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.15 \/ 8.1 - Changed Type and Column Size"
+        },
+        {
+            "name": "LastSubmissionDate",
+            "description": "Most recent submission time stamp (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "3.6 \/ 4.1"
+        },
+        {
+            "name": "SubmissionStatus",
+            "description": "Status of assignment submission",
+            "type": "smallint",
+            "size": "2",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.6 \/ 4.1"
+        },
+        {
+            "name": "SubmissionErrorType",
+            "description": "Type of submission error",
+            "type": "smallint",
+            "size": "2",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.6 \/ 4.1"
+        },
+        {
+            "name": "ErrorMessage",
+            "description": "Error message upon submission if applicable. Field can be null.",
+            "type": "nvarchar",
+            "size": "255",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "3.6 \/ 4.1"
+        },
+        {
+            "name": "SubmittedBy",
+            "description": "UserId of user who submitted the assignment to TurnItIn. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "3.6 \/ 4.1"
+        },
+        {
+            "name": "LastRefreshDate",
+            "description": "Most recent submission refresh time stamp (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "3.6 \/ 4.1"
+        },
+        {
+            "name": "LastModified",
+            "description": "Last time the submission was modified (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "6.6"
+        }
+    ]
+}

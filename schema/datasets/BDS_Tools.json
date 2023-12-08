@@ -1,0 +1,48 @@
+{
+    "type": "BDS",
+    "name": "Tools",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4540-tools-data-sets#tools",
+    "description": "The Tools Brightspace Data Set retrieves the data on all the tools that exist in the organization. Returned Fields",
+    "columns": [
+        {
+            "name": "ToolId",
+            "description": "Unique identifier for the tool",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.8 \/ 4.3"
+        },
+        {
+            "name": "Name",
+            "description": "Unique tool name",
+            "type": "nvarchar",
+            "size": "50",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Updated column size"
+        },
+        {
+            "name": "DisplayName",
+            "description": "Display name of the tool",
+            "type": "nvarchar",
+            "size": "200",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.18 \/ 8.4 - Updated column size"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.8 \/ 4.3"
+        }
+    ]
+}

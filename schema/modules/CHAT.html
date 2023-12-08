@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="fallbackPageContent">
+<main>
+<section>
+<div class="mainColumn">
+<article>
+<h2 data-id="chat-objects">Chat Objects</h2>
+<p>The Chat Objects Brightspace Data Set returns the attributes for all chats in the organization.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>3.6 / 4.1</td>
+<td>ChatId</td>
+<td style="width: 125px;">Unique chat identifier.</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
+<td>
+<p>OrgUnitId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique org unit identifier.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td>
+<p>ChatType</p>
+                    </td>
+<td style="width: 125px;">
+<p>Type of chat.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>128</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td>
+<p>Name</p>
+                    </td>
+<td style="width: 125px;">
+<p>Name of chat object.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>150</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
+<td>
+<p>Description</p>
+                    </td>
+<td style="width: 125px;">
+<p>Description of chat object.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>1000</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>7.8 - Changed Key</td>
+<td>
+<p>CreatorUserId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique chat object creator identifier.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
+<td>
+<p>LastModified</p>
+                    </td>
+<td style="width: 125px;">
+<p>Date / time the chat object was last modified.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr></tbody></table>
+<h2 data-id="chat-session-log">Chat Session Log</h2>
+<p>The Chat Session Log Brightspace Data Set returns a log of when messages were sent in chat sessions for your org units.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>OrgUnitId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique org unit identifier.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>UserId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique user identifier.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>ChatSessionId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique chat session identifier.</p>
+                    </td>
+<td style="width: 125px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>StartDate</p>
+                    </td>
+<td style="width: 125px;">
+<p>Chat session start date.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>EndDate</p>
+                    </td>
+<td style="width: 125px;">
+<p>Chat session end date.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>TimeSent</p>
+                    </td>
+<td style="width: 125px;">
+<p>Time message was sent.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.4</td>
+<td>MessageId</td>
+<td style="width: 125px;">Unique message identifier.</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td>PK</td>
+                </tr></tbody></table>
+</article>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>

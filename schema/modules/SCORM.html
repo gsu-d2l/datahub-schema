@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="fallbackPageContent">
+<main>
+<section>
+<div class="mainColumn">
+<article>
+<h2 data-id="scorm-activities">SCORM Activities</h2>
+<p>The SCORM Activities Brightspace Data Set describes the activities that exist in the SCORM package. Each activity will only be known after the first user, regardless of role, attempts it.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">ActivityId</td>
+<td>Unique identifier of the SCORM activity.</td>
+<td style="width: 125px;">uniqueidentifier</td>
+<td>16</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ScormObjectId</p>
+                    </td>
+<td>
+<p>Unique identifier for each content object.</p>
+                    </td>
+<td style="width: 125px;">
+<p>uniqueidentifier</p>
+                    </td>
+<td>
+<p>16</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ParentActivityId</p>
+                    </td>
+<td>
+<p>Unique identifier of the parent activity.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>uniqueidentifier</p>
+                    </td>
+<td>
+<p>16</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>NumChildren</p>
+                    </td>
+<td>
+<p>Number of child activities of this activity.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>InternalId</p>
+                    </td>
+<td>
+<p>Unique label for the activity.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>255</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>Title</p>
+                    </td>
+<td>
+<p>The title of the activity.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>200</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>CompletionThreshold</p>
+                    </td>
+<td>
+<p>Used to determine when the activity is considered complete.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>float</p>
+                    </td>
+<td>
+<p>24</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>PassingScore</p>
+                    </td>
+<td>
+<p>Scaled score required to pass the activity, between 0 and 100.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>float</p>
+                    </td>
+<td>
+<p>24</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>PassingScoreUsed</p>
+                    </td>
+<td>
+<p>Whether the passing score was used to determine the learner success status.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>bit</p>
+                    </td>
+<td>
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ScoreMin</p>
+                    </td>
+<td>
+<p>Minimum value in the range for the raw score in an activity attempt.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>float</p>
+                    </td>
+<td>
+<p>24</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ScoreMax</p>
+                    </td>
+<td>
+<p>Maximum value in the range for the raw score in an activity attempt.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>float</p>
+                    </td>
+<td>
+<p>24</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">LastModified</td>
+<td>Date when the activity was last modified (UTC).</td>
+<td style="width: 125px;">datetime2</td>
+<td>8</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="scorm-activity-attempts">SCORM Activity Attempts</h2>
+<p>The SCORM Activity Attempts Brightspace Data Set lists each user attempt on each activity within a SCORM package, the completion status, success status, and time spent for each attempt.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">VisitId</td>
+<td>Unique identifier of the SCORM visit.</td>
+<td style="width: 125px;">uniqueidentifier</td>
+<td>16</td>
+<td>PK, FK</td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ActivityId</p>
+                    </td>
+<td>
+<p>Unique identifier of the activity.</p>
+                    </td>
+<td style="width: 125px;">
+<p>uniqueidentifier</p>
+                    </td>
+<td>
+<p>16</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>AttemptNumber</p>
+                    </td>
+<td>
+<p>Number of the attempt on the objective.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>Completion</p>
+                    </td>
+<td>
+<p>The completion status of the learner in this attempt (UNKNOWN, COMPLETED, INCOMPLETE).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>100</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>Success</p>
+                    </td>
+<td>
+<p>The success status of the learner in this attempt (UNKNOWN, PASSED, FAILED).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>100</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>Score</p>
+                    </td>
+<td>
+<p>The score achieved by the learner in this attempt, between 0 and 100.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>float</p>
+                    </td>
+<td>
+<p>24</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ScoreRaw</p>
+                    </td>
+<td>
+<p>The raw score that the learner achieved in this attempt, between the min and max score of the activity.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>float</p>
+                    </td>
+<td>
+<p>24</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">TimeSpent</td>
+<td>
+<p>The time the learner spent in this attempt, in seconds.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">float</td>
+<td>24</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">Progress</td>
+<td>
+<p>How much of the activity was completed in this attempt, between 0 and 100.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">float</td>
+<td>24</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>LastModified</p>
+                    </td>
+<td>
+<p>Date when the activity attempt was last modified (UTC).</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr></tbody></table>
+<h2 data-id="scorm-interaction-attempts">SCORM Interaction Attempts</h2>
+<p>The SCORM Interaction Attempts Brightspace Data Set lists the runtime interactions for each user on the activities they have attempted, including their response and time spent.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">VisitId</td>
+<td>Unique identifier of the visit.</td>
+<td style="width: 125px;">uniqueidentifier</td>
+<td>16</td>
+<td>PK, FK</td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>InteractionId</p>
+                    </td>
+<td>
+<p>Unique identifier of the interaction.</p>
+                    </td>
+<td style="width: 125px;">
+<p>uniqueidentifier</p>
+                    </td>
+<td>
+<p>16</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>AttemptNumber</p>
+                    </td>
+<td>
+<p>Number of the attempt on the interaction.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ActivityId</p>
+                    </td>
+<td>
+<p>Unique identifier of the activity.</p>
+                    </td>
+<td style="width: 125px;">
+<p>uniqueidentifier</p>
+                    </td>
+<td>
+<p>16</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>Timestamp</p>
+                    </td>
+<td>
+<p>Point in time at which the interaction was first made available to the learner for learner interaction and response.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>Response</p>
+                    </td>
+<td>
+<p>Data generated when a learner responds to an interaction.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>1000</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>Result</p>
+                    </td>
+<td>
+<p>Judgment of the correctness of the learner response (CORRECT, INCORRECT, UNANTICIPATED, NEUTRAL).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>100</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">NumericResult</td>
+<td>
+<p>Numeric judgement of the correctness of the learner response.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">float</td>
+<td>24</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">TimeSpent</td>
+<td>
+<p>The time the learner spent in this attempt, in seconds.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">float</td>
+<td>24</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>LastModified</p>
+                    </td>
+<td>
+<p>Date when the interaction attempt was last modified (UTC).</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr></tbody></table>
+<h2 data-id="scorm-interaction-objectives">SCORM Interaction Objectives</h2>
+<p>The SCORM Interaction Objectives Brightspace Data Set defines the relationship between interactions and their objectives.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">InteractionId</td>
+<td>Unique identifier of the interaction.</td>
+<td style="width: 125px;">uniqueidentifier</td>
+<td>16</td>
+<td>PK, FK</td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ObjectiveId</p>
+                    </td>
+<td>
+<p>Unique identifier of the objective.</p>
+                    </td>
+<td style="width: 125px;">
+<p>uniqueidentifier</p>
+                    </td>
+<td>
+<p>16</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>LastModified</p>
+                    </td>
+<td>
+<p>Date when the activity was last modified (UTC).</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr></tbody></table>
+<h2 data-id="scorm-interactions">SCORM Interactions</h2>
+<p>The SCORM Interactions Brightspace Data Set describes the runtime interactions that exist in each activity in the SCORM package. Each interaction will only be known after the first user, regardless of role, attempts it.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">InteractionId</td>
+<td>Unique identifier of the interaction.</td>
+<td style="width: 125px;">uniqueidentifier</td>
+<td>16</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ActivityId</p>
+                    </td>
+<td>
+<p>Unique identifier for each activity.</p>
+                    </td>
+<td style="width: 125px;">
+<p>uniqueidentifier</p>
+                    </td>
+<td>
+<p>16</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>InternalId</p>
+                    </td>
+<td>
+<p>Unique label for the interaction.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>255</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>InteractionType</p>
+                    </td>
+<td>
+<p>The type of interaction (UNDEFINED, TRUEFALSE, CHOICE, FILLIN, LONGFILLIN, LIKERT, MATCHING, PERFORMANCE, SEQUENCING, NUMERIC, OTHER).</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>100</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>Description</p>
+                    </td>
+<td>
+<p>Brief informative description of the interaction.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>250</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>Weighting</p>
+                    </td>
+<td>
+<p>Weight given to the interaction relative to other interactions.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>float</p>
+                    </td>
+<td>
+<p>24</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>CorrectResponses</p>
+                    </td>
+<td>
+<p>JSON representation of an array of correct responses for this interaction.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>2000</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>LastModified</p>
+                    </td>
+<td>
+<p>Date when the activity was last modified (UTC).</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr></tbody></table>
+<h2 data-id="scorm-objective-attempts">SCORM Objective Attempts</h2>
+<p>The SCORM Objective Attempts Brightspace Data Set outputs the score and completion information on every objective associated to the SCORM object where an attempt has been made.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">VisitId</td>
+<td>Unique identifier of the SCORM visit.</td>
+<td style="width: 125px;">uniqueidentifier</td>
+<td>16</td>
+<td>PK, FK</td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ObjectiveId</p>
+                    </td>
+<td>
+<p>Unique identifier of the objective.</p>
+                    </td>
+<td style="width: 125px;">
+<p>uniqueidentifier</p>
+                    </td>
+<td>
+<p>16</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>AttemptNumber</p>
+                    </td>
+<td>
+<p>Number of the attempt on the objective.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>Score</p>
+                    </td>
+<td>
+<p>Number that reflects the performance of the learner on this objective, scaled to between 0 and 100.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>float</p>
+                    </td>
+<td>
+<p>24</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ScoreRaw</p>
+                    </td>
+<td>
+<p>Number that reflects the performance of the learner on this objective, relative to the min and max scores.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>float</p>
+                    </td>
+<td>
+<p>24</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>Success</p>
+                    </td>
+<td>
+<p>Indicates whether the learner has mastered the objective (PASSED, FAILED, UNKNOWN).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>100</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>Completion</p>
+                    </td>
+<td>
+<p>Indicates whether the learner has completed the objective (COMPLETED, INCOMPLETE, UNKNOWN, NOT_ATTEMPTED, BROWSED).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>100</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">Progress</td>
+<td>
+<p>How much of the objective was completed in this attempt, between 0 and 100.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">float</td>
+<td>24</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>LastModified</p>
+                    </td>
+<td>
+<p>Date when the activity was last modified (UTC).</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr></tbody></table>
+<h2 data-id="scorm-objectives">SCORM Objectives</h2>
+<p>The SCORM Objectives Brightspace Data Set describes the global, activity, and runtime interactions that exist for each SCORM package. The objectives will only be known after the first user registration or visit.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">ObjectiveId</td>
+<td>Unique identifier of the objective.</td>
+<td style="width: 125px;">uniqueidentifier</td>
+<td>16</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ScormObjectId</p>
+                    </td>
+<td>
+<p>Unique identifier for each SCORM object.</p>
+                    </td>
+<td style="width: 125px;">
+<p>uniqueidentifier</p>
+                    </td>
+<td>
+<p>16</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ObjectiveType</p>
+                    </td>
+<td>
+<p>Type of objective (GLOBAL, ACTIVITY, RUNTIME).</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>100</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ActivityId</p>
+                    </td>
+<td>
+<p>Unique identifier for each activity.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>uniqueidentifier</p>
+                    </td>
+<td>
+<p>16</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>InternalId</p>
+                    </td>
+<td>
+<p>Unique label for the objective.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>255</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>IsPrimary</p>
+                    </td>
+<td>
+<p>Whether this is the primary objective of the activity.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>bit</p>
+                    </td>
+<td>
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>Description</p>
+                    </td>
+<td>
+<p>Brief informative description of the objective.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>250</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">ScoreMin</td>
+<td>
+<p>Minimum value, for the objective, in the range for the raw score.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">float</td>
+<td>24</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">ScoreMax</td>
+<td>
+<p>Maximum value, for the objective, in the range for the raw score.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">float</td>
+<td>24</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>LastModified</p>
+                    </td>
+<td>
+<p>Date when the activity was last modified (UTC).</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr></tbody></table>
+<h2 data-id="scorm-objects">SCORM Objects</h2>
+<p>The SCORM Objects Brightspace Data Set describes all the SCORM objects that exist, and which course and which topic they are located in. At time of launch, this data set contains data from July 2020 onwards. Remaining baseline data will be filled in upon a future release.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ScormObjectId</p>
+                    </td>
+<td>
+<p>Unique identifier of the SCORM object.</p>
+                    </td>
+<td style="width: 125px;">
+<p>uniqueidentifier</p>
+                    </td>
+<td style="width: 125px;">
+<p>16</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>OrgUnitId</p>
+                    </td>
+<td>
+<p>Unique org unit identifier.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ContentObjectId</p>
+                    </td>
+<td>
+<p>Unique identifier of the content topic.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ContentServiceContentId</p>
+                    </td>
+<td>
+<p>Unique identifier for the associated content in content service.</p>
+                    </td>
+<td style="width: 125px;">
+<p>uniqueidentifier</p>
+                    </td>
+<td style="width: 125px;">
+<p>16</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ContentServiceRevisionId</p>
+                    </td>
+<td>
+<p>Unique identifier of the associated revision in content service.</p>
+                    </td>
+<td style="width: 125px;">
+<p>uniqueidentifier</p>
+                    </td>
+<td style="width: 125px;">
+<p>16</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ContentServiceTopicId</p>
+                    </td>
+<td>
+<p>Unique identifier of the associated topic in content service.</p>
+                    </td>
+<td style="width: 125px;">
+<p>uniqueidentifier</p>
+                    </td>
+<td style="width: 125px;">
+<p>16</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>Title</p>
+                    </td>
+<td>
+<p>The title of the SCORM object.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>1000</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>Description</p>
+                    </td>
+<td>
+<p>The description of the SCORM package.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>1000</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>LearningStandard</p>
+                    </td>
+<td>
+<p>The learning standard used by the SCORM content, one of SCORM_11, SCORM_12, SCORM_2004_2ND_EDITION, SCORM_2004_3RD_EDITION, SCORM_2004_4TH_EDITION, AICC, XAPI, CMI5.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>100</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>LastModified</p>
+                    </td>
+<td>
+<p>Date when the SCORM content was last modified (UTC).</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">LastModifiedBy</td>
+<td>User that last modified this SCORM object.</td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td>FK</td>
+                </tr></tbody></table>
+<h2 data-id="scorm-visits">SCORM Visits</h2>
+<p>The SCORM Visits Brightspace Data Set lists each user visit on each SCORM object, the overall completion status, and time spent on the visit.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">VisitId</td>
+<td>Unique identifier for each SCORM visit.</td>
+<td style="width: 125px;">uniqueidentifier</td>
+<td>16</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>ScormObjectId</p>
+                    </td>
+<td>
+<p>Unique identifier of the SCORM object.</p>
+                    </td>
+<td style="width: 125px;">
+<p>uniqueidentifier</p>
+                    </td>
+<td>
+<p>16</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>UserId</p>
+                    </td>
+<td>
+<p>User associated with the SCORM visit.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>OrgUnitId</p>
+                    </td>
+<td>
+<p>Unique org unit identifier.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>FirstAccessDate</p>
+                    </td>
+<td>
+<p>The date the user first accessed the SCORM object.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>LastAccessDate</p>
+                    </td>
+<td>
+<p>The date the user last accessed the SCORM object.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>CompletedDate</p>
+                    </td>
+<td>
+<p>The date the user first completed the SCORM object.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">Completion</td>
+<td>
+<p>The completion status of the user for the SCORM object. One of UNKNOWN, COMPLETED, or INCOMPLETE.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">nvarchar</td>
+<td>100</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">Success</td>
+<td>
+<p>The success status of the user for the SCORM object. One of UNKNOWN, PASSED, or FAILED.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">nvarchar</td>
+<td>100</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">Score</td>
+<td>
+<p>The score attained by the user for the SCORM object, between 0 and 100.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">float</td>
+<td>24</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">TimeSpent</td>
+<td>
+<p>The amount of time the user has had the SCORM object open, in seconds.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">int</td>
+<td>4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>6.15 / 7.3 - updated Type and Size</td>
+<td style="width: 125px;">Progress</td>
+<td>
+<p>How much of the activity has been completed, between 0 and 100.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">float</td>
+<td>24</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 125px;">
+<p>LastModified</p>
+                    </td>
+<td>
+<p>Date when the activity was last modified (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr></tbody></table>
+</article>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>

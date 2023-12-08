@@ -1,0 +1,98 @@
+{
+    "type": "BDS",
+    "name": "System Access Log",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4537-sessions-and-system-access-data-sets#system-access-log",
+    "description": "The System Access Log Brightspace Data Set captures each time a user accesses the system from the LMS via a browser (Brightspace), from the Pulse app (Pulse), or from the Brightspace Parent & Guardian mobile app (BPG-mobile). System access using Brightspace Parent & Guardian is represented in the data set twice: one where Source=Brightspace and one where Source=BPG-mobile. Data from Brightspace and Pulse is available from September 2020 onwards. Data from Brightspace Parent & Guardian is only available from May 2022 onwards. Note: System access begins when the user logs in, returns after 30 minutes of inactivity, or opens the app. System access ends after 30 minutes of inactivity. Returned Fields",
+    "columns": [
+        {
+            "name": "SessionId",
+            "description": "Unique identifier for the session.",
+            "type": "nvarchar",
+            "size": "36",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.6"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique identifier for the user.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.6"
+        },
+        {
+            "name": "Timestamp",
+            "description": "Date and time in which the system access changed state.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.6"
+        },
+        {
+            "name": "State",
+            "description": "Indicates whether a system access started or ended at the reported time.",
+            "type": "nvarchar",
+            "size": "20",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.6"
+        },
+        {
+            "name": "Source",
+            "description": "Source of the system access. Possible values:",
+            "type": "nvarchar",
+            "size": "20",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.6 - Updated description"
+        },
+        {
+            "name": "AppVersion",
+            "description": "Version of the app, where applicable. Field will be null for Brightspace sources.",
+            "type": "nvarchar",
+            "size": "20",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.6"
+        },
+        {
+            "name": "Device",
+            "description": "Device used in the system access. Field will be null for Brightspace sources.",
+            "type": "nvarchar",
+            "size": "50",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Updated column size"
+        },
+        {
+            "name": "IsOfflineMode",
+            "description": "Indicates if a portion or all of the system access occurred offline with no internet connection. Field will be null for Brightspace sources.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.6"
+        },
+        {
+            "name": "IPAddress",
+            "description": "IP Address at which the event occurred. Field can be null.",
+            "type": "nvarchar",
+            "size": "45",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.6"
+        }
+    ]
+}

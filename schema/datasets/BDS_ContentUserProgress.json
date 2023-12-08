@@ -1,0 +1,128 @@
+{
+    "type": "BDS",
+    "name": "Content User Progress",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4713-content-data-sets#content-user-progress",
+    "description": "The Content User Progress Brightspace Data Set returns user progress records modified in the past three calendar years. Results are ordered from newest to oldest. The data set is limited to 3 years of data (all of the previous two calendar years and the current calendar year to date).",
+    "columns": [
+        {
+            "name": "ContentObjectId",
+            "description": "Unique identifier of the content",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "2.5 \/ 3.0 - Added FK"
+        },
+        {
+            "name": "CompletedDate",
+            "description": "This column is currently not in use and appears as null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.2 - Updated to indicate not in use."
+        },
+        {
+            "name": "LastVisited",
+            "description": "Date content was last visited (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "IsRead",
+            "description": "Is content read by user",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "NumRealVisits",
+            "description": "Number of visits where the content is viewed, and the user continues in Brightspace. Recommend adding Real and Fake visits for total visits by a user.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.4 - Updated definition"
+        },
+        {
+            "name": "NumFakeVisits",
+            "description": "Number of visits where the content is viewed and the user leaves by closing the browser\/tab or the session times out while the content is open.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.4 - Updated definition"
+        },
+        {
+            "name": "TotalTime",
+            "description": "Total real visit time spent in content, in seconds",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.5 \/ 3.0 - Updated definition"
+        },
+        {
+            "name": "IsVisited",
+            "description": "Is content visited by user",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "IsCurrentBookmark",
+            "description": "Is content the last topic visited by user",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.7 - Updated definition"
+        },
+        {
+            "name": "IsSelfAssessComplete",
+            "description": "Is self assessment topic completed",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "LastModified",
+            "description": "Indicates the last time the user progress record was changed.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.5 \/ 3.0"
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "type": "BDS",
+    "name": "Portfolio Evidence Categories",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4530-portfolio-data-sets#portfolio-evidence-categories",
+    "description": "The Portfolio Evidence Categories Brightspace Data Set details the one or many categories that are mapped to each piece of evidence in the Portfolios in your organization. Returned Fields",
+    "columns": [
+        {
+            "name": "CategoryId",
+            "description": "The identifier for the category",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Updated column size"
+        },
+        {
+            "name": "EvidenceId",
+            "description": "The identifier for the evidence",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Updated column size"
+        },
+        {
+            "name": "Group",
+            "description": "Indicates how the category was linked to the evidence. By the learner or instructor.",
+            "type": "nvarchar",
+            "size": "30",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.7 \/ 5.1 - Updated description"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates whether the link between the category and the evidence is deleted",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.0"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date when the portfolio category was last modified (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.0"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "User who last modified the portfolio category",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.0"
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "type": "BDS",
+    "name": "Chat Session Log",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4522-chat-data-sets#chat-session-log",
+    "description": "The Chat Session Log Brightspace Data Set returns a log of when messages were sent in chat sessions for your org units.",
+    "columns": [
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "ChatSessionId",
+            "description": "Unique chat session identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "StartDate",
+            "description": "Chat session start date.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "EndDate",
+            "description": "Chat session end date. Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "TimeSent",
+            "description": "Time message was sent.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "MessageId",
+            "description": "Unique message identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.4"
+        }
+    ]
+}

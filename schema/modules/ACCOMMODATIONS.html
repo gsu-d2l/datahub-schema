@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="fallbackPageContent">
+<main>
+<section>
+<div class="mainColumn">
+<article>
+<h2 data-id="accommodations-profile-log">Accommodations Profile Log</h2>
+<p>The Accommodations Profile Log Brightspace Data Set returns all accommodations that have been created for learners in an org unit.</p>
+<p>Note: Learner accommodations contain sensitive information.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>6.10</td>
+<td style="width: 134px;">AccommodatedUserId</td>
+<td style="width: 134px;">Unique user identifier.</td>
+<td style="width: 134px;">bigint</td>
+<td style="width: 134px;">8</td>
+<td>PK, FK</td>
+                </tr><tr align="left" valign="top"><td>6.10</td>
+<td style="width: 134px;">OrgUnitId</td>
+<td style="width: 134px;">Unique org unit identifier.</td>
+<td style="width: 134px;">bigint</td>
+<td style="width: 134px;">8</td>
+<td>PK, FK</td>
+                </tr><tr align="left" valign="top"><td>6.13 / 7.1 - Updated column size</td>
+<td style="width: 134px;">QuizTimeLimitMultiplier</td>
+<td style="width: 134px;">
+<p>Amount of Time Multiplier for a quiz.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">decimal</td>
+<td style="width: 134px;">5,2</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>6.10</td>
+<td style="width: 134px;">QuizTimeLimitExtraTime</td>
+<td style="width: 134px;">
+<p>Amount of extra time allowed.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>6.10</td>
+<td style="width: 134px;">QuizControlAlwaysAllowRightClick</td>
+<td style="width: 134px;">
+<p>Indicates if the accommodation includes Always Include RightClick.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">bit</td>
+<td style="width: 134px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>6.10</td>
+<td style="width: 134px;">ModifiedBy</td>
+<td style="width: 134px;">Unique identifier of the user who last modified the accommodation.</td>
+<td style="width: 134px;">bigint</td>
+<td style="width: 134px;">8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>6.10</td>
+<td style="width: 134px;">LastModified</td>
+<td style="width: 134px;">Date the accommodation was updated (UTC).</td>
+<td style="width: 134px;">datetime2</td>
+<td style="width: 134px;">8</td>
+<td>PK</td>
+                </tr></tbody></table>
+</article>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>

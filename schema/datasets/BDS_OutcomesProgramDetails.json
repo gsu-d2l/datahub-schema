@@ -1,0 +1,88 @@
+{
+    "type": "BDS",
+    "name": "Outcomes Program Details",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4796-outcomes-data-sets#outcomes-program-details",
+    "description": "The Outcomes Program Details Brightspace Data Set provides details about the programs that are defined to hold a collection of outcomes (registry). All data for the data set is available, starting with your organization's first use of Learning Outcomes.",
+    "columns": [
+        {
+            "name": "ProgramId",
+            "description": "ID of this program which owns the registry.",
+            "type": "bigint",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.6 - Updated Type"
+        },
+        {
+            "name": "ProgramName",
+            "description": "The name of this program.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "ID of the org unit which owns this program.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "CreatedDate",
+            "description": "Date when this item was initially created (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "CreatedBy",
+            "description": "ID of user who initially created this item. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "LastModifiedDate",
+            "description": "Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "ID of user who last modified, created, or deleted this item.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates if this item has been deleted.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "type": "BDS",
+    "name": "Activity Feed Comment Objects",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4712-activity-feed-data-sets#activity-feed-comment-objects",
+    "description": "The Activity Feed Comment Objects Brightspace Data Set returns details on each comment in the organization.",
+    "columns": [
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.9\/6.2"
+        },
+        {
+            "name": "CommentId",
+            "description": "Unique comment identifier.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.9\/6.2"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "Unique identifier of the user who last modified the comment.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.9\/6.2"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date the comment was created, updated, or deleted (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.9\/6.2"
+        },
+        {
+            "name": "Content",
+            "description": "The text of the comment.",
+            "type": "nvarchar",
+            "size": "3072",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.9\/6.2"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates if the comment has been deleted.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.9\/6.2"
+        },
+        {
+            "name": "PostId",
+            "description": "Unique identifier for the parent post.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.9\/6.2"
+        },
+        {
+            "name": "Version",
+            "description": "Version of comment.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.9\/6.2"
+        }
+    ]
+}

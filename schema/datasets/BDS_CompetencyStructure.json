@@ -1,0 +1,58 @@
+{
+    "type": "BDS",
+    "name": "Competency Structure",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4754-competency-data-sets#competency-structure",
+    "description": "The Competency Structure Brightspace Data Set returns information about all competency structures for your org units. Returned Fields",
+    "columns": [
+        {
+            "name": "ObjectId",
+            "description": "Unique competency or learning objective ID",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.4 - Added Primary Key designation"
+        },
+        {
+            "name": "ParentObjectId",
+            "description": "Parent competency or learning objective ID",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.4 - Added Primary Key designation"
+        },
+        {
+            "name": "BaseObjectID",
+            "description": "Unique basic object ID",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.4 - Added Primary Key designation"
+        },
+        {
+            "name": "Depth",
+            "description": "Indicates the depth of the competency structure",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.2"
+        },
+        {
+            "name": "EntryTime",
+            "description": "The order in which a competency object exists with respect to its hierarchy.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.4"
+        }
+    ]
+}

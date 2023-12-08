@@ -1,0 +1,368 @@
+{
+    "type": "ADS",
+    "name": "Course Learning Outcome Evaluation",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#course-learning-outcome-evaluation",
+    "description": "The Course Learning Outcome Evaluation (CLOE) data set returns the learner's outcomes for required competencies. Data comes from the Competencies tool, not the Learning Outcomes tool. Required Config Variable d2l.Tools.AdvancedDataSets.ProgramOrgUnitTypeId (set the org unit type ID that represents a program for an org) Required Permission Advanced Data Sets > Can execute CLOE (Organization level) Available Filters Returned Fields",
+    "columns": [
+        {
+            "name": "Program Enrollment",
+            "description": "Ancestor of the course template defined in columns (Org Unit ID, Org Unit Name, and Org Unit Code). Where multiple ancestors exist, all ancestors are displayed in the field, using \u00e2\u0080\u0098|\" as a delimiter. The Org Unit Type to use as the parent is defined as a configuration variable.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Org Unit Id",
+            "description": "Org unit ID used to collect learning outcomes.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Org Unit Name",
+            "description": "Name of the course template used to collect results.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Org Unit Code",
+            "description": "Code of the course template used to collect results.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Org Unit Type Id",
+            "description": "ID of the course template.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Org Unit Type Name",
+            "description": "\"Course Template\".",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Outcome Id",
+            "description": "ID of the learning objective in the course template.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Outcome Type",
+            "description": "Learning objective.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Outcome Name",
+            "description": "Name of the learning objective.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Ready For Evaluation",
+            "description": "Possible status' for learning objectives:",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Course Offering Id",
+            "description": "OU ID for the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Course Offering Name",
+            "description": "Name of the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Course Offering Code",
+            "description": "Code for the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Semester Name",
+            "description": "Semester that the course offering belongs to.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "First Name",
+            "description": "First name of the learner.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Last Name",
+            "description": "Last name of the learner.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Username",
+            "description": "Learner's username.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Org Defined Id",
+            "description": "Learner's org defined ID.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "User Id",
+            "description": "Learner's unique numeric D2L ID.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Role Name",
+            "description": "Role name of the learner in the specified org unit.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Role Id",
+            "description": "D2L ID of the learner's role in the specified org unit.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Activity Id",
+            "description": "ID of the activity that the outcome is attached to.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Activity Type",
+            "description": "Type of activity that the outcome is attached to:",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Activity Name",
+            "description": "Name of the activity, for example, content topic name, dropbox name, quiz name, or quiz question name. Note: If the activity is a quiz question, then the quiz name must be included too.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Assessment Type",
+            "description": "Numeric or Rubric (or blank if it is not assessed)",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Rubric Id",
+            "description": "If the outcome is assessed by a rubric, this is the rubric ID.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Rubric Name",
+            "description": "If the outcome is assessed by a rubric, this is the rubric name.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Rubric Measurement",
+            "description": "If the outcome is assessed by a rubric, this contains Overall Score or the specific rubric criterion used to measure the outcome.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Assessment Threshold",
+            "description": "If assessed, contains the threshold considered to be successful attainment.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Assessment Threshold Criteria",
+            "description": "For numeric assessments, this field contains one of the following operators associated with the threshold:",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Rubric Level Achieved",
+            "description": "If the activity is assessed by a rubric, this is the level that the learner achieved. If the rubric measurement is Overall Score, this is the learner's overall score on the rubric. If the Rubric Measurement is a specific criterion, this is how the learner performed on that criterion.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Rubric Points",
+            "description": "If the activity is assessed by a rubric, this is the point score that the learner achieved. If the rubric measurement is Overall Score, this is the learner's overall score on the rubric. If the Rubric Measurement is a specific criterion, this is how the learner performed on that criterion.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Activity Grade Points",
+            "description": "Achieved points value the learner received when the activity is assessed by Grade.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Activity Grade Max Points",
+            "description": "Total possible points the learner could receive for the activity when the activity is assessed by Grade.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Activity Grade Percent",
+            "description": "Activity grade as recorded in the grade book.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Activity Threshold Achieved",
+            "description": "If this outcome is assessed, it is a comparison of the assessment threshold to the learner results.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        }
+    ]
+}

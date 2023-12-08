@@ -1,0 +1,188 @@
+{
+    "type": "BDS",
+    "name": "Awards Issued",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4520-awards-data-sets#awards-issued",
+    "description": "The Awards Issued Brightspace Data Set returns a list of all the awards that have been issued for your org units.",
+    "columns": [
+        {
+            "name": "AwardId",
+            "description": "Unique award identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "2.5 \/ 3.0 - Added FK"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.4 - Removed PK"
+        },
+        {
+            "name": "Type",
+            "description": "Award type",
+            "type": "nvarchar",
+            "size": "128",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.0 - REMOVED COLUMN"
+        },
+        {
+            "name": "IssuedBy",
+            "description": "Issued by user ID",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "IssueDate",
+            "description": "Award issue date (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "ExpiryDate",
+            "description": "Award expiry date (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "IsRevoked",
+            "description": "Is award revoked",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.0 - REMOVED COLUMN"
+        },
+        {
+            "name": "IssuedId",
+            "description": "Unique issued identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.4"
+        },
+        {
+            "name": "Credits",
+            "description": "Indicates if the award has credits, and how many.",
+            "type": "decimal",
+            "size": "9, 2",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.0 - REMOVED COLUMN"
+        },
+        {
+            "name": "Criteria",
+            "description": "Indicates the criteria necessary to issue the award.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.0 - Changed Description"
+        },
+        {
+            "name": "Evidence",
+            "description": "Provides proof that the user has met the criteria for the award.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.0 - Changed Description"
+        },
+        {
+            "name": "RevokedDate",
+            "description": "Award revocation date (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.0"
+        },
+        {
+            "name": "RevokedReason",
+            "description": "Reason for revoking issued award. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.0"
+        },
+        {
+            "name": "RevokedBy",
+            "description": "User who revoked the award. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "9.0"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "User who last modified the issued award object.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "9.0"
+        },
+        {
+            "name": "LastModifiedDate",
+            "description": "Date the issued award object was last modified (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.0"
+        },
+        {
+            "name": "Version",
+            "description": "Version number of this issued award.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.0"
+        }
+    ]
+}

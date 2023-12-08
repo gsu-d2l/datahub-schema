@@ -1,0 +1,138 @@
+{
+    "type": "BDS",
+    "name": "SCORM Visits",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4536-scorm-data-sets#scorm-visits",
+    "description": "The SCORM Visits Brightspace Data Set lists each user visit on each SCORM object, the overall completion status, and time spent on the visit. Returned Fields",
+    "columns": [
+        {
+            "name": "VisitId",
+            "description": "Unique identifier for each SCORM visit.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "ScormObjectId",
+            "description": "Unique identifier of the SCORM object.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "UserId",
+            "description": "User associated with the SCORM visit.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "FirstAccessDate",
+            "description": "The date the user first accessed the SCORM object. Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "LastAccessDate",
+            "description": "The date the user last accessed the SCORM object. Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "CompletedDate",
+            "description": "The date the user first completed the SCORM object. Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "Completion",
+            "description": "The completion status of the user for the SCORM object. One of UNKNOWN, COMPLETED, or INCOMPLETE. Field can be null.",
+            "type": "nvarchar",
+            "size": "100",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "Success",
+            "description": "The success status of the user for the SCORM object. One of UNKNOWN, PASSED, or FAILED. Field can be null.",
+            "type": "nvarchar",
+            "size": "100",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "Score",
+            "description": "The score attained by the user for the SCORM object, between 0 and 100. Field can be null.",
+            "type": "float",
+            "size": "24",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "TimeSpent",
+            "description": "The amount of time the user has had the SCORM object open, in seconds. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "Progress",
+            "description": "How much of the activity has been completed, between 0 and 100. Field can be null.",
+            "type": "float",
+            "size": "24",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "6.15 \/ 7.3 - updated Type and Size"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date when the activity was last modified (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        }
+    ]
+}

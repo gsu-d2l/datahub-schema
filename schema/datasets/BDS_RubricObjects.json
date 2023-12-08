@@ -1,0 +1,108 @@
+{
+    "type": "BDS",
+    "name": "Rubric Objects",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4535-rubrics-data-sets#rubric-objects",
+    "description": "The Rubric Objects Brightspace Data Set returns information about the rubric properties. Returned Fields",
+    "columns": [
+        {
+            "name": "RubricId",
+            "description": "Unique rubric Identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "Name",
+            "description": "Name of the rubric",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "RubricStatus",
+            "description": "Status of the rubric. Field can be null.",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "Description",
+            "description": "Description of the rubric object. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "RubricType",
+            "description": "Type of rubric used. Field can be null.",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "ScoringMethods",
+            "description": "Type of scoring methods used. Field can be null.",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "IsScoreVisible",
+            "description": "Is the rubric score visible",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "OrgUnitID",
+            "description": "Org unit identifier associated with the rubric",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "IsShared",
+            "description": "Set to true if the Rubric object is shared",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Set to true if the rubric object is deleted",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        }
+    ]
+}

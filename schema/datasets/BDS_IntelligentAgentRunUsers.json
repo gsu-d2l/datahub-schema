@@ -1,0 +1,98 @@
+{
+    "type": "BDS",
+    "name": "Intelligent Agent Run Users",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4528-intelligent-agents-data-sets#intelligent-agent-run-users",
+    "description": "The Intelligent Agent Run Users Brightspace Data Set lists the users that each intelligent agent run affected and the resulting action. It does not include users that don't meet agent criteria or are part of a practice run. Returned Fields",
+    "columns": [
+        {
+            "name": "AgentId",
+            "description": "Unique intelligent agent identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "AgentRunId",
+            "description": "Unique intelligent agent run identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier where the agent was run.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "ActionTypeName",
+            "description": "The type of action that was taken. Field can be null.",
+            "type": "nvarchar",
+            "size": "50",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "ActionHasError",
+            "description": "Indicates if the intelligent agent run has errors.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "ActionHasInfo",
+            "description": "Indicates if the intelligent agent run has info messages.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "ActionHasWarning",
+            "description": "Indicates if the intelligent agent run has warnings.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "ShouldRetry",
+            "description": "Indicates if the run should be retried.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        }
+    ]
+}

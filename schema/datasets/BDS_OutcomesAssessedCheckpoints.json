@@ -1,0 +1,128 @@
+{
+    "type": "BDS",
+    "name": "Outcomes Assessed Checkpoints",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4796-outcomes-data-sets#outcomes-assessed-checkpoints",
+    "description": "The Outcomes Assessed Checkpoints Brightspace Data Set provides details about the Overall Achievement Calculation Settings for a checkpoint. The data set only captures data from July 2021 onwards.",
+    "columns": [
+        {
+            "name": "CheckpointId",
+            "description": "ID of this checkpoint.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.9"
+        },
+        {
+            "name": "DemonstrationId",
+            "description": "ID of demonstration which assesses this outcome against the checkpoint.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.9"
+        },
+        {
+            "name": "Feedback",
+            "description": "Feedback left by assessor, truncated to 1000 characters.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.9"
+        },
+        {
+            "name": "ConfigDecayRate",
+            "description": "Value of the decay rate in Mastery View Settings for checkpoint calculation.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.9"
+        },
+        {
+            "name": "ConfigAggregationMethod",
+            "description": "Calculation method selected in Mastery View Settings. Possible values:",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.9"
+        },
+        {
+            "name": "ConfigIncludedActivities",
+            "description": "Selected activities for use in calculation in Mastery View Settings. If Most Recently Assessed Activities is selected, the specific number of activities to include is stored in ConfigRecentlyAssessedActivityCount. Possible values:",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.9"
+        },
+        {
+            "name": "ConfigMultipleAttemptStrategy",
+            "description": "Selected attempt for use in calculation in Mastery View Settings. Possible values:",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.9"
+        },
+        {
+            "name": "ConfigRecentlyAssessedActivityCount",
+            "description": "The number of recently assessed activities to include in calculation, when Most Recently Assessed Activities is selected.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.9"
+        },
+        {
+            "name": "ConfigTieBreaker",
+            "description": "Selected method for how to handle multiple items of the same count in calculating the overall level of achievement in Mastery View Settings. Possible values:",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.9"
+        },
+        {
+            "name": "LastModifiedDate",
+            "description": "Date when this item was last modified. Contains created date upon creation and deleted date for deleted items. Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "6.9"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "ID of user who last modified, created, or deleted this item. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "6.9"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates if this item has been deleted.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.9"
+        }
+    ]
+}

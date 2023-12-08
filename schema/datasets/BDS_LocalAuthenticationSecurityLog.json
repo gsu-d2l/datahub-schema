@@ -1,0 +1,48 @@
+{
+    "type": "BDS",
+    "name": "Local Authentication Security Log",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4714-local-authentication-data-sets#local-authentication-security-log",
+    "description": "The Local Authentication Security Log Brightspace Data Set has a record of users who are authorized for local login and whether two-factor authentication was enabled or disabled. This data set only captures data from May 2022 onwards. Returned Fields",
+    "columns": [
+        {
+            "name": "UserId",
+            "description": "Unique identifier of the user.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "7.6"
+        },
+        {
+            "name": "Action",
+            "description": "The action performed for the user. Possible values:",
+            "type": "nvarchar",
+            "size": "70",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.6"
+        },
+        {
+            "name": "ModifiedBy",
+            "description": "UserId of the user who performed the action.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "7.6"
+        },
+        {
+            "name": "ModifiedDate",
+            "description": "Date and time when the action was performed (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.6"
+        }
+    ]
+}

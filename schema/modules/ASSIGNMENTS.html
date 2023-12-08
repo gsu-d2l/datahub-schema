@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="fallbackPageContent">
+<main>
+<section>
+<div class="mainColumn">
+<article>
+<h2 data-id="assignment-special-access">Assignment Special Access</h2>
+<p>The Assignment Special Access Brightspace Data Set returns all applicable special access start, end, and due dates for each assignment in the organization.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>5.8/6.1</td>
+<td style="width: 134px;">DropboxId</td>
+<td style="width: 134px;">Unique assignment identifier</td>
+<td style="width: 134px;">bigint</td>
+<td style="width: 134px;">8</td>
+<td style="width: 95px;">PK,FK</td>
+                </tr><tr align="left" valign="top"><td>5.8/6.1</td>
+<td style="width: 134px;">UserId</td>
+<td style="width: 134px;">
+<p>Unique user identifier.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td style="width: 95px;">PK,FK</td>
+                </tr><tr align="left" valign="top"><td>5.8/6.1</td>
+<td style="width: 134px;">StartDate</td>
+<td style="width: 134px;">
+<p>Assignment special access availability start date (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">datetime2</td>
+<td style="width: 134px;">8</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>5.8/6.1</td>
+<td style="width: 134px;">EndDate</td>
+<td style="width: 134px;">
+<p>Assignment special access availability end date (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">datetime2</td>
+<td style="width: 134px;">8</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>5.8/6.1</td>
+<td style="width: 134px;">DueDate</td>
+<td style="width: 134px;">
+<p>Assignment special access due date (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">datetime2</td>
+<td style="width: 134px;">8</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>5.8/6.1</td>
+<td style="width: 134px;">ModifiedBy</td>
+<td style="width: 134px;">User who modified the assignment special access.</td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td style="width: 95px;">FK</td>
+                </tr><tr align="left" valign="top"><td>5.8/6.1</td>
+<td style="width: 134px;">LastModified</td>
+<td style="width: 134px;">Date when the special access was last modified for the assignment (UTC)</td>
+<td style="width: 134px;">datetime2</td>
+<td style="width: 134px;">8</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>5.8/6.1</td>
+<td style="width: 134px;">IsDeleted</td>
+<td style="width: 134px;">Indicates if special access has been deleted.</td>
+<td style="width: 134px;">bit</td>
+<td style="width: 134px;">1</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>7.13</td>
+<td style="width: 134px;">StartDateAvailabilityType</td>
+<td style="width: 134px;">
+<p>Determines whether learners can view or access the assignment before the StartDate. See About Availability Type for details.</p>
+<p>No data available for assignments created before December 2022/20.22.12.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">smallint</td>
+<td style="width: 134px;">2</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>7.13</td>
+<td style="width: 134px;">EndDateAvailabilityType</td>
+<td style="width: 134px;">
+<p>Determines whether learners can view or access the assignment after the EndDate. See About Availability Type for details.</p>
+<p>No data available for assignments created before December 2022/20.22.12.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">smallint</td>
+<td style="width: 134px;">2</td>
+<td style="width: 95px;"></td>
+                </tr></tbody></table>
+<h2 data-id="assignment-submission-details">Assignment Submission Details</h2>
+<p>The Assignment Submission Details Brightspace Data Set returns details of each individual submission made by the user for all your org units. Results are ordered from newest to oldest.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th><b>Key</b><br></th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>2.5 / 3.0 - Removed FK</td>
+<td style="width: 134px;">
+<p>SubmissionId</p>
+                    </td>
+<td>
+<p>Unique submission identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>DropboxId</p>
+                    </td>
+<td>
+<p>Unique assignment identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>4.7 / 5.1 - Removed FK</p>
+                    </td>
+<td style="width: 134px;">
+<p>UserId</p>
+                    </td>
+<td>
+<p>Unique user identifier.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>5.7 / 6.0 - Changed Type and Column Size</p>
+                    </td>
+<td style="width: 134px;">
+<p>GroupId</p>
+                    </td>
+<td>
+<p>Unique group identifier for the submission made to the assignment.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Type and Column Size</td>
+<td style="width: 134px;">
+<p>NumberOfFilesSubmitted</p>
+                    </td>
+<td>
+<p>Number of files submitted.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>6.14 / 7.2 - Updated Description</td>
+<td style="width: 134px;">
+<p>TotalFileSize</p>
+                    </td>
+<td>
+<p>Total file size of all submissions made, in bytes.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>SubmittedByUserId</p>
+                    </td>
+<td>
+<p>Submission made by user ID</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>1.0</p>
+                    </td>
+<td style="width: 134px;">
+<p>DateSubmitted</p>
+                    </td>
+<td>
+<p>Date the submission was made (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>Comments</p>
+                    </td>
+<td>
+<p>Comments on the submission.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>1000</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>1.0</p>
+                    </td>
+<td style="width: 134px;">
+<p>IsTurnItInExempt</p>
+                    </td>
+<td>
+<p>Is exempt from TurnItIn.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>IsDeleted</p>
+                    </td>
+<td>
+<p>Is submission deleted</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>IsPreview</p>
+                    </td>
+<td>
+<p>Is submission preview</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr></tbody></table>
+<h2 data-id="assignment-submissions">Assignment Submissions</h2>
+<p>The Assignment Submissions Brightspace Data Set returns a high-level summary information of all submissions made by a user to a given assignment for all your org units. Results are ordered from newest to oldest.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th><b>Key</b><br></th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>2.5/3.0 - Added FK</td>
+<td style="width: 134px;">
+<p>DropboxId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique assignment identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p>PK, FK</p>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>OrgUnitId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique org unit identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td style="width: 95px;">
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.0</td>
+<td style="width: 134px;">SubmitterId</td>
+<td style="width: 134px;">The user or group ID of the submitter.</td>
+<td style="width: 134px;">bigint</td>
+<td>8</td>
+<td style="width: 95px;">PK, FK</td>
+                </tr><tr align="left" valign="top"><td>
+<p>5.7 / 6.0 - Changed Column Size</p>
+                    </td>
+<td style="width: 134px;">SubmitterType</td>
+<td style="width: 134px;">
+<p>The type submission, either user or group.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">varchar</td>
+<td>5</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>FileSubmissionCount</p>
+                    </td>
+<td style="width: 134px;">
+<p>Number of files submitted to the assignment</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>6.14 / 7.2 - Updated Description</td>
+<td style="width: 134px;">
+<p>TotalFileSize</p>
+                    </td>
+<td style="width: 134px;">
+<p>Total file size of all submissions, in bytes.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>4.7 / 5.1 - Removed FK</p>
+                    </td>
+<td style="width: 134px;">
+<p>FeedbackUserId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Feedback by user ID.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>FeedbackIsRead</p>
+                    </td>
+<td style="width: 134px;">
+<p>Is feedback read</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td>
+<p>1</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>4.8 / 5.2 - Updated column size</td>
+<td style="width: 134px;">
+<p>Score</p>
+                    </td>
+<td style="width: 134px;">
+<p>Score the user achieved on the assignment submission.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>decimal</p>
+                    </td>
+<td>
+<p>19, 9</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>IsGraded</p>
+                    </td>
+<td style="width: 134px;">
+<p>Is assignment submission graded</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td>
+<p>1</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>LastSubmissionDate</p>
+                    </td>
+<td style="width: 134px;">
+<p>Last submission date time (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0 - Updated description</td>
+<td style="width: 134px;">
+<p>Feedback</p>
+                    </td>
+<td style="width: 134px;">
+<p>Instructor feedback.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>1000</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>6.16 / 7.4 - Updated description</td>
+<td style="width: 134px;">
+<p>FeedbackLastModified</p>
+                    </td>
+<td style="width: 134px;">
+<p>Last modified date time for draft and published feedback (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>6.16 / 7.4 - Updated description</td>
+<td style="width: 134px;">
+<p>FeedbackReadDate</p>
+                    </td>
+<td style="width: 134px;">
+<p>First date time that feedback is read (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>3.2</td>
+<td style="width: 134px;">CompletionDate</td>
+<td style="width: 134px;">
+<p>Indicates the date when the assignment was submitted by the learner (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">datetime2</td>
+<td>8</td>
+<td style="width: 95px;"></td>
+                </tr></tbody></table>
+<h2 data-id="assignment-summary">Assignment Summary</h2>
+<p>The Assignment Summary Brightspace Data Set returns information on the assignments for your org units.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>DropboxId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique assignment identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>OrgUnitId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique org unit identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td style="width: 95px;">
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 134px;">
+<p>Name</p>
+                    </td>
+<td style="width: 134px;">
+<p>Assignment name</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>128</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 134px;">
+<p>Category</p>
+                    </td>
+<td style="width: 134px;">
+<p>Assignment category.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>128</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>Type</p>
+                    </td>
+<td style="width: 134px;">
+<p>Individual/group assignment</p>
+                    </td>
+<td style="width: 134px;">
+<p>varchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>10</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>GradeItemId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique grade item identifier.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>4.8 / 5.2 - Updated column size</td>
+<td style="width: 134px;">
+<p>PossibleScore</p>
+                    </td>
+<td style="width: 134px;">
+<p>Possible score a user can achieve on the assignment.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>decimal</p>
+                    </td>
+<td style="width: 134px;">
+<p>19, 9</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>StartDate</p>
+                    </td>
+<td style="width: 134px;">
+<p>Assignment availability start date (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>EndDate</p>
+                    </td>
+<td style="width: 134px;">
+<p>Assignment availability end date (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>DueDate</p>
+                    </td>
+<td style="width: 134px;">
+<p>Assignment due date (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>IsRestricted</p>
+                    </td>
+<td style="width: 134px;">
+<p>Is assignment restricted</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>IsDeleted</p>
+                    </td>
+<td style="width: 134px;">
+<p>Is assignment deleted</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>TurnItInEnabled</p>
+                    </td>
+<td style="width: 134px;">
+<p>Is TurnItIn enabled</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.2</td>
+<td style="width: 134px;">IsHidden</td>
+<td style="width: 134px;">True or false value indicating whether the assignment is hidden.</td>
+<td style="width: 134px;">bit</td>
+<td style="width: 134px;">1</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>2.2</td>
+<td style="width: 134px;">SortOrder</td>
+<td style="width: 134px;">Display sort order used for the content objects</td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>3.2</td>
+<td style="width: 134px;">SubmissionType</td>
+<td style="width: 134px;">Indicates the format submission type for the assignment being submitted. Values for this column include File, Text, On Paper, and Observed.</td>
+<td style="width: 134px;">varchar</td>
+<td style="width: 134px;">18</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>3.2</td>
+<td style="width: 134px;">CompletionType</td>
+<td style="width: 134px;">Indicates how the assignment was completed. Values for this column include OnSubmission, DueDate, ManuallyByLearner, and OnEvaluation.</td>
+<td style="width: 134px;">varchar</td>
+<td style="width: 134px;">27</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>4.9 / 5.3</td>
+<td style="width: 134px;">ResultId</td>
+<td style="width: 134px;">
+<p>Unique release condition result identifier.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td style="width: 95px;">FK</td>
+                </tr><tr align="left" valign="top"><td>5.9 / 6.2</td>
+<td style="width: 134px;">CategoryId</td>
+<td style="width: 134px;">
+<p>Unique category identifier for the assignment.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">bigint</td>
+<td style="width: 134px;">8</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>6.8</td>
+<td style="width: 134px;">Version</td>
+<td style="width: 134px;">
+<p>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</p>
+                    </td>
+<td style="width: 134px;">bigint</td>
+<td style="width: 134px;">8</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>7.13</td>
+<td style="width: 134px;">StartDateAvailabilityType</td>
+<td style="width: 134px;">
+<p>Determines whether learners can view or access the assignment before the StartDate. See About Availability Type for details.</p>
+<p>All assignments with start dates created before December 2022/20.22.12 have default value '0'.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">smallint</td>
+<td style="width: 134px;">2</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>7.13</td>
+<td style="width: 134px;">EndDateAvailabilityType</td>
+<td style="width: 134px;">
+<p>Determines whether learners can view or access the assignment after the EndDate. See About Availability Type for details.</p>
+<p>All assignments with end dates created before December 2022/20.22.12 have default value '0'.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">smallint</td>
+<td style="width: 134px;">2</td>
+<td style="width: 95px;"></td>
+                </tr></tbody></table>
+<h2 data-id="turnitin-submissions">TurnItIn Submissions</h2>
+<p>The TurnItIn Submissions Brightspace Data Set returns details of assignment submissions shared with TurnItIn version 2.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th><b>Key</b><br></th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>3.6 / 4.1</td>
+<td style="width: 134px;">
+<p>DropboxId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique assignment identifier.</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>8.9 - Changed Key</td>
+<td style="width: 134px;">SubmissionId</td>
+<td style="width: 134px;">Unique assignment submission identifier</td>
+<td>
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>PK, FK</td>
+                </tr><tr align="left" valign="top"><td>7.15 / 8.1 - Changed Type and Column Size</td>
+<td style="width: 134px;">
+<p>FileId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique file identifier.</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
+<td style="width: 134px;">
+<p>LastSubmissionDate</p>
+                    </td>
+<td style="width: 134px;">
+<p>Most recent submission time stamp (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>datetime2</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
+<td style="width: 134px;">SubmissionStatus</td>
+<td style="width: 134px;">Status of assignment submission</td>
+<td>smallint</td>
+<td style="width: 134px;">2</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
+<td style="width: 134px;">SubmissionErrorType</td>
+<td style="width: 134px;">Type of submission error</td>
+<td>smallint</td>
+<td style="width: 134px;">2</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
+<td style="width: 134px;">ErrorMessage</td>
+<td style="width: 134px;">
+<p>Error message upon submission if applicable.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>nvarchar</td>
+<td style="width: 134px;">255</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
+<td style="width: 134px;">SubmittedBy</td>
+<td style="width: 134px;">
+<p>UserId of user who submitted the assignment to TurnItIn.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>int</td>
+<td style="width: 134px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
+<td style="width: 134px;">LastRefreshDate</td>
+<td style="width: 134px;">
+<p>Most recent submission refresh time stamp (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td>datetime2</td>
+<td style="width: 134px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>6.6</td>
+<td style="width: 134px;">LastModified</td>
+<td style="width: 134px;">
+<p>Last time the submission was modified (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td>datetime2</td>
+<td style="width: 134px;">8</td>
+<td></td>
+                </tr></tbody></table>
+</article>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="fallbackPageContent">
+<main>
+<section>
+<div class="mainColumn">
+<article>
+<h2 data-id="activity-exemptions-log">Activity Exemptions Log</h2>
+<p>The Activity Exemptions Log Brightspace Data Set returns details on the exemptions a user has created for your organization units.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Type and Column Size</td>
+<td style="width: 134px;">OrgUnitId</td>
+<td style="width: 134px;">Unique org unit identifier</td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Type and Column Size</td>
+<td style="width: 134px;">UserId</td>
+<td style="width: 134px;">Unique user identifier.</td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>1.6</td>
+<td style="width: 134px;">ObjectId</td>
+<td style="width: 134px;">
+<p>Unique identifier of the object with an exemption.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.6</td>
+<td style="width: 134px;">ActivityId</td>
+<td style="width: 134px;">Unique identifier for an activity associated with the exemption</td>
+<td style="width: 134px;">varchar</td>
+<td style="width: 134px;">225</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.6</td>
+<td style="width: 134px;">LogTypeName</td>
+<td style="width: 134px;">
+<p>Name of log type.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">varchar</td>
+<td style="width: 134px;">50</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.6</td>
+<td style="width: 134px;">LastModifiedUtc</td>
+<td style="width: 134px;">Time of the last log entry (UTC).</td>
+<td style="width: 134px;">datetime2</td>
+<td style="width: 134px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Type and Column Size</td>
+<td style="width: 134px;">LastModifiedBy</td>
+<td style="width: 134px;">
+<p>User ID of user who last modified the exemption.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>1.6</td>
+<td style="width: 134px;">
+<p>ActivityExemptionsLogId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique exemptions log identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>4.7 / 5.1 - Updated description</p>
+                    </td>
+<td style="width: 134px;">ToolId</td>
+<td style="width: 134px;">Unique identifier for the tool with an exemption</td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td>FK</td>
+                </tr></tbody></table>
+</article>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>

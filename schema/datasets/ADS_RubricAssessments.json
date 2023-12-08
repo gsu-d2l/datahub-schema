@@ -1,0 +1,338 @@
+{
+    "type": "ADS",
+    "name": "Rubric Assessments",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#rubric-assessments",
+    "description": "The Rubric Assessments data set provides insight on how rubrics are used, the assessments they are used against, and the scoring for all individual learner assessments. Note: This data set only reports on fully assessed rubrics. For rubrics using a Text Only scoring method, there must be an Overall Score provided for the rubric to be considered fully assessed and to show in the report. Required Permission Advanced Data Sets > Can execute Rubric Assessments (Organization level) Available Filters Returned Fields",
+    "columns": [
+        {
+            "name": "Course Org Unit Id",
+            "description": "Unique identifier for the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Course Name",
+            "description": "Name of the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Course Code",
+            "description": "Course offering code.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Parent Department Name",
+            "description": "Parent department org unit name of the course offering. This may contain multiple values.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Parent Semester Name",
+            "description": "Parent semester org unit name of the course offering. This may contain multiple values.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Parent Course Template Name",
+            "description": "Parent course template name of the course offering. This may contain multiple values.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Course Section Id",
+            "description": "Unique identifier of the user's section within the course.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Course Section Name",
+            "description": "Name of the section the user is in.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Course Section Code",
+            "description": "Code of the section the user is in.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Rubric Id",
+            "description": "Unique identifier of the rubric.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Rubric Name",
+            "description": "Name of the rubric.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Activity Id",
+            "description": "Unique identifier of the activity the rubric is associated with.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Activity Type",
+            "description": "Tool type in which the activity is represented.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Activity Name",
+            "description": "Name of the activity that the rubric was used for.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "User Id",
+            "description": "Unique identifier of the user.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "First Name",
+            "description": "First name of the user.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Last Name",
+            "description": "Last name of the user.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Username",
+            "description": "Username of the user.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Org Defined Id",
+            "description": "Org defined Id of the user.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Role Id",
+            "description": "Unique role identifier.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Role Name",
+            "description": "Name of the role assigned to the user.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Criterion Id",
+            "description": "Unique identifier of the rubric criterion.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Criterion",
+            "description": "Name of the rubric criterion.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Level",
+            "description": "Level that the user obtained on the criterion.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Points",
+            "description": "Number of points that the user scored on the criterion.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Overall Level Achieved",
+            "description": "Overall level achieved by the user on the rubric.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Is Score Overridden",
+            "description": "Indicates if the score is overridden by instructor.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Evaluation Date",
+            "description": "Date that the criterion was last assessed for the user.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Assessor User Id",
+            "description": "Unique identifier of the user who completed the rubric assessment.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Assessor First Name",
+            "description": "First name of the assessor.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Assessor Last Name",
+            "description": "Last name of the assessor.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Assessor Username",
+            "description": "Username of the assessor.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.8"
+        },
+        {
+            "name": "Assessor Org Defined Id",
+            "description": "Org defined Id of the assessor.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.8"
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+{
+    "type": "BDS",
+    "name": "Course Publisher Launches",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4524-course-publisher-data-sets#course-publisher-launches",
+    "description": "The Course Publisher Launches Brightspace Data Set returns details about course packages launched from the Course Publisher tool.",
+    "columns": [
+        {
+            "name": "LaunchId",
+            "description": "Unique course package launch identifier",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier",
+            "type": "int",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "RecipientId",
+            "description": "Unique recipient identifier",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier",
+            "type": "int",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "RoleId",
+            "description": "Unique role identifier",
+            "type": "int",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "LaunchMethod",
+            "description": "Method for launching the course package",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "ExternalUserId",
+            "description": "Unique external user identifier",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "ExternalLMSType",
+            "description": "External LMS type used by the recipient",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "IsNewUser",
+            "description": "If the external user is new",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date the course package was last modified (UTC)",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        }
+    ]
+}

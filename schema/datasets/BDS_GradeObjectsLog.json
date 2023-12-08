@@ -1,0 +1,118 @@
+{
+    "type": "BDS",
+    "name": "Grade Objects Log",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4527-grades-data-sets#grade-objects-log",
+    "description": "The Grade Objects Log Brightspace Data Set returns a log of all changes to grades for each applicable user in the organization.",
+    "columns": [
+        {
+            "name": "LogId",
+            "description": "Unique grade object log identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Type and Column Size"
+        },
+        {
+            "name": "Name",
+            "description": "Name of the action. Field can be null.",
+            "type": "nvarchar",
+            "size": "50",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "GradeObjectId",
+            "description": "Grade object identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "3.7 \/ 4.2"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique identifier of the user who completed the action.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "3.7 \/ 4.2"
+        },
+        {
+            "name": "GradeSymbolString",
+            "description": "Value of the grade. Field can be null.",
+            "type": "nvarchar",
+            "size": "50",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "PointsDenominator",
+            "description": "Total number of points possible. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "PointsNumerator",
+            "description": "Number of points received by user. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "WeightedDenominator",
+            "description": "Total number of points possible after weight is applied. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "WeightedNumerator",
+            "description": "Number of points received after weight is applied. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "Modified",
+            "description": "Date and time the action was made.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.7 \/ 4.2"
+        },
+        {
+            "name": "ModifiedBy",
+            "description": "User who modified the grade object. Field can be null if done automatically.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "3.7 \/ 4.2"
+        }
+    ]
+}

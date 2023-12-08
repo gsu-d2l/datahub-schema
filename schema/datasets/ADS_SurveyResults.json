@@ -1,0 +1,188 @@
+{
+    "type": "ADS",
+    "name": "Survey Results",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#survey-results",
+    "description": "The Survey Results advanced data set provides detailed information on the surveys available in the organization. Required Permission Advanced Data Sets > Can execute Survey Results (Organization level) Available Filters Returned Fields",
+    "columns": [
+        {
+            "name": "Survey Id",
+            "description": "Unique survey identifier.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.12"
+        },
+        {
+            "name": "Survey Name",
+            "description": "Name of the survey.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.12"
+        },
+        {
+            "name": "Attempt Id",
+            "description": "Unique attempt identifier.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.12"
+        },
+        {
+            "name": "Active Status",
+            "description": "Indicates if the survey is active or not.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.12"
+        },
+        {
+            "name": "Course Offering Id",
+            "description": "D2L's unique identifier for the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.12"
+        },
+        {
+            "name": "Course Offering Code",
+            "description": "Often the course identifier from an SIS system.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.12"
+        },
+        {
+            "name": "Course Offering Name",
+            "description": "Name of the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.12"
+        },
+        {
+            "name": "Parent Department Name",
+            "description": "Name of department.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.12"
+        },
+        {
+            "name": "Parent Department Code",
+            "description": "Department code.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.12"
+        },
+        {
+            "name": "Respondent User Id",
+            "description": "Unique user identifier. Null if survey is anonymous.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.12"
+        },
+        {
+            "name": "Respondent Username",
+            "description": "User's username. If survey is anonymous, username is \"anonymous\".",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.12"
+        },
+        {
+            "name": "Respondent First Name",
+            "description": "User's first name. Null if survey is anonymous.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.12"
+        },
+        {
+            "name": "Respondent Last Name",
+            "description": "User's last name. Null if survey is anonymous.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.12"
+        },
+        {
+            "name": "Category Name",
+            "description": "Category Name for the survey.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.12"
+        },
+        {
+            "name": "Submission Date",
+            "description": "Date survey was submitted.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.12"
+        },
+        {
+            "name": "Question Number",
+            "description": "Unique survey question identifier.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.12"
+        },
+        {
+            "name": "Question",
+            "description": "Survey question.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.12"
+        },
+        {
+            "name": "Answer",
+            "description": "Survey answer.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.12"
+        }
+    ]
+}

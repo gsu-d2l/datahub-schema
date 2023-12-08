@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="fallbackPageContent">
+<main>
+<section>
+<div class="mainColumn">
+<article>
+<h2 data-id="grade-book-settings">Grade Book Settings</h2>
+<p>The Grade Book Settings Brightspace Data Set returns all the grade book settings for your org units.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>OrgUnitId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique org unit identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td>
+<p>PK,</p>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>2.5 / 3.0 - Removed FK</td>
+<td style="width: 134px;">
+<p>GradeSchemeId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique grade scheme identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 134px;">
+<p>GradingSystem</p>
+                    </td>
+<td style="width: 134px;">
+<p>Type of grading system setup for the course</p>
+                    </td>
+<td style="width: 134px;">
+<p>varchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 134px;">
+<p>UngradedItems</p>
+                    </td>
+<td style="width: 134px;">
+<p>Drop ungraded items/Treat them as 0</p>
+                    </td>
+<td style="width: 134px;">
+<p>varchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>25</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>IsAdjustedFinalGradeReleased</p>
+                    </td>
+<td style="width: 134px;">
+<p>Is final adjusted grade released to user.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>IsCalculatedFinalGradeReleased</p>
+                    </td>
+<td style="width: 134px;">
+<p>Is calculated adjusted grade released to user.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>6.7</td>
+<td style="width: 134px;">LastModified</td>
+<td style="width: 134px;">
+<p>Date gradebook settings were last modified (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">datetime2</td>
+<td style="width: 134px;">8</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="grade-objects">Grade Objects</h2>
+<p>The Grade Objects Brightspace Data Set returns a list of the grade objects created for your org units.</p>
+<p>The data set returns a NULL grade scheme value when the grade item is using the default scheme.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>GradeObjectId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique grade object identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td style="width: 95px;">
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>OrgUnitId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique org unit identifier.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td style="width: 95px;">
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>8.0 - Updated Description</td>
+<td style="width: 134px;">
+<p>ParentGradeObjectId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Parent grade object identifier.</p>
+<p>Note: Categories are considered Parent grade objects. Category names can be determined by using the ParentGradeObjectId and joining the data set to itself.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td style="width: 95px;">
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 134px;">
+<p>Name</p>
+                    </td>
+<td style="width: 134px;">
+<p>Grade object name</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>128</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>TypeName</p>
+                    </td>
+<td style="width: 134px;">
+<p>Grade object type name.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>varchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>50</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>StartDate</p>
+                    </td>
+<td style="width: 134px;">
+<p>Start date for the grade object (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>EndDate</p>
+                    </td>
+<td style="width: 134px;">
+<p>End date for the grade object (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>IsAutoPointed</p>
+                    </td>
+<td style="width: 134px;">
+<p>Indicates if the object is automatically pointed. If this contains a value, the object automatically has points assigned; if it is set to 0, then the grade object must manually have points assigned.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>IsFormula</p>
+                    </td>
+<td style="width: 134px;">
+<p>Is a formula associated with the grade object</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>IsBonus</p>
+                    </td>
+<td style="width: 134px;">
+<p>Is bonus grade</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>4.8 / 5.2 - Updated column size</td>
+<td style="width: 134px;">
+<p>MaxPoints</p>
+                    </td>
+<td style="width: 134px;">
+<p>Maximum points achievable in this grade</p>
+                    </td>
+<td style="width: 134px;">
+<p>decimal</p>
+                    </td>
+<td style="width: 134px;">
+<p>19, 9</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>CanExceedMaxGrade</p>
+                    </td>
+<td style="width: 134px;">
+<p>Can user get more than maximum points</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>ExcludeFromFinalGradeCalc</p>
+                    </td>
+<td style="width: 134px;">
+<p>Is grade excluded from final grade calculation</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>3.2 - Updated description</p>
+                    </td>
+<td style="width: 134px;">
+<p>GradeSchemeId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique grade scheme identifier. This column returns a null result when the grade item is set to use default scheme. This is intended.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>4.8 / 5.2 - Updated column size</td>
+<td style="width: 134px;">
+<p>Weight</p>
+                    </td>
+<td style="width: 134px;">
+<p>Weight associated with the grade.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>decimal</p>
+                    </td>
+<td style="width: 134px;">
+<p>19, 9</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>NumLowestGradesToDrop</p>
+                    </td>
+<td style="width: 134px;">
+<p>Drop number of lowest grades from the calculated grade</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>NumHighestGradesToDrop</p>
+                    </td>
+<td style="width: 134px;">
+<p>Drop number of highest grades from the calculated grade</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 134px;">
+<p>WeightDistributionType</p>
+                    </td>
+<td style="width: 134px;">
+<p>Grade weight distribution within category.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>varchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">CreatedDate</td>
+<td style="width: 134px;">
+<p>Date the grade was created (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">datetime2</td>
+<td style="width: 134px;">8</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 134px;">
+<p>ToolName</p>
+                    </td>
+<td style="width: 134px;">
+<p>Tool associated with the object.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>50</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>AssociatedToolItemId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique activity ID associated with the grade object: Dropbox ID, Quiz ID, Discussion ID.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.1</td>
+<td style="width: 134px;">LastModified</td>
+<td style="width: 134px;">Last time the grade was modified (UTC).</td>
+<td style="width: 134px;">datetime2</td>
+<td style="width: 134px;">8</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 134px;">ShortName</td>
+<td style="width: 134px;">
+<p>The item or category short name as per the corresponding field in Brightspace.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">nvarchar</td>
+<td style="width: 134px;">128</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>6.11 - Updated description</td>
+<td style="width: 134px;">GradeObjectTypeId</td>
+<td style="width: 134px;">
+<p>ID of the grade object type.</p>
+<p>Possible values:</p>
+<ul><li>
+<p>Numeric = 1</p>
+                            </li>
+<li>
+<p>Pass/Fail = 2</p>
+                            </li>
+<li>
+<p>Select box = 3</p>
+                            </li>
+<li>
+<p>Text = 4</p>
+                            </li>
+<li>
+<p>Calculated = 5</p>
+                            </li>
+<li>
+<p>Formula = 6</p>
+                            </li>
+<li>
+<p>Final Calculated = 7</p>
+                            </li>
+<li>
+<p>Final Adjusted = 8</p>
+                            </li>
+<li>
+<p>Category = 9</p>
+                            </li>
+                        </ul></td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>1.1</td>
+<td style="width: 134px;">SortOrder</td>
+<td style="width: 134px;">Specified sort order of grade objects</td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>1.10</td>
+<td style="width: 134px;">IsDeleted</td>
+<td style="width: 134px;">
+<p>Indicates if the grade object is deleted.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">bit</td>
+<td style="width: 134px;">1</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>1.10</td>
+<td style="width: 134px;">DeletedDate</td>
+<td style="width: 134px;">
+<p>Date the grade object was soft deleted.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">datetime2</td>
+<td style="width: 134px;">8</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Type and Column Size</td>
+<td style="width: 134px;">DeletedByUserId</td>
+<td style="width: 134px;">
+<p>ID of the user who deleted the grade object.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td style="width: 95px;">FK</td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 134px;">ResultId</td>
+<td style="width: 134px;">
+<p>Unique release condition result identifier.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td style="width: 95px;">FK</td>
+                </tr></tbody></table>
+<h2 data-id="grade-objects-log">Grade Objects Log</h2>
+<p>The Grade Objects Log Brightspace Data Set returns a log of all changes to grades for each applicable user in the organization.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Type and Column Size</td>
+<td style="width: 134px;">
+<p>LogId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique grade object log identifier.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 134px;">
+<p>Name</p>
+                    </td>
+<td style="width: 134px;">
+<p>Name of the action.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>50</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>3.7 / 4.2</td>
+<td style="width: 134px;">
+<p>GradeObjectId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Grade object identifier.</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td style="width: 95px;">
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>3.7 / 4.2</td>
+<td style="width: 134px;">UserId</td>
+<td style="width: 134px;">Unique identifier of the user who completed the action.</td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td style="width: 95px;">
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 134px;">
+<p>GradeSymbolString</p>
+                    </td>
+<td style="width: 134px;">
+<p>Value of the grade.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>50</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>4.8 / 5.2 - Updated column size</p>
+                    </td>
+<td style="width: 134px;">PointsDenominator</td>
+<td style="width: 134px;">
+<p>Total number of points possible.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>decimal</p>
+                    </td>
+<td style="width: 134px;">
+<p>19, 9</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>4.8 / 5.2 - Updated column size</p>
+                    </td>
+<td style="width: 134px;">PointsNumerator</td>
+<td style="width: 134px;">
+<p>Number of points received by user.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>decimal</p>
+                    </td>
+<td style="width: 134px;">
+<p>19, 9</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>4.8 / 5.2 - Updated column size</p>
+                    </td>
+<td style="width: 134px;">WeightedDenominator</td>
+<td style="width: 134px;">
+<p>Total number of points possible after weight is applied.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>decimal</p>
+                    </td>
+<td style="width: 134px;">
+<p>19, 9</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>4.8 / 5.2 - Updated column size</p>
+                    </td>
+<td style="width: 134px;">WeightedNumerator</td>
+<td style="width: 134px;">
+<p>Number of points received after weight is applied.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">decimal</td>
+<td style="width: 134px;">19, 9</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>3.7 / 4.2</td>
+<td style="width: 134px;">Modified</td>
+<td style="width: 134px;">Date and time the action was made.</td>
+<td style="width: 134px;">datetime2</td>
+<td style="width: 134px;">8</td>
+<td style="width: 95px;"></td>
+                </tr><tr align="left" valign="top"><td>3.7 / 4.2</td>
+<td style="width: 134px;">ModifiedBy</td>
+<td style="width: 134px;">
+<p>User who modified the grade object.</p>
+<p>Field can be null if done automatically.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td style="width: 95px;"></td>
+                </tr></tbody></table>
+<h2 data-id="grade-results">Grade Results</h2>
+<p>The Grade Results Brightspace Data Set returns data from the newest grade objects first.</p>
+<table cellpadding="2" border="1"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th><b>Key</b><br></th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>GradeObjectId</p>
+                    </td>
+<td>
+<p>Unique grade object identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>OrgUnitId</p>
+                    </td>
+<td>
+<p>Unique org unit identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>UserId</p>
+                    </td>
+<td>
+<p>Unique user identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>4.8 / 5.2 - Updated column size</td>
+<td style="width: 134px;">
+<p>PointsNumerator</p>
+                    </td>
+<td>
+<p>Number of points received by user.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>decimal</p>
+                    </td>
+<td>
+<p>19, 9</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>4.8 / 5.2 - Updated column size</td>
+<td style="width: 134px;">
+<p>PointsDenominator</p>
+                    </td>
+<td>
+<p>Total number of points possible.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>decimal</p>
+                    </td>
+<td>
+<p>19, 9</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>4.8 / 5.2 - Updated column size</td>
+<td style="width: 134px;">
+<p>WeightedNumerator</p>
+                    </td>
+<td>
+<p>Number of points received after weight is applied.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>decimal</p>
+                    </td>
+<td>
+<p>19, 9</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>4.8 / 5.2 - Updated column size</td>
+<td style="width: 134px;">
+<p>WeightedDenominator</p>
+                    </td>
+<td>
+<p>Total number of points possible after weight is applied.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>decimal</p>
+                    </td>
+<td>
+<p>19, 9</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>7.13 - Updated description</td>
+<td style="width: 134px;">
+<p>IsReleased</p>
+                    </td>
+<td>
+<p>Is grade released.</p>
+<p>Field can be null. For example, it is null when the grade object is not submitted.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td>
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>IsDropped</p>
+                    </td>
+<td>
+<p>Is score dropped from final grade</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td>
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>LastModified</p>
+                    </td>
+<td>
+<p>Last time score was modified (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Type and Column Size</td>
+<td style="width: 134px;">
+<p>LastModifiedBy</p>
+                    </td>
+<td>
+<p>User ID of user who last modified the grade object.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>Comments</p>
+                    </td>
+<td>
+<p>Comments.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>1000</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>PrivateComments</p>
+                    </td>
+<td>
+<p>Private comments.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>1000</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.1</td>
+<td style="width: 134px;">IsExempt</td>
+<td>
+<p>Is exempt.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">bit</td>
+<td>1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.6</td>
+<td style="width: 134px;">GradeText</td>
+<td>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">nvarchar</td>
+<td>50</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.2</td>
+<td style="width: 134px;">GradeReleasedDate</td>
+<td>
+<p>Date when the grade was released to the learner (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.2</td>
+<td style="width: 134px;">Version</td>
+<td>
+<p>Indicates the version of the grade result.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td>8</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="grade-schemes">Grade Schemes</h2>
+<p>The Grade Schemes Brightspace Data Set returns data about created grade schemes.</p>
+<table cellpadding="2" border="1"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th><b>Key</b><br></th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.4 - Added Primary Key designation</td>
+<td style="width: 134px;">GradeSchemeId</td>
+<td>Unique grade scheme identifier.</td>
+<td style="width: 134px;">bigint</td>
+<td>8</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">OrgUnitId</td>
+<td>
+<p>Unique org unit identifier.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td>4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 134px;">SchemeName</td>
+<td>Grade scheme name</td>
+<td style="width: 134px;">nvarchar</td>
+<td>128</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>9.0 - REMOVED COLUMN</td>
+<td style="width: 134px;">GradeSchemeRangeId</td>
+<td>Unique grade scheme range identifier</td>
+<td style="width: 134px;">bigint</td>
+<td>8</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>9.0 - REMOVED COLUMN</td>
+<td style="width: 134px;">IsDeleted</td>
+<td>
+<p>Indicates that the grade scheme is deleted.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">bit</td>
+<td>1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.10</td>
+<td style="width: 134px;">DeletedDate</td>
+<td>
+<p>Date when the scheme was deleted (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">datetime2</td>
+<td>8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0</td>
+<td style="width: 134px;">Version</td>
+<td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
+<td style="width: 134px;">bigint</td>
+<td>8</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="grade-scheme-ranges">Grade Scheme Ranges</h2>
+<p>The Grade Schemes Ranges Brightspace Data Set describes the ranges used in grade schemes in the organization.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>5.7 / 6.0</td>
+<td style="width: 134px;">
+<p>GradeSchemeRangeId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique grade scheme range identifier.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0</td>
+<td style="width: 134px;">
+<p>GradeSchemeId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique grade scheme identifier.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0</td>
+<td style="width: 134px;">
+<p>SymbolString</p>
+                    </td>
+<td style="width: 134px;">
+<p>The name of the range.</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>100</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0</td>
+<td style="width: 134px;">
+<p>AssignedValue</p>
+                    </td>
+<td style="width: 134px;">
+<p>The value assigned to the grade scheme range.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>decimal</p>
+                    </td>
+<td style="width: 134px;">
+<p>19, 9</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0</td>
+<td style="width: 134px;">
+<p>RangeStart</p>
+                    </td>
+<td style="width: 134px;">
+<p>The starting value (in percent) of the grade scheme.</p>
+                    </td>
+<td style="width: 134px;">
+<p>decimal</p>
+                    </td>
+<td style="width: 134px;">
+<p>19, 9</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0</td>
+<td style="width: 134px;">
+<p>IsDeleted</p>
+                    </td>
+<td style="width: 134px;">
+<p>Indicates that the grade scheme is deleted</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0</td>
+<td style="width: 134px;">Version</td>
+<td style="width: 134px;">Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
+<td style="width: 134px;">bigint</td>
+<td style="width: 134px;">8</td>
+<td></td>
+                </tr></tbody></table>
+</article>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>

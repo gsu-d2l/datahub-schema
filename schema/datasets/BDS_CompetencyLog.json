@@ -1,0 +1,138 @@
+{
+    "type": "BDS",
+    "name": "Competency Log",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4754-competency-data-sets#competency-log",
+    "description": "The Competency Log Brightspace Data Set returns data changes to the competency structure. Returned Fields",
+    "columns": [
+        {
+            "name": "CompetencyLogId",
+            "description": "Unique log identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.5"
+        },
+        {
+            "name": "LogTypeId",
+            "description": "Log type identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.5"
+        },
+        {
+            "name": "LogTypeName",
+            "description": "Name of the log type. Field can be null.",
+            "type": "varchar",
+            "size": "19",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "ObjectId",
+            "description": "Identifier for the object that created the change in the competency structure recorded in the log.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.5"
+        },
+        {
+            "name": "ObjectTypeId",
+            "description": "Identifier for the object type that created the change in the competency structure recorded in the log.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.5"
+        },
+        {
+            "name": "ObjectTypeName",
+            "description": "Name of the object type. Field can be null.",
+            "type": "varchar",
+            "size": "18",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "ObjectVersion",
+            "description": "Version of the object that created the change in the competency structure",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.5"
+        },
+        {
+            "name": "LogDateTime",
+            "description": "Time and date of the entry in the log (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.5"
+        },
+        {
+            "name": "ModifiedBy",
+            "description": "User who modified the competency structure.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.5"
+        },
+        {
+            "name": "IndirectObjectId",
+            "description": "Identifier for the indirect object that created the change in the log. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.5"
+        },
+        {
+            "name": "IndirectObjectTypeName",
+            "description": "Name of the indirect object type. Field can be null.",
+            "type": "varchar",
+            "size": "18",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "IndirectObjectTypeId",
+            "description": "Identifier of the type of indirect object that created the change in the log. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.5"
+        },
+        {
+            "name": "IndirectObjectVersion",
+            "description": "Version of the object that indirectly created the change in the log. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.5"
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "type": "BDS",
+    "name": "Competency Activity Log",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4754-competency-data-sets#competency-activity-log",
+    "description": "The Competency Activity Log Brightspace Data Set records changes as competencies are mapped to specific activities. Returned Fields",
+    "columns": [
+        {
+            "name": "ActivityId",
+            "description": "Unique activity identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.6"
+        },
+        {
+            "name": "ActivityLogId",
+            "description": "Unique identifier for the activity log",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.6"
+        },
+        {
+            "name": "LogTypeId",
+            "description": "Log type identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.6"
+        },
+        {
+            "name": "LogTypeName",
+            "description": "Name of the log type. Field can be null.",
+            "type": "varchar",
+            "size": "19",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "LogDateTime",
+            "description": "Time and date of the entry in the log",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.6"
+        },
+        {
+            "name": "ModifiedBy",
+            "description": "User who modified the competency structure.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.6"
+        }
+    ]
+}

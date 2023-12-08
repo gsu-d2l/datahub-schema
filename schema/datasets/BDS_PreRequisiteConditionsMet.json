@@ -1,0 +1,58 @@
+{
+    "type": "BDS",
+    "name": "PreRequisite Conditions Met",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4533-release-conditions-data-sets#prerequisite-conditions-met",
+    "description": "The PreRequisite Conditions Met Brightspace Data Set returns all the prerequisite conditions that have been met for applicable users in the organization.",
+    "columns": [
+        {
+            "name": "PreRequisiteId",
+            "description": "Unique prerequisite identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Updated key"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Updated key"
+        },
+        {
+            "name": "DateMet",
+            "description": "Date the prerequisite condition was met (UTC). Field can be null",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Updated column size"
+        },
+        {
+            "name": "Action",
+            "description": "The action that occurred: Met or Deleted.",
+            "type": "nvarchar",
+            "size": "7",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.11 \/ 9.0"
+        },
+        {
+            "name": "LastModified",
+            "description": "The date and time when the condition was Met or Deleted. For Met conditions, this matches the DateMet column.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.11 \/ 9.0"
+        }
+    ]
+}

@@ -1,0 +1,358 @@
+{
+    "type": "BDS",
+    "name": "Role Details",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4534-role-details-data-sets#role-details",
+    "description": "The Role Details Brightspace Data Set returns a full set of attributes for each role in your organization.",
+    "columns": [
+        {
+            "name": "RoleId",
+            "description": "Unique role identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "OrgId",
+            "description": "Unique org unit identifier. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "9.0 - REMOVED COLUMN"
+        },
+        {
+            "name": "RoleName",
+            "description": "Name of the role.",
+            "type": "nvarchar",
+            "size": "120",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.0 - Updated size"
+        },
+        {
+            "name": "Description",
+            "description": "Description of the role. Field can be null.",
+            "type": "nvarchar",
+            "size": "400",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.0 - Updated size"
+        },
+        {
+            "name": "IsCascading",
+            "description": "Attribute indicating that the role cascades from other roles.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "InClassList",
+            "description": "Attribute indicating that users with this role appear in class lists.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "ClassListRoleName",
+            "description": "Attribute indicating the role name for users that appear in class lists. Field can be null.",
+            "type": "nvarchar",
+            "size": "120",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.0 - Updated size"
+        },
+        {
+            "name": "ClassListShowGroups",
+            "description": "Attribute indicating that members of this role can see groups consisting of learners in the class list.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "ClassListShowSections",
+            "description": "Attribute indicating that members of this role can see sections consisting of learners in the class list.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "ClassListDisplayRole",
+            "description": "Attribute indicating that members of this role appear in the class list with the role displayed.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "AccessInactiveCO",
+            "description": "Attribute indicating that the role can access inactive course offerings.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "HasSpecialAccess",
+            "description": "Attribute indicating that the role has special access to courses.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "AddToCourseOfferingGroups",
+            "description": "Attribute indicating that the role appears in the course offering group.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Field"
+        },
+        {
+            "name": "CanBeAutoEnrolledIntoGroups",
+            "description": "Attribute indicating that the role can be automatically enrolled into groups in a class.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "AddToCourseOfferingSections",
+            "description": "Attribute indicating that users with this role can be added to course offering sections.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "CanBeAutoEnrolledIntoSections",
+            "description": "Attribute indicating that users with this role can be automatically enrolled into course sections.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "ClassListDisplayRoleCategory",
+            "description": "Attributing that this role category appears in class lists.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.0 - REMOVED COLUMN"
+        },
+        {
+            "name": "ClassListRoleCategory",
+            "description": "Attribute indicating this is a role that can be used to sort members of a class list.",
+            "type": "nvarchar",
+            "size": "50",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.0 - REMOVED COLUMN"
+        },
+        {
+            "name": "ClassListRoleCategoryOrder",
+            "description": "Attribute indicating the order in which the role categories should appear in the class list.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.0 - REMOVED COLUMN"
+        },
+        {
+            "name": "AccessPastCourses",
+            "description": "Attribute indicating that this role can access past courses.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "AccessFutureCourses",
+            "description": "Attribute indicating that this role can access courses that have not yet started.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "SortOrder",
+            "description": "Indicates the sort order for users with this role.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "ShowInContent",
+            "description": "Indicates that this role should appear in Content.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "ShowInDiscussionAssess",
+            "description": "Indicates that this role should appear in Discussions assessments.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "ShowInDiscussionStats",
+            "description": "Indicates that this role should appear in Discussions statistics.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "ShowInGrades",
+            "description": "Indicates that this role should appear in Grades.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "ShowInAttendance",
+            "description": "Indicates that this role should appear in Attendance.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "AllowSelfEnrollInGroups",
+            "description": "Indicates that this role should have permission to self-enroll in groups.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "ShowInRegistration",
+            "description": "Indicates that this role should appear in registration information for a course.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "ShowInUserProgress",
+            "description": "Indicates that this role should appear in User Progress.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.1"
+        },
+        {
+            "name": "RoleAlias",
+            "description": "Indicates the alias for this role. Field can be null.",
+            "type": "nvarchar",
+            "size": "120",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.0 - Updated size"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version for this row entry.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.0 - REMOVED COLUMN"
+        },
+        {
+            "name": "RoleCode",
+            "description": "Code assigned to each role for mapping to other systems or organizations. Field can be null.",
+            "type": "nvarchar",
+            "size": "100",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.0 - Updated size"
+        },
+        {
+            "name": "LastModifiedDate",
+            "description": "Date and time when the role was last modified (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.0"
+        },
+        {
+            "name": "DeletedBy",
+            "description": "User identifier of the user that deleted the role. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "9.0"
+        }
+    ]
+}

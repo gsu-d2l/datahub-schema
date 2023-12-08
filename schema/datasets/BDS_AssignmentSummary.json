@@ -1,0 +1,228 @@
+{
+    "type": "BDS",
+    "name": "Assignment Summary",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4767-assignments-data-sets#assignment-summary",
+    "description": "The Assignment Summary Brightspace Data Set returns information on the assignments for your org units.",
+    "columns": [
+        {
+            "name": "DropboxId",
+            "description": "Unique assignment identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "Name",
+            "description": "Assignment name",
+            "type": "nvarchar",
+            "size": "128",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "Category",
+            "description": "Assignment category. Field can be null.",
+            "type": "nvarchar",
+            "size": "128",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "Type",
+            "description": "Individual\/group assignment",
+            "type": "varchar",
+            "size": "10",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "GradeItemId",
+            "description": "Unique grade item identifier. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "PossibleScore",
+            "description": "Possible score a user can achieve on the assignment. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "StartDate",
+            "description": "Assignment availability start date (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "EndDate",
+            "description": "Assignment availability end date (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "DueDate",
+            "description": "Assignment due date (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "IsRestricted",
+            "description": "Is assignment restricted",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Is assignment deleted",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "TurnItInEnabled",
+            "description": "Is TurnItIn enabled",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "IsHidden",
+            "description": "True or false value indicating whether the assignment is hidden.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.2"
+        },
+        {
+            "name": "SortOrder",
+            "description": "Display sort order used for the content objects",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.2"
+        },
+        {
+            "name": "SubmissionType",
+            "description": "Indicates the format submission type for the assignment being submitted. Values for this column include File, Text, On Paper, and Observed.",
+            "type": "varchar",
+            "size": "18",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.2"
+        },
+        {
+            "name": "CompletionType",
+            "description": "Indicates how the assignment was completed. Values for this column include OnSubmission, DueDate, ManuallyByLearner, and OnEvaluation.",
+            "type": "varchar",
+            "size": "27",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.2"
+        },
+        {
+            "name": "ResultId",
+            "description": "Unique release condition result identifier. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "4.9 \/ 5.3"
+        },
+        {
+            "name": "CategoryId",
+            "description": "Unique category identifier for the assignment. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.9 \/ 6.2"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "StartDateAvailabilityType",
+            "description": "Determines whether learners can view or access the assignment before the StartDate. See About Availability Type for details. All assignments with start dates created before December 2022\/20.22.12 have default value '0'. Field can be null.",
+            "type": "smallint",
+            "size": "2",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "7.13"
+        },
+        {
+            "name": "EndDateAvailabilityType",
+            "description": "Determines whether learners can view or access the assignment after the EndDate. See About Availability Type for details. All assignments with end dates created before December 2022\/20.22.12 have default value '0'. Field can be null.",
+            "type": "smallint",
+            "size": "2",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "7.13"
+        }
+    ]
+}

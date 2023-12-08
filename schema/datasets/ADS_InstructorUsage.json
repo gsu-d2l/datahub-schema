@@ -1,0 +1,248 @@
+{
+    "type": "ADS",
+    "name": "Instructor Usage",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#instructor-usage",
+    "description": "The Instructor Usage data set returns information about how instructors are using Brightspace functionality within their courses. Required Permission Advanced Data Sets > Can execute Instructor Usage (Organization level) Available Filters Returned Fields",
+    "columns": [
+        {
+            "name": "Username",
+            "description": "Instructor's username.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "First Name",
+            "description": "Instructor's first name.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Last Name",
+            "description": "Instructor's last name.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Org Defined Id",
+            "description": "Instructor's Org Defined Id (often the learner identifier from an SIS system).",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "User Id",
+            "description": "D2L's unique identifier for the instructor.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Role Name",
+            "description": "Instructor's role at the specific course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Role Id",
+            "description": "Instructor's role Id at the specific course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Is Active",
+            "description": "Instructor's status.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Course Offering Name",
+            "description": "Name of the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Course Offering Code",
+            "description": "Often the course identifier from an SIS system.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Course Offering Id",
+            "description": "D2L's unique identifier for the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Number of Content Topics Visited",
+            "description": "Number of content topics the instructor visited in the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Last Access to Course Offering Content",
+            "description": "Last date\/time the instructor accessed content within the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Number of Assignments",
+            "description": "Number of assignments in the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Number of Assignment Submissions Commented on",
+            "description": "Number of assignment submissions the instructor commented on in the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Number of Grade Items",
+            "description": "Number of grade items in the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Number of Graded Grade Items",
+            "description": "Number of grade items the instructor graded in the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Last Modification of a Grade Item",
+            "description": "Last date\/time a grade item in the course was modified by the instructor.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Number of Discussion Posts",
+            "description": "Number of discussion posts in the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Number of Discussion Posts Authored",
+            "description": "Number of discussion posts the instructor authored in the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Last Discussion Post Date",
+            "description": "Date\/time the instructor last posted a discussion in the course.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Last Access to Course Offering",
+            "description": "Last date\/time (UTC format) the instructor accessed the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Number of Logins to the System",
+            "description": "Number of times the instructor accessed Brightspace.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Last Sent Mail Date",
+            "description": "Last date\/time the instructor sent an email from within the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        }
+    ]
+}

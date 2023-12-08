@@ -1,0 +1,88 @@
+{
+    "type": "BDS",
+    "name": "Media Consumption Log",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/22812-content-service-data-sets#media-consumption-log",
+    "description": "In the Media Consumption Log Brightspace Data Set, each row represents one session where a user interacted with a media object, beginning when the user starts playback and ending when the user stops engaging with the media object. The data set captures events from November 2023 onwards.",
+    "columns": [
+        {
+            "name": "LogId",
+            "description": "Unique identifier for this consumption session.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique identifier for the user who consumed the content.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "ContentId",
+            "description": "Unique identifier for the content that was consumed.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "RevisionId",
+            "description": "Unique identifier for the revision of the content that was consumed.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "ContentType",
+            "description": "Type of content for this revision: Audio or Video.",
+            "type": "nvarchar",
+            "size": "5",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "ClientApp",
+            "description": "Location in Brightspace from which the content was added. Field can be null.",
+            "type": "nvarchar",
+            "size": "32",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "DateConsumed",
+            "description": "Date and time when the user started this consumption session (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "DurationPercentageWatched",
+            "description": "Percentage (from 0 to 100) of the content's duration that the user consumed in this session.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        }
+    ]
+}

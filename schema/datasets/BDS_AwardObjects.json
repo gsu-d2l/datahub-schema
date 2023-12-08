@@ -1,0 +1,138 @@
+{
+    "type": "BDS",
+    "name": "Award Objects",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4520-awards-data-sets#award-objects",
+    "description": "The Award Objects Brightspace Data Set returns details on all awards that were created anywhere in the organization.",
+    "columns": [
+        {
+            "name": "AwardId",
+            "description": "Unique award identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.4"
+        },
+        {
+            "name": "Name",
+            "description": "Award name",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "AwardTypeId",
+            "description": "Award type identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.4"
+        },
+        {
+            "name": "Type",
+            "description": "Award type (Certificate or Badge)",
+            "type": "nvarchar",
+            "size": "128",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "Description",
+            "description": "Description of the award.",
+            "type": "nvarchar",
+            "size": "512",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.7 - Changed Description"
+        },
+        {
+            "name": "ExpiryCalculationType",
+            "description": "Calculation type for expiry of award",
+            "type": "nvarchar",
+            "size": "128",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "ExpiryNotificationType",
+            "description": "Time unit for expiry notification (such as days)",
+            "type": "nvarchar",
+            "size": "128",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "ExpiryDate",
+            "description": "Date when the award is scheduled to expire. Can be NULL if the award never expires or has a relative expiry date.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.7 - Updated description"
+        },
+        {
+            "name": "ImagePath",
+            "description": "Indicates the location where the award image is stored. Field can be null.",
+            "type": "varchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "CreatedByUserId",
+            "description": "User who created the award",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Field"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date award was last changed (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.4"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates whether the award is deleted",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.4"
+        },
+        {
+            "name": "Criteria",
+            "description": "Indicates the criteria necessary to issue the award. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "8.7"
+        }
+    ]
+}

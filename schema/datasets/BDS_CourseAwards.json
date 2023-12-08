@@ -1,0 +1,68 @@
+{
+    "type": "BDS",
+    "name": "Course Awards",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4520-awards-data-sets#course-awards",
+    "description": "The Course Awards Brightspace Data Set returns a list of all the awards that exist in each course for all your org units.",
+    "columns": [
+        {
+            "name": "AssociationId",
+            "description": "Unique association identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.4"
+        },
+        {
+            "name": "AwardId",
+            "description": "Unique award identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "DateCreated",
+            "description": "Date when the award was created (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "HiddenAward",
+            "description": "Award is hidden from learner view",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.0"
+        },
+        {
+            "name": "ConditionSetId",
+            "description": "Identifier for the conditions that need to be met in order to issue this award. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.0"
+        }
+    ]
+}

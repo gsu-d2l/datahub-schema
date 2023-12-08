@@ -1,0 +1,38 @@
+{
+    "type": "BDS",
+    "name": "SCORM Interaction Objectives",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4536-scorm-data-sets#scorm-interaction-objectives",
+    "description": "The SCORM Interaction Objectives Brightspace Data Set defines the relationship between interactions and their objectives. Returned Fields",
+    "columns": [
+        {
+            "name": "InteractionId",
+            "description": "Unique identifier of the interaction.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "ObjectiveId",
+            "description": "Unique identifier of the objective.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date when the activity was last modified (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.5"
+        }
+    ]
+}

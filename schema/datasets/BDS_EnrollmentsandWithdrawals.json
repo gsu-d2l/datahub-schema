@@ -1,0 +1,88 @@
+{
+    "type": "BDS",
+    "name": "Enrollments and Withdrawals",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4740-users-data-sets#enrollments-and-withdrawals",
+    "description": "The Enrollments and Withdrawals Brightspace Data Set returns a list of enrollments and withdrawals for all users in your organization.",
+    "columns": [
+        {
+            "name": "LogId",
+            "description": "Unique log entry identifier for any change to the user enrollment.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.7 - Updated description"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Added FK"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Added FK"
+        },
+        {
+            "name": "RoleId",
+            "description": "Unique role identifier. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Added FK"
+        },
+        {
+            "name": "Action",
+            "description": "Indicates whether the item is an enrollment or a withdrawal",
+            "type": "varchar",
+            "size": "50",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.2"
+        },
+        {
+            "name": "EnrollmentType",
+            "description": "Enrollment type. Field can be null.",
+            "type": "varchar",
+            "size": "50",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.0 - REMOVED COLUMN"
+        },
+        {
+            "name": "ModifiedByUserId",
+            "description": "Identifies the last user who modified the enrollment status for the user. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "3.2"
+        },
+        {
+            "name": "EnrollmentDate",
+            "description": "Date enrolled (UTC)",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.2"
+        }
+    ]
+}

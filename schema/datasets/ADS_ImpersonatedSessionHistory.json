@@ -1,0 +1,88 @@
+{
+    "type": "ADS",
+    "name": "Impersonated Session History",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#impersonated-session-history",
+    "description": "The Impersonated Session History data set returns all impersonated sessions for a specific user or all users over a date range, including D2LSupport. Note: The course offerings must be children of a given parent org unit. Required Permission Advanced Data Sets > Can Execute Impersonation Session History (Organization level) Available Filters Returned Fields",
+    "columns": [
+        {
+            "name": "SessionId",
+            "description": "Unique session identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.8.5"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit Identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.8.5"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.8.5"
+        },
+        {
+            "name": "Username",
+            "description": "Username of the impersonated user",
+            "type": "nvarchar",
+            "size": "540",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.8.5"
+        },
+        {
+            "name": "DateStarted",
+            "description": "Session start date time (UTC)",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.8.5"
+        },
+        {
+            "name": "DateEnded",
+            "description": "Session end date time (UTC)",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.8.5"
+        },
+        {
+            "name": "ImpersonatingUser Id",
+            "description": "Unique user identifier of the impersonator.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.8.5"
+        },
+        {
+            "name": "ImpersonatingUsername",
+            "description": "Impersonator's username.",
+            "type": "nvarchar",
+            "size": "540",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.8.5"
+        }
+    ]
+}

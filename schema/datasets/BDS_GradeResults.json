@@ -1,0 +1,178 @@
+{
+    "type": "BDS",
+    "name": "Grade Results",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4527-grades-data-sets#grade-results",
+    "description": "The Grade Results Brightspace Data Set returns data from the newest grade objects first.",
+    "columns": [
+        {
+            "name": "GradeObjectId",
+            "description": "Unique grade object identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "PointsNumerator",
+            "description": "Number of points received by user. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "PointsDenominator",
+            "description": "Total number of points possible. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "WeightedNumerator",
+            "description": "Number of points received after weight is applied. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "WeightedDenominator",
+            "description": "Total number of points possible after weight is applied. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "IsReleased",
+            "description": "Is grade released. Field can be null. For example, it is null when the grade object is not submitted.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "7.13 - Updated description"
+        },
+        {
+            "name": "IsDropped",
+            "description": "Is score dropped from final grade",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "LastModified",
+            "description": "Last time score was modified (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "User ID of user who last modified the grade object. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Type and Column Size"
+        },
+        {
+            "name": "Comments",
+            "description": "Comments. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "PrivateComments",
+            "description": "Private comments. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "IsExempt",
+            "description": "Is exempt. Field can be null.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.1"
+        },
+        {
+            "name": "GradeText",
+            "description": "Field can be null.",
+            "type": "nvarchar",
+            "size": "50",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.6"
+        },
+        {
+            "name": "GradeReleasedDate",
+            "description": "Date when the grade was released to the learner (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "3.2"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version of the grade result. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "3.2"
+        }
+    ]
+}

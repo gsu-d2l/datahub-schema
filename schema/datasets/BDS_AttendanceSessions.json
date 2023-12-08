@@ -1,0 +1,68 @@
+{
+    "type": "BDS",
+    "name": "Attendance Sessions",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4519-attendance-data-sets#attendance-sessions",
+    "description": "The Attendance Sessions Brightspace Data Set maps the sessions that exist for each register in your organization.",
+    "columns": [
+        {
+            "name": "AttendanceSessionId",
+            "description": "Unique identifier for the session.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "AttendanceRegisterId",
+            "description": "Unique attendance register identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "Name",
+            "description": "The given name of the session.",
+            "type": "nvarchar",
+            "size": "128",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "Description",
+            "description": "The description of the session. Field can be null.",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "SortOrder",
+            "description": "The placement of the session in the register. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        }
+    ]
+}

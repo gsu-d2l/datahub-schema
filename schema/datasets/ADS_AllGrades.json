@@ -1,0 +1,338 @@
+{
+    "type": "ADS",
+    "name": "All Grades",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#all-grades",
+    "description": "The All Grades data set returns one row for each gradable item for each learner in each course offering. Note: Course offerings must be the direct or indirect children of a specific org unit. For example, you can export all grade items for: Required Permission Advanced Data Sets > Can execute All Grades (Organization level) Available Filters Returned Fields",
+    "columns": [
+        {
+            "name": "User Id",
+            "description": "D2L's unique identifier for the user.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Org Defined Id",
+            "description": "User's Org Defined Id (often the learner identifier from an SIS system).",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Username",
+            "description": "User's username.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "First Name",
+            "description": "User's first name.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Last Name",
+            "description": "User's last name.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Is Active",
+            "description": "Learner's status.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Role Id",
+            "description": "User's role Id at the specific course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Role Name",
+            "description": "User's role at the specific course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Course Offering Id",
+            "description": "D2L's unique identifier for the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Course Offering Code",
+            "description": "Often the course identifier from an SIS system.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Course Offering Name",
+            "description": "Name of the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Course Section Id",
+            "description": "D2L's unique identifier for the section.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Course Section Code",
+            "description": "Client defined code for the section.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Course Section Name",
+            "description": "Name of the section.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Grade Item Category Id",
+            "description": "D2L's unique identifier for the category in which the grade item belongs.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Grade Item Category Name",
+            "description": "Name of the category in which the grade item belongs.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Grade Item Id",
+            "description": "D2L's unique identifier for a grade item. Note: The final calculated grade and final adjusted grades will be included.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Grade Item Name",
+            "description": "Name of the grade item.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Grade Item Weight",
+            "description": "Weight of the grade item.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Grade Item Start Date",
+            "description": "Date the grade item will become visible in the grade book.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Grade Item End Date",
+            "description": "Date the grade item will become invisible in the grade book.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Points Numerator",
+            "description": "Numerator of the grade value.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Points Denominator",
+            "description": "Denominator of the grade value.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Grade Value",
+            "description": "Value of the grade with the grade scheme applied.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Grade Last Modified",
+            "description": "Date that the grade was last modified. Note: This is a UTC formatted date\/time stamp in accordance with the org's local time zone.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Grade Comments",
+            "description": "Comments\/feedback left for the user.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Grader User Id",
+            "description": "User Id of the last user that modified the grade.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Grader Org Defined Id",
+            "description": "Org Defined Id of the last user that modified the grade.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Grader Username",
+            "description": "Grader's username.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Grader First Name",
+            "description": "First name of the last user that modified the grade.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Grader Last Name",
+            "description": "Last name of the last user that modified the grade.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Exclude From Final Grade",
+            "description": "Whether this grade value is not used in the final grade calculation.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Grade Object Type",
+            "description": "Grade object type name.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.12"
+        }
+    ]
+}

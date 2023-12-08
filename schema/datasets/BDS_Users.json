@@ -1,0 +1,148 @@
+{
+    "type": "BDS",
+    "name": "Users",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4740-users-data-sets#users",
+    "description": "The Users Brightspace Data Set returns a list of users in your organization. Version 4.10 \/ 5.4 adds a system user entry with UserId = 0 to this data set. The system user is only included in the full CSV.",
+    "columns": [
+        {
+            "name": "UserId",
+            "description": "Unique user identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "UserName",
+            "description": "User name",
+            "type": "nvarchar",
+            "size": "270",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Updated column size"
+        },
+        {
+            "name": "OrgDefinedId",
+            "description": "Org defined ID. Field can be null.",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.9 \/ 5.3 - Corrected column size"
+        },
+        {
+            "name": "FirstName",
+            "description": "User's first name. If a preferred first name is provided, it is used. If not, the legal first name is used.",
+            "type": "nvarchar",
+            "size": "64",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.13 \/ 7.1 - Updated description"
+        },
+        {
+            "name": "MiddleName",
+            "description": "Middle name. Field can be null.",
+            "type": "nvarchar",
+            "size": "64",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Updated column size"
+        },
+        {
+            "name": "LastName",
+            "description": "User's last name. If a preferred last name is provided, it is used. If not, the legal last name is used.",
+            "type": "nvarchar",
+            "size": "64",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.13 \/ 7.1 - Updated description"
+        },
+        {
+            "name": "IsActive",
+            "description": "Is user active? Field can be null.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "Organization",
+            "description": "Organization name. Field can be null.",
+            "type": "varchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Updated column size"
+        },
+        {
+            "name": "ExternalEmail",
+            "description": "External email address. Field can be null.",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Updated column size"
+        },
+        {
+            "name": "SignupDate",
+            "description": "Date the user was created in the system (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "FirstLoginDate",
+            "description": "Date when the user first logged in to the system (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "3.0 - Added"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version of the content in the row. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "3.1 -Added"
+        },
+        {
+            "name": "OrgRoleId",
+            "description": "The unique role identifier for the role of the user at the org level. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4 - Added"
+        },
+        {
+            "name": "LastAccessed",
+            "description": "The date the user last accessed the system. If the user has never accessed the system, captures the date the user was created.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.13 \/ 7.1 - Updated description"
+        }
+    ]
+}

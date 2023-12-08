@@ -1,0 +1,48 @@
+{
+    "type": "BDS",
+    "name": "Release Condition Results",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4533-release-conditions-data-sets#release-condition-results",
+    "description": "The Release Condition Results Brightspace Data Set returns all the release condition results and whether they have been met for applicable users in the organization. These are the resulting actions that occur when pre-requisites are met.",
+    "columns": [
+        {
+            "name": "ResultId",
+            "description": "Unique result identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.7 - Updated key"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.7 - Updated key"
+        },
+        {
+            "name": "Met",
+            "description": "Indicates whether the result has been met or not met by the user.",
+            "type": "varchar",
+            "size": "7",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Updated column size"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.7 \/ 4.2"
+        }
+    ]
+}

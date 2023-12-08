@@ -1,0 +1,48 @@
+{
+    "type": "BDS",
+    "name": "Checklist Completions",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4523-checklist-data-sets#checklist-completions",
+    "description": "The Checklist Completions Brightspace Data Set returns the completion status of each checklist item.",
+    "columns": [
+        {
+            "name": "UserId",
+            "description": "Unique user Identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "DateCompleted",
+            "description": "Date the checklist item was last completed (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.11 \/ 9.0 - Changed description"
+        },
+        {
+            "name": "ItemId",
+            "description": "Unique checklist item identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date the content user completion was last modified (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "6.8"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "type": "BDS",
+    "name": "Organizational Unit Parents",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4529-organizational-units-data-sets#organizational-unit-parents",
+    "description": "The Organizational Unit Parents Brightspace Data Set returns the direct parent of each org unit in order to build out the initial org unit structure. Returned Fields",
+    "columns": [
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "2.3"
+        },
+        {
+            "name": "ParentOrgUnitId",
+            "description": "Parent org unit identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "2.3"
+        },
+        {
+            "name": "RowVersion",
+            "description": "Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Type and Column Size"
+        },
+        {
+            "name": "DateDeleted",
+            "description": "Date the parent-child relationship was deleted (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "8.6"
+        }
+    ]
+}

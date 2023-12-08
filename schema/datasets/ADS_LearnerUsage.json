@@ -1,0 +1,358 @@
+{
+    "type": "ADS",
+    "name": "Learner Usage",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#learner-usage",
+    "description": "The Learner Usage data set returns the activity for learners in course offerings. The course offerings must be children of the selected org unit. The learners that are included depend on the date range selected (see note). About Time Tracking The time tracking in this report does not align with the SCORM Detailed Report. If a user opens a SCORM package in a new window, the Total Time Spent in the SCORM Detailed Report will be substantially higher because Learner Usage doesn't track that time. If a user opens a SCORM package in embed mode, the Total Time Spent in the SCORM Detailed Report will be slightly lower because it only tracks the time users spend interacting with the SCORM Object, whereas Learner Usage Report tracks the entire session. About SCORM Dates If a user clicks on a legacy SCORM topic it will be marked as completed, even if the user has not progressed through the entire topic and has a SCORM Report showing incomplete. This means that a user who visits a legacy SCORM topic will get both a Last SCORM Visit Date and a Last SCORM Completion Date Required Permission Advanced Data Sets > Can execute Learner Usage (Organization level) Available Filters Returned Fields",
+    "columns": [
+        {
+            "name": "Course Offering Id",
+            "description": "Unique course offering numeric identifier in Brightspace.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Course Offering Code",
+            "description": "Course offering string code.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Course Offering Name",
+            "description": "Course offering string name.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Parent Department Name",
+            "description": "Org unit name of the parent department.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Parent Department Code",
+            "description": "Org unit code of the parent department.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Semester Id",
+            "description": "Unique semester numeric identifier in Brightspace. If a course is not associated with a semester, the value is NULL.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Semester Code",
+            "description": "Semester code associated with the course offering. The semester is the organization unit type as defined by the Standard Semester in Brightspace. If a semester is not associated as a direct parent of the course offering being exported, the value is NULL. If a course offering is associated with multiple semesters, these are exported as a pipe-delimited list of strings.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Semester Name",
+            "description": "Semester name associated with the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "User Id",
+            "description": "Internal numeric user identifier within Brightspace.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Username",
+            "description": "User name that identifies the learner.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Org Defined Id",
+            "description": "Organization-defined identifier within Brightspace for the learner.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "First Name",
+            "description": "First name.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Last Name",
+            "description": "Last name.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Is Active",
+            "description": "Learner's status.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Role Id",
+            "description": "The learner's numeric role ID within the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Role Name",
+            "description": "A string identifying the learner's role within the course offering such as Learner.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Content Completed",
+            "description": "Number of content topics completed by the learner. See Note: Calculating Content Completed.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Content Required",
+            "description": "Number of content topics required by the learner (for user progress). See Note: Calculating Content Required.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Checklist Completed",
+            "description": "Number of checklists completed by the learner.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Quiz Completed",
+            "description": "The total number of unique quizzes the user has attempted and completed. This does not include quizzes that are in progress.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Total Quiz Attempts",
+            "description": "The total number of quiz attempts the user has attempted and completed. This does not include quiz attempts that are in progress.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Discussion Post Created",
+            "description": "Number of discussion posts created by the learner.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Discussion Post Replies",
+            "description": "Number of discussion replies by the learner.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Discussion Post Read",
+            "description": "Number of discussion posts read by the learner.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Last Discussion Post Date",
+            "description": "Date the user last posted to a discussion. If the user has not posted in any discussion, this field is NULL.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Number Of Assignment Submissions",
+            "description": "Number of times the learner submitted an item to assignments within the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Last Assignment Submission Date",
+            "description": "Date\/time the learner's last submission\/post into an assignment.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Total Time Spent In Content",
+            "description": "Sum of all the time spent in course content, measured in seconds. If the learner has not visited any of the content in this course, this field is ZERO. If the learner has multiple instances or tabs open with the same content, this tracks each instance as a separate session, and as a result, substantially increases total time spent.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Last Visited Date",
+            "description": "Most recent visit date\/time for the course. If the course has not been visited by the learner, this field is NULL.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Last System Login",
+            "description": "Date\/time the learner last logged in to Brightspace.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Number Of Logins To The System",
+            "description": "Total number of times the learner logged in to Brightspace.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Auditor Name",
+            "description": "Username of the user who is assigned as the auditor for this learner.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Last Quiz Attempt Date",
+            "description": "Date the learner last attempted and completed a quiz.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.21.7"
+        },
+        {
+            "name": "Last Scorm Completion Date",
+            "description": "Date the learner last completed a SCORM object.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.21.7"
+        },
+        {
+            "name": "Last Scorm Visit Date",
+            "description": "Date the learner last launched or interacted with a SCORM object.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.21.7"
+        }
+    ]
+}

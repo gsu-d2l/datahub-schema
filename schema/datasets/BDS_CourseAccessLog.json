@@ -1,0 +1,48 @@
+{
+    "type": "BDS",
+    "name": "Course Access Log",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4740-users-data-sets#course-access-log",
+    "description": "The Course Access Log Brightspace Data Set returns information on users accessing their course offerings using the Pulse app. The data set creates a row with a timestamp when a user initially accesses a course, then creates additional rows for every 30 minutes that the user spends in the course.",
+    "columns": [
+        {
+            "name": "OrgUnitId",
+            "description": "Unique identifier for the org unit.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "7.5"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique identifier for the user.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "7.5"
+        },
+        {
+            "name": "Timestamp",
+            "description": "Indicates the time in UTC that a user accessed the course.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.5"
+        },
+        {
+            "name": "Source",
+            "description": "The source of the course access. Only Pulse data is available at this time.",
+            "type": "nvarchar",
+            "size": "20",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.5"
+        }
+    ]
+}

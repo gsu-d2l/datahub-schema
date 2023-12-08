@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="fallbackPageContent">
+<main>
+<section>
+<div class="mainColumn">
+<article>
+<h2 data-id="rubric-assessment">Rubric Assessment</h2>
+<p>The Rubric Assessment Brightspace Data Set returns rubric outcomes that are associated with a competency. Includes incomplete rubric assessments, which have a null LevelAchieved value.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th><b>Key</b><br></th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>RubricId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Unique rubric identifier</p>
+                    </td>
+<td style="width: 122px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>OrgUnitId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Unique org unit identifier</p>
+                    </td>
+<td style="width: 122px;">
+<p>int</p>
+                    </td>
+<td style="width: 122px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>6.8 - Updated key</td>
+<td style="width: 122px;">
+<p>UserId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Unique user identifier</p>
+                    </td>
+<td style="width: 122px;">
+<p>int</p>
+                    </td>
+<td style="width: 122px;">
+<p>4</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 122px;">
+<p>Score</p>
+                    </td>
+<td style="width: 122px;">
+<p>Rubric score.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">
+<p>decimal</p>
+                    </td>
+<td style="width: 122px;">
+<p>36, 2</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>AssessedByUserId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Rubric assessed by.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">
+<p>int</p>
+                    </td>
+<td style="width: 122px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>AssessmentDate</p>
+                    </td>
+<td style="width: 122px;">
+<p>Date the rubric was assessed (UTC).</p>
+                    </td>
+<td style="width: 122px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>IsCompleted</p>
+                    </td>
+<td style="width: 122px;">
+<p>Is rubric assessment complete.</p>
+                    </td>
+<td style="width: 122px;">
+<p>bit</p>
+                    </td>
+<td style="width: 122px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 122px;">
+<p>ActivityType</p>
+                    </td>
+<td style="width: 122px;">
+<p>Activity type associated with the rubric.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 122px;">
+<p>50</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>ActivityObjectId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Identifier of the activity associated with the rubric.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>DateCreated</p>
+                    </td>
+<td style="width: 122px;">
+<p>Date rubric was created (UTC).</p>
+                    </td>
+<td style="width: 122px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>AssessmentId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Unique assessment ID.</p>
+                    </td>
+<td style="width: 122px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 122px;">LevelAchievedId</td>
+<td style="width: 122px;">
+<p>Unique rubric level achieved identifier.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">bigint</td>
+<td style="width: 122px;">8</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="rubric-assessment-criteria">Rubric Assessment Criteria</h2>
+<p>The Rubric Assessment Criteria Brightspace Data Set returns details for all rubric criteria in rubrics.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>AssessmentId</p>
+                    </td>
+<td>
+<p>Unique assessment ID</p>
+                    </td>
+<td style="width: 122px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.6 - Updated PK</td>
+<td style="width: 122px;">
+<p>UserId</p>
+                    </td>
+<td>
+<p>Unique user identifier</p>
+                    </td>
+<td style="width: 122px;">
+<p>int</p>
+                    </td>
+<td style="width: 122px;">
+<p>4</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.6 - Updated FK</td>
+<td style="width: 122px;">
+<p>RubricId</p>
+                    </td>
+<td>
+<p>Unique rubric ID</p>
+                    </td>
+<td style="width: 122px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>4.8 / 5.2 - Updated column size</td>
+<td style="width: 122px;">
+<p>Score</p>
+                    </td>
+<td>
+<p>Rubric score the user achieved on a criterion.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">
+<p>decimal</p>
+                    </td>
+<td style="width: 122px;">
+<p>19, 9</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>Feedback</p>
+                    </td>
+<td>
+<p>Feedback for that criterion.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 122px;">
+<p>1000</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>IsScoreOverridden</p>
+                    </td>
+<td>
+<p>Is score overridden by instructor</p>
+                    </td>
+<td style="width: 122px;">
+<p>bit</p>
+                    </td>
+<td style="width: 122px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>4.9 / 5.3 - Updated PK</td>
+<td style="width: 122px;">CriterionId</td>
+<td>Unique criterion identifier</td>
+<td style="width: 122px;">bigint</td>
+<td style="width: 122px;">8</td>
+<td>PK, FK</td>
+                </tr><tr align="left" valign="top"><td>5.5</td>
+<td style="width: 122px;">LevelAchievedId</td>
+<td>
+<p>Unique rubric level achieved identifier.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">bigint</td>
+<td style="width: 122px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0</td>
+<td style="width: 122px;">Version</td>
+<td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
+<td style="width: 122px;">bigint</td>
+<td style="width: 122px;">8</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="rubric-criteria-levels">Rubric Criteria Levels</h2>
+<p>The Rubric Criteria Levels Brightspace Data Set returns the details for all rubric criteria and associated levels where they exist.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>4.9 / 5.3 - Corrected PK</td>
+<td style="width: 122px;">
+<p>RubricId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Unique rubric identifier</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>4.9 / 5.3 - Corrected PK</td>
+<td style="width: 122px;">
+<p>CriterionId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Identifier for the criterion associated with the rubric levels</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>2.0</td>
+<td style="width: 122px;">Description</td>
+<td style="width: 122px;">
+<p>Description of the criterion.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>nvarchar</td>
+<td style="width: 122px;">1000</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>2.0</td>
+<td style="width: 122px;">Feedback</td>
+<td style="width: 122px;">
+<p>Automated feedback provided by the rubric for the rubric criterion.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>nvarchar</td>
+<td style="width: 122px;">1000</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>2.0</td>
+<td style="width: 122px;">Value</td>
+<td style="width: 122px;">
+<p>Value assigned to the criterion in the rubric. This is populated based on the rubric type and the scoring method.</p>
+<p>Field can be null</p>
+                    </td>
+<td>decimal</td>
+<td style="width: 122px;">19, 9</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>2.0</td>
+<td style="width: 122px;">LevelId</td>
+<td style="width: 122px;">Identifier of the level associated with the criterion</td>
+<td>bigint</td>
+<td style="width: 122px;">8</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>2.0</td>
+<td style="width: 122px;">
+<p>IsDeleted</p>
+                    </td>
+<td style="width: 122px;">
+<p>Set to true if the criterion has been deleted</p>
+                    </td>
+<td>
+<p>bit</p>
+                    </td>
+<td style="width: 122px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr></tbody></table>
+<h2 data-id="rubric-objects">Rubric Objects</h2>
+<p>The Rubric Objects Brightspace Data Set returns information about the rubric properties.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">
+<p>RubricId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Unique rubric Identifier</p>
+                    </td>
+<td style="width: 122px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 122px;">
+<p>Name</p>
+                    </td>
+<td style="width: 122px;">
+<p>Name of the rubric</p>
+                    </td>
+<td style="width: 122px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 122px;">
+<p>256</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 122px;">
+<p>RubricStatus</p>
+                    </td>
+<td style="width: 122px;">
+<p>Status of the rubric.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 122px;">
+<p>256</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">
+<p>Description</p>
+                    </td>
+<td style="width: 122px;">
+<p>Description of the rubric object.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 122px;">
+<p>1000</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 122px;">
+<p>RubricType</p>
+                    </td>
+<td style="width: 122px;">
+<p>Type of rubric used.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 122px;">
+<p>256</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 122px;">
+<p>ScoringMethods</p>
+                    </td>
+<td style="width: 122px;">
+<p>Type of scoring methods used.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 122px;">
+<p>256</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">
+<p>IsScoreVisible</p>
+                    </td>
+<td style="width: 122px;">
+<p>Is the rubric score visible</p>
+                    </td>
+<td style="width: 122px;">
+<p>bit</p>
+                    </td>
+<td style="width: 122px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">
+<p>OrgUnitID</p>
+                    </td>
+<td style="width: 122px;">
+<p>Org unit identifier associated with the rubric</p>
+                    </td>
+<td style="width: 122px;">
+<p>int</p>
+                    </td>
+<td style="width: 122px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">
+<p>IsShared</p>
+                    </td>
+<td style="width: 122px;">
+<p>Set to true if the Rubric object is shared</p>
+                    </td>
+<td style="width: 122px;">
+<p>bit</p>
+                    </td>
+<td style="width: 122px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">
+<p>IsDeleted</p>
+                    </td>
+<td style="width: 122px;">
+<p>Set to true if the rubric object is deleted</p>
+                    </td>
+<td style="width: 122px;">
+<p>bit</p>
+                    </td>
+<td style="width: 122px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr></tbody></table>
+<h2 data-id="rubric-object-criteria">Rubric Object Criteria</h2>
+<p>The Rubric Object Criteria Brightspace Data Set returns information about the rubric criteria within a rubric.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">
+<p>RubricId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Unique rubric identifier</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">
+<p>CriterionId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Identifier for the criterion associated with the rubric levels</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>2.0 - field name updated</td>
+<td style="width: 122px;">
+<p>Name</p>
+                    </td>
+<td style="width: 122px;">
+<p>Name of the criterion.</p>
+                    </td>
+<td>
+<p>nvarchar</p>
+                    </td>
+<td style="width: 122px;">
+<p>256</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">
+<p>SortOrder</p>
+                    </td>
+<td style="width: 122px;">
+<p>Sort order by which the criteria is listed</p>
+                    </td>
+<td>
+<p>int</p>
+                    </td>
+<td style="width: 122px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>2.0 - field name updated</td>
+<td style="width: 122px;">
+<p>CriteriaGroupId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Identifier for the criterion group to which the criterion belongs</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>2.0 - field name updated</td>
+<td style="width: 122px;">GroupName</td>
+<td style="width: 122px;">Name of the criterion group.</td>
+<td>nvarchar</td>
+<td style="width: 122px;">256</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>2.0 - field name updated</td>
+<td style="width: 122px;">GroupSortOrder</td>
+<td style="width: 122px;">Sort order assigned to the criterion group</td>
+<td>int</td>
+<td style="width: 122px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">
+<p>LevelSetId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Identifier of the Level Set to which the level belongs</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">
+<p>IsDeleted</p>
+                    </td>
+<td style="width: 122px;">
+<p>Set to true if the Level Set, Criterion Group or Criterion has been deleted</p>
+                    </td>
+<td>
+<p>bit</p>
+                    </td>
+<td style="width: 122px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr></tbody></table>
+<h2 data-id="rubric-object-levels">Rubric Object Levels</h2>
+<p>The Rubric Object Levels Brightspace Data Set returns information about the rubric levels in a rubric criteria.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">
+<p>RubricId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Unique rubric Identifier</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">
+<p>LevelId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Identifier for the level associated with the rubric</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 122px;">Name</td>
+<td style="width: 122px;">Name of the level</td>
+<td>
+<p>nvarchar</p>
+                    </td>
+<td style="width: 122px;">256</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">Description</td>
+<td style="width: 122px;">
+<p>Description of the level.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>nvarchar</td>
+<td style="width: 122px;">1000</td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">Feedback</td>
+<td style="width: 122px;">
+<p>Automated feedback provided by the rubric for the corresponding level.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>nvarchar</p>
+                    </td>
+<td style="width: 122px;">1000</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>
+<p>4.8 / 5.2 - Updated column size</p>
+                    </td>
+<td style="width: 122px;">Value</td>
+<td style="width: 122px;">
+<p>Value assigned to the level. This is populated based on the rubric type and scoring method.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>decimal</td>
+<td style="width: 122px;">19, 9</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>
+<p>4.8 / 5.2 - Updated column size</p>
+                    </td>
+<td style="width: 122px;">RangeStartValue</td>
+<td style="width: 122px;">
+<p>Level range start value which is populated based on the rubric type and scoring method.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>decimal</td>
+<td style="width: 122px;">19, 9</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">SortOrder</td>
+<td style="width: 122px;">Sort order for the levels</td>
+<td>int</td>
+<td style="width: 122px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">LevelSetId</td>
+<td style="width: 122px;">Identifier for the level set to which the level belongs</td>
+<td>bigint</td>
+<td style="width: 122px;">8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">
+<p>IsDeleted</p>
+                    </td>
+<td style="width: 122px;">
+<p>Set to true when Level Set or Level have been deleted.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>bit</p>
+                    </td>
+<td style="width: 122px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr></tbody></table>
+<h2 data-id="rubrics-edit">Rubrics Edit</h2>
+<p>In the Rubrics Edit Brightspace Data Set, each row represents one element of a rubric that was changed by a permissioned user. If multiple elements are changed in the same rubric, multiple data rows will appear in the data set.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><strong>Field</strong><br></p>
+                    </th>
+<th>
+<p><strong>Description</strong><br></p>
+                    </th>
+<th>
+<p><strong>Type</strong><br></p>
+                    </th>
+<th>
+<p><strong>Column Size</strong><br></p>
+                    </th>
+<th>
+<p><strong>Key</strong><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>7.12</td>
+<td style="width: 122px;">
+<p>AuditLogId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Unique identifier</p>
+                    </td>
+<td>
+<p>uniqueidentifier</p>
+                    </td>
+<td style="width: 122px;">
+<p>16</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>7.12</td>
+<td style="width: 122px;">
+<p>RubricId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Unique rubric identifier</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>7.12</td>
+<td style="width: 122px;">CriterionId</td>
+<td style="width: 122px;">
+<p>Identifier for the criterion row of the rubric.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td style="width: 122px;">8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>7.12</td>
+<td style="width: 122px;">LevelId</td>
+<td style="width: 122px;">
+<p>Identifier for the evaluation level of the rubric.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>bigint</td>
+<td style="width: 122px;">8</td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>7.12</td>
+<td style="width: 122px;">ModifiedBy</td>
+<td style="width: 122px;">
+<p>ID of the user who last modified this item</p>
+                    </td>
+<td>
+<p>int</p>
+                    </td>
+<td style="width: 122px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>7.13 - Updated field name</td>
+<td style="width: 122px;">ModifiedObjectType</td>
+<td style="width: 122px;">Rubric element that has been edited. Refer to Modified Object Type Lookup for details.</td>
+<td>int</td>
+<td style="width: 122px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>7.12</td>
+<td style="width: 122px;">CriteriaGroupId</td>
+<td style="width: 122px;">
+<p>Identifier for the criterion group to which the criterion belongs.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>bigint</td>
+<td style="width: 122px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>7.12</td>
+<td style="width: 122px;">ModifiedDate</td>
+<td style="width: 122px;">The date when this item was modified (UTC)</td>
+<td>datetime2</td>
+<td style="width: 122px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>7.13 - Updated column size</td>
+<td style="width: 122px;">PreviousValue</td>
+<td style="width: 122px;">
+<p>The value of the object prior to the modification.</p>
+                    </td>
+<td>nvarchar</td>
+<td style="width: 122px;">4000</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>7.13 - Updated column size</td>
+<td style="width: 122px;">
+<p>ModifiedValue</p>
+                    </td>
+<td style="width: 122px;">
+<p>The value of the object after the modification.</p>
+                    </td>
+<td>
+<p>nvarchar</p>
+                    </td>
+<td style="width: 122px;">
+<p>4000</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>7.12</td>
+<td style="width: 122px;">IsLocked</td>
+<td style="width: 122px;">The locked status of the rubric at the time of the modification</td>
+<td>bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>8.7</td>
+<td style="width: 122px;">Version</td>
+<td style="width: 122px;">Incrementing sequence number to keep track of edits that were made during the same session.</td>
+<td>int</td>
+<td style="width: 122px;">4</td>
+<td></td>
+                </tr></tbody></table>
+</article>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>

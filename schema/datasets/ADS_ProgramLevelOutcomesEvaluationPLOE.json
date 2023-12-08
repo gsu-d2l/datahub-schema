@@ -1,0 +1,178 @@
+{
+    "type": "ADS",
+    "name": "Program Level Outcomes Evaluation (PLOE)",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#program-level-outcomes-evaluation-(ploe)",
+    "description": "The PLOE data set provides a list of competencies and learning objectives related to the org unit selected and provides insight into outcome achievement across multiple courses within a program. Data comes from the Competencies tool, not the Learning Outcomes tool. Required Config Variable d2l.Tools.AdvancedDataSets.ProgramOrgUnitTypeId (set the org unit type ID that represents a program for an org) Required Permission Advanced Data Sets > Can execute PLOE (Organization level) Available Filters Returned Fields",
+    "columns": [
+        {
+            "name": "OrgUnitId",
+            "description": "The org unit for which we want to collect results",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.10"
+        },
+        {
+            "name": "OrgUnitName",
+            "description": "The name of the org unit",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.10"
+        },
+        {
+            "name": "OrgUnitCode",
+            "description": "The code of the org unit",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.10"
+        },
+        {
+            "name": "Program",
+            "description": "The program is a custom org unit type, with the filter parameter passed in. There should be one line per program.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.10"
+        },
+        {
+            "name": "OutcomeId",
+            "description": "Identifier of the competency or learning outcome",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.10"
+        },
+        {
+            "name": "OutcomeType",
+            "description": "Type of outcome. Options are Competency or Learning Objective",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.10"
+        },
+        {
+            "name": "OutcomeName",
+            "description": "Name of the outcome",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.10"
+        },
+        {
+            "name": "OutcomeStatus",
+            "description": "Status of the outcome Competency status options are Draft, In Review, Approved, or ArchivedLearning Objective options are Ready for evaluation or Not ready for evaluation",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.10"
+        },
+        {
+            "name": "FirstName",
+            "description": "First name of the learner being assessed by the outcome",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.10"
+        },
+        {
+            "name": "LastName",
+            "description": "Last name of the learner being assessed by the outcome",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.10"
+        },
+        {
+            "name": "UserName",
+            "description": "Username of the learner being assessed by the outcome",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.10"
+        },
+        {
+            "name": "OrgDefinedId",
+            "description": "Identifier of the learner defined by the org unit",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.10"
+        },
+        {
+            "name": "UserId",
+            "description": "Numeric identifier of the learner",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.10"
+        },
+        {
+            "name": "RoleName",
+            "description": "Name of the user's role in the org unit",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.10"
+        },
+        {
+            "name": "RoleId",
+            "description": "Identifier of the user's role in the org unit",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.10"
+        },
+        {
+            "name": "IsAchieved",
+            "description": "Indicates if the outcome is achieved. 1=Achieved, 0=Not achieved, Null=not assessed",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.10"
+        },
+        {
+            "name": "AchievementDateTime",
+            "description": "Indicates the date and time the achievement was accomplished",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.10"
+        }
+    ]
+}

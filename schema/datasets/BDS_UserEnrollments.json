@@ -1,0 +1,68 @@
+{
+    "type": "BDS",
+    "name": "User Enrollments",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4740-users-data-sets#user-enrollments",
+    "description": "The User Enrollments Brightspace Data Set returns a list of enrollments for all users in your organization.",
+    "columns": [
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "RoleName",
+            "description": "Role name",
+            "type": "nvarchar",
+            "size": "60",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Updated column size"
+        },
+        {
+            "name": "EnrollmentDate",
+            "description": "Date enrolled (UTC)",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "EnrollmentType",
+            "description": "Enrollment type. Field can be null.",
+            "type": "varchar",
+            "size": "50",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Updated column size"
+        },
+        {
+            "name": "RoleId",
+            "description": "Unique role identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.7 and 6.0 - Added FK"
+        }
+    ]
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="fallbackPageContent">
+<main>
+<section>
+<div class="mainColumn">
+<article>
+<h2 data-id="checklist-category-details">Checklist Category Details</h2>
+<p>The Checklist Category Details Brightspace Data Set returns information on categories within checklists.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">CategoryId</td>
+<td style="width: 125px;">Unique category identifier.</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">ChecklistId</td>
+<td style="width: 125px;">Unique checklist identifier.</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 125px;">Name</td>
+<td style="width: 125px;">Name of the checklist category.</td>
+<td style="width: 125px;">nvarchar</td>
+<td style="width: 125px;">512</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">Description</td>
+<td style="width: 125px;">
+<p>Description of the category.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">nvarchar</td>
+<td style="width: 125px;">1000</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">DescriptionIsHtml</td>
+<td style="width: 125px;">Indicates if the description is in HTML.</td>
+<td style="width: 125px;">bit</td>
+<td style="width: 125px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">SortOrder</td>
+<td style="width: 125px;">The order in which the checklist categories are sorted.</td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">LastModifiedUtc</td>
+<td style="width: 125px;">
+<p>Last modified date/time (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>8.9</td>
+<td style="width: 125px;">DateDeleted</td>
+<td style="width: 125px;">
+<p>Date the category was deleted (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">datetime2</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>8.9</td>
+<td style="width: 125px;">DeletedBy</td>
+<td style="width: 125px;">
+<p>User who deleted the checklist category.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>8.9</td>
+<td style="width: 125px;">Version</td>
+<td style="width: 125px;">Indicates the version of the checklist category.</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="checklist-completions">Checklist Completions</h2>
+<p>The Checklist Completions Brightspace Data Set returns the completion status of each checklist item.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>UserId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique user Identifier.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>8.11 / 9.0 - Changed description</td>
+<td style="width: 125px;">
+<p>DateCompleted</p>
+                    </td>
+<td style="width: 125px;">
+<p>Date the checklist item was last completed (UTC).</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">ItemId</td>
+<td style="width: 125px;">Unique checklist item identifier.</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td>PK, FK</td>
+                </tr><tr align="left" valign="top"><td>6.8</td>
+<td style="width: 125px;">LastModified</td>
+<td style="width: 125px;">
+<p>Date the content user completion was last modified (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">datetime2</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="checklist-item-details">Checklist Item Details</h2>
+<p>The Checklist Item Details Brightspace Data Set returns information on each checklist item within a checklist.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">ItemId</td>
+<td>Unique checklist item identifier.</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">CategoryId</td>
+<td>
+<p>Unique category identifier.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 125px;">Name</td>
+<td>
+<p>Checklist item name.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">nvarchar</td>
+<td style="width: 125px;">512</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">Description</td>
+<td>
+<p>Checklist item description.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">nvarchar</td>
+<td style="width: 125px;">1000</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">DescriptionIsHtml</td>
+<td>Indicates if the description is in HTML.</td>
+<td style="width: 125px;">bit</td>
+<td style="width: 125px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">DueDate</td>
+<td>
+<p>Date the item is due.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">datetime2</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Type and Column Size</td>
+<td style="width: 125px;">ScheduleId</td>
+<td>
+<p>Indicates the schedule to which this checklist belongs.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">SortOrder</td>
+<td>The order in which the checklist items are sorted.</td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">IsAutoChecked</td>
+<td>Indicates if the checklist item is automatically selected.</td>
+<td style="width: 125px;">bit</td>
+<td style="width: 125px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">LastModifiedUtc</td>
+<td>
+<p>Last modified date/time (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>8.9</td>
+<td style="width: 125px;">DateDeleted</td>
+<td>
+<p>Date the item was deleted (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">datetime2</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>8.9</td>
+<td style="width: 125px;">DeletedBy</td>
+<td>
+<p>User who deleted the checklist item.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>8.9</td>
+<td style="width: 125px;">Version</td>
+<td>Indicates the version of the checklist item.</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="checklist-objects">Checklist Objects</h2>
+<p>The Checklist Objects Brightspace Data Set returns information on checklist attributes.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">ChecklistId</td>
+<td style="width: 125px;">Unique checklist identifier.</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">OrgUnitId</td>
+<td style="width: 125px;">Unique identifier for the org unit where the checklist exists.</td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 125px;">Name</td>
+<td style="width: 125px;">Checklist name.</td>
+<td style="width: 125px;">nvarchar</td>
+<td style="width: 125px;">512</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">Description</td>
+<td style="width: 125px;">
+<p>Description of the checklist.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">nvarchar</td>
+<td style="width: 125px;">1000</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">DescriptionIsHtml</td>
+<td style="width: 125px;">Indication if the description is in HTML.</td>
+<td style="width: 125px;">bit</td>
+<td style="width: 125px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">SharedUserId</td>
+<td style="width: 125px;">
+<p>Unique user Id that the checklist is shared with.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">DisplayInNewWindow</td>
+<td style="width: 125px;">Indicates if the checklist appears in a new browser window when viewed.</td>
+<td style="width: 125px;">bit</td>
+<td style="width: 125px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">SortOrder</td>
+<td style="width: 125px;">The order in which the checklist is sorted.</td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.3</td>
+<td style="width: 125px;">Version</td>
+<td style="width: 125px;">
+<p>Indicates the version for this row entry.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>4.9 / 5.3</td>
+<td style="width: 125px;">ResultId</td>
+<td style="width: 125px;">
+<p>Unique release condition result identifier.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>8.10</td>
+<td style="width: 125px;">DateDeleted</td>
+<td style="width: 125px;">
+<p>Date the checklist item was deleted (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">datetime2</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>8.10</td>
+<td style="width: 125px;">DeletedBy</td>
+<td style="width: 125px;">
+<p>User who deleted the checklist item.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td>FK</td>
+                </tr></tbody></table>
+</article>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+{
+    "type": "BDS",
+    "name": "SIS Course Merge Log",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/19147-sis-course-merge-data-sets#sis-course-merge-log",
+    "description": "The SIS Course Merge Log Brightspace Data Set returns a list of attempts to merge or unmerge course offerings using the SIS Course Merge tool. This data set only captures data from July 2023 onwards. Returned Fields",
+    "columns": [
+        {
+            "name": "BatchId",
+            "description": "The batch ID for this job.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.6"
+        },
+        {
+            "name": "JobType",
+            "description": "What type of job was requested: Merge or Unmerge.",
+            "type": "nvarchar",
+            "size": "32",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.6"
+        },
+        {
+            "name": "Status",
+            "description": "The status of the job: Started, CompletedWithErrors, Completed, or Failed.",
+            "type": "nvarchar",
+            "size": "32",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.6"
+        },
+        {
+            "name": "OriginalTargetOrgUnitId",
+            "description": "The target course which the source courses are merged or were originally merged into.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "8.6"
+        },
+        {
+            "name": "OriginalSourceOrgUnitId",
+            "description": "The source course which is being merged or was previously merged into the target.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "8.6"
+        },
+        {
+            "name": "SourceSystemId",
+            "description": "The ID of the source system that this course belongs to.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.6"
+        },
+        {
+            "name": "NumberOfCoursesInBatch",
+            "description": "The total number of source courses with the same batch ID being attempted to merge or unmerge. Only shown for course merge jobs with the \"Started\" status. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "8.6"
+        },
+        {
+            "name": "UserId",
+            "description": "The user who requested the merge or unmerge.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "8.6"
+        },
+        {
+            "name": "ErrorType",
+            "description": "The type of error that occurred. Possible values: Field can be null.",
+            "type": "nvarchar",
+            "size": "48",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "8.6"
+        },
+        {
+            "name": "Timestamp",
+            "description": "The date and time when the merge or unmerge event occurred (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.6"
+        }
+    ]
+}

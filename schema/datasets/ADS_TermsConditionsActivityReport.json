@@ -1,0 +1,118 @@
+{
+    "type": "ADS",
+    "name": "Terms & Conditions - Activity Report",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#terms-&-conditions---activity-report",
+    "description": "Returns the most recent accept or decline responses of the Terms and Conditions for each user. This Advanced Data Set only appears in Data Hub if the Terms and Conditions tool is enabled. Required Permission Advanced Data Sets > Can execute Terms and Conditions (Organization level) Available Filters Returned Fields",
+    "columns": [
+        {
+            "name": "User Id",
+            "description": "D2L's unique identifier for the user.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.3"
+        },
+        {
+            "name": "Org Defined Id",
+            "description": "Learner's org defined ID.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.21.3"
+        },
+        {
+            "name": "Username",
+            "description": "Learner's username.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.3"
+        },
+        {
+            "name": "First Name",
+            "description": "First name of the learner.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.3"
+        },
+        {
+            "name": "Last Name",
+            "description": "Last name of the learner.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.3"
+        },
+        {
+            "name": "Is Active",
+            "description": "Learner's status.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.3"
+        },
+        {
+            "name": "Date",
+            "description": "Date the Terms and Conditions were accepted or declined.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.3"
+        },
+        {
+            "name": "Has Accepted",
+            "description": "True or false response for the Learner.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.3"
+        },
+        {
+            "name": "Version Comments",
+            "description": "Any comments associated with the version.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.21.3"
+        },
+        {
+            "name": "Title",
+            "description": "Title of the terms and conditions.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.3"
+        },
+        {
+            "name": "Version Id",
+            "description": "Version identifier for the Terms and Conditions.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.3"
+        }
+    ]
+}

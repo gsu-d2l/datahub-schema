@@ -1,0 +1,98 @@
+{
+    "type": "BDS",
+    "name": "Rubric Assessment Criteria",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4535-rubrics-data-sets#rubric-assessment-criteria",
+    "description": "The Rubric Assessment Criteria Brightspace Data Set returns details for all rubric criteria in rubrics. Returned Fields",
+    "columns": [
+        {
+            "name": "AssessmentId",
+            "description": "Unique assessment ID",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.6 - Updated PK"
+        },
+        {
+            "name": "RubricId",
+            "description": "Unique rubric ID",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.6 - Updated FK"
+        },
+        {
+            "name": "Score",
+            "description": "Rubric score the user achieved on a criterion. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "Feedback",
+            "description": "Feedback for that criterion. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "IsScoreOverridden",
+            "description": "Is score overridden by instructor",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "CriterionId",
+            "description": "Unique criterion identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "4.9 \/ 5.3 - Updated PK"
+        },
+        {
+            "name": "LevelAchievedId",
+            "description": "Unique rubric level achieved identifier. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0"
+        }
+    ]
+}

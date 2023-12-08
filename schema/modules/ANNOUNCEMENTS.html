@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="fallbackPageContent">
+<main>
+<section>
+<div class="mainColumn">
+<article>
+<h2 data-id="announcements">Announcements</h2>
+<p>The Announcements Brightspace Data Set returns details on the announcements a user has created for your org units.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>AnnouncementId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique announcement identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>OrgUnitId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique org unit identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 134px;">
+<p>Title</p>
+                    </td>
+<td style="width: 134px;">
+<p>Announcement title</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>400</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>StartDate</p>
+                    </td>
+<td style="width: 134px;">
+<p>First time the announcement is visible (UTC).</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>1.0</p>
+                    </td>
+<td style="width: 134px;">
+<p>EndDate</p>
+                    </td>
+<td style="width: 134px;">
+<p>Last date the announcement is visible (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>IsGlobal</p>
+                    </td>
+<td style="width: 134px;">
+<p>If new items are visible across orgs</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>IsDraft</p>
+                    </td>
+<td style="width: 134px;">
+<p>If in draft, then the announcement has not been published yet</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>NumAttachments</p>
+                    </td>
+<td style="width: 134px;">
+<p>Number of attachments</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>DeletedDate</p>
+                    </td>
+<td style="width: 134px;">
+<p>Date the announcement was deleted (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>DeletedByUserId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Deleted by user ID.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>LastModified</p>
+                    </td>
+<td style="width: 134px;">
+<p>Last modified date/time (UTC).</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>4.7 / 5.1</td>
+<td style="width: 134px;">LastModifiedBy</td>
+<td style="width: 134px;">
+<p>User who last modified the announcement.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>4.7 / 5.1</td>
+<td style="width: 134px;">CreatedBy</td>
+<td style="width: 134px;">
+<p>User who created the announcement.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>4.7 / 5.1</td>
+<td style="width: 134px;">IsAuthorInfoShown</td>
+<td style="width: 134px;">If author information is displayed.</td>
+<td style="width: 134px;">bit</td>
+<td style="width: 134px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>4.7 / 5.1</td>
+<td style="width: 134px;">CreatedDate</td>
+<td style="width: 134px;">
+<p>Date the announcement was created (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">datetime2</td>
+<td style="width: 134px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0</td>
+<td style="width: 134px;">ResultId</td>
+<td style="width: 134px;">
+<p>Unique release condition result identifier.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">bigint</td>
+<td style="width: 134px;">8</td>
+<td>FK</td>
+                </tr></tbody></table>
+</article>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>

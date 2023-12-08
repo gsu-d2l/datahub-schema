@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="fallbackPageContent">
+<main>
+<section>
+<div class="mainColumn">
+<article>
+<h2 data-id="activity-feed-comment-log">Activity Feed Comment Log</h2>
+<p>The Activity Feed Comment Log Brightspace Data Set returns details on all actions that occur to each comment in the organization.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">LogId</td>
+<td style="width: 134px;">Unique log entry identifier.</td>
+<td style="width: 134px;">uniqueidentifier</td>
+<td style="width: 134px;">16</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">UserId</td>
+<td style="width: 134px;">Unique identifier of the user who last modified the comment.</td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">OrgUnitId</td>
+<td style="width: 134px;">Unique organization unit identifier.</td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">CommentId</td>
+<td style="width: 134px;">Unique comment identifier.</td>
+<td style="width: 134px;">uniqueidentifier</td>
+<td style="width: 134px;">16</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">Action</td>
+<td style="width: 134px;">Indicates whether the comment was created, updated, or deleted.</td>
+<td style="width: 134px;">nvarchar</td>
+<td style="width: 134px;">16</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">ActionDate</td>
+<td style="width: 134px;">Date the comment was created, updated, or deleted (UTC).</td>
+<td style="width: 134px;">datetime2</td>
+<td style="width: 134px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">Content</td>
+<td style="width: 134px;">Text of the comment.</td>
+<td style="width: 134px;">nvarchar</td>
+<td style="width: 134px;">3072</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.9 / 6.2 - Added Key</td>
+<td style="width: 134px;">PostId</td>
+<td style="width: 134px;">Unique identifier for the parent post.</td>
+<td style="width: 134px;">uniqueidentifier</td>
+<td style="width: 134px;">16</td>
+<td>FK</td>
+                </tr></tbody></table>
+<h2 data-id="activity-feed-comment-objects">Activity Feed Comment Objects</h2>
+<p>The Activity Feed Comment Objects Brightspace Data Set returns details on each comment in the organization.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>5.9/6.2</td>
+<td style="width: 134px;">OrgUnitId</td>
+<td style="width: 134px;">Unique org unit identifier.</td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>5.9/6.2</td>
+<td style="width: 134px;">CommentId</td>
+<td style="width: 134px;">Unique comment identifier.</td>
+<td style="width: 134px;">uniqueidentifier</td>
+<td style="width: 134px;">16</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>5.9/6.2</td>
+<td style="width: 134px;">LastModifiedBy</td>
+<td style="width: 134px;">Unique identifier of the user who last modified the comment.</td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>5.9/6.2</td>
+<td style="width: 134px;">LastModified</td>
+<td style="width: 134px;">Date the comment was created, updated, or deleted (UTC).</td>
+<td style="width: 134px;">datetime2</td>
+<td style="width: 134px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.9/6.2</td>
+<td style="width: 134px;">Content</td>
+<td style="width: 134px;">The text of the comment.</td>
+<td style="width: 134px;">nvarchar</td>
+<td style="width: 134px;">3072</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.9/6.2</td>
+<td style="width: 134px;">IsDeleted</td>
+<td style="width: 134px;">Indicates if the comment has been deleted.</td>
+<td style="width: 134px;">bit</td>
+<td style="width: 134px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.9/6.2</td>
+<td style="width: 134px;">PostId</td>
+<td style="width: 134px;">Unique identifier for the parent post.</td>
+<td style="width: 134px;">uniqueidentifier</td>
+<td style="width: 134px;">16</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>5.9/6.2</td>
+<td style="width: 134px;">Version</td>
+<td style="width: 134px;">Version of comment.</td>
+<td style="width: 134px;">bigint</td>
+<td style="width: 134px;">8</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="activity-feed-post-log">Activity Feed Post Log</h2>
+<p>The Activity Feed Post Log Brightspace Data Set returns details on all actions that occur to each post in the organization.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">LogId</td>
+<td style="width: 134px;">Unique log entry identifier</td>
+<td style="width: 134px;">uniqueidentifier</td>
+<td style="width: 134px;">16</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">UserId</td>
+<td style="width: 134px;">Unique identifier of the user who last modified the post.</td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">OrgUnitId</td>
+<td style="width: 134px;">
+<p>Unique org unit identifier.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">PostId</td>
+<td style="width: 134px;">Unique post identifier.</td>
+<td style="width: 134px;">uniqueidentifier</td>
+<td style="width: 134px;">16</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">PostType</td>
+<td style="width: 134px;">Type of post.</td>
+<td style="width: 134px;">nvarchar</td>
+<td style="width: 134px;">16</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">Action</td>
+<td style="width: 134px;">Indicates whether the post was created, updated, or deleted.</td>
+<td style="width: 134px;">nvarchar</td>
+<td style="width: 134px;">16</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">ActionDate</td>
+<td style="width: 134px;">Date the post was created, updated, or deleted (UTC).</td>
+<td style="width: 134px;">datetime2</td>
+<td style="width: 134px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">DropboxId</td>
+<td style="width: 134px;">Unique ID of the posted assignment, if the post is of type assignment. Field can be null.</td>
+<td style="width: 134px;">bigint</td>
+<td style="width: 134px;">8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">Content</td>
+<td style="width: 134px;">The text of the message post, if the post is of type message. Field can be null.</td>
+<td style="width: 134px;">nvarchar</td>
+<td style="width: 134px;">3072</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">CommentCount</td>
+<td style="width: 134px;">Number of comments associated with the post.</td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 134px;">AttachmentCount</td>
+<td style="width: 134px;">Indicates the number of attachments associated with the post, if the post is of type message. Field can be null.</td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="activity-feed-post-objects">Activity Feed Post Objects</h2>
+<p>The Activity Feed Post Objects Brightspace Data Set returns details on each post in the organization.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>5.9 / 6.2</td>
+<td style="width: 134px;">OrgUnitId</td>
+<td style="width: 134px;">Unique org unit identifier.</td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>5.9 / 6.2</td>
+<td style="width: 134px;">PostId</td>
+<td style="width: 134px;">Unique post identifier.</td>
+<td style="width: 134px;">uniqueidentifier</td>
+<td style="width: 134px;">16</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>5.9 / 6.2</td>
+<td style="width: 134px;">PostType</td>
+<td style="width: 134px;">The type of post.</td>
+<td style="width: 134px;">nvarchar</td>
+<td style="width: 134px;">16</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.9 / 6.2</td>
+<td style="width: 134px;">LastModifiedBy</td>
+<td style="width: 134px;">Unique identifier of the user who last modified the post.</td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>5.9 / 6.2</td>
+<td style="width: 134px;">LastModified</td>
+<td style="width: 134px;">Date the post was created, updated, or deleted (UTC).</td>
+<td style="width: 134px;">datetime2</td>
+<td style="width: 134px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.9 / 6.2</td>
+<td style="width: 134px;">DropboxId</td>
+<td style="width: 134px;">Unique identifier of the posted assignment, if the post is of type assignment. Field can be null.</td>
+<td style="width: 134px;">bigint</td>
+<td style="width: 134px;">8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>5.9 / 6.2</td>
+<td style="width: 134px;">Content</td>
+<td style="width: 134px;">
+<p>The text of the message post, if the post is of type message.</p>
+<p></p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">nvarchar</td>
+<td style="width: 134px;">3072</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.9 / 6.2</td>
+<td style="width: 134px;">IsDeleted</td>
+<td style="width: 134px;">Indicates if the post has been deleted.</td>
+<td style="width: 134px;">bit</td>
+<td style="width: 134px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.9 / 6.2</td>
+<td style="width: 134px;">CommentCount</td>
+<td style="width: 134px;">Indicates the number of comments associated with the post.</td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.9 / 6.2</td>
+<td style="width: 134px;">AttachmentCount</td>
+<td style="width: 134px;">
+<p>Indicates the number of attachments associated with the post, if the post is of type message.</p>
+<p></p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.9 / 6.2</td>
+<td style="width: 134px;">Version</td>
+<td style="width: 134px;">Version of post.</td>
+<td style="width: 134px;">bigint</td>
+<td style="width: 134px;">8</td>
+<td></td>
+                </tr></tbody></table>
+</article>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>

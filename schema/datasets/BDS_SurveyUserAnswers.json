@@ -1,0 +1,108 @@
+{
+    "type": "BDS",
+    "name": "Survey User Answers",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4538-surveys-data-sets#survey-user-answers",
+    "description": "The Survey User Answers Brightspace Data Set returns data to describe how a user responded to a survey question. Rows in the data set are filtered out if they are associated with deleted survey attempts.",
+    "columns": [
+        {
+            "name": "AttemptId",
+            "description": "Unique attempt identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "QuestionId",
+            "description": "Unique question identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.7 - Updated description"
+        },
+        {
+            "name": "QuestionVersionId",
+            "description": "Unique question version identifier. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "TimeCompleted",
+            "description": "Date\/time when the question was completed (UTC). No data is provided for question pools or sections. Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "8.11 \/ 9.0 - Updated description"
+        },
+        {
+            "name": "QuestionNumber",
+            "description": "Question number in the survey. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "Comment",
+            "description": "Feedback left by instructor. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "SortOrder",
+            "description": "Sort order of the question.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "Score",
+            "description": "Score the user received for the answer. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "Page",
+            "description": "Page the question appeared on when the user took the survey",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "Assigned",
+            "description": "Indicates if the survey is assigned to a user. Field can be null.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        }
+    ]
+}

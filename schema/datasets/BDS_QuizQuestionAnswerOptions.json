@@ -1,0 +1,78 @@
+{
+    "type": "BDS",
+    "name": "Quiz Question Answer Options",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4532-quizzes-data-sets#quiz-question-answer-options",
+    "description": "The Quiz Question Answer Options Brightspace Data Set returns possible options for a given quiz answer. Only includes answer options for these question types: Short Answer, Fill in the Blanks, and Multi-Short Answer. Rows in the data set are filtered out if they are associated with deleted quiz attempts.",
+    "columns": [
+        {
+            "name": "AnswerId",
+            "description": "Unique answer Identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "AnswerText",
+            "description": "User answer. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "Weight",
+            "description": "Weight associated with the answer",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "QuestionId",
+            "description": "Unique question identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "QuestionVersionId",
+            "description": "Unique question version identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "QuizObjectId",
+            "description": "Unique quiz object identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.7 - Updated key"
+        },
+        {
+            "name": "AnswerOptionId",
+            "description": "Unique answer option identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.2"
+        }
+    ]
+}

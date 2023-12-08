@@ -1,0 +1,78 @@
+{
+    "type": "BDS",
+    "name": "User Attribute Values",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4740-users-data-sets#user-attribute-values",
+    "description": "The User Attribute Values Brightspace Data Set returns a list of all values for all defined user attributes for each user in your organization. If no user attributes are defined for your organization, the data set will not generate.",
+    "columns": [
+        {
+            "name": "UserId",
+            "description": "Unique identifier of the user who the attribute is assigned to.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Added FK"
+        },
+        {
+            "name": "AttributeId",
+            "description": "Unique identifier of the attribute.",
+            "type": "nvarchar",
+            "size": "128",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "Value",
+            "description": "Value or list of values assigned to the user for the given attribute. Formatted as comma-separated values (CSV).",
+            "type": "nvarchar",
+            "size": "4000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.19 \/ 8.5 - Updated description"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date the attribute value was last modified (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "ModifiedBy",
+            "description": "User who last modified the attribute value.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates if the attribute value is deleted (TRUE - 1) or not (FALSE - 0).",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version of the row. This information is used to determine which row occurred first.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        }
+    ]
+}

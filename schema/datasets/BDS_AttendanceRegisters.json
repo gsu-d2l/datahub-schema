@@ -1,0 +1,98 @@
+{
+    "type": "BDS",
+    "name": "Attendance Registers",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4519-attendance-data-sets#attendance-registers",
+    "description": "The Attendance Registers Brightspace Data Set describes the registers for taking attendance that exist in your organization.",
+    "columns": [
+        {
+            "name": "AttendanceRegisterId",
+            "description": "Unique attendance register identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "Name",
+            "description": "The name given to the register.",
+            "type": "nvarchar",
+            "size": "128",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "Description",
+            "description": "The description of the attendance register. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "SchemeId",
+            "description": "Unique identifier of the scheme used for the register.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "IsVisible",
+            "description": "Indicates if users are allowed to view this register.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "IncludeAllUsers",
+            "description": "Indicates that all users in the course can be assessed with this register. If false, only specific groups\/sections are included.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "CauseForConcern",
+            "description": "The threshold at which users will be flagged as a concern. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        }
+    ]
+}

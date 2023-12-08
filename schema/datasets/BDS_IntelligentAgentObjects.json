@@ -1,0 +1,238 @@
+{
+    "type": "BDS",
+    "name": "Intelligent Agent Objects",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4528-intelligent-agents-data-sets#intelligent-agent-objects",
+    "description": "The Intelligent Agent Objects Brightspace Data Set describes all the intelligent agents created in your organization. Returned Fields",
+    "columns": [
+        {
+            "name": "AgentId",
+            "description": "Unique agent identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier where the agent was created.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "AgentName",
+            "description": "Name of intelligent agent.",
+            "type": "nvarchar",
+            "size": "128",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "Description",
+            "description": "The description of the intelligent agent. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "Enabled",
+            "description": "Indicates if the agent is enabled.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "SpecificRoles",
+            "description": "Array of the roles the agent allies to. If null, it applies to all users visible in the Classlist. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Updated Description"
+        },
+        {
+            "name": "LoginConditionEnabled",
+            "description": "Indicates if the agent looks at login activity.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "LoginConditionThreshold",
+            "description": "Number of days the login threshold is set to. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "LoginConditionType",
+            "description": "The type of login activity: User has not logged in for at least X days or user has logged in during the past X days. Field can be null.",
+            "type": "nvarchar",
+            "size": "14",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "AccessConditionEnabled",
+            "description": "Indicates if the agent looks at course access activity.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "AccessConditionThreshold",
+            "description": "Number of days the course activity threshold is set to. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "AccessConditionType",
+            "description": "The type of course activity: User has not accessed course in for at least X days or user has accessed course in during the past X days. Field can be null.",
+            "type": "nvarchar",
+            "size": "20",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "ResultId",
+            "description": "Unique release condition result identifier. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Type and Column Size"
+        },
+        {
+            "name": "RepeatType",
+            "description": "Indicates whether the action is taken once or every time the criteria is met for a user.",
+            "type": "nvarchar",
+            "size": "10",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "EmailWhenSatisfied",
+            "description": "Indicates if an email is sent when the criteria are satisfied.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "EnableSchedule",
+            "description": "Indicates if a schedule is used.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "ScheduleType",
+            "description": "Defines the frequency the schedule runs on: daily, weekly, monthly, annually. Field can be null.",
+            "type": "nvarchar",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "ScheduleRepeatsEvery",
+            "description": "The number of days, weeks, etc between runs. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "StartDate",
+            "description": "When the schedule begins (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "EndDate",
+            "description": "When the schedule ends (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "LastModified",
+            "description": "The date when the agent was last modified (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "The unique user identifier of the user who last changed the agent. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "6.16 \/ 7.4 - Updated description"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates if the agent is deleted.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        }
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "type": "BDS",
+    "name": "Outcomes Aligned to Tool Objects",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4796-outcomes-data-sets#outcomes-aligned-to-tool-objects",
+    "description": "The Outcomes Aligned to Tool Objects Brightspace Data Set provides details of which outcomes are aligned to which assessment tools for all your org units. It includes a row for every outcome aligned to an assessment activity, for both direct alignments and alignments references via rubrics. The data set only captures data from June 2021 onwards.",
+    "columns": [
+        {
+            "name": "ObjectType",
+            "description": "Type of tool this outcome is aligned to. See Tool-Specific Object Lookup for details.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "ObjectId",
+            "description": "ID of the tool this outcome is aligned to. See Tool-Specific Object Lookup for details.",
+            "type": "nvarchar",
+            "size": "255",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.14 \/ 7.2 - Updated Column size"
+        },
+        {
+            "name": "OutcomeId",
+            "description": "ID of this Outcome in the Outcome Details data set.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "RegistryId",
+            "description": "ID of registry representing the context in which this alignment exists.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "CreatedDate",
+            "description": "Date when this item was initially created (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "CreatedBy",
+            "description": "ID of user who initially created this item. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "LastModifiedDate",
+            "description": "Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "ID of user who last modified, created, or deleted this item.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates if this item has been deleted.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        }
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "type": "BDS",
+    "name": "Rubric Object Criteria",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4535-rubrics-data-sets#rubric-object-criteria",
+    "description": "The Rubric Object Criteria Brightspace Data Set returns information about the rubric criteria within a rubric. Returned Fields",
+    "columns": [
+        {
+            "name": "RubricId",
+            "description": "Unique rubric identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "CriterionId",
+            "description": "Identifier for the criterion associated with the rubric levels",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "Name",
+            "description": "Name of the criterion.",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.0 - field name updated"
+        },
+        {
+            "name": "SortOrder",
+            "description": "Sort order by which the criteria is listed",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "CriteriaGroupId",
+            "description": "Identifier for the criterion group to which the criterion belongs",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.0 - field name updated"
+        },
+        {
+            "name": "GroupName",
+            "description": "Name of the criterion group.",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.0 - field name updated"
+        },
+        {
+            "name": "GroupSortOrder",
+            "description": "Sort order assigned to the criterion group",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.0 - field name updated"
+        },
+        {
+            "name": "LevelSetId",
+            "description": "Identifier of the Level Set to which the level belongs",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Set to true if the Level Set, Criterion Group or Criterion has been deleted",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        }
+    ]
+}

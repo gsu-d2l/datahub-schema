@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="fallbackPageContent">
+<main>
+<section>
+<div class="mainColumn">
+<article>
+<h2 data-id="course-publisher-launches">Course Publisher Launches</h2>
+<p>The Course Publisher Launches Brightspace Data Set returns details about course packages launched from the Course Publisher tool.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>6.8</td>
+<td style="width: 125px;">LaunchId</td>
+<td style="width: 125px;">Unique course package launch identifier</td>
+<td style="width: 125px;">uniqueidentifier</td>
+<td style="width: 125px;">16</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>6.8</td>
+<td style="width: 125px;">OrgUnitId</td>
+<td style="width: 125px;">
+<p>Unique org unit identifier</p>
+                    </td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>6.8</td>
+<td style="width: 125px;">RecipientId</td>
+<td style="width: 125px;">Unique recipient identifier</td>
+<td style="width: 125px;">uniqueidentifier</td>
+<td style="width: 125px;">16</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>
+<p>6.8</p>
+                    </td>
+<td style="width: 125px;">UserId</td>
+<td style="width: 125px;">Unique user identifier</td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>6.8</td>
+<td style="width: 125px;">RoleId</td>
+<td style="width: 125px;">Unique role identifier</td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>6.8</td>
+<td style="width: 125px;">LaunchMethod</td>
+<td style="width: 125px;">Method for launching the course package</td>
+<td style="width: 125px;">nvarchar</td>
+<td style="width: 125px;">256</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>6.8</td>
+<td style="width: 125px;">ExternalUserId</td>
+<td style="width: 125px;">Unique external user identifier</td>
+<td style="width: 125px;">nvarchar</td>
+<td style="width: 125px;">256</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>6.8</td>
+<td style="width: 125px;">ExternalLMSType</td>
+<td style="width: 125px;">External LMS type used by the recipient</td>
+<td style="width: 125px;">nvarchar</td>
+<td style="width: 125px;">256</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>6.8</td>
+<td style="width: 125px;">IsNewUser</td>
+<td style="width: 125px;">If the external user is new</td>
+<td style="width: 125px;">bit</td>
+<td style="width: 125px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>6.8</td>
+<td style="width: 125px;">LastModified</td>
+<td style="width: 125px;">Date the course package was last modified (UTC)</td>
+<td style="width: 125px;">datetime2</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="course-publisher-recipients">Course Publisher Recipients</h2>
+<p>The Course Publisher Recipients Brightspace Data Set returns details about course package recipients in the Course Publisher tool.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>
+<p>6.8</p>
+                    </td>
+<td style="width: 125px;">RecipientID</td>
+<td style="width: 125px;">Unique recipient identifier</td>
+<td style="width: 125px;">uniqueidentifier</td>
+<td style="width: 125px;">16</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>6.8</td>
+<td style="width: 125px;">Name</td>
+<td style="width: 125px;">
+<p>Recipient name</p>
+                    </td>
+<td style="width: 125px;">nvarchar</td>
+<td style="width: 125px;">256</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>6.8</td>
+<td style="width: 125px;">CreatedAt</td>
+<td style="width: 125px;">Date the recipient was created (UTC)</td>
+<td style="width: 125px;">datetime2</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>
+<p>6.8</p>
+                    </td>
+<td style="width: 125px;">LastModified</td>
+<td style="width: 125px;">Date the recipient was last modified (UTC)</td>
+<td style="width: 125px;">datetime2</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr></tbody></table>
+</article>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>

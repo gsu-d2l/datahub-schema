@@ -1,0 +1,58 @@
+{
+    "type": "BDS",
+    "name": "Media Objects",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/22812-content-service-data-sets#media-objects",
+    "description": "In the Media Objects Brightspace Data Set, each row represents one audio or video content object uploaded to Media Library. The data set captures media objects from January 2022 onwards.",
+    "columns": [
+        {
+            "name": "ContentId",
+            "description": "Unique content identifier.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "Title",
+            "description": "Title of the media object.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "RevisionCount",
+            "description": "Number of revisions of this media object.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "OwnerId",
+            "description": "Brightspace user identifier for the owner of the media object.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date the media object was last modified (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        }
+    ]
+}

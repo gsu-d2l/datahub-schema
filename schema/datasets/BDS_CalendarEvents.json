@@ -1,0 +1,158 @@
+{
+    "type": "BDS",
+    "name": "Calendar Events",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4521-calendar-data-sets#calendar-events",
+    "description": "The Calendar Events Brightspace Data Set returns a list of calendar events and their details for your org units.",
+    "columns": [
+        {
+            "name": "ScheduleId",
+            "description": "Unique identifier of the scheduled event",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier. For course-level events, the org unit ID displays. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier. For user-level events, the user ID displays. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "Title",
+            "description": "Calendar event title.",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "StartDate",
+            "description": "Calendar event start date. Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "EndDate",
+            "description": "Calendar event end date. Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "TimeZoneIdentifier",
+            "description": "Time zone identifier.",
+            "type": "varchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "IsAllDayEvent",
+            "description": "Is all day event",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "RecurrenceType",
+            "description": "Calendar recurrence type: None, Daily, Weekly, Monthly, Yearly. Field can be null.",
+            "type": "varchar",
+            "size": "7",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "RecurrenceInterval",
+            "description": "Calendar recurrence interval.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "CreatedByUserId",
+            "description": "Created by user ID.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "LastModified",
+            "description": "Last modified date and time.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "EventObjectTypeName",
+            "description": "If event is associated with an object, displays the object type name. Field can be null.",
+            "type": "nvarchar",
+            "size": "200",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "ObjectLookupId1",
+            "description": "Shows primary look-up object ID of the associated object. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "ObjectLookupId2",
+            "description": "Shows secondary look-up object ID of the associated object. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        }
+    ]
+}

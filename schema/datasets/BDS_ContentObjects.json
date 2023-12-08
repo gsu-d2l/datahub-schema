@@ -1,0 +1,248 @@
+{
+    "type": "BDS",
+    "name": "Content Objects",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4713-content-data-sets#content-objects",
+    "description": "The Content Objects Brightspace Data Set returns information about content topics and modules created for your org units.",
+    "columns": [
+        {
+            "name": "ContentObjectId",
+            "description": "Unique identifier of the content",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "Title",
+            "description": "Content title",
+            "type": "nvarchar",
+            "size": "150",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Updated column size"
+        },
+        {
+            "name": "ContentObjectType",
+            "description": "Content object type",
+            "type": "varchar",
+            "size": "6",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "CompletionType",
+            "description": "Content completion type",
+            "type": "varchar",
+            "size": "7",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Updated column size"
+        },
+        {
+            "name": "ParentContentObjectId",
+            "description": "Parent content object identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "Location",
+            "description": "Location of the content asset. Field can be null.",
+            "type": "nvarchar",
+            "size": "1024",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "7.13 - Updated column size"
+        },
+        {
+            "name": "StartDate",
+            "description": "Content availability start date (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "EndDate",
+            "description": "Content availability end date (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "DueDate",
+            "description": "Content availability due date (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "ObjectId1",
+            "description": "Quick link Object ID for the associated tool. Maps to DropboxId, QuizId, ChecklistId, SurveyId, ChatId, Self-AssessmentId. For Discussions, this field is used if a Forum is quicklinked. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "8.10 - Updated description"
+        },
+        {
+            "name": "ObjectId2",
+            "description": "Quick link Object ID, only used for the Discussion tool if a Topic is quicklinked. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "8.10 - Updated description"
+        },
+        {
+            "name": "ObjectId3",
+            "description": "Quick link Object ID, only used for the Discussion tool if a Thread is quicklinked. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "8.10 - Updated description"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date the content was last modified (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.0 \u00e2\u0080\u0093 Updated name"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Content is deleted",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "SortOrder",
+            "description": "Display sort order used for the content objects",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.2"
+        },
+        {
+            "name": "Depth",
+            "description": "Indicates the number of nested hierarchical levels in the discussion post.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.5 \/ 3.0"
+        },
+        {
+            "name": "ToolId",
+            "description": "Unique identifier for the tool. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "4.6 \/ 5.0"
+        },
+        {
+            "name": "IsHidden",
+            "description": "Content object has not been published yet",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.6 \/ 5.0"
+        },
+        {
+            "name": "ResultId",
+            "description": "Release Condition unique result identifier. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.7 \/ 5.1 - Updated description"
+        },
+        {
+            "name": "DeletedDate",
+            "description": "Date when the content object was deleted (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.6 \/ 5.0"
+        },
+        {
+            "name": "CreatedBy",
+            "description": "User who created the content object. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.6 \/ 5.0"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "User who last modified the content object. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.6 \/ 5.0"
+        },
+        {
+            "name": "DeletedBy",
+            "description": "User who deleted the content object. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "8.6 - Updated description"
+        }
+    ]
+}

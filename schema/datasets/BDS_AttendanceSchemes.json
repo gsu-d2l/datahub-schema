@@ -1,0 +1,88 @@
+{
+    "type": "BDS",
+    "name": "Attendance Schemes",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4519-attendance-data-sets#attendance-schemes",
+    "description": "The Attendance Schemes Brightspace Data Set describes the schemes that are available for use with attendance registers in your organization.",
+    "columns": [
+        {
+            "name": "SchemeId",
+            "description": "Unique scheme identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "SchemeName",
+            "description": "The given name of the scheme.",
+            "type": "nvarchar",
+            "size": "128",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "SchemeSymbolId",
+            "description": "Unique scheme symbol identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "SymbolName",
+            "description": "The name given to the symbol.",
+            "type": "nvarchar",
+            "size": "128",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "SymbolValue",
+            "description": "The value used for the symbol.",
+            "type": "nvarchar",
+            "size": "50",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "Percentage",
+            "description": "The score as a percentage that contributes towards the attendance score when a symbol is given. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        }
+    ]
+}

@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="fallbackPageContent">
+<main>
+<section>
+<div class="mainColumn">
+<article>
+<h2 data-id="competency-activities">Competency Activities</h2>
+<p>The Competency Activities Brightspace Data Set retrieves the data required to associate rubrics with competency activities. Using the returned data, clients can validate that they have configured the associations correctly.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>8.9 - Updated Description</td>
+<td style="width: 125px;">
+<p>ActivityId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique identifier for the activity associated with the competency. Can join with Competency Activity Results, Activity Exemptions Log, SCORM Objectives, SCORM Activity Attempts, SCORM Interactions, and SCORM Interaction Attempts.</p>
+                    </td>
+<td style="width: 125px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.8</td>
+<td style="width: 125px;">
+<p>OrgUnitId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Identifier for the Org Unit associated with the competency.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.8</td>
+<td style="width: 125px;">
+<p>ActivityName</p>
+                    </td>
+<td style="width: 125px;">
+<p>The name of the activity.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>256</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.8</td>
+<td style="width: 125px;">
+<p>ActivityTypeId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Identifier for the activity type</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.8</td>
+<td style="width: 125px;">
+<p>AssessmentType</p>
+                    </td>
+<td style="width: 125px;">
+<p>Rubric assessment type</p>
+                    </td>
+<td style="width: 125px;">
+<p>varchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>7</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.8</td>
+<td style="width: 125px;">
+<p>ObjectLookupId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Lookup object id that is associated with the object.</p>
+                    </td>
+<td style="width: 125px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.8</td>
+<td style="width: 125px;">
+<p>RubricId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Identifier of the rubric. This field is only valid for competency activities associated with a rubric.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.8</td>
+<td style="width: 125px;">
+<p>LevelId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Identifier of the rubric level associated with the competency activity. This field is only valid for competency activities associated with a rubric.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.8</td>
+<td style="width: 125px;">
+<p>RubricCriterionId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Identifier of the rubric criterion associated with the activity. This field is only valid for competency activities associated with a rubric and scored at the criteria level.</p>
+<p>If the overall rubric score is used, the value is null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.8</td>
+<td style="width: 125px;">
+<p>AssessmentThresholdCriteria</p>
+                    </td>
+<td style="width: 125px;">
+<p>For numeric activity only. Can be &gt;= (greater than or equal to), &gt; (greater than), = (equal to), &lt;= (less than or equal to), or &lt; (less than).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>varchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>2</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.8</td>
+<td style="width: 125px;">
+<p>AssessmentThreshold</p>
+                    </td>
+<td style="width: 125px;">
+<p>When a competency activity is evaluated, the assessment threshold is the value that must be met by a learner to achieve the competency.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>decimal</p>
+                    </td>
+<td style="width: 125px;">
+<p>19, 9</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.8</td>
+<td style="width: 125px;">
+<p>IsAutoEval</p>
+                    </td>
+<td style="width: 125px;">
+<p>Indicates if this competency is automatically evaluated. If this is false, the competency is a manual evaluation.</p>
+                    </td>
+<td style="width: 125px;">
+<p>bit</p>
+                    </td>
+<td style="width: 125px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.8</td>
+<td style="width: 125px;">
+<p>RubricName</p>
+                    </td>
+<td style="width: 125px;">
+<p>Name of the rubric.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>256</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 125px;">
+<p>RubricLevelRequired</p>
+                    </td>
+<td style="width: 125px;">
+<p>Level required to achieve this learning objective.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>256</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.8</td>
+<td style="width: 125px;">
+<p>ObjectId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Identifier of the competency object associated with the competency activity.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0</td>
+<td style="width: 125px;">ActivityType</td>
+<td style="width: 125px;">
+<p>Type of activity.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">nvarchar</td>
+<td style="width: 125px;">50</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0</td>
+<td style="width: 125px;">Version</td>
+<td style="width: 125px;">Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="competency-activity-log">Competency Activity Log</h2>
+<p>The Competency Activity Log Brightspace Data Set records changes as competencies are mapped to specific activities.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.6</td>
+<td style="width: 125px;">
+<p>ActivityId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique activity identifier</p>
+                    </td>
+<td style="width: 125px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.6</td>
+<td style="width: 125px;">ActivityLogId</td>
+<td style="width: 125px;">Unique identifier for the activity log</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>1.6</td>
+<td style="width: 125px;">
+<p>LogTypeId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Log type identifier</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 125px;">
+<p>LogTypeName</p>
+                    </td>
+<td style="width: 125px;">
+<p>Name of the log type.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>varchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>19</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.6</td>
+<td style="width: 125px;">
+<p>LogDateTime</p>
+                    </td>
+<td style="width: 125px;">
+<p>Time and date of the entry in the log</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.6</td>
+<td style="width: 125px;">ModifiedBy</td>
+<td style="width: 125px;">User who modified the competency structure.</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td>FK</td>
+                </tr></tbody></table>
+<h2 data-id="competency-activity-results">Competency Activity Results</h2>
+<p>The Competency Activity Results Brightspace Data Set returns data on activities associated with learning objectives that have been created for your org units.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>2.5 / 3.0 - Added FK</td>
+<td style="width: 125px;">
+<p>ActivityId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique identifier for activity associated with a competency</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>OrgUnitId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique org unit identifier</p>
+                    </td>
+<td>
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>UserId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique user Identifier</p>
+                    </td>
+<td>
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>LearningObjectId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique learning object identifier</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>IsAchieved</p>
+                    </td>
+<td style="width: 125px;">
+<p>Is learning objective achieved.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>bit</p>
+                    </td>
+<td style="width: 125px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>4.8 / 5.2 - Updated column size</td>
+<td style="width: 125px;">
+<p>PercentAchieved</p>
+                    </td>
+<td style="width: 125px;">
+<p>Percentage achieved in the activity.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>decimal</p>
+                    </td>
+<td style="width: 125px;">
+<p>19, 9</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>4.8 / 5.2 - Updated column size</td>
+<td style="width: 125px;">
+<p>RubricScore</p>
+                    </td>
+<td style="width: 125px;">
+<p>Rubric score achieved in the activity.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>decimal</p>
+                    </td>
+<td style="width: 125px;">
+<p>19, 9</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 125px;">
+<p>RubricLevelAchieved</p>
+                    </td>
+<td style="width: 125px;">
+<p>Rubric level achieved in the activity.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>nvarchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>256</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.4</td>
+<td style="width: 125px;">RubricId</td>
+<td style="width: 125px;">
+<p>Rubric id attached to the competency activity (used for evaluation).</p>
+<p>Field can be null.</p>
+                    </td>
+<td>bigint</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.6</td>
+<td style="width: 125px;">RubricCriterionId</td>
+<td style="width: 125px;">
+<p>Criterion attached to the competency activity.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>bigint</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
+<td style="width: 125px;">AchievedDate</td>
+<td style="width: 125px;">
+<p>Date the competency was achieved (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0</td>
+<td style="width: 125px;">Version</td>
+<td style="width: 125px;">Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
+<td>bigint</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="competency-log">Competency Log</h2>
+<p>The Competency Log Brightspace Data Set returns data changes to the competency structure.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.5</td>
+<td style="width: 125px;">
+<p>CompetencyLogId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique log identifier</p>
+                    </td>
+<td style="width: 125px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.5</td>
+<td style="width: 125px;">
+<p>LogTypeId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Log type identifier</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 125px;">
+<p>LogTypeName</p>
+                    </td>
+<td style="width: 125px;">
+<p>Name of the log type.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>varchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>19</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.5</td>
+<td style="width: 125px;">
+<p>ObjectId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Identifier for the object that created the change in the competency structure recorded in the log.</p>
+                    </td>
+<td style="width: 125px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.5</td>
+<td style="width: 125px;">
+<p>ObjectTypeId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Identifier for the object type that created the change in the competency structure recorded in the log.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 125px;">ObjectTypeName</td>
+<td style="width: 125px;">
+<p>Name of the object type.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">varchar</td>
+<td style="width: 125px;">18</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.5</td>
+<td style="width: 125px;">
+<p>ObjectVersion</p>
+                    </td>
+<td style="width: 125px;">
+<p>Version of the object that created the change in the competency structure</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.5</td>
+<td style="width: 125px;">
+<p>LogDateTime</p>
+                    </td>
+<td style="width: 125px;">
+<p>Time and date of the entry in the log (UTC).</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.5</td>
+<td style="width: 125px;">ModifiedBy</td>
+<td style="width: 125px;">User who modified the competency structure.</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>1.5</td>
+<td style="width: 125px;">IndirectObjectId</td>
+<td style="width: 125px;">
+<p>Identifier for the indirect object that created the change in the log.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 125px;">IndirectObjectTypeName</td>
+<td style="width: 125px;">
+<p>Name of the indirect object type.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">varchar</td>
+<td style="width: 125px;">18</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.5</td>
+<td style="width: 125px;">IndirectObjectTypeId</td>
+<td style="width: 125px;">
+<p>Identifier of the type of indirect object that created the change in the log.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.5</td>
+<td style="width: 125px;">IndirectObjectVersion</td>
+<td style="width: 125px;">
+<p>Version of the object that indirectly created the change in the log.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="competency-objects">Competency Objects</h2>
+<p>The Competency Objects Brightspace Data Set returns the competencies and learning objectives which have been created within your organization.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>ObjectId</p>
+                    </td>
+<td>
+<p>Unique competency or learning objective ID</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>OrgUnitId</p>
+                    </td>
+<td>
+<p>Unique org unit identifier</p>
+                    </td>
+<td>
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td>
+<p>Name</p>
+                    </td>
+<td>
+<p>Competency name</p>
+                    </td>
+<td>
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>256</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td>
+<p>Type</p>
+                    </td>
+<td>
+<p>Competency type</p>
+                    </td>
+<td>
+<p>varchar</p>
+                    </td>
+<td>
+<p>256</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>ReadyForEvaluation</p>
+                    </td>
+<td>
+<p>Is flagged as ready for evaluation</p>
+                    </td>
+<td>
+<p>bit</p>
+                    </td>
+<td>
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td>
+<p>Status</p>
+                    </td>
+<td>
+<p>Status of competency: Draft, In Review, Approved, Archived.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>varchar</p>
+                    </td>
+<td>
+<p>9</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>Description</p>
+                    </td>
+<td>
+<p>Competency or learning objective description.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>1000</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>NeedReevaluation</p>
+                    </td>
+<td>
+<p>Flag indicating if the competency or learning objective needs to be reevaluated</p>
+                    </td>
+<td>
+<p>bit</p>
+                    </td>
+<td>
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>ReevaluationIfAchieved</p>
+                    </td>
+<td>
+<p>Determines if reevaluation will occur when the competency or learning objective is updated and the competency or learning objective has already been achieved.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>bit</p>
+                    </td>
+<td>
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>ReevaluationIfNotAchieved</p>
+                    </td>
+<td>
+<p>Determines if reevaluation will occur when the competency or learning objective is updated and the competency or learning objective has not been achieved.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>bit</p>
+                    </td>
+<td>
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td>
+<p>AdditionalIdentifier</p>
+                    </td>
+<td>
+<p>Additional competency or learning objective identifier.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>512</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>3.9 / 4.4</td>
+<td>IsHidden</td>
+<td>Indicates if the competency is hidden to consumers.</td>
+<td>bit</td>
+<td>1</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="competency-structure">Competency Structure</h2>
+<p>The Competency Structure Brightspace Data Set returns information about all competency structures for your org units.</p>
+<p></p>
+<p>Returned Fields</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Column Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.4 - Added Primary Key designation</td>
+<td style="width: 125px;">
+<p>ObjectId</p>
+                    </td>
+<td>
+<p>Unique competency or learning objective ID</p>
+                    </td>
+<td style="width: 125px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.4 - Added Primary Key designation</td>
+<td style="width: 125px;">
+<p>ParentObjectId</p>
+                    </td>
+<td>
+<p>Parent competency or learning objective ID</p>
+                    </td>
+<td style="width: 125px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.4 - Added Primary Key designation</td>
+<td style="width: 125px;">BaseObjectID</td>
+<td>Unique basic object ID</td>
+<td style="width: 125px;">bigint</td>
+<td style="width: 125px;">8</td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.2</td>
+<td style="width: 125px;">Depth</td>
+<td>Indicates the depth of the competency structure</td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.4</td>
+<td style="width: 125px;">EntryTime</td>
+<td>
+<p>The order in which a competency object exists with respect to its hierarchy.</p>
+                    </td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td>PK</td>
+                </tr></tbody></table>
+</article>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>

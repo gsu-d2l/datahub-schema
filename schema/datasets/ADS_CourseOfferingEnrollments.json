@@ -1,0 +1,58 @@
+{
+    "type": "ADS",
+    "name": "Course Offering Enrollments",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#course-offering-enrollments",
+    "description": "Returns the course offerings within which a user is enrolled, including both explicit and implicit enrollments. Required Permission Advanced Data Sets > Can Execute Course Offering Enrollments (Organization level) Available Filters Returned Fields",
+    "columns": [
+        {
+            "name": "User Id",
+            "description": "Internal numeric user identifier within Brightspace.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.1"
+        },
+        {
+            "name": "Org Unit Id",
+            "description": "Unique org unit identifier for the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.1"
+        },
+        {
+            "name": "Role Id",
+            "description": "The learner's numeric role Id within the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.1"
+        },
+        {
+            "name": "Enrollment Date",
+            "description": "The date of the learner's enrollment.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.1"
+        },
+        {
+            "name": "Enrollment Type",
+            "description": "The type of enrollment.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.21.1"
+        }
+    ]
+}

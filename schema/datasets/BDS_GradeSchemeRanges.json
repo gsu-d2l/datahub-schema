@@ -1,0 +1,78 @@
+{
+    "type": "BDS",
+    "name": "Grade Scheme Ranges",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4527-grades-data-sets#grade-scheme-ranges",
+    "description": "The Grade Schemes Ranges Brightspace Data Set describes the ranges used in grade schemes in the organization.",
+    "columns": [
+        {
+            "name": "GradeSchemeRangeId",
+            "description": "Unique grade scheme range identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0"
+        },
+        {
+            "name": "GradeSchemeId",
+            "description": "Unique grade scheme identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0"
+        },
+        {
+            "name": "SymbolString",
+            "description": "The name of the range.",
+            "type": "nvarchar",
+            "size": "100",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0"
+        },
+        {
+            "name": "AssignedValue",
+            "description": "The value assigned to the grade scheme range. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0"
+        },
+        {
+            "name": "RangeStart",
+            "description": "The starting value (in percent) of the grade scheme.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates that the grade scheme is deleted",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0"
+        }
+    ]
+}

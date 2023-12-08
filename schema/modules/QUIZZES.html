@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="fallbackPageContent">
+<main>
+<section>
+<div class="mainColumn">
+<article>
+<h2 data-id="quiz-attempts">Quiz Attempts</h2>
+<p>The Quiz Attempts Brightspace Data Set returns details for each user quiz attempt for all your org units. This data set includes completed quiz attempts and in-progress quiz attempts.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>AttemptId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique attempt identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>6.7 - Updated key</td>
+<td>
+<p>QuizId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique quiz identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td>
+<p>UserId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique user identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td>
+<p>OrgUnitId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique org unit identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>AttemptNumber</p>
+                    </td>
+<td style="width: 134px;">
+<p>Attempt number for the quiz</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>TimeStarted</p>
+                    </td>
+<td style="width: 134px;">
+<p>Quiz attempt start time (UTC).</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>TimeCompleted</p>
+                    </td>
+<td style="width: 134px;">
+<p>Quiz attempt completion time (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>4.8 / 5.2 - Updated column size</td>
+<td>
+<p>Score</p>
+                    </td>
+<td style="width: 134px;">
+<p>Score for the attempt.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>decimal</p>
+                    </td>
+<td style="width: 134px;">
+<p>19, 9</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>IsGraded</p>
+                    </td>
+<td style="width: 134px;">
+<p>If a quiz has been graded</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.10</td>
+<td>OldAttemptNumber</td>
+<td style="width: 134px;">
+<p>Number of previous times a learner has attempted the quiz.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.10</td>
+<td>IsDeleted</td>
+<td style="width: 134px;">
+<p>Indicates that the quiz attempt is deleted.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">bit</td>
+<td style="width: 134px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td>PossibleScore</td>
+<td style="width: 134px;">
+<p>Indicates the total possible value of the quiz attempt. This should indicate what the quiz "out of" score is, even if the quiz total possible value changes after the attempt is made.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">decimal</td>
+<td style="width: 134px;">19, 9</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>8.10 - Updated description</td>
+<td>IsRetakeIncorrectOnly</td>
+<td style="width: 134px;">
+<p>Indicates if this attempt only includes questions that were incorrect on a previous attempt.</p>
+                    </td>
+<td style="width: 134px;">bit</td>
+<td style="width: 134px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>6.11</td>
+<td>DueDate</td>
+<td style="width: 134px;">
+<p>Quiz attempt due date (UTC). Based on when the learner begins the attempt, even if the instructor changes the quiz due date later.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">datetime2</td>
+<td style="width: 134px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>6.11</td>
+<td>TimeLimit</td>
+<td style="width: 134px;">
+<p>Amount of time, in minutes, that a learner has to complete the quiz attempt. Based on when the learner begins the attempt, even if the instructor changes the quiz time limit later.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>6.11</td>
+<td>TimeLimitEnforced</td>
+<td style="width: 134px;">
+<p>Indicates whether the time limit on this quiz attempt is enforced. Based on when the learner begins the attempt, even if the instructor changes the time limit enforced setting later.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">bit</td>
+<td style="width: 134px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>9.0 - REMOVED COLUMN</td>
+<td>GracePeriod</td>
+<td style="width: 134px;">
+<p>Amount of time, in minutes, that a learner has to complete the quiz attempt in addition to the time limit. Based on when the learner begins the attempt, even if the instructor changes the quiz grace period later.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>9.0 - Changed Field name and Description</td>
+<td>TimeLimitExceededBehaviour</td>
+<td style="width: 134px;">
+<p>If the time limit is enforced for this attempt, indicates the desired behavior when the time limit is exceeded.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">nvarchar</td>
+<td style="width: 134px;">128</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>9.0</td>
+<td>IsSynchronous</td>
+<td style="width: 134px;">Indicates that a quiz attempt is synchronous. A synchronous quiz's timer starts on the start date.</td>
+<td style="width: 134px;">bit</td>
+<td style="width: 134px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>9.0 - REMOVED COLUMN</td>
+<td>ExtendedDeadline</td>
+<td style="width: 134px;">
+<p>The extended deadline learners are allowed beyond the grace period for this attempt, in minutes. Based on when the learner begins the attempt, even if the instructor changes the quiz's extended deadline later. Beyond this extended deadline, the learner's attempt is graded as 0.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>9.0</td>
+<td>DeductionPercentage</td>
+<td style="width: 134px;">
+<p>The percentage of a question's point value that is deducted from the quiz attempt score if the question is answered incorrectly. This value remains constant once the learner begins the attempt, even if the instructor changes the deduction percentage later.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">int</td>
+<td style="width: 134px;">4</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="quiz-attempts-log">Quiz Attempts Log</h2>
+<p>The Quiz Attempts Log Brightspace Data Set returns details on the events that occur during a quiz attempt. This data set includes completed quiz attempts and in-progress quiz attempts. There is no explicit time cap placed on this data set. However, data is sorted from newest to oldest and older data will be dropped if the data set reaches the row limit.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>3.6 / 4.1</td>
+<td>LogId</td>
+<td style="width: 134px;">Unique log identifier</td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
+<td>
+<p>AttemptId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique attempt identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td>
+<p>EventTypeId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique event type identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td>
+<p>Name</p>
+                    </td>
+<td style="width: 134px;">
+<p>Name of the event.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>256</p>
+                    </td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td>Description</td>
+<td style="width: 134px;">
+<p>Description of the event.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>256</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
+<td>
+<p>EventTime</p>
+                    </td>
+<td style="width: 134px;">
+<p>Event occurred time (UTC).</p>
+                    </td>
+<td style="width: 134px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
+<td>IPAddress</td>
+<td style="width: 134px;">
+<p>IPAddress at which the event occurred.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">varchar</td>
+<td style="width: 134px;">15</td>
+<td>
+<p></p>
+                    </td>
+                </tr></tbody></table>
+<h2 data-id="quiz-objects">Quiz Objects</h2>
+<p>The Quiz Objects Brightspace Data Set returns information about the settings and properties of a quiz.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">QuizId</td>
+<td style="width: 122px;">Unique quiz identifier</td>
+<td style="width: 122px;">bigint</td>
+<td style="width: 122px;">8</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 122px;">QuizName</td>
+<td style="width: 122px;">Quiz name</td>
+<td style="width: 122px;">nvarchar</td>
+<td style="width: 122px;">256</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">QuizDescription</td>
+<td style="width: 122px;">
+<p>Description of the Quiz.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 122px;">1000</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">QuizCategory</td>
+<td style="width: 122px;">
+<p>Category assigned to the quiz.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">nvarchar</td>
+<td style="width: 122px;">256</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">IsActive</td>
+<td style="width: 122px;">Indicates if the quiz is active</td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>6.7 - Updated key</td>
+<td style="width: 122px;">OrgUnitId</td>
+<td style="width: 122px;">Org unit identifier associated with the quiz object</td>
+<td style="width: 122px;">int</td>
+<td style="width: 122px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">StartDate</td>
+<td style="width: 122px;">
+<p>First time the quiz is visible.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">datetime2</td>
+<td style="width: 122px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">EndDate</td>
+<td style="width: 122px;">
+<p>Last date the quiz is visible.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">datetime2</td>
+<td style="width: 122px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">DueDate</td>
+<td style="width: 122px;">
+<p>Date the quiz is due (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">datetime2</td>
+<td style="width: 122px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">CreationDate</td>
+<td style="width: 122px;">Date the quiz was created (UTC).</td>
+<td style="width: 122px;">datetime2</td>
+<td style="width: 122px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">CreatedBy</td>
+<td style="width: 122px;">
+<p>Id of the user who created the quiz.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">bigint</td>
+<td style="width: 122px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">LastModified</td>
+<td style="width: 122px;">Date when the quiz was last modified (UTC).</td>
+<td style="width: 122px;">datetime2</td>
+<td style="width: 122px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">LastModifiedBy</td>
+<td style="width: 122px;">
+<p>Id of the user who last modified the quiz.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">bigint</td>
+<td style="width: 122px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">GradeObjectId</td>
+<td style="width: 122px;">
+<p>Grade object identifier associated with the quiz.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">bigint</td>
+<td style="width: 122px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 122px;">OverallScoreCalculation</td>
+<td style="width: 122px;">
+<p>Quiz score calculation method. Types include: Highest Attempt, Lowest Attempt, Average of all attempts, First Attempt, and Last Attempt.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">varchar</td>
+<td style="width: 122px;">23</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>
+<p>4.8 / 5.2 - Updated column size</p>
+                    </td>
+<td style="width: 122px;">QuizScoreDenominator</td>
+<td style="width: 122px;">Denominator for the quiz score</td>
+<td style="width: 122px;">decimal</td>
+<td style="width: 122px;">19, 9</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">HasPassword</td>
+<td style="width: 122px;">
+<p>Is a password required to access this quiz.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">IPRestricted</td>
+<td style="width: 122px;">
+<p>Is this quiz available to only certain IP Addresses.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">TimeLimit</td>
+<td style="width: 122px;">Does this quiz have a time limit.</td>
+<td style="width: 122px;">int</td>
+<td style="width: 122px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">TimeLimitEnforced</td>
+<td style="width: 122px;">Is the time limit assigned to this quiz enforced.</td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>9.0 - REMOVED COLUMN</td>
+<td style="width: 122px;">
+<p>TimeLimitExceededBehavior</p>
+<p></p>
+                    </td>
+<td style="width: 122px;">
+<p>Are learners taking this quiz permitted to exceed the time limit.</p>
+<p>Possible values:</p>
+<ul><li>
+<p>0 = Allow the student to continue working</p>
+                            </li>
+<li>
+<p>1 = Allow the student to continue working, but automatically score the attempt as zero after an extended deadline</p>
+                            </li>
+<li>
+<p>2 = Prevent the student from making further changes</p>
+                            </li>
+                        </ul><p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">int</td>
+<td style="width: 122px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>9.0 - REMOVED COLUMN</td>
+<td style="width: 122px;">TimeLimitGracePeriod</td>
+<td style="width: 122px;">
+<p>Is there a grace period at the end of the time limit on this quiz.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">int</td>
+<td style="width: 122px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">AttemptsAllowed</td>
+<td style="width: 122px;">
+<p>Number of times learners are permitted to attempt the quiz.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">int</td>
+<td style="width: 122px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">PreventMovingBackwards</td>
+<td style="width: 122px;">Indicates if learners are permitted to move to previous pages in the quiz.</td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">AllowHints</td>
+<td style="width: 122px;">Indicates that there are hints allowed for the quiz.</td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 122px;">NotificationEmail</td>
+<td style="width: 122px;">
+<p>Indicates that there is a notification email for this quiz.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">nvarchar</td>
+<td style="width: 122px;">1000</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">DisablePagerAccess</td>
+<td style="width: 122px;">Indicates that learners cannot access the pager functionality</td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.7</td>
+<td style="width: 122px;">DisplayInCalendar</td>
+<td style="width: 122px;">
+<p>The quiz is not turned on in the calendar.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>9.0 - REMOVED COLUMN</td>
+<td style="width: 122px;">ShowClock</td>
+<td style="width: 122px;">Indicates whether there is a quiz clock visible while learners are taking the quiz.</td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>2.2</td>
+<td style="width: 122px;">IsAttemptRldb</td>
+<td style="width: 122px;">Indicates that a quiz was attempted using Respondus.</td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>2.2</td>
+<td style="width: 122px;">IsSubviewRldb</td>
+<td style="width: 122px;">Indicates that a portion of the quiz was attempted using Respondus</td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>2.2</td>
+<td style="width: 122px;">SortOrder</td>
+<td style="width: 122px;">Display sort order used for the content objects</td>
+<td style="width: 122px;">int</td>
+<td style="width: 122px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.9 / 6.2</td>
+<td style="width: 122px;">CategoryId</td>
+<td style="width: 122px;">
+<p>Unique category identifier for the quiz.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">bigint</td>
+<td style="width: 122px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>5.9 / 6.2</td>
+<td style="width: 122px;">ResultId</td>
+<td style="width: 122px;">
+<p>Unique release condition result identifier.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">bigint</td>
+<td style="width: 122px;">8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>8.10 - Updated description</td>
+<td style="width: 122px;">IsRetakeIncorrectOnly</td>
+<td style="width: 122px;">
+<p>Indicates if the quiz allows Retake Incorrect Only.</p>
+                    </td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>7.14 / 8.0 - Updated field description</td>
+<td style="width: 122px;">PagingTypeId</td>
+<td style="width: 122px;">
+<p>Exposes page break information from the New Quiz Experience.</p>
+<p>Possible values:</p>
+<ul><li>
+<p>NULL = Uses Classic Quiz Creation paging</p>
+                            </li>
+<li>
+<p>0 = All questions on one page</p>
+                            </li>
+<li>
+<p>1 = One question per page</p>
+                            </li>
+<li>
+<p>2 = Page breaks after each section</p>
+                            </li>
+<li>
+<p>3 = 5 questions per page</p>
+                            </li>
+<li>
+<p>4 = 10 questions per page</p>
+                            </li>
+                        </ul><p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">int</td>
+<td style="width: 122px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>9.0</td>
+<td style="width: 122px;">IsSynchronous</td>
+<td style="width: 122px;">Indicates that a quiz is synchronous. A synchronous quiz's timer starts on the start date.</td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>9.0</td>
+<td style="width: 122px;">DeductionPercentage</td>
+<td style="width: 122px;">
+<p>The percentage of a question's point value that will be deducted from the quiz attempt score if the question is answered incorrectly.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">int</td>
+<td style="width: 122px;">4</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="quiz-question-answer-options">Quiz Question Answer Options</h2>
+<p>The Quiz Question Answer Options Brightspace Data Set returns possible options for a given quiz answer. Only includes answer options for these question types: Short Answer, Fill in the Blanks, and Multi-Short Answer. Rows in the data set are filtered out if they are associated with deleted quiz attempts.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>AnswerId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique answer Identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>AnswerText</p>
+                    </td>
+<td style="width: 134px;">
+<p>User answer.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>1000</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>4.8 / 5.2 - Updated column size</td>
+<td style="width: 134px;">
+<p>Weight</p>
+                    </td>
+<td style="width: 134px;">
+<p>Weight associated with the answer</p>
+                    </td>
+<td style="width: 134px;">
+<p>decimal</p>
+                    </td>
+<td style="width: 134px;">
+<p>19, 9</p>
+                    </td>
+<td style="width: 95px;">
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>QuestionId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique question identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 134px;">
+<p>QuestionVersionId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique question version identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td style="width: 95px;">
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>6.7 - Updated key</td>
+<td style="width: 134px;">QuizObjectId</td>
+<td style="width: 134px;">Unique quiz object identifier</td>
+<td style="width: 134px;">bigint</td>
+<td style="width: 134px;">8</td>
+<td style="width: 95px;">PK, FK</td>
+                </tr><tr align="left" valign="top"><td>1.2</td>
+<td style="width: 134px;">AnswerOptionId</td>
+<td style="width: 134px;">Unique answer option identifier</td>
+<td style="width: 134px;">bigint</td>
+<td style="width: 134px;">8</td>
+<td style="width: 95px;">PK</td>
+                </tr></tbody></table>
+<h2 data-id="quiz-question-answers">Quiz Question Answers</h2>
+<p>The Quiz Question Answers Brightspace Data Set returns possible answers for a given quiz question. Rows in the data set are filtered out if they are associated with deleted quiz attempts.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th>
+<p><b>Version <br>History</b><br></p>
+                    </th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>
+<p>1.0</p>
+                    </td>
+<td style="width: 134px;">
+<p>AnswerId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique answer identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>1.0</p>
+                    </td>
+<td style="width: 134px;">
+<p>QuestionId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique question identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>1.0</p>
+                    </td>
+<td style="width: 134px;">
+<p>QuestionVersionId</p>
+                    </td>
+<td style="width: 134px;">
+<p>Unique question version identifier</p>
+                    </td>
+<td style="width: 134px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 134px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>1.0</p>
+                    </td>
+<td style="width: 134px;">
+<p>SortOrder</p>
+                    </td>
+<td style="width: 134px;">
+<p>Order in which the quiz answers are displayed or correct answer order for ordering questions.</p>
+                    </td>
+<td style="width: 134px;">
+<p>int</p>
+                    </td>
+<td style="width: 134px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>1.0</p>
+                    </td>
+<td style="width: 134px;">
+<p>IsCorrect</p>
+                    </td>
+<td style="width: 134px;">
+<p>Is answer correct.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>bit</p>
+                    </td>
+<td style="width: 134px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>4.8 / 5.2 - Updated column size</p>
+                    </td>
+<td style="width: 134px;">
+<p>Weight</p>
+                    </td>
+<td style="width: 134px;">
+<p>Weight associated with answer.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>decimal</p>
+                    </td>
+<td style="width: 134px;">
+<p>19, 9</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>5.7 / 6.0 - Changed Column Size</p>
+                    </td>
+<td style="width: 134px;">
+<p>Answer</p>
+                    </td>
+<td style="width: 134px;">
+<p>Answer text.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>1000</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>1.0</p>
+                    </td>
+<td style="width: 134px;">
+<p>Comment</p>
+                    </td>
+<td style="width: 134px;">
+<p>Instructor comment on the answer.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>1000</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>5.7 / 6.0 - Changed Column Size</p>
+                    </td>
+<td style="width: 134px;">
+<p>Description</p>
+                    </td>
+<td style="width: 134px;">
+<p>System description for the type of answer expected.</p>
+                    </td>
+<td style="width: 134px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 134px;">
+<p>256</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>6.7 - Updated key</p>
+                    </td>
+<td style="width: 134px;">ObjectId</td>
+<td style="width: 134px;">Unique identifier of the answer</td>
+<td style="width: 134px;">bigint</td>
+<td style="width: 134px;">8</td>
+<td>PK</td>
+                </tr></tbody></table>
+<h2 data-id="quiz-survey-sections">Quiz Survey Sections</h2>
+<p>The Quiz Survey Sections Brightspace Data Set returns information about all the sections and question pools that have been created in quizzes in the organization.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>3.4</td>
+<td style="width: 122px;">CollectionId</td>
+<td style="width: 122px;">Unique question collection identifier</td>
+<td style="width: 122px;">bigint</td>
+<td style="width: 122px;">8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>3.4</td>
+<td style="width: 122px;">SectionId</td>
+<td style="width: 122px;">Unique section identifier.</td>
+<td style="width: 122px;">bigint</td>
+<td style="width: 122px;">8</td>
+<td>PK</td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
+<td style="width: 122px;">Name</td>
+<td style="width: 122px;">Field can be null.</td>
+<td style="width: 122px;">nvarchar</td>
+<td style="width: 122px;">256</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.4</td>
+<td style="width: 122px;">NameIsDisplayed</td>
+<td style="width: 122px;">Indicates if the section name is hidden or shown.</td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.4</td>
+<td style="width: 122px;">IsQuestionPool</td>
+<td style="width: 122px;">Indicates if the question pool is a random section.</td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.4</td>
+<td style="width: 122px;">SectionText</td>
+<td style="width: 122px;">Field can be null.</td>
+<td style="width: 122px;">nvarchar</td>
+<td style="width: 122px;">1000</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.4</td>
+<td style="width: 122px;">SectionTextIsHTML</td>
+<td style="width: 122px;">Indicates if the section text is HTML or plain text.</td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.4</td>
+<td style="width: 122px;">IsSectionTextHidden</td>
+<td style="width: 122px;">
+<p>Indicates if the section text is hidden or shown. Values are 0 for hidden, and 1 for shown.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>
+<p>4.8 / 5.2 - Updated column size</p>
+                    </td>
+<td style="width: 122px;">QuestionPoints</td>
+<td style="width: 122px;">Field can be null.</td>
+<td style="width: 122px;">decimal</td>
+<td style="width: 122px;">19, 9</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.4</td>
+<td style="width: 122px;">NumQuestions</td>
+<td style="width: 122px;">Indicates the number of questions in the quiz section.</td>
+<td style="width: 122px;">int</td>
+<td style="width: 122px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.4</td>
+<td style="width: 122px;">NumChoices</td>
+<td style="width: 122px;">Indicates the number of choices in the question pool from which the quiz can be created.</td>
+<td style="width: 122px;">int</td>
+<td style="width: 122px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.4</td>
+<td style="width: 122px;">Shuffle</td>
+<td style="width: 122px;">Indicates that the quiz questions in the pool are shuffled.</td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.4</td>
+<td style="width: 122px;">CreationDate</td>
+<td style="width: 122px;">Date the quiz was created (UTC).</td>
+<td style="width: 122px;">datetime2</td>
+<td style="width: 122px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>6.7 - Updated key</td>
+<td style="width: 122px;">CreatedBy</td>
+<td style="width: 122px;">
+<p>Id of the user who created the quiz.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">bigint</td>
+<td style="width: 122px;">8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>3.4</td>
+<td style="width: 122px;">LastModified</td>
+<td style="width: 122px;">Date when the quiz was last modified (UTC).</td>
+<td style="width: 122px;">datetime2</td>
+<td style="width: 122px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>6.7 - Updated key</td>
+<td style="width: 122px;">LastModifiedBy</td>
+<td style="width: 122px;">
+<p>Id of the user who last modified the quiz.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">bigint</td>
+<td style="width: 122px;">8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>3.4</td>
+<td style="width: 122px;">IsDeleted</td>
+<td style="width: 122px;">
+<p>Indicates that the quiz question is deleted.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">bit</td>
+<td style="width: 122px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>3.6 / 4.0</td>
+<td style="width: 122px;">Version</td>
+<td style="width: 122px;">
+<p>Indicates the version of the question. This column supports the Question Pools information in the Assessment Quality Dashboard.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 122px;">
+<p>8</p>
+                    </td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="quiz-user-answer-responses">Quiz User Answer Responses</h2>
+<p>The Quiz User Answer Responses Brightspace Data Set returns details on how a user answered a specific quiz question. Data includes whether an answer is correct and details around the quiz score. Rows in the data set are filtered out if they are associated with deleted quiz questions. The Quiz User Answer Responses data set and differential is limited to 3 years of data (all of the previous two calendar years and the current calendar year to date).</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>AttemptId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Unique attempt identifier</p>
+                    </td>
+<td style="width: 122px;">
+<p>bigint</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>AttemptNumber</p>
+                    </td>
+<td style="width: 122px;">
+<p>Attempt number associated with the AttemptId</p>
+                    </td>
+<td style="width: 122px;">
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>QuestionId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Unique question identifier</p>
+                    </td>
+<td style="width: 122px;">
+<p>bigint</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>QuestionVersionId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Unique question version identifier</p>
+                    </td>
+<td style="width: 122px;">
+<p>bigint</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>AnswerId</p>
+                    </td>
+<td style="width: 122px;">
+<p>Unique answer identifier</p>
+                    </td>
+<td style="width: 122px;">
+<p>bigint</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>SortOrder</p>
+                    </td>
+<td style="width: 122px;">
+<p>Order in which quiz question options appear to the user. For example, the order in which multi-select or true /false options appear. Some question types can be randomized, for example, multi-select.</p>
+                    </td>
+<td style="width: 122px;">
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>IsCorrect</p>
+                    </td>
+<td style="width: 122px;">
+<p>Is user response correct.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">
+<p>bit</p>
+                    </td>
+<td>
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>UserSelection</p>
+                    </td>
+<td style="width: 122px;">
+<p>Option the user chose for the question.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">
+<p>bigint</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 122px;">
+<p>UserAnswer</p>
+                    </td>
+<td style="width: 122px;">
+<p>User answer.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>1000</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
+<td style="width: 122px;">FileSetId</td>
+<td style="width: 122px;">
+<p>Indicates the auto generated file set ID of uploaded file(s).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 122px;">bigint</td>
+<td>8</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="quiz-user-answers">Quiz User Answers</h2>
+<p>The Quiz User Answers Brightspace Data Set returns data to describe the option a user chose or the answer a user provided for a question. Rows in the data set are filtered out if they are associated with deleted quiz questions. The Quiz User Answers data set is limited to 3 years of data (all of the previous two calendar years and the current calendar year to date).</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><b>Version <br>History</b><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>AttemptId</p>
+                    </td>
+<td>
+<p>Unique attempt identifier</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>6.7 - Updated description</td>
+<td>
+<p>QuestionId</p>
+                    </td>
+<td>
+<p>Unique question identifier.</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.12 / 6.5 - Updated key</td>
+<td>
+<p>QuestionVersionId</p>
+                    </td>
+<td>
+<p>Unique question version identifier.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>bigint</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>8.11 / 9.0 - Updated description</td>
+<td>
+<p>TimeCompleted</p>
+                    </td>
+<td>
+<p>Date/time when the question was completed (UTC). No data is provided for question pools or sections.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>datetime2</p>
+                    </td>
+<td>
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>QuestionNumber</p>
+                    </td>
+<td>
+<p>Question number in the quiz.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>Comment</p>
+                    </td>
+<td>
+<p>Feedback left by instructor.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>nvarchar</p>
+                    </td>
+<td>
+<p>1000</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>SortOrder</p>
+                    </td>
+<td>
+<p>Order in which quiz questions appear in the user interface. This also accounts for the ordering of sections (question numbers are null for sections).</p>
+                    </td>
+<td>
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>4.8 / 5.2 - Updated column size</td>
+<td>
+<p>Score</p>
+                    </td>
+<td>
+<p>Score the user received for the answer.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>
+<p>decimal</p>
+                    </td>
+<td>
+<p>19, 9</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td>
+<p>Page</p>
+                    </td>
+<td>
+<p>Page the question appeared on when the user took the quiz</p>
+                    </td>
+<td>
+<p>int</p>
+                    </td>
+<td>
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
+<td>SectionId</td>
+<td>
+<p>Unique section identifier.</p>
+<p>Field can be null.</p>
+                    </td>
+<td>bigint</td>
+<td>8</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>6.7 - Updated key</td>
+<td>ObjectId</td>
+<td>Unique global identifier of the question object.</td>
+<td>bigint</td>
+<td>8</td>
+<td>PK</td>
+                </tr></tbody></table>
+</article>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>

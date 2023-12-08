@@ -1,0 +1,58 @@
+{
+    "type": "BDS",
+    "name": "Discussion Topic User Scores",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4525-discussions-data-sets#discussion-topic-user-scores",
+    "description": "The Discussion Topic User Scores Brightspace Data Set returns the scores a user received for a discussion topic.",
+    "columns": [
+        {
+            "name": "UserId",
+            "description": "Unique user identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "TopicId",
+            "description": "Unique topic identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "Score",
+            "description": "Topic score. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "IsGraded",
+            "description": "If topic was graded",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.6 \/ 5.0"
+        }
+    ]
+}

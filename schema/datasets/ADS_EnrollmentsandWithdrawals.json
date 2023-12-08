@@ -1,0 +1,148 @@
+{
+    "type": "ADS",
+    "name": "Enrollments and Withdrawals",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#enrollments-and-withdrawals",
+    "description": "Returns explicit enrollment status for all users in an org unit. Required Permission Advanced Data Sets > Can Execute Enrollments And Withdrawals (Organization level) Available Filters Returned Fields",
+    "columns": [
+        {
+            "name": "Log Id",
+            "description": "Log entry's unique identification number.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Org Unit Id",
+            "description": "Org unit's unique identification number.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Org Unit Name",
+            "description": "Name of the org unit.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Org Unit Code",
+            "description": "Code of the org unit.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Org Unit Type",
+            "description": "Type of org unit.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "User Id",
+            "description": "User's unique numeric D2L ID.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "First Name",
+            "description": "User's first name.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Last Name",
+            "description": "User's last name.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Username",
+            "description": "User's username.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Org Defined Id",
+            "description": "User's org defined ID.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Role Id",
+            "description": "D2L ID of the user's role in the specified org unit.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Role Name",
+            "description": "Role name of the user in the specified org unit.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Log Event",
+            "description": "Status of the user's enrollment or withdrawal.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        },
+        {
+            "name": "Log Date",
+            "description": "Date of the user's enrollment or withdrawal.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "10.7.0"
+        }
+    ]
+}

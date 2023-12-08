@@ -1,0 +1,238 @@
+{
+    "type": "ADS",
+    "name": "Content Progress",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#content-progress",
+    "description": "Content Progress provides insight on the content viewed and not viewed by users in a selection of org units during a specified date range. Only active users are included in this report. This advanced data set is intended to replace the corresponding standard data exports so that all analytics reside in a single tool. Required Permission Advanced Data Sets > Can execute Content Progress (Organization level) Available Filters Returned Fields",
+    "columns": [
+        {
+            "name": "Course Offering ID",
+            "description": "D2L's unique identifier for the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Course Offering Code",
+            "description": "Often the course identifier from an SIS system.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Course Offering Name",
+            "description": "Name of the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Course Section ID",
+            "description": "D2L's unique identifier for the section. May contain a list if there are multiple sections.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Course Section Code",
+            "description": "Client defined code for the section. May contain a list if there are multiple sections.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Course Section Name",
+            "description": "Name of the section. May contain a list if there are multiple sections.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Semester ID",
+            "description": "Unique identifier for the Semester that the course offering belongs to. May contain a list if there are multiple sections.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Semester Code",
+            "description": "Unique code for the semester that the course offering belongs to. May contain a list if there are multiple sections.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Semester Name",
+            "description": "Semester that the course offering belongs to. May contain a list if there are multiple sections.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "User ID",
+            "description": "D2L's unique identifier for the user.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "User Name",
+            "description": "User's username.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Org Defined ID",
+            "description": "User's Org Defined Id (often the learner identifier from an SIS system).",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "First Name",
+            "description": "User's first name.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Last Name",
+            "description": "User's last name.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Role ID",
+            "description": "User's role Id at the specific course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Role Name",
+            "description": "User's role at the specific course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Content Topic ID",
+            "description": "D2L's unique identifier for the content topic.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Content Topic Name",
+            "description": "Name of the content topic.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Module ID",
+            "description": "Unique identifier of the module. This only displays output from the direct parent.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Module Name",
+            "description": "Name of the module. This only displays output from the direct parent",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Content Topic Visits",
+            "description": "Number of visits the user made to topics in the org.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Total Time Spent",
+            "description": "Time in seconds the user spent in the topics in the org.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.20.11"
+        },
+        {
+            "name": "Last Visited Date",
+            "description": "Last date\/time a user accessed the course content.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.20.11"
+        }
+    ]
+}

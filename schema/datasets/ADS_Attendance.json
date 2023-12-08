@@ -1,0 +1,248 @@
+{
+    "type": "ADS",
+    "name": "Attendance",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#attendance",
+    "description": "Returns attendance results from the Attendance tool for each user in a selection of org units. Required Permission Advanced Data Sets > Can execute Attendance (Organization level) Available Filters Returned Fields",
+    "columns": [
+        {
+            "name": "User Id",
+            "description": "D2L's unique identifier for the user.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Org Defined Id",
+            "description": "User's Org Defined Id (often the learner identifier from an SIS system).",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Username",
+            "description": "User's username.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "First Name",
+            "description": "User's first name.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Last Name",
+            "description": "User's last name.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Role Name",
+            "description": "User's role in the specific course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Role Id",
+            "description": "User's role Id in the specific course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Attendance Register Id",
+            "description": "Unique attendance register identifier.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Attendance Register Name",
+            "description": "The name given to the register.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Attendance Session Id",
+            "description": "Unique identifier for the session.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Attendance Session Name",
+            "description": "The given name of the session.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Scheme Symbol Id",
+            "description": "Unique scheme symbol identifier.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Symbol Name",
+            "description": "The name given to the symbol.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Symbol Value",
+            "description": "The value used for the symbol.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Percentage",
+            "description": "The score as a percentage that contributes towards the attendance score when a symbol is given. Field can be null.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Last Modified",
+            "description": "Date the symbol for the user in the session was last modified (UTC). Field can be null.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Course Offering Id",
+            "description": "D2L's unique identifier for the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Course Offering Code",
+            "description": "Often the course identifier from an SIS system.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Course Offering Name",
+            "description": "Name of the course offering.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Course Section Id",
+            "description": "D2L's unique identifier for the section.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Course Section Code",
+            "description": "Client defined code for the section.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Course Section Name",
+            "description": "Name of the section.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Parent Department Name",
+            "description": "Name of the department the course offering is under.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        },
+        {
+            "name": "Semester Name",
+            "description": "Name of the semester the course offering is under.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.21.2"
+        }
+    ]
+}

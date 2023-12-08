@@ -1,0 +1,218 @@
+{
+    "type": "ADS",
+    "name": "Awards Issued",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#awards-issued",
+    "description": "Awards Issued data set returns all awards that have been issued and their details for all users over a date range. Required Permission Advanced Data Sets > Can execute Awards Issued (Organization level) Custom Reporting Framework > Can See DataHub (Organization level) Available Filters Returned Fields",
+    "columns": [
+        {
+            "name": "AwardId",
+            "description": "Identifier of the award",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "Name",
+            "description": "Name of the award in Brightspace.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "Type",
+            "description": "Type of award: certificate or badge.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "Credits",
+            "description": "The number of credits associated with the award.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "UserId",
+            "description": "The identifier of the of the award recipient.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "UserName",
+            "description": "The username of the of the award recipient.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "FirstName",
+            "description": "The first name of the award recipient.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "LastName",
+            "description": "The last name of the of the award recipient.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "OrgDefinedId",
+            "description": "The organization-defined identifier to which this award is associated for the award recipient.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "IssuedBy",
+            "description": "The identifier of the user who issued the award.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "IssuerUserName",
+            "description": "The user name of the user who issued the award.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "IssuerFirstName",
+            "description": "The first name of the user who issued the award.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "IssuerLastName",
+            "description": "The last name of the user who issued the award.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "IssueDate",
+            "description": "The date when the award was issued.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "RevokedId",
+            "description": "Indicates if the award has been revoked.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "Criteria",
+            "description": "Indicates the criteria that must be met to earn the award.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "Evidence",
+            "description": "Displays the evidence that the criteria for the award was met.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "ExpiryDate",
+            "description": "Indicates the date when the award expires",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "The organization unit identifier for the org in which the award was issued.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "OrgUnitName",
+            "description": "The organization unit name for the org in which the award was issued.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.19.4"
+        },
+        {
+            "name": "OrgUnitCode",
+            "description": "The organization unit code for the org in which the award was issued.",
+            "type": "varchar",
+            "size": "",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "20.19.4"
+        }
+    ]
+}

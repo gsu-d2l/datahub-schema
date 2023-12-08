@@ -1,0 +1,118 @@
+{
+    "type": "BDS",
+    "name": "User Logins",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4740-users-data-sets#user-logins",
+    "description": "The User Logins Brightspace Data Set returns a list of all login attempts for your organization.",
+    "columns": [
+        {
+            "name": "OrgId",
+            "description": "Unique org unit Identifier. Field can be null",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.0 - REMOVED COLUMN"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "9.0 - Updated description"
+        },
+        {
+            "name": "UserName",
+            "description": "User name used to attempt log in.",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.6 - Updated description"
+        },
+        {
+            "name": "IP",
+            "description": "IP address",
+            "type": "varchar",
+            "size": "64",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "SessionId",
+            "description": "Unique session identifier. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "2.5 \/ 3.0 - Removed FK"
+        },
+        {
+            "name": "StatusType",
+            "description": "Login status",
+            "type": "nvarchar",
+            "size": "50",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.0 - Updated type"
+        },
+        {
+            "name": "AttemptDate",
+            "description": "Attempt date (UTC)",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "ImpersonatingUserId",
+            "description": "User ID of impersonator. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "TimeOff",
+            "description": "Time elapsed in seconds since the last time a user logged in. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.0 - REMOVED COLUMN"
+        },
+        {
+            "name": "LoginAttemptId",
+            "description": "Unique login attempt identifier",
+            "type": "nvarchar",
+            "size": "36",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.0 - Updated type and size"
+        },
+        {
+            "name": "LoginSource",
+            "description": "The source of the login attempt, for example: Brightspace.",
+            "type": "nvarchar",
+            "size": "50",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.0"
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+{
+    "type": "BDS",
+    "name": "Survey Question Answers",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4538-surveys-data-sets#survey-question-answers",
+    "description": "The Survey Question Answers Brightspace Data Set returns possible answers for a given survey. Rows in the data set are filtered out if they are associated with deleted survey questions.",
+    "columns": [
+        {
+            "name": "AnswerId",
+            "description": "Unique answer identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "QuestionId",
+            "description": "Unique question identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "QuestionVersionId",
+            "description": "Unique question version identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "SortOrder",
+            "description": "Order in which the survey answers are displayed or correct answer order for ordering questions",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "IsCorrect",
+            "description": "Is answer correct? Field can be null.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "Weight",
+            "description": "Weight associated with answer. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "Answer",
+            "description": "Answer text. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "Comment",
+            "description": "Instructor comment on the answer. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "Description",
+            "description": "System description for the type of answer expected.",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "SurveyObjectId",
+            "description": "Unique survey object identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.2"
+        }
+    ]
+}

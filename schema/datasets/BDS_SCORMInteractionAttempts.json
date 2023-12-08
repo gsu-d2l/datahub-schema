@@ -1,0 +1,108 @@
+{
+    "type": "BDS",
+    "name": "SCORM Interaction Attempts",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4536-scorm-data-sets#scorm-interaction-attempts",
+    "description": "The SCORM Interaction Attempts Brightspace Data Set lists the runtime interactions for each user on the activities they have attempted, including their response and time spent. Returned Fields",
+    "columns": [
+        {
+            "name": "VisitId",
+            "description": "Unique identifier of the visit.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "InteractionId",
+            "description": "Unique identifier of the interaction.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "AttemptNumber",
+            "description": "Number of the attempt on the interaction.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "ActivityId",
+            "description": "Unique identifier of the activity.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "Timestamp",
+            "description": "Point in time at which the interaction was first made available to the learner for learner interaction and response. Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "Response",
+            "description": "Data generated when a learner responds to an interaction. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "Result",
+            "description": "Judgment of the correctness of the learner response (CORRECT, INCORRECT, UNANTICIPATED, NEUTRAL). Field can be null.",
+            "type": "nvarchar",
+            "size": "100",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "NumericResult",
+            "description": "Numeric judgement of the correctness of the learner response. Field can be null.",
+            "type": "float",
+            "size": "24",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "TimeSpent",
+            "description": "The time the learner spent in this attempt, in seconds. Field can be null.",
+            "type": "float",
+            "size": "24",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date when the interaction attempt was last modified (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.5"
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "type": "BDS",
+    "name": "Survey Question Answer Options",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4538-surveys-data-sets#survey-question-answer-options",
+    "description": "The Survey Question Answer Options Brightspace Data Set returns possible answers for a given survey question. Only includes answer options for these question types: Short Answer, Fill in the Blanks, and Multi-Short Answer. Rows in the data set are filtered out if they are associated with deleted survey questions.",
+    "columns": [
+        {
+            "name": "AnswerId",
+            "description": "Unique answer identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "AnswerText",
+            "description": "Answer the user entered. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "Weight",
+            "description": "Weight associated with the answer.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "QuestionId",
+            "description": "Unique question identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "QuestionVersionId",
+            "description": "Unique question version identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "SurveyObjectId",
+            "description": "Unique survey object identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "2.5 \/ 3.0 - Added keys"
+        },
+        {
+            "name": "AnswerOptionId",
+            "description": "Unique survey answer identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.2"
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+    "type": "BDS",
+    "name": "Survey Attempts",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4538-surveys-data-sets#survey-attempts",
+    "description": "The Survey Attempts Brightspace Data Set returns details for each user survey attempt for all your org units. This data set includes completed survey attempts and in-progress survey attempts.",
+    "columns": [
+        {
+            "name": "AttemptId",
+            "description": "Unique attempt identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "SurveyId",
+            "description": "Unique survey identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "7.17 \/ 8.3 - Removed nullability and added FK"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "AttemptNumber",
+            "description": "Attempt number for the survey.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "TimeStarted",
+            "description": "Survey attempt start time (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "TimeCompleted",
+            "description": "Survey attempt complete time (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "AttemptedFromOrgUnitId",
+            "description": "Org unit identifier where the survey was attempted from. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "1.1"
+        },
+        {
+            "name": "OldAttemptNumber",
+            "description": "Number of previous times a learner has attempted the survey. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.10"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates that the survey attempt is deleted. Field can be null.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.10"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0"
+        }
+    ]
+}

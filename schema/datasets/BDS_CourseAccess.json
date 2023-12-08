@@ -1,0 +1,38 @@
+{
+    "type": "BDS",
+    "name": "Course Access",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4740-users-data-sets#course-access",
+    "description": "The Course Access Brightspace Data Set returns information on each day each user has accessed each course offering from the LMS (via a browser) across the organization. The data set does not include course access via any of our Apps. Note: If an administrator changes your time zone at the organization level, this can affect the calculation of DayAccessed because this field is in local time.",
+    "columns": [
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "2.4"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "2.4"
+        },
+        {
+            "name": "DayAccessed",
+            "description": "Indicates the most recent day in local time when a user accessed the course.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.5 - Updated description"
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "type": "BDS",
+    "name": "Activity Feed Comment Log",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4712-activity-feed-data-sets#activity-feed-comment-log",
+    "description": "The Activity Feed Comment Log Brightspace Data Set returns details on all actions that occur to each comment in the organization.",
+    "columns": [
+        {
+            "name": "LogId",
+            "description": "Unique log entry identifier.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.8 \/ 6.1"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique identifier of the user who last modified the comment.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.8 \/ 6.1"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique organization unit identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.8 \/ 6.1"
+        },
+        {
+            "name": "CommentId",
+            "description": "Unique comment identifier.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.8 \/ 6.1"
+        },
+        {
+            "name": "Action",
+            "description": "Indicates whether the comment was created, updated, or deleted.",
+            "type": "nvarchar",
+            "size": "16",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.8 \/ 6.1"
+        },
+        {
+            "name": "ActionDate",
+            "description": "Date the comment was created, updated, or deleted (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.8 \/ 6.1"
+        },
+        {
+            "name": "Content",
+            "description": "Text of the comment.",
+            "type": "nvarchar",
+            "size": "3072",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.8 \/ 6.1"
+        },
+        {
+            "name": "PostId",
+            "description": "Unique identifier for the parent post.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.9 \/ 6.2 - Added Key"
+        }
+    ]
+}

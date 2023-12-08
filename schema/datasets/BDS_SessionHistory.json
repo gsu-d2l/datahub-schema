@@ -1,0 +1,88 @@
+{
+    "type": "BDS",
+    "name": "Session History",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4537-sessions-and-system-access-data-sets#session-history",
+    "description": "The Session History Brightspace Data Set returns a list of login session histories for all users in your organization. Does not include app usage. The Session History data set and differential is limited to 3 years of data (all of the previous two calendar years and the current calendar year to date). Returned Fields",
+    "columns": [
+        {
+            "name": "SessionId",
+            "description": "Unique session identifier. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "7.19 \/ 8.5 - Updated type"
+        },
+        {
+            "name": "OrgId",
+            "description": "Unique org unit Identifier. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "DateStarted",
+            "description": "Session start date time (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "DateEnded",
+            "description": "Session end date time (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "LastAccessed",
+            "description": "Last access date time (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "TimedOut",
+            "description": "If session timed out.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "HistoryID",
+            "description": "Unique session history identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.6"
+        }
+    ]
+}

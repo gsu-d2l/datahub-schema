@@ -1,0 +1,128 @@
+{
+    "type": "BDS",
+    "name": "Checklist Objects",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4523-checklist-data-sets#checklist-objects",
+    "description": "The Checklist Objects Brightspace Data Set returns information on checklist attributes.",
+    "columns": [
+        {
+            "name": "ChecklistId",
+            "description": "Unique checklist identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.3"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Unique identifier for the org unit where the checklist exists.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "3.3"
+        },
+        {
+            "name": "Name",
+            "description": "Checklist name.",
+            "type": "nvarchar",
+            "size": "512",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "Description",
+            "description": "Description of the checklist. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "3.3"
+        },
+        {
+            "name": "DescriptionIsHtml",
+            "description": "Indication if the description is in HTML.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.3"
+        },
+        {
+            "name": "SharedUserId",
+            "description": "Unique user Id that the checklist is shared with. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "3.3"
+        },
+        {
+            "name": "DisplayInNewWindow",
+            "description": "Indicates if the checklist appears in a new browser window when viewed.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.3"
+        },
+        {
+            "name": "SortOrder",
+            "description": "The order in which the checklist is sorted.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.3"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version for this row entry. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "3.3"
+        },
+        {
+            "name": "ResultId",
+            "description": "Unique release condition result identifier. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "4.9 \/ 5.3"
+        },
+        {
+            "name": "DateDeleted",
+            "description": "Date the checklist item was deleted (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "DeletedBy",
+            "description": "User who deleted the checklist item. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "8.10"
+        }
+    ]
+}

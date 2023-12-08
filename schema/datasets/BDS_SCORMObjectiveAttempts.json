@@ -1,0 +1,98 @@
+{
+    "type": "BDS",
+    "name": "SCORM Objective Attempts",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4536-scorm-data-sets#scorm-objective-attempts",
+    "description": "The SCORM Objective Attempts Brightspace Data Set outputs the score and completion information on every objective associated to the SCORM object where an attempt has been made. Returned Fields",
+    "columns": [
+        {
+            "name": "VisitId",
+            "description": "Unique identifier of the SCORM visit.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "ObjectiveId",
+            "description": "Unique identifier of the objective.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "AttemptNumber",
+            "description": "Number of the attempt on the objective.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "Score",
+            "description": "Number that reflects the performance of the learner on this objective, scaled to between 0 and 100. Field can be null.",
+            "type": "float",
+            "size": "24",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "ScoreRaw",
+            "description": "Number that reflects the performance of the learner on this objective, relative to the min and max scores. Field can be null.",
+            "type": "float",
+            "size": "24",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "Success",
+            "description": "Indicates whether the learner has mastered the objective (PASSED, FAILED, UNKNOWN). Field can be null.",
+            "type": "nvarchar",
+            "size": "100",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "Completion",
+            "description": "Indicates whether the learner has completed the objective (COMPLETED, INCOMPLETE, UNKNOWN, NOT_ATTEMPTED, BROWSED). Field can be null.",
+            "type": "nvarchar",
+            "size": "100",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "Progress",
+            "description": "How much of the objective was completed in this attempt, between 0 and 100. Field can be null.",
+            "type": "float",
+            "size": "24",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.5"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date when the activity was last modified (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.5"
+        }
+    ]
+}

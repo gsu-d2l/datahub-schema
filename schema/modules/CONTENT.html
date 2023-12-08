@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="fallbackPageContent">
+<main>
+<section>
+<div class="mainColumn">
+<article>
+<h2 data-id="content-files-properties-log">Content Files Properties Log</h2>
+<p>In the Content Files Properties Log Brightspace Data Set, each row represents a change (created, edited, or deleted) to a file that is linked to a content object within an org unit. The data set only captures changes to content files from July 2022 onwards.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>7.8</td>
+<td style="width: 125px;">
+<p>OrgUnitId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique org unit identifier.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>7.8</td>
+<td style="width: 125px;">
+<p>ContentObjectId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique identifier of the content object.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>7.8</td>
+<td style="width: 125px;">
+<p>Action</p>
+                    </td>
+<td style="width: 125px;">
+<p>Action taken on the file: Created, Updated, or Deleted.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>10</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>7.8</td>
+<td style="width: 125px;">
+<p>FilePath</p>
+                    </td>
+<td style="width: 125px;">
+<p>Virtual file path of the file.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>10000</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>7.8</td>
+<td style="width: 125px;">
+<p>FileName</p>
+                    </td>
+<td style="width: 125px;">
+<p>Name of the file.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>512</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>7.8</td>
+<td style="width: 125px;">
+<p>FileExtension</p>
+                    </td>
+<td style="width: 125px;">
+<p>Extension of the file.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>512</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>7.8</td>
+<td style="width: 125px;">
+<p>FileSizeBytes</p>
+                    </td>
+<td style="width: 125px;">
+<p>Size of the file in bytes.</p>
+                    </td>
+<td style="width: 125px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>7.8</td>
+<td style="width: 125px;">
+<p>UploadDate</p>
+                    </td>
+<td style="width: 125px;">
+<p>Time the file was uploaded (UTC).</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>7.8</td>
+<td style="width: 125px;">
+<p>LastModifiedBy</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique user identifier that last modified the file.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>7.8</p>
+                    </td>
+<td style="width: 125px;">
+<p>LastModified</p>
+                    </td>
+<td style="width: 125px;">
+<p>The last time the file was modified (UTC).</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr></tbody></table>
+<h2 data-id="content-objects">Content Objects</h2>
+<p>The Content Objects Brightspace Data Set returns information about content topics and modules created for your org units.</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>ContentObjectId</p>
+                    </td>
+<td>
+<p>Unique identifier of the content</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>PK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>OrgUnitId</p>
+                    </td>
+<td>
+<p>Unique org unit identifier</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Updated column size</td>
+<td style="width: 125px;">
+<p>Title</p>
+                    </td>
+<td>
+<p>Content title</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>150</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>ContentObjectType</p>
+                    </td>
+<td>
+<p>Content object type</p>
+                    </td>
+<td style="width: 125px;">
+<p>varchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>6</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Updated column size</td>
+<td style="width: 125px;">
+<p>CompletionType</p>
+                    </td>
+<td>
+<p>Content completion type</p>
+                    </td>
+<td style="width: 125px;">
+<p>varchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>7</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>ParentContentObjectId</p>
+                    </td>
+<td>
+<p>Parent content object identifier</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>7.13 - Updated column size</td>
+<td style="width: 125px;">
+<p>Location</p>
+                    </td>
+<td>
+<p>Location of the content asset.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>nvarchar</p>
+                    </td>
+<td style="width: 125px;">
+<p>1024</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>StartDate</p>
+                    </td>
+<td>
+<p>Content availability start date (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>EndDate</p>
+                    </td>
+<td>
+<p>Content availability end date (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>DueDate</p>
+                    </td>
+<td>
+<p>Content availability due date (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>8.10 - Updated description</td>
+<td style="width: 125px;">
+<p>ObjectId1</p>
+                    </td>
+<td>
+<p>Quick link Object ID for the associated tool. Maps to DropboxId, QuizId, ChecklistId, SurveyId, ChatId, Self-AssessmentId. For Discussions, this field is used if a Forum is quicklinked.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>8.10 - Updated description</td>
+<td style="width: 125px;">
+<p>ObjectId2</p>
+                    </td>
+<td>
+<p>Quick link Object ID, only used for the Discussion tool if a Topic is quicklinked.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>8.10 - Updated description</td>
+<td style="width: 125px;">
+<p>ObjectId3</p>
+                    </td>
+<td>
+<p>Quick link Object ID, only used for the Discussion tool if a Thread is quicklinked.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>
+<p>5.0 â Updated name</p>
+                    </td>
+<td style="width: 125px;">LastModified</td>
+<td>Date the content was last modified (UTC).</td>
+<td style="width: 125px;">datetime2</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>IsDeleted</p>
+                    </td>
+<td>
+<p>Content is deleted</p>
+                    </td>
+<td style="width: 125px;">
+<p>bit</p>
+                    </td>
+<td style="width: 125px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>2.2</td>
+<td style="width: 125px;">SortOrder</td>
+<td>Display sort order used for the content objects</td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>2.5 / 3.0</td>
+<td style="width: 125px;">Depth</td>
+<td>Indicates the number of nested hierarchical levels in the discussion post.</td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>4.6 / 5.0</td>
+<td style="width: 125px;">ToolId</td>
+<td>
+<p>Unique identifier for the tool.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td>FK</td>
+                </tr><tr align="left" valign="top"><td>4.6 / 5.0</td>
+<td style="width: 125px;">IsHidden</td>
+<td>Content object has not been published yet</td>
+<td style="width: 125px;">bit</td>
+<td style="width: 125px;">1</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>
+<p>4.7 / 5.1 - Updated description</p>
+                    </td>
+<td style="width: 125px;">ResultId</td>
+<td>
+<p>Release Condition unique result identifier.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>4.6 / 5.0</td>
+<td style="width: 125px;">DeletedDate</td>
+<td>
+<p>Date when the content object was deleted (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">datetime2</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>4.6 / 5.0</td>
+<td style="width: 125px;">CreatedBy</td>
+<td>
+<p>User who created the content object.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>4.6 / 5.0</td>
+<td style="width: 125px;">LastModifiedBy</td>
+<td>
+<p>User who last modified the content object.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td></td>
+                </tr><tr align="left" valign="top"><td>8.6 - Updated description</td>
+<td style="width: 125px;">DeletedBy</td>
+<td>
+<p>User who deleted the content object.</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">int</td>
+<td style="width: 125px;">4</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="content-user-completion">Content User Completion</h2>
+<p>The Content User Completion Brightspace Data Set returns information about specific user's completion of content topics. The data set is limited to 3 years of data (all of the previous two calendar years and the current calendar year to date).</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>ContentObjectId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique identifier of the content</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>OrgUnitId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique org unit identifier</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>UserId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique user identifier</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>DateCompleted</p>
+                    </td>
+<td style="width: 125px;">
+<p>Date content was completed (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>6.7</td>
+<td style="width: 125px;">LastModified</td>
+<td style="width: 125px;">
+<p>Date the content user completion was last modified (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">datetime2</td>
+<td style="width: 125px;">8</td>
+<td></td>
+                </tr></tbody></table>
+<h2 data-id="content-user-progress">Content User Progress</h2>
+<p>The Content User Progress Brightspace Data Set returns user progress records modified in the past three calendar years. Results are ordered from newest to oldest. The data set is limited to 3 years of data (all of the previous two calendar years and the current calendar year to date).</p>
+<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
+<th>
+<p><b>Field</b><br></p>
+                    </th>
+<th>
+<p><b>Description</b><br></p>
+                    </th>
+<th>
+<p><b>Type</b><br></p>
+                    </th>
+<th>
+<p><b>Size</b><br></p>
+                    </th>
+<th>
+<p><b>Key</b><br></p>
+                    </th>
+                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>ContentObjectId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique identifier of the content</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>2.5 / 3.0 - Added FK</td>
+<td style="width: 125px;">
+<p>UserId</p>
+                    </td>
+<td style="width: 125px;">
+<p>Unique user identifier</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p>PK, FK</p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>3.2 - Updated to indicate not in use.</td>
+<td style="width: 125px;">
+<p>CompletedDate</p>
+                    </td>
+<td style="width: 125px;">
+<p>This column is currently not in use and appears as null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>LastVisited</p>
+                    </td>
+<td style="width: 125px;">
+<p>Date content was last visited (UTC).</p>
+<p>Field can be null.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>IsRead</p>
+                    </td>
+<td style="width: 125px;">
+<p>Is content read by user</p>
+                    </td>
+<td style="width: 125px;">
+<p>bit</p>
+                    </td>
+<td style="width: 125px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>2.4 - Updated definition</td>
+<td style="width: 125px;">
+<p>NumRealVisits</p>
+                    </td>
+<td style="width: 125px;">
+<p>Number of visits where the content is viewed, and the user continues in Brightspace. Recommend adding Real and Fake visits for total visits by a user.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>2.4 - Updated definition</td>
+<td style="width: 125px;">
+<p>NumFakeVisits</p>
+                    </td>
+<td style="width: 125px;">
+<p>Number of visits where the content is viewed and the user leaves by closing the browser/tab or the session times out while the content is open.</p>
+                    </td>
+<td style="width: 125px;">
+<p>int</p>
+                    </td>
+<td style="width: 125px;">
+<p>4</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>2.5 / 3.0 - Updated definition</td>
+<td style="width: 125px;">
+<p>TotalTime</p>
+                    </td>
+<td style="width: 125px;">
+<p>Total real visit time spent in content, in seconds</p>
+                    </td>
+<td style="width: 125px;">
+<p>bigint</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>IsVisited</p>
+                    </td>
+<td style="width: 125px;">
+<p>Is content visited by user</p>
+                    </td>
+<td style="width: 125px;">
+<p>bit</p>
+                    </td>
+<td style="width: 125px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>8.7 - Updated definition</td>
+<td style="width: 125px;">
+<p>IsCurrentBookmark</p>
+                    </td>
+<td style="width: 125px;">
+<p>Is content the last topic visited by user</p>
+                    </td>
+<td style="width: 125px;">
+<p>bit</p>
+                    </td>
+<td style="width: 125px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>1.0</td>
+<td style="width: 125px;">
+<p>IsSelfAssessComplete</p>
+                    </td>
+<td style="width: 125px;">
+<p>Is self assessment topic completed</p>
+                    </td>
+<td style="width: 125px;">
+<p>bit</p>
+                    </td>
+<td style="width: 125px;">
+<p>1</p>
+                    </td>
+<td>
+<p></p>
+                    </td>
+                </tr><tr align="left" valign="top"><td>2.5 / 3.0</td>
+<td style="width: 125px;">LastModified</td>
+<td style="width: 125px;">
+<p>Indicates the last time the user progress record was changed.</p>
+                    </td>
+<td style="width: 125px;">
+<p>datetime2</p>
+                    </td>
+<td style="width: 125px;">
+<p>8</p>
+                    </td>
+<td></td>
+                </tr></tbody></table>
+</article>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>

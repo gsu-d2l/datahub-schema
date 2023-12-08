@@ -1,0 +1,178 @@
+{
+    "type": "BDS",
+    "name": "Discussion Forums",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4525-discussions-data-sets#discussion-forums",
+    "description": "The Discussion Forums Brightspace Data Set returns discussion forums. Results are ordered from newest to oldest.",
+    "columns": [
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "2.3"
+        },
+        {
+            "name": "ForumId",
+            "description": "Unique forum identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.3"
+        },
+        {
+            "name": "Name",
+            "description": "Name of the discussion forum.",
+            "type": "nvarchar",
+            "size": "400",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.18 \/ 8.4 - Changed description"
+        },
+        {
+            "name": "Description",
+            "description": "Description of the discussion forum. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "2.4 - Updated"
+        },
+        {
+            "name": "MustPostToParticipate",
+            "description": "Indicates that a user must post in the discussion forum in order to participate in any discussion threads.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.3"
+        },
+        {
+            "name": "AllowAnon",
+            "description": "Indicates whether there is anonymous posting permitted for the discussion forum.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.3"
+        },
+        {
+            "name": "IsHidden",
+            "description": "Indicates whether the discussion forum is hidden.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.3"
+        },
+        {
+            "name": "RequiresApproval",
+            "description": "Indicates that the discussion forum requires approval from a moderator before contributions to the forum are posted.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.3"
+        },
+        {
+            "name": "SortOrder",
+            "description": "Display sort order used for the content objects",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.3"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates if the discussion forum is deleted. Field can be null.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "7.18 \/ 8.4 - Changed description"
+        },
+        {
+            "name": "DeletedDate",
+            "description": "Date when the discussion forum was deleted (UTC). Field can be null",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "2.3"
+        },
+        {
+            "name": "DeletedByUserId",
+            "description": "User who deleted the discussion forum. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "2.3"
+        },
+        {
+            "name": "ResultId",
+            "description": "Unique release condition result identifier. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "4.9 \/ 5.3"
+        },
+        {
+            "name": "StartDate",
+            "description": "First date when learners can post to topics in the forum (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "6.12 \/ 7.0 - Added"
+        },
+        {
+            "name": "StartDateAvailabilityType",
+            "description": "Before the StartDate, this type determines whether learners can view or access discussion topics within the forum. See About Availability type for details. Field can be null.",
+            "type": "smallint",
+            "size": "2",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "7.7 - Updated Description"
+        },
+        {
+            "name": "EndDate",
+            "description": "Last date when learners can post to topics in the forum (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.12 \/ 7.0 - Added"
+        },
+        {
+            "name": "EndDateAvailabilityType",
+            "description": "After the EndDate, this type determines whether learners can view or access discussion topics within the forum. See About Availability type for details. Field can be null.",
+            "type": "smallint",
+            "size": "2",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "7.7 - Updated Description"
+        }
+    ]
+}

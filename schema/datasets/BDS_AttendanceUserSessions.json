@@ -1,0 +1,58 @@
+{
+    "type": "BDS",
+    "name": "Attendance User Sessions",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4519-attendance-data-sets#attendance-user-sessions",
+    "description": "The Attendance User Sessions Brightspace Data Set provides the result for each user's session in each register in your organization.",
+    "columns": [
+        {
+            "name": "UserId",
+            "description": "Unique user identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "AttendanceSessionId",
+            "description": "Unique identifier for the session.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "SchemeSymbolId",
+            "description": "Unique scheme symbol identifier given to the user for the session.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date the symbol for the user in the session was last modified (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "Unique identifier for the user who last modified the session. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "6.15 \/ 7.3"
+        }
+    ]
+}

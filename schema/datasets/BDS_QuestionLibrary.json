@@ -1,0 +1,128 @@
+{
+    "type": "BDS",
+    "name": "Question Library",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4531-questions-data-sets#question-library",
+    "description": "The Question Library Brightspace Data Set details all the questions that have been created in the organization. This includes quiz questions that are not currently used in a quiz. Returned Fields",
+    "columns": [
+        {
+            "name": "QuestionId",
+            "description": "Unique question identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.6 \/ 4.0"
+        },
+        {
+            "name": "QuestionVersionId",
+            "description": "Unique question version identifier. Each time you edit a quiz, survey, or self-assessment question, a new version of that question is created, indicated by the QuestionVersionID field.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.11 - Updated description"
+        },
+        {
+            "name": "IsAutoGraded",
+            "description": "Indicates if the question is automatically graded.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.11 - Updated description"
+        },
+        {
+            "name": "TemplateTypeId",
+            "description": "Unique identifier of the template used to create this question. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Removed FK"
+        },
+        {
+            "name": "QuestionType",
+            "description": "Type of question. Field can be null.",
+            "type": "varchar",
+            "size": "28",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Updated column size"
+        },
+        {
+            "name": "Name",
+            "description": "Question name. Field can be null.",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Updated column size"
+        },
+        {
+            "name": "Question",
+            "description": "Body of the question. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "6.11 - Updated description"
+        },
+        {
+            "name": "Comment",
+            "description": "Comment associated with the question. Field can be null. When you add a question to a quiz, the Overall Question Feedback field provides feedback comments during the grading process. The information captured in this field is the Comment field.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "3.6 \/ 4.0"
+        },
+        {
+            "name": "AnswerKey",
+            "description": "Answer key for the question. This only applies to Written Response Questions. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "3.6 \/ 4.0"
+        },
+        {
+            "name": "CreationDate",
+            "description": "Date the question was created (UTC)",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Field"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "3.6 \/ 4.0"
+        },
+        {
+            "name": "AllowsAttachments",
+            "description": "Indicates if attachments are allowed in this question. Field can be null.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.8 \/ 6.1"
+        }
+    ]
+}

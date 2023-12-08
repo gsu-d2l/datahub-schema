@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS `PortfolioEvidenceLog`;
+
+CREATE TABLE `PortfolioEvidenceLog` (
+  `LogId` VARCHAR(36) NOT NULL,
+  `ParentObjectId` VARCHAR(36) DEFAULT NULL,
+  `ObjectId` VARCHAR(36) DEFAULT NULL,
+  `ObjectType` VARCHAR(40) DEFAULT NULL,
+  `UserId` INT DEFAULT NULL,
+  `OrgUnitId` INT DEFAULT NULL,
+  `Action` VARCHAR(16) DEFAULT NULL,
+  `IsMobile` TINYINT DEFAULT NULL,
+  `ActionDate` DATETIME DEFAULT NULL,
+  UNIQUE KEY (`LogId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

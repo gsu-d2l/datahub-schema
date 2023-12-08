@@ -1,0 +1,108 @@
+{
+    "type": "BDS",
+    "name": "Intelligent Agent Run Log",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4528-intelligent-agents-data-sets#intelligent-agent-run-log",
+    "description": "The Intelligent Agent Run Log Brightspace Data Set lists all the times, including practice runs, each intelligent agent has run in your organization. This data set captures data from November 2020 onwards. Returned Fields",
+    "columns": [
+        {
+            "name": "AgentId",
+            "description": "Unique intelligent agent identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "AgentRunId",
+            "description": "Unique intelligent agent run identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "IsPracticeRun",
+            "description": "Indicates if it is a practice run.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "IsRunNow",
+            "description": "Indicates if it was an unscheduled run.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "NumUsers",
+            "description": "Count of the number of users affected by this run.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "NumUsersWithErrors",
+            "description": "The number of users where the action produced errors.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "NumUsersWithInfos",
+            "description": "The number of users where the action produced informational messages.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "NumUsersWithWarnings",
+            "description": "The number of users where the action produced warning messages.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "RunUserId",
+            "description": "Unique identifier of the user who ran the agent. 0 for system.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Key"
+        },
+        {
+            "name": "RunDate",
+            "description": "The date the run occurred (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.10 \/ 5.4"
+        }
+    ]
+}

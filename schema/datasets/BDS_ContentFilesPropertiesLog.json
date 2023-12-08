@@ -1,0 +1,108 @@
+{
+    "type": "BDS",
+    "name": "Content Files Properties Log",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4713-content-data-sets#content-files-properties-log",
+    "description": "In the Content Files Properties Log Brightspace Data Set, each row represents a change (created, edited, or deleted) to a file that is linked to a content object within an org unit. The data set only captures changes to content files from July 2022 onwards.",
+    "columns": [
+        {
+            "name": "OrgUnitId",
+            "description": "Unique org unit identifier.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "7.8"
+        },
+        {
+            "name": "ContentObjectId",
+            "description": "Unique identifier of the content object.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "7.8"
+        },
+        {
+            "name": "Action",
+            "description": "Action taken on the file: Created, Updated, or Deleted.",
+            "type": "nvarchar",
+            "size": "10",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.8"
+        },
+        {
+            "name": "FilePath",
+            "description": "Virtual file path of the file.",
+            "type": "nvarchar",
+            "size": "10000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.8"
+        },
+        {
+            "name": "FileName",
+            "description": "Name of the file.",
+            "type": "nvarchar",
+            "size": "512",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.8"
+        },
+        {
+            "name": "FileExtension",
+            "description": "Extension of the file.",
+            "type": "nvarchar",
+            "size": "512",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.8"
+        },
+        {
+            "name": "FileSizeBytes",
+            "description": "Size of the file in bytes.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.8"
+        },
+        {
+            "name": "UploadDate",
+            "description": "Time the file was uploaded (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.8"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "Unique user identifier that last modified the file. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "7.8"
+        },
+        {
+            "name": "LastModified",
+            "description": "The last time the file was modified (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "7.8"
+        }
+    ]
+}

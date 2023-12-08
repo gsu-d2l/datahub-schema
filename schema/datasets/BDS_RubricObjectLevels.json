@@ -1,0 +1,108 @@
+{
+    "type": "BDS",
+    "name": "Rubric Object Levels",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4535-rubrics-data-sets#rubric-object-levels",
+    "description": "The Rubric Object Levels Brightspace Data Set returns information about the rubric levels in a rubric criteria. Returned Fields",
+    "columns": [
+        {
+            "name": "RubricId",
+            "description": "Unique rubric Identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "LevelId",
+            "description": "Identifier for the level associated with the rubric",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "Name",
+            "description": "Name of the level",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "Description",
+            "description": "Description of the level. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "Feedback",
+            "description": "Automated feedback provided by the rubric for the corresponding level. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "Value",
+            "description": "Value assigned to the level. This is populated based on the rubric type and scoring method. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "RangeStartValue",
+            "description": "Level range start value which is populated based on the rubric type and scoring method. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "SortOrder",
+            "description": "Sort order for the levels",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "LevelSetId",
+            "description": "Identifier for the level set to which the level belongs",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Set to true when Level Set or Level have been deleted. Field can be null.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.7"
+        }
+    ]
+}

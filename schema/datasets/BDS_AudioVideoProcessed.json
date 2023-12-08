@@ -1,0 +1,108 @@
+{
+    "type": "BDS",
+    "name": "Audio Video Processed",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/22812-content-service-data-sets#audio-video-processed",
+    "description": "In the Audio Video Processed Brightspace Data Set, each row represents one completed media processing job. The data set captures events from January 2022 onwards.",
+    "columns": [
+        {
+            "name": "ContentId",
+            "description": "Unique content identifier.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "RevisionId",
+            "description": "Unique revision identifier.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "RevisionNumber",
+            "description": "Indicates the version of the media object that this processing job applies to. For example: for a video that's been edited 4 times, the row representing the media processing job for version 3 will have \"3\" in this column.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "Type",
+            "description": "Type of content for this revision: Audio or Video.",
+            "type": "nvarchar",
+            "size": "5",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "Source",
+            "description": "Location in Brightspace from which the content was added. Field can be null.",
+            "type": "nvarchar",
+            "size": "32",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "RevisionSize",
+            "description": "Size of all resources for this revision in bytes.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "Duration",
+            "description": "Duration of the revision in seconds.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "RequiredTranscoding",
+            "description": "True if the revision required transcoding.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "RequiredTranscribing",
+            "description": "True if the revision required transcribing.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date this revision was last modified (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10"
+        }
+    ]
+}

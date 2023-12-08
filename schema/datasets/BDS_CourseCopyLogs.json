@@ -1,0 +1,98 @@
+{
+    "type": "BDS",
+    "name": "Course Copy Logs",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4725-course-copy-data-sets#course-copy-logs",
+    "description": "The Course Copy Logs Brightspace Data Set returns a list of course copy jobs. Returned Fields",
+    "columns": [
+        {
+            "name": "SourceOrgUnitId",
+            "description": "Unique source org unit identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "DestinationOrgUnitId",
+            "description": "Unique destination org unit identifier",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "UserId",
+            "description": "Unique user identifier. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "Status",
+            "description": "Status of copy",
+            "type": "varchar",
+            "size": "128",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "StartDate",
+            "description": "Start date time (UTC)",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "EndDate",
+            "description": "End date time (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "IsDestinationNew",
+            "description": "Is the copy destination new",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "CopyProtectedResources",
+            "description": "Copy protected resources",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "CopyCourseJobId",
+            "description": "Unique copy course job identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        }
+    ]
+}

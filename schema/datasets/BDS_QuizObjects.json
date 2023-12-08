@@ -1,0 +1,388 @@
+{
+    "type": "BDS",
+    "name": "Quiz Objects",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4532-quizzes-data-sets#quiz-objects",
+    "description": "The Quiz Objects Brightspace Data Set returns information about the settings and properties of a quiz.",
+    "columns": [
+        {
+            "name": "QuizId",
+            "description": "Unique quiz identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "QuizName",
+            "description": "Quiz name",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "QuizDescription",
+            "description": "Description of the Quiz. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "QuizCategory",
+            "description": "Category assigned to the quiz. Field can be null.",
+            "type": "nvarchar",
+            "size": "256",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "IsActive",
+            "description": "Indicates if the quiz is active",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "OrgUnitId",
+            "description": "Org unit identifier associated with the quiz object",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.7 - Updated key"
+        },
+        {
+            "name": "StartDate",
+            "description": "First time the quiz is visible. Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "EndDate",
+            "description": "Last date the quiz is visible. Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "DueDate",
+            "description": "Date the quiz is due (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "CreationDate",
+            "description": "Date the quiz was created (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "CreatedBy",
+            "description": "Id of the user who created the quiz. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date when the quiz was last modified (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "Id of the user who last modified the quiz. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "GradeObjectId",
+            "description": "Grade object identifier associated with the quiz. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "OverallScoreCalculation",
+            "description": "Quiz score calculation method. Types include: Highest Attempt, Lowest Attempt, Average of all attempts, First Attempt, and Last Attempt. Field can be null.",
+            "type": "varchar",
+            "size": "23",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "QuizScoreDenominator",
+            "description": "Denominator for the quiz score",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "HasPassword",
+            "description": "Is a password required to access this quiz. Field can be null.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "IPRestricted",
+            "description": "Is this quiz available to only certain IP Addresses. Field can be null.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "TimeLimit",
+            "description": "Does this quiz have a time limit.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "TimeLimitEnforced",
+            "description": "Is the time limit assigned to this quiz enforced.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "TimeLimitExceededBehavior",
+            "description": "Are learners taking this quiz permitted to exceed the time limit. Possible values: Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.0 - REMOVED COLUMN"
+        },
+        {
+            "name": "TimeLimitGracePeriod",
+            "description": "Is there a grace period at the end of the time limit on this quiz. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.0 - REMOVED COLUMN"
+        },
+        {
+            "name": "AttemptsAllowed",
+            "description": "Number of times learners are permitted to attempt the quiz. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "PreventMovingBackwards",
+            "description": "Indicates if learners are permitted to move to previous pages in the quiz.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "AllowHints",
+            "description": "Indicates that there are hints allowed for the quiz.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "NotificationEmail",
+            "description": "Indicates that there is a notification email for this quiz. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+        },
+        {
+            "name": "DisablePagerAccess",
+            "description": "Indicates that learners cannot access the pager functionality",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "DisplayInCalendar",
+            "description": "The quiz is not turned on in the calendar. Field can be null.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.7"
+        },
+        {
+            "name": "ShowClock",
+            "description": "Indicates whether there is a quiz clock visible while learners are taking the quiz.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.0 - REMOVED COLUMN"
+        },
+        {
+            "name": "IsAttemptRldb",
+            "description": "Indicates that a quiz was attempted using Respondus.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.2"
+        },
+        {
+            "name": "IsSubviewRldb",
+            "description": "Indicates that a portion of the quiz was attempted using Respondus",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.2"
+        },
+        {
+            "name": "SortOrder",
+            "description": "Display sort order used for the content objects",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "2.2"
+        },
+        {
+            "name": "CategoryId",
+            "description": "Unique category identifier for the quiz. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "5.9 \/ 6.2"
+        },
+        {
+            "name": "ResultId",
+            "description": "Unique release condition result identifier. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "5.9 \/ 6.2"
+        },
+        {
+            "name": "IsRetakeIncorrectOnly",
+            "description": "Indicates if the quiz allows Retake Incorrect Only.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.10 - Updated description"
+        },
+        {
+            "name": "PagingTypeId",
+            "description": "Exposes page break information from the New Quiz Experience. Possible values: Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "7.14 \/ 8.0 - Updated field description"
+        },
+        {
+            "name": "IsSynchronous",
+            "description": "Indicates that a quiz is synchronous. A synchronous quiz's timer starts on the start date.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.0"
+        },
+        {
+            "name": "DeductionPercentage",
+            "description": "The percentage of a question's point value that will be deducted from the quiz attempt score if the question is answered incorrectly. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.0"
+        }
+    ]
+}

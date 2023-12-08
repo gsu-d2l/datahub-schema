@@ -1,0 +1,108 @@
+{
+    "type": "BDS",
+    "name": "Outcomes Scale Definition",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4796-outcomes-data-sets#outcomes-scale-definition",
+    "description": "In the Outcomes Scale Definition Brightspace Data Set, each entry represents an achievement scale defined at the organization level. All data for the data set is available, starting with your organization's first use of Learning Outcomes.",
+    "columns": [
+        {
+            "name": "ScaleId",
+            "description": "ID for this scale.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "Name",
+            "description": "Name of this scale.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "IsDefault",
+            "description": "Indicates if this is the scale used by default whenever an assessment of an outcome takes place.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "UsePercentages",
+            "description": "Indicates if percentage ranges are specified for each scale level. This is used when suggesting a scale level for an assessment. Specific percentage threshold values are associated with each Scale Level.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "CreatedDate",
+            "description": "Date when this item was initially created (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "CreatedBy",
+            "description": "ID of user who initially created this item. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "LastModifiedDate",
+            "description": "Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "ID of user who last modified, created, or deleted this item.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates if this item has been deleted.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        },
+        {
+            "name": "RegistryId",
+            "description": "ID of registry that owns this scale.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.8"
+        }
+    ]
+}
