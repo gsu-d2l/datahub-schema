@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Question Relationships",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4531-questions-data-sets#question-relationships",
-    "description": "The Question Relationships Brightspace Data Set details which quizzes, sections, question pools, surveys, or self-assessments the questions in Question Library have been added to. Returned Fields",
+    "description": "The Question Relationships Brightspace Data Set details which quizzes, sections, question pools, surveys, or self-assessments the questions in Question Library have been added to.   Returned Fields",
     "columns": [
         {
             "name": "CollectionId",

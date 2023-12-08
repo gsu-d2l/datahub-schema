@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Competency Activities",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4754-competency-data-sets#competency-activities",
-    "description": "The Competency Activities Brightspace Data Set retrieves the data required to associate rubrics with competency activities. Using the returned data, clients can validate that they have configured the associations correctly. Returned Fields",
+    "description": "The Competency Activities Brightspace Data Set retrieves the data required to associate rubrics with competency activities. Using the returned data, clients can validate that they have configured the associations correctly.   Returned Fields",
     "columns": [
         {
             "name": "ActivityId",

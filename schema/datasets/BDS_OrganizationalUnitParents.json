@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Organizational Unit Parents",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4529-organizational-units-data-sets#organizational-unit-parents",
-    "description": "The Organizational Unit Parents Brightspace Data Set returns the direct parent of each org unit in order to build out the initial org unit structure. Returned Fields",
+    "description": "The Organizational Unit Parents Brightspace Data Set returns the direct parent of each org unit in order to build out the initial org unit structure.   Returned Fields",
     "columns": [
         {
             "name": "OrgUnitId",

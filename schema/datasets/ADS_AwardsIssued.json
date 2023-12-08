@@ -2,7 +2,7 @@
     "type": "ADS",
     "name": "Awards Issued",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#awards-issued",
-    "description": "Awards Issued data set returns all awards that have been issued and their details for all users over a date range. Required Permission Advanced Data Sets > Can execute Awards Issued (Organization level) Custom Reporting Framework > Can See DataHub (Organization level) Available Filters Returned Fields",
+    "description": "Awards Issued data set returns all awards that have been issued and their details for all users over a date range. Required Permission Advanced Data Sets > Can execute Awards Issued (Organization level) Custom Reporting Framework > Can See DataHub (Organization level) Available Filters   Returned Fields",
     "columns": [
         {
             "name": "AwardId",

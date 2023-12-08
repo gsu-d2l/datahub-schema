@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Organizational Unit Recent Access",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4529-organizational-units-data-sets#organizational-unit-recent-access",
-    "description": "The Organizational Unit Recent Access Brightspace Data Set returns a list of users, corresponding org units, and the time stamp when they most recently accessed the org unit. Returned Fields",
+    "description": "The Organizational Unit Recent Access Brightspace Data Set returns a list of users, corresponding org units, and the time stamp when they most recently accessed the org unit.   Returned Fields",
     "columns": [
         {
             "name": "OrgUnitId",

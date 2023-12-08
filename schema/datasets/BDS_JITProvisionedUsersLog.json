@@ -36,7 +36,7 @@
         },
         {
             "name": "ProviderType",
-            "description": "The type of provider that provisioned the user (For example: \u00e2\u0080\u009cSAML\u00e2\u0080\u009d).",
+            "description": "The type of provider that provisioned the user (For example: \"SAML\").",
             "type": "nvarchar",
             "size": "32",
             "isPrimary": false,

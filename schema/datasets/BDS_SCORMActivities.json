@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "SCORM Activities",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4536-scorm-data-sets#scorm-activities",
-    "description": "The SCORM Activities Brightspace Data Set describes the activities that exist in the SCORM package. Each activity will only be known after the first user, regardless of role, attempts it. Returned Fields",
+    "description": "The SCORM Activities Brightspace Data Set describes the activities that exist in the SCORM package. Each activity will only be known after the first user, regardless of role, attempts it.   Returned Fields",
     "columns": [
         {
             "name": "ActivityId",

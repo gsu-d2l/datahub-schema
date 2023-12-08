@@ -2,7 +2,7 @@
     "type": "ADS",
     "name": "All Grades",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#all-grades",
-    "description": "The All Grades data set returns one row for each gradable item for each learner in each course offering. Note: Course offerings must be the direct or indirect children of a specific org unit. For example, you can export all grade items for: Required Permission Advanced Data Sets > Can execute All Grades (Organization level) Available Filters Returned Fields",
+    "description": "The All Grades data set returns one row for each gradable item for each learner in each course offering. Note: Course offerings must be the direct or indirect children of a specific org unit. For example, you can export all grade items for: Required Permission Advanced Data Sets > Can execute All Grades (Organization level) Available Filters   Returned Fields",
     "columns": [
         {
             "name": "User Id",

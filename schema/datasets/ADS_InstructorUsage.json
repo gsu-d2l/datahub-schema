@@ -2,7 +2,7 @@
     "type": "ADS",
     "name": "Instructor Usage",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#instructor-usage",
-    "description": "The Instructor Usage data set returns information about how instructors are using Brightspace functionality within their courses. Required Permission Advanced Data Sets > Can execute Instructor Usage (Organization level) Available Filters Returned Fields",
+    "description": "The Instructor Usage data set returns information about how instructors are using Brightspace functionality within their courses.  Required Permission Advanced Data Sets > Can execute Instructor Usage (Organization level) Available Filters Returned Fields",
     "columns": [
         {
             "name": "Username",

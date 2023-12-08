@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Session History",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4537-sessions-and-system-access-data-sets#session-history",
-    "description": "The Session History Brightspace Data Set returns a list of login session histories for all users in your organization. Does not include app usage. The Session History data set and differential is limited to 3 years of data (all of the previous two calendar years and the current calendar year to date). Returned Fields",
+    "description": "The Session History Brightspace Data Set returns a list of login session histories for all users in your organization. Does not include app usage. The Session History data set and differential is limited to 3 years of data (all of the previous two calendar years and the current calendar year to date).   Returned Fields",
     "columns": [
         {
             "name": "SessionId",

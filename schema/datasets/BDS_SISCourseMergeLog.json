@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "SIS Course Merge Log",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/19147-sis-course-merge-data-sets#sis-course-merge-log",
-    "description": "The SIS Course Merge Log Brightspace Data Set returns a list of attempts to merge or unmerge course offerings using the SIS Course Merge tool. This data set only captures data from July 2023 onwards. Returned Fields",
+    "description": "The SIS Course Merge Log Brightspace Data Set returns a list of attempts to merge or unmerge course offerings using the SIS Course Merge tool. This data set only captures data from July 2023 onwards.   Returned Fields",
     "columns": [
         {
             "name": "BatchId",

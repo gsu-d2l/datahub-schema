@@ -15,7 +15,7 @@
             "versionHistory": "5.5"
         },
         {
-            "name": "UserId",
+            "name": "UserId ",
             "description": "The user who performed this launch.",
             "type": "int",
             "size": "4",
@@ -35,7 +35,7 @@
             "versionHistory": "5.5"
         },
         {
-            "name": "ImpersonatingUserId",
+            "name": "ImpersonatingUserId ",
             "description": "The impersonating user who performed this launch. Field can be null.",
             "type": "bigint",
             "size": "8",
@@ -55,7 +55,7 @@
             "versionHistory": "5.5"
         },
         {
-            "name": "LaunchDate",
+            "name": "LaunchDate ",
             "description": "The UTC time when this launch occurred.",
             "type": "datetime2",
             "size": "8",
@@ -115,7 +115,7 @@
             "versionHistory": "5.5"
         },
         {
-            "name": "ContentTopicId",
+            "name": "ContentTopicId ",
             "description": "Id of the content topic where this launch happened. Field can be null.",
             "type": "bigint",
             "size": "8",
@@ -125,7 +125,7 @@
             "versionHistory": "5.5"
         },
         {
-            "name": "ParentModuleId",
+            "name": "ParentModuleId ",
             "description": "Id of the parent module where this launch happened. Field can be null.",
             "type": "bigint",
             "size": "8",
@@ -145,7 +145,7 @@
             "versionHistory": "5.5"
         },
         {
-            "name": "MessageVersion",
+            "name": "MessageVersion ",
             "description": "LTI message version of this launch. Field can be null.",
             "type": "nvarchar",
             "size": "10",

@@ -205,7 +205,7 @@
             "versionHistory": "1.7"
         },
         {
-            "name": "TimeLimitExceededBehavior",
+            "name": "TimeLimitExceededBehavior  ",
             "description": "Are learners taking this quiz permitted to exceed the time limit. Possible values: Field can be null.",
             "type": "int",
             "size": "4",

@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Rubric Object Criteria",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4535-rubrics-data-sets#rubric-object-criteria",
-    "description": "The Rubric Object Criteria Brightspace Data Set returns information about the rubric criteria within a rubric. Returned Fields",
+    "description": "The Rubric Object Criteria Brightspace Data Set returns information about the rubric criteria within a rubric.   Returned Fields",
     "columns": [
         {
             "name": "RubricId",

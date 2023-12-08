@@ -142,7 +142,7 @@
             "isPrimary": false,
             "isForeign": false,
             "canBeNull": false,
-            "versionHistory": "5.0 \u00e2\u0080\u0093 Updated name"
+            "versionHistory": "5.0 - Updated name"
         },
         {
             "name": "IsDeleted",

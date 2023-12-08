@@ -6,7 +6,7 @@
     "columns": [
         {
             "name": "Program Enrollment",
-            "description": "Ancestor of the course template defined in columns (Org Unit ID, Org Unit Name, and Org Unit Code). Where multiple ancestors exist, all ancestors are displayed in the field, using \u00e2\u0080\u0098|\" as a delimiter. The Org Unit Type to use as the parent is defined as a configuration variable.",
+            "description": "Ancestor of the course template defined in columns (Org Unit ID, Org Unit Name, and Org Unit Code). Where multiple ancestors exist, all ancestors are displayed in the field, using '|\" as a delimiter. The Org Unit Type to use as the parent is defined as a configuration variable.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,

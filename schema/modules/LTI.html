@@ -38,29 +38,29 @@
                     </td>
                 </tr><tr align="left" valign="top"><td>5.5</td>
 <td style="width: 125px;">
-<p>UserId</p>
+<p>UserId </p>
                     </td>
 <td>The user who performed this launch.</td>
 <td style="width: 125px;">
 <p>int</p>
                     </td>
 <td style="width: 125px;">4</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>5.5</td>
 <td style="width: 125px;">IMSRoleNames</td>
 <td>A list of user's IMS roles.</td>
 <td style="width: 125px;">nvarchar</td>
 <td style="width: 125px;">10000</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>5.5</td>
-<td style="width: 125px;">ImpersonatingUserId</td>
+<td style="width: 125px;">ImpersonatingUserId </td>
 <td>
 <p>The impersonating user who performed this launch.</p>
 <p>Field can be null.</p>
                     </td>
 <td style="width: 125px;">bigint</td>
 <td style="width: 125px;">8</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>5.5</td>
 <td style="width: 125px;">ImpersonatingUserIMSRoleName</td>
 <td>
@@ -69,19 +69,19 @@
                     </td>
 <td style="width: 125px;">nvarchar</td>
 <td style="width: 125px;">10000</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>5.5</td>
-<td style="width: 125px;">LaunchDate</td>
+<td style="width: 125px;">LaunchDate </td>
 <td>The UTC time when this launch occurred.</td>
 <td style="width: 125px;">datetime2</td>
 <td style="width: 125px;">8</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>5.5</td>
 <td style="width: 125px;">OrgUnitId</td>
 <td>Id of the org unit where this launch happened.</td>
 <td style="width: 125px;">bigint</td>
 <td style="width: 125px;">8</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>8.9 - Changed Description</td>
 <td style="width: 125px;">LTILinkId</td>
 <td>
@@ -99,7 +99,7 @@
                     </td>
 <td style="width: 125px;">uniqueidentifier</td>
 <td style="width: 125px;">16</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>5.5</td>
 <td style="width: 125px;">ClientId</td>
 <td>
@@ -108,7 +108,7 @@
                     </td>
 <td style="width: 125px;">uniqueidentifier</td>
 <td style="width: 125px;">16</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>5.5</td>
 <td style="width: 125px;">ToolProviderId</td>
 <td>
@@ -117,25 +117,25 @@
                     </td>
 <td style="width: 125px;">nvarchar</td>
 <td style="width: 125px;">300</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>5.5</td>
-<td style="width: 125px;">ContentTopicId</td>
+<td style="width: 125px;">ContentTopicId </td>
 <td>
 <p>Id of the content topic where this launch happened.</p>
 <p>Field can be null.</p>
                     </td>
 <td style="width: 125px;">bigint</td>
 <td style="width: 125px;">8</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>5.5</td>
-<td style="width: 125px;">ParentModuleId</td>
+<td style="width: 125px;">ParentModuleId </td>
 <td>
 <p>Id of the parent module where this launch happened.</p>
 <p>Field can be null.</p>
                     </td>
 <td style="width: 125px;">bigint</td>
 <td style="width: 125px;">8</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>5.5</td>
 <td style="width: 125px;">Placement</td>
 <td>
@@ -144,16 +144,16 @@
                     </td>
 <td style="width: 125px;">nvarchar</td>
 <td style="width: 125px;">10</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>5.5</td>
-<td style="width: 125px;">MessageVersion</td>
+<td style="width: 125px;">MessageVersion </td>
 <td>
 <p>LTI message version of this launch.</p>
 <p>Field can be null.</p>
                     </td>
 <td style="width: 125px;">nvarchar</td>
 <td style="width: 125px;">10</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>5.5</td>
 <td style="width: 125px;">RequestType</td>
 <td>
@@ -162,7 +162,7 @@
                     </td>
 <td style="width: 125px;">nvarchar</td>
 <td style="width: 125px;">30</td>
-<td></td>
+<td> </td>
                 </tr></tbody></table>
 <h2 data-id="lti-link-migration-audit">LTI Link Migration Audit</h2>
 <p>The LTI Link Migration Audit Brightspace Data Set logs all attempted LTI link migrations. Each row in the data set represents an attempted link migration from LTI 1.1 (legacy) to LTI 1.3 (advantage).</p>
@@ -199,7 +199,7 @@
 <td>The date the migration occurred for this link (UTC)</td>
 <td style="width: 125px;">datetime2</td>
 <td style="width: 125px;">8</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>7.14 / 8.0</td>
 <td style="width: 125px;">OrgUnitId</td>
 <td>ID of the org unit where the launch migration occurred</td>
@@ -217,13 +217,13 @@
 <td>Launch URL for the link</td>
 <td style="width: 125px;">nvarchar</td>
 <td style="width: 125px;">2000</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>7.14 / 8.0</td>
 <td style="width: 125px;">LinkName</td>
 <td>Name of the link</td>
 <td style="width: 125px;">nvarchar</td>
 <td style="width: 125px;">200</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>7.14 / 8.0</td>
 <td style="width: 125px;">ClientId</td>
 <td>
@@ -232,7 +232,7 @@
                     </td>
 <td style="width: 125px;">nvarchar</td>
 <td style="width: 125px;">255</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>7.14 / 8.0</td>
 <td style="width: 125px;">RegistrationDomain</td>
 <td>
@@ -241,7 +241,7 @@
                     </td>
 <td style="width: 125px;">nvarchar</td>
 <td style="width: 125px;">2083</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>7.14 / 8.0</td>
 <td style="width: 125px;">DeploymentId</td>
 <td>
@@ -250,13 +250,13 @@
                     </td>
 <td style="width: 125px;">uniqueidentifier</td>
 <td style="width: 125px;">16</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>7.14 / 8.0</td>
 <td style="width: 125px;">JobId</td>
 <td>ID for the job this link was migrated under.</td>
 <td style="width: 125px;">bigint</td>
 <td style="width: 125px;">8</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>7.14 / 8.0</td>
 <td style="width: 125px;">Status</td>
 <td>
@@ -267,7 +267,7 @@
                     </td>
 <td style="width: 125px;">smallint</td>
 <td style="width: 125px;">2</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>7.14 / 8.0</td>
 <td style="width: 125px;">FailureCode</td>
 <td>
@@ -284,7 +284,7 @@
                     </td>
 <td style="width: 125px;">smallint</td>
 <td style="width: 125px;">2</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>7.14 / 8.0</td>
 <td style="width: 125px;">MigrationType</td>
 <td>
@@ -296,7 +296,7 @@
                     </td>
 <td style="width: 125px;">smallint</td>
 <td style="width: 125px;">2</td>
-<td></td>
+<td> </td>
                 </tr></tbody></table>
 <h2 data-id="lti-links">LTI Links</h2>
 <p>The LTI Links Brightspace Data Set retrieves the list of LTI links that exist in the organization. It does not include deleted links.</p>
@@ -358,7 +358,7 @@
                     </td>
 <td>200</td>
 <td>
-<p></p>
+<p> </p>
                     </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>
@@ -372,7 +372,7 @@
                     </td>
 <td>4</td>
 <td>
-<p></p>
+<p> </p>
                     </td>
                 </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
 <td>
@@ -386,7 +386,7 @@
                     </td>
 <td>12</td>
 <td>
-<p></p>
+<p> </p>
                     </td>
                 </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
 <td>
@@ -401,7 +401,7 @@
                     </td>
 <td>1000</td>
 <td>
-<p></p>
+<p> </p>
                     </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>Description</td>
@@ -411,31 +411,31 @@
                     </td>
 <td>nvarchar</td>
 <td>1000</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>IsVisible</td>
 <td>Determines if the link is displayed when adding to course content in the course. For Legacy LTI, this is called IsVisible in the UI.</td>
 <td>bit</td>
 <td>1</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>SendTCInfo</td>
 <td>If true, determines if the tool_consumer variables are allowed to be included in the LTI launch. Legacy LTI only.</td>
 <td>bit</td>
 <td>1</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>SendContextInfo</td>
 <td>If true, determines if context_id, context_title, context_label, and context_type variables are included in the LTI launch. Legacy LTI only.</td>
 <td>bit</td>
 <td>1</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>SendCourseInfo</td>
 <td>If true, determines if LISSourcedId is included in the launch. Legacy LTI only.</td>
 <td>bit</td>
 <td>1</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>SendOrgUnitInfo</td>
 <td>
@@ -444,55 +444,55 @@
                     </td>
 <td>bit</td>
 <td>1</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>SendUserId</td>
 <td>If true, determines a unique identifier for the user, generated on the user's first launch. Legacy LTI only. This is always sent to LTIAdvantage and cannot be turned off unless Anonymous launch is used.</td>
 <td>bit</td>
 <td>1</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>SendUserName</td>
 <td>If true, determines if users first, last, and given name (first last) are sent during launch.</td>
 <td>bit</td>
 <td>1</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>SendUserEmail</td>
 <td>If true, determines if the user's primary email is sent during launch.</td>
 <td>bit</td>
 <td>1</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>SendLinkTitle</td>
 <td>If true, determines if the LTI Link Title is sent during launch. Legacy LTI only.</td>
 <td>bit</td>
 <td>1</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>SendLinkDescription</td>
 <td>If true, determines if the LTI Link Description is sent during launch. Legacy LTI only.</td>
 <td>bit</td>
 <td>1</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>SendD2LUserName</td>
 <td>If true, determines if the Brightspace username is sent during launch.</td>
 <td>bit</td>
 <td>1</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>SendD2LOrgDefinedId</td>
 <td>If true, determines if the Brightspace OrgDefinedId is sent during launch.</td>
 <td>bit</td>
 <td>1</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>SendD2LOrgRoleId</td>
 <td>If true, determines if the custom Brightspace D2L role is sent during launch. Legacy LTI only.</td>
 <td>bit</td>
 <td>1</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>SendBrightspaceUserId</td>
 <td>
@@ -501,7 +501,7 @@
                     </td>
 <td>bit</td>
 <td>1</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>Anonymous</td>
 <td>
@@ -510,7 +510,7 @@
                     </td>
 <td>bit</td>
 <td>1</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>Shared</td>
 <td>
@@ -519,13 +519,13 @@
                     </td>
 <td>bit</td>
 <td>1</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>UseToolProviderSecuritySettings</td>
 <td>If true, uses the Tool Provider security settings versus link security settings based on domain matching. Legacy LTI only.</td>
 <td>bit</td>
 <td>1</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>3.6 / 4.1</td>
 <td>LastModifiedDate</td>
 <td>
@@ -534,7 +534,7 @@
                     </td>
 <td>datetime2</td>
 <td>8</td>
-<td></td>
+<td> </td>
                 </tr><tr align="left" valign="top"><td>4.7 / 5.1</td>
 <td>OuAvailabilitySetId</td>
 <td>
@@ -543,7 +543,7 @@
                     </td>
 <td>bigint</td>
 <td>8</td>
-<td></td>
+<td> </td>
                 </tr></tbody></table>
 <h2 data-id="lti-links-shared">LTI Links Shared</h2>
 <p>The LTI Links Shared Brightspace Data Set lists the parent Org Units that a link is shared with and can be used within the organization. LTI Links can be shared explicitly with an org unit or be shared with an org unit's descendants, which is called inherited sharing. When an LTI 1.1 link is shared, users have the option to share with descendants of a specific type such as course offering.</p>
@@ -623,7 +623,7 @@
                     </td>
 <td style="width: 125px;">datetime2</td>
 <td style="width: 125px;">8</td>
-<td></td>
+<td> </td>
                 </tr></tbody></table>
 </article>
 </div>
