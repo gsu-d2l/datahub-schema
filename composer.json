@@ -1,7 +1,7 @@
 {
   "name": "gsu-d2l/datahub-schema",
   "license": "MIT",
-  "homepage": "https://github.com/mforest-gsu",
+  "homepage": "https://github.com/gsu-d2l",
   "require": {
     "php": ">=8.1",
     "ext-dom": "*",
