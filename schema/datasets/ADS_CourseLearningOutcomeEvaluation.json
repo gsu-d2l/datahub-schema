@@ -2,7 +2,7 @@
     "type": "ADS",
     "name": "Course Learning Outcome Evaluation",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#course-learning-outcome-evaluation",
-    "description": "The Course Learning Outcome Evaluation (CLOE) data set returns the learner's outcomes for required competencies. Data comes from the Competencies tool, not the Learning Outcomes tool. Required Config Variable d2l.Tools.AdvancedDataSets.ProgramOrgUnitTypeId (set the org unit type ID that represents a program for an org) Required Permission Advanced Data Sets > Can execute CLOE (Organization level) Available Filters Returned Fields",
+    "description": "The Course Learning Outcome Evaluation (CLOE) data set returns the learner's outcomes for required competencies. Data comes from the Competencies tool, not the Learning Outcomes tool. Required Config Variable d2l.Tools.AdvancedDataSets.ProgramOrgUnitTypeId (set the org unit type ID that represents a program for an org) Required Permission Advanced Data Sets > Can execute CLOE (Organization level)",
     "columns": [
         {
             "name": "Program Enrollment",

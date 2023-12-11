@@ -2,7 +2,7 @@
     "type": "ADS",
     "name": "Final Grades",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#final-grades",
-    "description": "Returns final grades for all users in course offerings. Required Permission Advanced Data Sets > Can Execute Final Grades (Organization level) Available Filters Returned Fields",
+    "description": "Returns final grades for all users in course offerings. Required Permission Advanced Data Sets > Can Execute Final Grades (Organization level)",
     "columns": [
         {
             "name": "User Id",
@@ -96,7 +96,7 @@
         },
         {
             "name": "Semester Code",
-            "description": "Semester code associated with the course offering. The semester is the organization unit type as defined by the Standard Semester in Brightspace.  If a semester is not associated as a direct parent of the course offering being exported, the value is NULL. If a course offering is associated with multiple semesters, these are exported as a pipe-delimited list of strings.",
+            "description": "Semester code associated with the course offering. The semester is the organization unit type as defined by the Standard Semester in Brightspace. If a semester is not associated as a direct parent of the course offering being exported, the value is NULL. If a course offering is associated with multiple semesters, these are exported as a pipe-delimited list of strings.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,

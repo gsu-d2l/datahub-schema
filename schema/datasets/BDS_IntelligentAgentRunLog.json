@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Intelligent Agent Run Log",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4528-intelligent-agents-data-sets#intelligent-agent-run-log",
-    "description": "The Intelligent Agent Run Log Brightspace Data Set lists all the times, including practice runs, each intelligent agent has run in your organization. This data set captures data from November 2020 onwards. Returned Fields",
+    "description": "The Intelligent Agent Run Log Brightspace Data Set lists all the times, including practice runs, each intelligent agent has run in your organization. This data set captures data from November 2020 onwards.",
     "columns": [
         {
             "name": "AgentId",

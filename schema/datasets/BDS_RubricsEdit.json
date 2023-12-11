@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Rubrics Edit",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4535-rubrics-data-sets#rubrics-edit",
-    "description": "In the Rubrics Edit Brightspace Data Set, each row represents one element of a rubric that was changed by a permissioned user. If multiple elements are changed in the same rubric, multiple data rows will appear in the data set. Returned Fields",
+    "description": "In the Rubrics Edit Brightspace Data Set, each row represents one element of a rubric that was changed by a permissioned user. If multiple elements are changed in the same rubric, multiple data rows will appear in the data set.",
     "columns": [
         {
             "name": "AuditLogId",

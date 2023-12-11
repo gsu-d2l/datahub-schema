@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "JIT Provisioned Users Log",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/5782-jit-provisioning-data-sets#jit-provisioned-users-log",
-    "description": "The JIT Provisioned Users Log Brightspace Data Set returns information on any issues or failures with the provisioning of users via Just-In-Time User Provisioning. Each row in the data set represents a log of action (for example, created or updated) taken on users provisioned via Just-In-Time User Provisioning. It provides information about the users, the type of their provider, the Id of the provider, date, and time that the users were provisioned (UTC). Returned Fields",
+    "description": "The JIT Provisioned Users Log Brightspace Data Set returns information on any issues or failures with the provisioning of users via Just-In-Time User Provisioning. Each row in the data set represents a log of action (for example, created or updated) taken on users provisioned via Just-In-Time User Provisioning. It provides information about the users, the type of their provider, the Id of the provider, date, and time that the users were provisioned (UTC).",
     "columns": [
         {
             "name": "UserId",

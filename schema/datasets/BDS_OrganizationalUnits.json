@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Organizational Units",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4529-organizational-units-data-sets#organizational-units",
-    "description": "The Organizational Units Brightspace Data Set returns details about all org units within your organization.   Returned Fields",
+    "description": "The Organizational Units Brightspace Data Set returns details about all org units within your organization.",
     "columns": [
         {
             "name": "OrgUnitId",

@@ -2,7 +2,7 @@
     "type": "ADS",
     "name": "Terms & Conditions - Version History Report",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#terms-&-conditions---version-history-report",
-    "description": "Returns the version history for the Terms and Conditions. This Advanced Data Set only appears in Data Hub if the Terms and Conditions tool is enabled. Required Permission Advanced Data Sets > Can execute Terms and Conditions (Organization level) Available Filters: None Returned Fields",
+    "description": "Returns the version history for the Terms and Conditions. This Advanced Data Set only appears in Data Hub if the Terms and Conditions tool is enabled. Required Permission Advanced Data Sets > Can execute Terms and Conditions (Organization level) Available Filters: None",
     "columns": [
         {
             "name": "Version Id",

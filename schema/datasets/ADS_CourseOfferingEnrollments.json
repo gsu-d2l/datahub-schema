@@ -2,7 +2,7 @@
     "type": "ADS",
     "name": "Course Offering Enrollments",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#course-offering-enrollments",
-    "description": "Returns the course offerings within which a user is enrolled, including both explicit and implicit enrollments. Required Permission Advanced Data Sets > Can Execute Course Offering Enrollments (Organization level) Available Filters Returned Fields",
+    "description": "Returns the course offerings within which a user is enrolled, including both explicit and implicit enrollments. Required Permission Advanced Data Sets > Can Execute Course Offering Enrollments (Organization level)",
     "columns": [
         {
             "name": "User Id",

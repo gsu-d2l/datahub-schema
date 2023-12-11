@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Activity Exemptions Log",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4526-exemptions-data-sets#activity-exemptions-log",
-    "description": "The Activity Exemptions Log Brightspace Data Set returns details on the exemptions a user has created for your organization units.   Returned Fields",
+    "description": "The Activity Exemptions Log Brightspace Data Set returns details on the exemptions a user has created for your organization units.",
     "columns": [
         {
             "name": "OrgUnitId",

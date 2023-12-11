@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Rubric Assessment",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4535-rubrics-data-sets#rubric-assessment",
-    "description": "The Rubric Assessment Brightspace Data Set returns rubric outcomes that are associated with a competency. Includes incomplete rubric assessments, which have a null LevelAchieved value.   Returned Fields",
+    "description": "The Rubric Assessment Brightspace Data Set returns rubric outcomes that are associated with a competency. Includes incomplete rubric assessments, which have a null LevelAchieved value.",
     "columns": [
         {
             "name": "RubricId",

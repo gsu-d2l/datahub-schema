@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Competency Objects",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4754-competency-data-sets#competency-objects",
-    "description": "The Competency Objects Brightspace Data Set returns the competencies and learning objectives which have been created within your organization.   Returned Fields",
+    "description": "The Competency Objects Brightspace Data Set returns the competencies and learning objectives which have been created within your organization.",
     "columns": [
         {
             "name": "ObjectId",

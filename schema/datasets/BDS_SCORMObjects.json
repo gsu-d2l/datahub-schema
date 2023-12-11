@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "SCORM Objects",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4536-scorm-data-sets#scorm-objects",
-    "description": "The SCORM Objects Brightspace Data Set describes all the SCORM objects that exist, and which course and which topic they are located in. At time of launch, this data set contains data from July 2020 onwards. Remaining baseline data will be filled in upon a future release.   Returned Fields",
+    "description": "The SCORM Objects Brightspace Data Set describes all the SCORM objects that exist, and which course and which topic they are located in. At time of launch, this data set contains data from July 2020 onwards. Remaining baseline data will be filled in upon a future release.",
     "columns": [
         {
             "name": "ScormObjectId",

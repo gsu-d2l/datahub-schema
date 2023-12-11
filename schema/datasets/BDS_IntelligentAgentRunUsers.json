@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Intelligent Agent Run Users",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4528-intelligent-agents-data-sets#intelligent-agent-run-users",
-    "description": "The Intelligent Agent Run Users Brightspace Data Set lists the users that each intelligent agent run affected and the resulting action. It does not include users that don't meet agent criteria or are part of a practice run. Returned Fields",
+    "description": "The Intelligent Agent Run Users Brightspace Data Set lists the users that each intelligent agent run affected and the resulting action. It does not include users that don't meet agent criteria or are part of a practice run.",
     "columns": [
         {
             "name": "AgentId",

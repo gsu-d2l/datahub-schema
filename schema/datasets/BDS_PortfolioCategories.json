@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Portfolio Categories",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4530-portfolio-data-sets#portfolio-categories",
-    "description": "The Portfolio Categories Brightspace Data Set details the categories that have been created in your organization.   Returned Fields",
+    "description": "The Portfolio Categories Brightspace Data Set details the categories that have been created in your organization.",
     "columns": [
         {
             "name": "CategoryId",

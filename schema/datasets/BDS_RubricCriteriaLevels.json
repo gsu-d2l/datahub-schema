@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Rubric Criteria Levels",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4535-rubrics-data-sets#rubric-criteria-levels",
-    "description": "The Rubric Criteria Levels Brightspace Data Set returns the details for all rubric criteria and associated levels where they exist.   Returned Fields",
+    "description": "The Rubric Criteria Levels Brightspace Data Set returns the details for all rubric criteria and associated levels where they exist.",
     "columns": [
         {
             "name": "RubricId",

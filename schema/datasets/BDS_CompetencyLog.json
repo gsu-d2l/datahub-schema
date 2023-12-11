@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Competency Log",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4754-competency-data-sets#competency-log",
-    "description": "The Competency Log Brightspace Data Set returns data changes to the competency structure.   Returned Fields",
+    "description": "The Competency Log Brightspace Data Set returns data changes to the competency structure.",
     "columns": [
         {
             "name": "CompetencyLogId",

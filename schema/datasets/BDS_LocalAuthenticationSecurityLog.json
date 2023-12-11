@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Local Authentication Security Log",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4714-local-authentication-data-sets#local-authentication-security-log",
-    "description": "The Local Authentication Security Log Brightspace Data Set has a record of users who are authorized for local login and whether two-factor authentication was enabled or disabled. This data set only captures data from May 2022 onwards.   Returned Fields",
+    "description": "The Local Authentication Security Log Brightspace Data Set has a record of users who are authorized for local login and whether two-factor authentication was enabled or disabled. This data set only captures data from May 2022 onwards.",
     "columns": [
         {
             "name": "UserId",

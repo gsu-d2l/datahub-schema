@@ -2,7 +2,7 @@
     "type": "ADS",
     "name": "Terms & Conditions - Activity Report",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#terms-&-conditions---activity-report",
-    "description": "Returns the most recent accept or decline responses of the Terms and Conditions for each user. This Advanced Data Set only appears in Data Hub if the Terms and Conditions tool is enabled. Required Permission Advanced Data Sets > Can execute Terms and Conditions (Organization level) Available Filters Returned Fields",
+    "description": "Returns the most recent accept or decline responses of the Terms and Conditions for each user. This Advanced Data Set only appears in Data Hub if the Terms and Conditions tool is enabled. Required Permission Advanced Data Sets > Can execute Terms and Conditions (Organization level)",
     "columns": [
         {
             "name": "User Id",

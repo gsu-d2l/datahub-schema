@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Portfolio Evidence Objects",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4530-portfolio-data-sets#portfolio-evidence-objects",
-    "description": "The Portfolio Evidence Objects Brightspace Data Set defines the attributes of each piece of evidence in Portfolios in your organization.   Returned Fields",
+    "description": "The Portfolio Evidence Objects Brightspace Data Set defines the attributes of each piece of evidence in Portfolios in your organization.",
     "columns": [
         {
             "name": "EvidenceId",

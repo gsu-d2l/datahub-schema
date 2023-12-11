@@ -2,7 +2,7 @@
     "type": "ADS",
     "name": "Attendance",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#attendance",
-    "description": "Returns attendance results from the Attendance tool for each user in a selection of org units. Required Permission Advanced Data Sets > Can execute Attendance (Organization level) Available Filters Returned Fields",
+    "description": "Returns attendance results from the Attendance tool for each user in a selection of org units. Required Permission Advanced Data Sets > Can execute Attendance (Organization level)",
     "columns": [
         {
             "name": "User Id",

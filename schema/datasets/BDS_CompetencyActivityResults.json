@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Competency Activity Results",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4754-competency-data-sets#competency-activity-results",
-    "description": "The Competency Activity Results Brightspace Data Set returns data on activities associated with learning objectives that have been created for your org units.   Returned Fields",
+    "description": "The Competency Activity Results Brightspace Data Set returns data on activities associated with learning objectives that have been created for your org units.",
     "columns": [
         {
             "name": "ActivityId",

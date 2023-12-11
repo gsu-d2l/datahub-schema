@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "SCORM Interaction Objectives",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4536-scorm-data-sets#scorm-interaction-objectives",
-    "description": "The SCORM Interaction Objectives Brightspace Data Set defines the relationship between interactions and their objectives.   Returned Fields",
+    "description": "The SCORM Interaction Objectives Brightspace Data Set defines the relationship between interactions and their objectives.",
     "columns": [
         {
             "name": "InteractionId",

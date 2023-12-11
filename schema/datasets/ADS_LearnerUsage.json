@@ -2,7 +2,7 @@
     "type": "ADS",
     "name": "Learner Usage",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#learner-usage",
-    "description": "The Learner Usage data set returns the activity for learners in course offerings. The course offerings must be children of the selected org unit. The learners that are included depend on the date range selected (see note). About Time Tracking The time tracking in this report does not align with the SCORM Detailed Report. If a user opens a SCORM package in a new window, the Total Time Spent in the SCORM Detailed Report will be substantially higher because Learner Usage doesn't track that time. If a user opens a SCORM package in embed mode, the Total Time Spent in the SCORM Detailed Report will be slightly lower because it only tracks the time users spend interacting with the SCORM Object, whereas Learner Usage Report tracks the entire session. About SCORM Dates If a user clicks on a legacy SCORM topic it will be marked as completed, even if the user has not progressed through the entire topic and has a SCORM Report showing incomplete. This means that a user who visits a legacy SCORM topic will get both a Last SCORM Visit Date and a Last SCORM Completion Date Required Permission Advanced Data Sets > Can execute Learner Usage (Organization level) Available Filters Returned Fields",
+    "description": "The Learner Usage data set returns the activity for learners in course offerings. The course offerings must be children of the selected org unit. The learners that are included depend on the date range selected (see note). About Time Tracking The time tracking in this report does not align with the SCORM Detailed Report. If a user opens a SCORM package in a new window, the Total Time Spent in the SCORM Detailed Report will be substantially higher because Learner Usage doesn't track that time. If a user opens a SCORM package in embed mode, the Total Time Spent in the SCORM Detailed Report will be slightly lower because it only tracks the time users spend interacting with the SCORM Object, whereas Learner Usage Report tracks the entire session. About SCORM Dates If a user clicks on a legacy SCORM topic it will be marked as completed, even if the user has not progressed through the entire topic and has a SCORM Report showing incomplete. This means that a user who visits a legacy SCORM topic will get both a Last SCORM Visit Date and a Last SCORM Completion Date Required Permission Advanced Data Sets > Can execute Learner Usage (Organization level)",
     "columns": [
         {
             "name": "Course Offering Id",
@@ -66,7 +66,7 @@
         },
         {
             "name": "Semester Code",
-            "description": "Semester code associated with the course offering. The semester is the organization unit type as defined by the Standard Semester in Brightspace.  If a semester is not associated as a direct parent of the course offering being exported, the value is NULL. If a course offering is associated with multiple semesters, these are exported as a pipe-delimited list of strings.",
+            "description": "Semester code associated with the course offering. The semester is the organization unit type as defined by the Standard Semester in Brightspace. If a semester is not associated as a direct parent of the course offering being exported, the value is NULL. If a course offering is associated with multiple semesters, these are exported as a pipe-delimited list of strings.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -286,7 +286,7 @@
         },
         {
             "name": "Last Visited Date",
-            "description": "Most recent visit date\/time for the course.  If the course has not been visited by the learner, this field is NULL.",
+            "description": "Most recent visit date\/time for the course. If the course has not been visited by the learner, this field is NULL.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,

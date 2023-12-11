@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Intelligent Agent Objects",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4528-intelligent-agents-data-sets#intelligent-agent-objects",
-    "description": "The Intelligent Agent Objects Brightspace Data Set describes all the intelligent agents created in your organization. Returned Fields",
+    "description": "The Intelligent Agent Objects Brightspace Data Set describes all the intelligent agents created in your organization.",
     "columns": [
         {
             "name": "AgentId",

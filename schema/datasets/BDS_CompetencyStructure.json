@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Competency Structure",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4754-competency-data-sets#competency-structure",
-    "description": "The Competency Structure Brightspace Data Set returns information about all competency structures for your org units.   Returned Fields",
+    "description": "The Competency Structure Brightspace Data Set returns information about all competency structures for your org units.",
     "columns": [
         {
             "name": "ObjectId",

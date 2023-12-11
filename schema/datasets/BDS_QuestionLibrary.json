@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Question Library",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4531-questions-data-sets#question-library",
-    "description": "The Question Library Brightspace Data Set details all the questions that have been created in the organization. This includes quiz questions that are not currently used in a quiz.   Returned Fields",
+    "description": "The Question Library Brightspace Data Set details all the questions that have been created in the organization. This includes quiz questions that are not currently used in a quiz.",
     "columns": [
         {
             "name": "QuestionId",

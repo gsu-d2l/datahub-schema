@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Portfolio Evidence Categories",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4530-portfolio-data-sets#portfolio-evidence-categories",
-    "description": "The Portfolio Evidence Categories Brightspace Data Set details the one or many categories that are mapped to each piece of evidence in the Portfolios in your organization.   Returned Fields",
+    "description": "The Portfolio Evidence Categories Brightspace Data Set details the one or many categories that are mapped to each piece of evidence in the Portfolios in your organization.",
     "columns": [
         {
             "name": "CategoryId",

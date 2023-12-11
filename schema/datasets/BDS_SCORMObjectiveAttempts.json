@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "SCORM Objective Attempts",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4536-scorm-data-sets#scorm-objective-attempts",
-    "description": "The SCORM Objective Attempts Brightspace Data Set outputs the score and completion information on every objective associated to the SCORM object where an attempt has been made.   Returned Fields",
+    "description": "The SCORM Objective Attempts Brightspace Data Set outputs the score and completion information on every objective associated to the SCORM object where an attempt has been made.",
     "columns": [
         {
             "name": "VisitId",

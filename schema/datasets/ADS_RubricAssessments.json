@@ -2,7 +2,7 @@
     "type": "ADS",
     "name": "Rubric Assessments",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#rubric-assessments",
-    "description": "The Rubric Assessments data set provides insight on how rubrics are used, the assessments they are used against, and the scoring for all individual learner assessments. Note: This data set only reports on fully assessed rubrics. For rubrics using a Text Only scoring method, there must be an Overall Score provided for the rubric to be considered fully assessed and to show in the report. Required Permission Advanced Data Sets > Can execute Rubric Assessments (Organization level) Available Filters Returned Fields",
+    "description": "The Rubric Assessments data set provides insight on how rubrics are used, the assessments they are used against, and the scoring for all individual learner assessments. Note: This data set only reports on fully assessed rubrics. For rubrics using a Text Only scoring method, there must be an Overall Score provided for the rubric to be considered fully assessed and to show in the report. Required Permission Advanced Data Sets > Can execute Rubric Assessments (Organization level)",
     "columns": [
         {
             "name": "Course Org Unit Id",
