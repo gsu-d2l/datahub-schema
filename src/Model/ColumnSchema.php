@@ -15,11 +15,18 @@ class ColumnSchema
     public static function create(mixed $values): self
     {
         $values = ArrayValue::convertToArray($values);
+
         $description = ArrayValue::getStringNull($values, 'description') ?? '';
-        $canBeNull = str_contains(strtolower($description), 'field can be null');
+        $canBeNull = ArrayValue::getBoolNull($values, 'canBeNull')
+            ?? str_contains(strtolower($description), 'field can be null');
+
+        if ($canBeNull === true && !str_contains(strtolower($description), "field can be null")) {
+            $description .= " Field can be null.";
+        }
+
         $key = strtoupper(ArrayValue::getStringNull($values, 'key') ?? '');
-        $isPrimary = str_contains($key, 'PK');
-        $isForeign = str_contains($key, 'FK');
+        $isPrimary = ArrayValue::getBoolNull($values, 'isPrimary') ?? str_contains($key, 'PK');
+        $isForeign = ArrayValue::getBoolNull($values, 'isForeign') ?? str_contains($key, 'FK');
 
         return new self(
             name: ArrayValue::getString($values, 'name'),
