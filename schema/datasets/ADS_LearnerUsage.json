@@ -16,7 +16,7 @@
         },
         {
             "name": "Course Offering Code",
-            "description": "Course offering string code.",
+            "description": "Course offering string code. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -46,7 +46,7 @@
         },
         {
             "name": "Parent Department Code",
-            "description": "Org unit code of the parent department.",
+            "description": "Org unit code of the parent department. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -56,7 +56,7 @@
         },
         {
             "name": "Semester Id",
-            "description": "Unique semester numeric identifier in Brightspace. If a course is not associated with a semester, the value is NULL.",
+            "description": "Unique semester numeric identifier in Brightspace. If a course is not associated with a semester, the value is NULL. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -66,7 +66,7 @@
         },
         {
             "name": "Semester Code",
-            "description": "Semester code associated with the course offering. The semester is the organization unit type as defined by the Standard Semester in Brightspace. If a semester is not associated as a direct parent of the course offering being exported, the value is NULL. If a course offering is associated with multiple semesters, these are exported as a pipe-delimited list of strings.",
+            "description": "Semester code associated with the course offering. The semester is the organization unit type as defined by the Standard Semester in Brightspace. If a semester is not associated as a direct parent of the course offering being exported, the value is NULL. If a course offering is associated with multiple semesters, these are exported as a pipe-delimited list of strings. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -76,7 +76,7 @@
         },
         {
             "name": "Semester Name",
-            "description": "Semester name associated with the course offering.",
+            "description": "Semester name associated with the course offering. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -156,7 +156,7 @@
         },
         {
             "name": "Role Name",
-            "description": "A string identifying the learner's role within the course offering such as Learner.",
+            "description": "A string identifying the learner's role within the course offering such as Learner. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -246,7 +246,7 @@
         },
         {
             "name": "Last Discussion Post Date",
-            "description": "Date the user last posted to a discussion. If the user has not posted in any discussion, this field is NULL.",
+            "description": "Date the user last posted to a discussion. If the user has not posted in any discussion, this field is NULL. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -266,7 +266,7 @@
         },
         {
             "name": "Last Assignment Submission Date",
-            "description": "Date\/time the learner's last submission\/post into an assignment.",
+            "description": "Date\/time the learner's last submission\/post into an assignment. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -286,7 +286,7 @@
         },
         {
             "name": "Last Visited Date",
-            "description": "Most recent visit date\/time for the course. If the course has not been visited by the learner, this field is NULL.",
+            "description": "Most recent visit date\/time for the course. If the course has not been visited by the learner, this field is NULL. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -296,7 +296,7 @@
         },
         {
             "name": "Last System Login",
-            "description": "Date\/time the learner last logged in to Brightspace.",
+            "description": "Date\/time the learner last logged in to Brightspace. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -316,7 +316,7 @@
         },
         {
             "name": "Auditor Name",
-            "description": "Username of the user who is assigned as the auditor for this learner.",
+            "description": "Username of the user who is assigned as the auditor for this learner. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -326,7 +326,7 @@
         },
         {
             "name": "Last Quiz Attempt Date",
-            "description": "Date the learner last attempted and completed a quiz.",
+            "description": "Date the learner last attempted and completed a quiz. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -336,7 +336,7 @@
         },
         {
             "name": "Last Scorm Completion Date",
-            "description": "Date the learner last completed a SCORM object.",
+            "description": "Date the learner last completed a SCORM object. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -346,7 +346,7 @@
         },
         {
             "name": "Last Scorm Visit Date",
-            "description": "Date the learner last launched or interacted with a SCORM object.",
+            "description": "Date the learner last launched or interacted with a SCORM object. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,

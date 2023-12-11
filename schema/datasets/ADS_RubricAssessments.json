@@ -26,7 +26,7 @@
         },
         {
             "name": "Course Code",
-            "description": "Course offering code.",
+            "description": "Course offering code. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -36,7 +36,7 @@
         },
         {
             "name": "Parent Department Name",
-            "description": "Parent department org unit name of the course offering. This may contain multiple values.",
+            "description": "Parent department org unit name of the course offering. This may contain multiple values. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -46,7 +46,7 @@
         },
         {
             "name": "Parent Semester Name",
-            "description": "Parent semester org unit name of the course offering. This may contain multiple values.",
+            "description": "Parent semester org unit name of the course offering. This may contain multiple values. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -56,7 +56,7 @@
         },
         {
             "name": "Parent Course Template Name",
-            "description": "Parent course template name of the course offering. This may contain multiple values.",
+            "description": "Parent course template name of the course offering. This may contain multiple values. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -66,7 +66,7 @@
         },
         {
             "name": "Course Section Id",
-            "description": "Unique identifier of the user's section within the course.",
+            "description": "Unique identifier of the user's section within the course. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -76,7 +76,7 @@
         },
         {
             "name": "Course Section Name",
-            "description": "Name of the section the user is in.",
+            "description": "Name of the section the user is in. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -86,7 +86,7 @@
         },
         {
             "name": "Course Section Code",
-            "description": "Code of the section the user is in.",
+            "description": "Code of the section the user is in. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -186,7 +186,7 @@
         },
         {
             "name": "Org Defined Id",
-            "description": "Org defined Id of the user.",
+            "description": "Org defined Id of the user. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -236,7 +236,7 @@
         },
         {
             "name": "Level",
-            "description": "Level that the user obtained on the criterion.",
+            "description": "Level that the user obtained on the criterion. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -246,7 +246,7 @@
         },
         {
             "name": "Points",
-            "description": "Number of points that the user scored on the criterion.",
+            "description": "Number of points that the user scored on the criterion. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -256,7 +256,7 @@
         },
         {
             "name": "Overall Level Achieved",
-            "description": "Overall level achieved by the user on the rubric.",
+            "description": "Overall level achieved by the user on the rubric. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -276,7 +276,7 @@
         },
         {
             "name": "Evaluation Date",
-            "description": "Date that the criterion was last assessed for the user.",
+            "description": "Date that the criterion was last assessed for the user. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -326,7 +326,7 @@
         },
         {
             "name": "Assessor Org Defined Id",
-            "description": "Org defined Id of the assessor.",
+            "description": "Org defined Id of the assessor. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,

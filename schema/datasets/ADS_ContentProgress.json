@@ -6,7 +6,7 @@
     "columns": [
         {
             "name": "Course Offering ID",
-            "description": "D2L's unique identifier for the course offering.",
+            "description": "D2L's unique identifier for the course offering. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -16,7 +16,7 @@
         },
         {
             "name": "Course Offering Code",
-            "description": "Often the course identifier from an SIS system.",
+            "description": "Often the course identifier from an SIS system. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -26,7 +26,7 @@
         },
         {
             "name": "Course Offering Name",
-            "description": "Name of the course offering.",
+            "description": "Name of the course offering. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -36,7 +36,7 @@
         },
         {
             "name": "Course Section ID",
-            "description": "D2L's unique identifier for the section. May contain a list if there are multiple sections.",
+            "description": "D2L's unique identifier for the section. May contain a list if there are multiple sections. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -46,7 +46,7 @@
         },
         {
             "name": "Course Section Code",
-            "description": "Client defined code for the section. May contain a list if there are multiple sections.",
+            "description": "Client defined code for the section. May contain a list if there are multiple sections. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -56,7 +56,7 @@
         },
         {
             "name": "Course Section Name",
-            "description": "Name of the section. May contain a list if there are multiple sections.",
+            "description": "Name of the section. May contain a list if there are multiple sections. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -66,7 +66,7 @@
         },
         {
             "name": "Semester ID",
-            "description": "Unique identifier for the Semester that the course offering belongs to. May contain a list if there are multiple sections.",
+            "description": "Unique identifier for the Semester that the course offering belongs to. May contain a list if there are multiple sections. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -76,7 +76,7 @@
         },
         {
             "name": "Semester Code",
-            "description": "Unique code for the semester that the course offering belongs to. May contain a list if there are multiple sections.",
+            "description": "Unique code for the semester that the course offering belongs to. May contain a list if there are multiple sections. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -86,7 +86,7 @@
         },
         {
             "name": "Semester Name",
-            "description": "Semester that the course offering belongs to. May contain a list if there are multiple sections.",
+            "description": "Semester that the course offering belongs to. May contain a list if there are multiple sections. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -96,7 +96,7 @@
         },
         {
             "name": "User ID",
-            "description": "D2L's unique identifier for the user.",
+            "description": "D2L's unique identifier for the user. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -106,7 +106,7 @@
         },
         {
             "name": "User Name",
-            "description": "User's username.",
+            "description": "User's username. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -126,7 +126,7 @@
         },
         {
             "name": "First Name",
-            "description": "User's first name.",
+            "description": "User's first name. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -136,7 +136,7 @@
         },
         {
             "name": "Last Name",
-            "description": "User's last name.",
+            "description": "User's last name. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -146,7 +146,7 @@
         },
         {
             "name": "Role ID",
-            "description": "User's role Id at the specific course offering.",
+            "description": "User's role Id at the specific course offering. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -156,7 +156,7 @@
         },
         {
             "name": "Role Name",
-            "description": "User's role at the specific course offering.",
+            "description": "User's role at the specific course offering. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -166,7 +166,7 @@
         },
         {
             "name": "Content Topic ID",
-            "description": "D2L's unique identifier for the content topic.",
+            "description": "D2L's unique identifier for the content topic. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -176,7 +176,7 @@
         },
         {
             "name": "Content Topic Name",
-            "description": "Name of the content topic.",
+            "description": "Name of the content topic. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -186,7 +186,7 @@
         },
         {
             "name": "Module ID",
-            "description": "Unique identifier of the module. This only displays output from the direct parent.",
+            "description": "Unique identifier of the module. This only displays output from the direct parent. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -196,7 +196,7 @@
         },
         {
             "name": "Module Name",
-            "description": "Name of the module. This only displays output from the direct parent",
+            "description": "Name of the module. This only displays output from the direct parent Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -206,7 +206,7 @@
         },
         {
             "name": "Content Topic Visits",
-            "description": "Number of visits the user made to topics in the org.",
+            "description": "Number of visits the user made to topics in the org. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -216,7 +216,7 @@
         },
         {
             "name": "Total Time Spent",
-            "description": "Time in seconds the user spent in the topics in the org.",
+            "description": "Time in seconds the user spent in the topics in the org. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,

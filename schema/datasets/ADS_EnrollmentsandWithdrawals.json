@@ -96,7 +96,7 @@
         },
         {
             "name": "Org Defined Id",
-            "description": "User's org defined ID.",
+            "description": "User's org defined ID. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,

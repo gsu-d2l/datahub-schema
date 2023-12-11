@@ -36,7 +36,7 @@
         },
         {
             "name": "Credits",
-            "description": "The number of credits associated with the award.",
+            "description": "The number of credits associated with the award. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -146,7 +146,7 @@
         },
         {
             "name": "RevokedId",
-            "description": "Indicates if the award has been revoked.",
+            "description": "Indicates if the award has been revoked. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -156,7 +156,7 @@
         },
         {
             "name": "Criteria",
-            "description": "Indicates the criteria that must be met to earn the award.",
+            "description": "Indicates the criteria that must be met to earn the award. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -166,7 +166,7 @@
         },
         {
             "name": "Evidence",
-            "description": "Displays the evidence that the criteria for the award was met.",
+            "description": "Displays the evidence that the criteria for the award was met. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -176,7 +176,7 @@
         },
         {
             "name": "ExpiryDate",
-            "description": "Indicates the date when the award expires",
+            "description": "Indicates the date when the award expires Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,

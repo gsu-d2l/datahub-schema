@@ -136,7 +136,7 @@
         },
         {
             "name": "Semester Name",
-            "description": "Semester that the course offering belongs to.",
+            "description": "Semester that the course offering belongs to. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -176,7 +176,7 @@
         },
         {
             "name": "Org Defined Id",
-            "description": "Learner's org defined ID.",
+            "description": "Learner's org defined ID. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -246,7 +246,7 @@
         },
         {
             "name": "Assessment Type",
-            "description": "Numeric or Rubric (or blank if it is not assessed)",
+            "description": "Numeric or Rubric (or blank if it is not assessed) Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -256,7 +256,7 @@
         },
         {
             "name": "Rubric Id",
-            "description": "If the outcome is assessed by a rubric, this is the rubric ID.",
+            "description": "If the outcome is assessed by a rubric, this is the rubric ID. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -266,7 +266,7 @@
         },
         {
             "name": "Rubric Name",
-            "description": "If the outcome is assessed by a rubric, this is the rubric name.",
+            "description": "If the outcome is assessed by a rubric, this is the rubric name. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -276,7 +276,7 @@
         },
         {
             "name": "Rubric Measurement",
-            "description": "If the outcome is assessed by a rubric, this contains Overall Score or the specific rubric criterion used to measure the outcome.",
+            "description": "If the outcome is assessed by a rubric, this contains Overall Score or the specific rubric criterion used to measure the outcome. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -286,7 +286,7 @@
         },
         {
             "name": "Assessment Threshold",
-            "description": "If assessed, contains the threshold considered to be successful attainment.",
+            "description": "If assessed, contains the threshold considered to be successful attainment. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -296,7 +296,7 @@
         },
         {
             "name": "Assessment Threshold Criteria",
-            "description": "For numeric assessments, this field contains one of the following operators associated with the threshold:",
+            "description": "For numeric assessments, this field contains one of the following operators associated with the threshold: Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -306,7 +306,7 @@
         },
         {
             "name": "Rubric Level Achieved",
-            "description": "If the activity is assessed by a rubric, this is the level that the learner achieved. If the rubric measurement is Overall Score, this is the learner's overall score on the rubric. If the Rubric Measurement is a specific criterion, this is how the learner performed on that criterion.",
+            "description": "If the activity is assessed by a rubric, this is the level that the learner achieved. If the rubric measurement is Overall Score, this is the learner's overall score on the rubric. If the Rubric Measurement is a specific criterion, this is how the learner performed on that criterion. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -316,7 +316,7 @@
         },
         {
             "name": "Rubric Points",
-            "description": "If the activity is assessed by a rubric, this is the point score that the learner achieved. If the rubric measurement is Overall Score, this is the learner's overall score on the rubric. If the Rubric Measurement is a specific criterion, this is how the learner performed on that criterion.",
+            "description": "If the activity is assessed by a rubric, this is the point score that the learner achieved. If the rubric measurement is Overall Score, this is the learner's overall score on the rubric. If the Rubric Measurement is a specific criterion, this is how the learner performed on that criterion. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -326,7 +326,7 @@
         },
         {
             "name": "Activity Grade Points",
-            "description": "Achieved points value the learner received when the activity is assessed by Grade.",
+            "description": "Achieved points value the learner received when the activity is assessed by Grade. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -336,7 +336,7 @@
         },
         {
             "name": "Activity Grade Max Points",
-            "description": "Total possible points the learner could receive for the activity when the activity is assessed by Grade.",
+            "description": "Total possible points the learner could receive for the activity when the activity is assessed by Grade. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -346,7 +346,7 @@
         },
         {
             "name": "Activity Grade Percent",
-            "description": "Activity grade as recorded in the grade book.",
+            "description": "Activity grade as recorded in the grade book. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -356,7 +356,7 @@
         },
         {
             "name": "Activity Threshold Achieved",
-            "description": "If this outcome is assessed, it is a comparison of the assessment threshold to the learner results.",
+            "description": "If this outcome is assessed, it is a comparison of the assessment threshold to the learner results. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,

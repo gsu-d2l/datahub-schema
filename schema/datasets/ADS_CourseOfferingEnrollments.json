@@ -46,7 +46,7 @@
         },
         {
             "name": "Enrollment Type",
-            "description": "The type of enrollment.",
+            "description": "The type of enrollment. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,

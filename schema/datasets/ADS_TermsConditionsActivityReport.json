@@ -16,7 +16,7 @@
         },
         {
             "name": "Org Defined Id",
-            "description": "Learner's org defined ID.",
+            "description": "Learner's org defined ID. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -86,7 +86,7 @@
         },
         {
             "name": "Version Comments",
-            "description": "Any comments associated with the version.",
+            "description": "Any comments associated with the version. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,

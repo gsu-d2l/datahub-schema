@@ -16,7 +16,7 @@
         },
         {
             "name": "Org Defined Id",
-            "description": "User's org defined ID.",
+            "description": "User's org defined ID. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -76,7 +76,7 @@
         },
         {
             "name": "Semester Id",
-            "description": "Unique semester numeric identifier in Brightspace. If a course is not associated with a semester, the value is NULL.",
+            "description": "Unique semester numeric identifier in Brightspace. If a course is not associated with a semester, the value is NULL. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -86,7 +86,7 @@
         },
         {
             "name": "Semester Name",
-            "description": "Semester name associated with the course offering.",
+            "description": "Semester name associated with the course offering. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -96,7 +96,7 @@
         },
         {
             "name": "Semester Code",
-            "description": "Semester code associated with the course offering. The semester is the organization unit type as defined by the Standard Semester in Brightspace. If a semester is not associated as a direct parent of the course offering being exported, the value is NULL. If a course offering is associated with multiple semesters, these are exported as a pipe-delimited list of strings.",
+            "description": "Semester code associated with the course offering. The semester is the organization unit type as defined by the Standard Semester in Brightspace. If a semester is not associated as a direct parent of the course offering being exported, the value is NULL. If a course offering is associated with multiple semesters, these are exported as a pipe-delimited list of strings. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -116,7 +116,7 @@
         },
         {
             "name": "Course Offering Code",
-            "description": "Often the course identifier from an SIS system.",
+            "description": "Often the course identifier from an SIS system. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -136,7 +136,7 @@
         },
         {
             "name": "Course Section Name",
-            "description": "Name of the course section.",
+            "description": "Name of the course section. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -146,7 +146,7 @@
         },
         {
             "name": "Final Calculated Grade (Percentage)",
-            "description": "Final calculated grade as a percentage.",
+            "description": "Final calculated grade as a percentage. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -176,7 +176,7 @@
         },
         {
             "name": "Final Adjusted Last Modified Date",
-            "description": "Last modified date for the final adjusted grade.",
+            "description": "Last modified date for the final adjusted grade. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -186,7 +186,7 @@
         },
         {
             "name": "Final Adjusted Comments",
-            "description": "Comments for the final adjusted grade.",
+            "description": "Comments for the final adjusted grade. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -206,7 +206,7 @@
         },
         {
             "name": "Final Adjusted Last Modified By",
-            "description": "User that last modified the final adjusted grade.",
+            "description": "User that last modified the final adjusted grade. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,

@@ -16,7 +16,7 @@
         },
         {
             "name": "Org Defined Id",
-            "description": "User's Org Defined Id (often the learner identifier from an SIS system).",
+            "description": "User's Org Defined Id (often the learner identifier from an SIS system). Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -96,7 +96,7 @@
         },
         {
             "name": "Course Offering Code",
-            "description": "Often the course identifier from an SIS system.",
+            "description": "Often the course identifier from an SIS system. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -116,7 +116,7 @@
         },
         {
             "name": "Course Section Id",
-            "description": "D2L's unique identifier for the section.",
+            "description": "D2L's unique identifier for the section. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -126,7 +126,7 @@
         },
         {
             "name": "Course Section Code",
-            "description": "Client defined code for the section.",
+            "description": "Client defined code for the section. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -136,7 +136,7 @@
         },
         {
             "name": "Course Section Name",
-            "description": "Name of the section.",
+            "description": "Name of the section. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -146,7 +146,7 @@
         },
         {
             "name": "Grade Item Category Id",
-            "description": "D2L's unique identifier for the category in which the grade item belongs.",
+            "description": "D2L's unique identifier for the category in which the grade item belongs. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -156,7 +156,7 @@
         },
         {
             "name": "Grade Item Category Name",
-            "description": "Name of the category in which the grade item belongs.",
+            "description": "Name of the category in which the grade item belongs. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -186,7 +186,7 @@
         },
         {
             "name": "Grade Item Weight",
-            "description": "Weight of the grade item.",
+            "description": "Weight of the grade item. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -196,7 +196,7 @@
         },
         {
             "name": "Grade Item Start Date",
-            "description": "Date the grade item will become visible in the grade book.",
+            "description": "Date the grade item will become visible in the grade book. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -206,7 +206,7 @@
         },
         {
             "name": "Grade Item End Date",
-            "description": "Date the grade item will become invisible in the grade book.",
+            "description": "Date the grade item will become invisible in the grade book. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -216,7 +216,7 @@
         },
         {
             "name": "Points Numerator",
-            "description": "Numerator of the grade value.",
+            "description": "Numerator of the grade value. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -226,7 +226,7 @@
         },
         {
             "name": "Points Denominator",
-            "description": "Denominator of the grade value.",
+            "description": "Denominator of the grade value. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -236,7 +236,7 @@
         },
         {
             "name": "Grade Value",
-            "description": "Value of the grade with the grade scheme applied.",
+            "description": "Value of the grade with the grade scheme applied. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -266,7 +266,7 @@
         },
         {
             "name": "Grader User Id",
-            "description": "User Id of the last user that modified the grade.",
+            "description": "User Id of the last user that modified the grade. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -276,7 +276,7 @@
         },
         {
             "name": "Grader Org Defined Id",
-            "description": "Org Defined Id of the last user that modified the grade.",
+            "description": "Org Defined Id of the last user that modified the grade. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -286,7 +286,7 @@
         },
         {
             "name": "Grader Username",
-            "description": "Grader's username.",
+            "description": "Grader's username. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -296,7 +296,7 @@
         },
         {
             "name": "Grader First Name",
-            "description": "First name of the last user that modified the grade.",
+            "description": "First name of the last user that modified the grade. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -306,7 +306,7 @@
         },
         {
             "name": "Grader Last Name",
-            "description": "Last name of the last user that modified the grade.",
+            "description": "Last name of the last user that modified the grade. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -326,7 +326,7 @@
         },
         {
             "name": "Grade Object Type",
-            "description": "Grade object type name.",
+            "description": "Grade object type name. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,

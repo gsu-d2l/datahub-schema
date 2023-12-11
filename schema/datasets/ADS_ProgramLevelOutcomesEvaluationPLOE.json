@@ -36,7 +36,7 @@
         },
         {
             "name": "Program",
-            "description": "The program is a custom org unit type, with the filter parameter passed in. There should be one line per program.",
+            "description": "The program is a custom org unit type, with the filter parameter passed in. There should be one line per program. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -156,7 +156,7 @@
         },
         {
             "name": "IsAchieved",
-            "description": "Indicates if the outcome is achieved. 1=Achieved, 0=Not achieved, Null=not assessed",
+            "description": "Indicates if the outcome is achieved. 1=Achieved, 0=Not achieved, Null=not assessed Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,

@@ -36,7 +36,7 @@
         },
         {
             "name": "Org Defined Id",
-            "description": "Instructor's Org Defined Id (often the learner identifier from an SIS system).",
+            "description": "Instructor's Org Defined Id (often the learner identifier from an SIS system). Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -96,7 +96,7 @@
         },
         {
             "name": "Course Offering Code",
-            "description": "Often the course identifier from an SIS system.",
+            "description": "Often the course identifier from an SIS system. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -126,7 +126,7 @@
         },
         {
             "name": "Last Access to Course Offering Content",
-            "description": "Last date\/time the instructor accessed content within the course offering.",
+            "description": "Last date\/time the instructor accessed content within the course offering. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -176,7 +176,7 @@
         },
         {
             "name": "Last Modification of a Grade Item",
-            "description": "Last date\/time a grade item in the course was modified by the instructor.",
+            "description": "Last date\/time a grade item in the course was modified by the instructor. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -206,7 +206,7 @@
         },
         {
             "name": "Last Discussion Post Date",
-            "description": "Date\/time the instructor last posted a discussion in the course.",
+            "description": "Date\/time the instructor last posted a discussion in the course. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -216,7 +216,7 @@
         },
         {
             "name": "Last Access to Course Offering",
-            "description": "Last date\/time (UTC format) the instructor accessed the course offering.",
+            "description": "Last date\/time (UTC format) the instructor accessed the course offering. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -236,7 +236,7 @@
         },
         {
             "name": "Last Sent Mail Date",
-            "description": "Last date\/time the instructor sent an email from within the course offering.",
+            "description": "Last date\/time the instructor sent an email from within the course offering. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,

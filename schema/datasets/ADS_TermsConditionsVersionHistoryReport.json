@@ -56,7 +56,7 @@
         },
         {
             "name": "Comments",
-            "description": "Any comments associated with the Terms and Conditions.",
+            "description": "Any comments associated with the Terms and Conditions. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,

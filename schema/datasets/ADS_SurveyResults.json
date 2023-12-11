@@ -56,7 +56,7 @@
         },
         {
             "name": "Course Offering Code",
-            "description": "Often the course identifier from an SIS system.",
+            "description": "Often the course identifier from an SIS system. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -66,7 +66,7 @@
         },
         {
             "name": "Course Offering Name",
-            "description": "Name of the course offering.",
+            "description": "Name of the course offering. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -76,7 +76,7 @@
         },
         {
             "name": "Parent Department Name",
-            "description": "Name of department.",
+            "description": "Name of department. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -86,7 +86,7 @@
         },
         {
             "name": "Parent Department Code",
-            "description": "Department code.",
+            "description": "Department code. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -96,7 +96,7 @@
         },
         {
             "name": "Respondent User Id",
-            "description": "Unique user identifier. Null if survey is anonymous.",
+            "description": "Unique user identifier. Null if survey is anonymous. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -116,7 +116,7 @@
         },
         {
             "name": "Respondent First Name",
-            "description": "User's first name. Null if survey is anonymous.",
+            "description": "User's first name. Null if survey is anonymous. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -126,7 +126,7 @@
         },
         {
             "name": "Respondent Last Name",
-            "description": "User's last name. Null if survey is anonymous.",
+            "description": "User's last name. Null if survey is anonymous. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -136,7 +136,7 @@
         },
         {
             "name": "Category Name",
-            "description": "Category Name for the survey.",
+            "description": "Category Name for the survey. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -156,7 +156,7 @@
         },
         {
             "name": "Question Number",
-            "description": "Unique survey question identifier.",
+            "description": "Unique survey question identifier. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -166,7 +166,7 @@
         },
         {
             "name": "Question",
-            "description": "Survey question.",
+            "description": "Survey question. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
@@ -176,7 +176,7 @@
         },
         {
             "name": "Answer",
-            "description": "Survey answer.",
+            "description": "Survey answer. Field can be null.",
             "type": "varchar",
             "size": "",
             "isPrimary": false,
