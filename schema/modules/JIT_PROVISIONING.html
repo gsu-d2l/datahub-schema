@@ -1,103 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<div id="fallbackPageContent">
-<main>
-<section>
-<div class="mainColumn">
-<article>
-<h2 data-id="jit-provisioned-users-log">JIT Provisioned Users Log</h2>
-<p>The JIT Provisioned Users Log Brightspace Data Set returns information on any issues or failures with the provisioning of users via Just-In-Time User Provisioning.</p>
-<p>Each row in the data set represents a log of action (for example, created or updated) taken on users provisioned via Just-In-Time User Provisioning. It provides information about the users, the type of their provider, the Id of the provider, date, and time that the users were provisioned (UTC).</p>
-<p></p>
-<p>Returned Fields</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Column Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>7.12</td>
-<td style="width: 134px;">
-<p>UserId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique identifier for the user.</p>
-                    </td>
-<td>
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>PK, FK</td>
-                </tr><tr align="left" valign="top"><td>7.12</td>
-<td style="width: 134px;">
-<p>MappingField</p>
-                    </td>
-<td style="width: 134px;">
-<p>The Brightspace field used to map the user with the Identity Provider (For example: "Username", "Email Address", "Org Defined Id").</p>
-                    </td>
-<td>
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>32</p>
-                    </td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>7.12</td>
-<td style="width: 134px;">MappingFieldValue</td>
-<td style="width: 134px;">The value of the Brightspace field used to map the user with the Identity Provider.</td>
-<td>nvarchar</td>
-<td style="width: 134px;">270</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>7.12</td>
-<td style="width: 134px;">ProviderType</td>
-<td style="width: 134px;">The type of provider that provisioned the user (For example: "SAML").</td>
-<td>nvarchar</td>
-<td style="width: 134px;">32</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>7.12</td>
-<td style="width: 134px;">ProviderId</td>
-<td style="width: 134px;">The Id of the provider that provisioned the user.</td>
-<td>nvarchar</td>
-<td style="width: 134px;">1024</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>7.12</td>
-<td style="width: 134px;">RoleId</td>
-<td style="width: 134px;">The Org level Role that the user was provisioned as.</td>
-<td>int</td>
-<td style="width: 134px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>7.12</td>
-<td style="width: 134px;">Timestamp</td>
-<td style="width: 134px;">Date and time that the user was provisioned (UTC).</td>
-<td>datetime2</td>
-<td style="width: 134px;">8</td>
-<td>PK</td>
-                </tr><tr align="left" valign="top"><td>7.12</td>
-<td style="width: 134px;">
-<p>Action</p>
-                    </td>
-<td style="width: 134px;">Indicates the provisioning action taken on the user (For example:: "Created", "Updated").</td>
-<td>nvarchar</td>
-<td style="width: 134px;">16</td>
-<td></td>
-                </tr></tbody></table>
-</article>
-</div>
-</section>
-</main>
-</div>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>JIT Provisioned Users Log</h2>
+            <p>The JIT Provisioned Users Log Brightspace Data Set returns information on any issues or failures with the provisioning of users via Just-In-Time User Provisioning. Each row in the data set represents a log of action (for example, created or updated) taken on users provisioned via Just-In-Time User Provisioning. It provides information about the users, the type of their provider, the Id of the provider, date, and time that the users were provisioned (UTC).</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>7.12</td>
+                  <td>UserId</td>
+                  <td>Unique identifier for the user.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>7.12</td>
+                  <td>MappingField</td>
+                  <td>The Brightspace field used to map the user with the Identity Provider (For example: &quot;Username&quot;, &quot;Email Address&quot;, &quot;Org Defined Id&quot;).</td>
+                  <td>nvarchar</td>
+                  <td>32</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>7.12</td>
+                  <td>MappingFieldValue</td>
+                  <td>The value of the Brightspace field used to map the user with the Identity Provider.</td>
+                  <td>nvarchar</td>
+                  <td>270</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>7.12</td>
+                  <td>ProviderType</td>
+                  <td>The type of provider that provisioned the user (For example: &quot;SAML&quot;).</td>
+                  <td>nvarchar</td>
+                  <td>32</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>7.12</td>
+                  <td>ProviderId</td>
+                  <td>The Id of the provider that provisioned the user.</td>
+                  <td>nvarchar</td>
+                  <td>1024</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>7.12</td>
+                  <td>RoleId</td>
+                  <td>The Org level Role that the user was provisioned as.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>7.12</td>
+                  <td>Timestamp</td>
+                  <td>Date and time that the user was provisioned (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>7.12</td>
+                  <td>Action</td>
+                  <td>Indicates the provisioning action taken on the user (For example:: &quot;Created&quot;, &quot;Updated&quot;).</td>
+                  <td>nvarchar</td>
+                  <td>16</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

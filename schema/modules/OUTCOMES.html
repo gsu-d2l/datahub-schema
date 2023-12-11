@@ -1,1092 +1,1039 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<div id="fallbackPageContent">
-<main>
-<section>
-<div class="mainColumn">
-<article>
-<h2 data-id="tool-specific-object-lookup">Tool-Specific Object Lookup</h2>
-<p>To retrieve details about tool-specific objects that are aligned to or assessed against learning outcomes, you must reference other Brightspace Data Sets. The values you need to look up a tool-specific object are:</p>
-<p>Locate your AlignedObjectType in the following table, navigate to the corresponding Reference Column, and locate the row where the unique identifier value matches your AlignedObjectId.</p>
-<p> </p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><thead><tr><th><i>AlignedObjectType</i><br></th>
-<th>Reference Column</th>
-                </tr></thead><tbody><tr><td>1</td>
-<td>
-<p><b>Data Set</b>: <a rel="nofollow" href="https://d2l.vanillacommunities.com/brightspace/kb/articles/4525-discussions-data-sets">Discussion Topics</a></p>
-<p><b>Column</b>: TopicId</p>
-<p><b>Type</b>: bigint</p>
-                    </td>
-                </tr><tr><td>2</td>
-<td>
-<p><b>Data Set</b>: <a rel="nofollow" href="https://d2l.vanillacommunities.com/brightspace/kb/articles/4767-assignments-data-sets">Assignment Summary</a></p>
-<p><b>Column</b>: DropboxId</p>
-<p><b>Type</b>: bigint</p>
-                    </td>
-                </tr><tr><td>3</td>
-<td>
-<p><b>Data Set</b>: <a rel="nofollow" href="https://d2l.vanillacommunities.com/brightspace/kb/articles/4532-quizzes-data-sets">Quiz Attempts</a></p>
-<p><b>Column</b>: AttemptId</p>
-<p><b>Type</b>: bigint</p>
-                    </td>
-                </tr><tr><td>4</td>
-<td>
-<p><b>Data Set</b>: <i>Checkpoint Definition (future delivery)</i></p>
-<p><b>Column</b>: CheckpointId</p>
-<p><b>Type</b>: uniqueidentifier</p>
-                    </td>
-                </tr><tr><td>5</td>
-<td>
-<p><b>Data Set</b>: <a rel="nofollow" href="https://d2l.vanillacommunities.com/brightspace/kb/articles/4530-portfolio-data-sets">Portfolio Evidence Objects</a></p>
-<p><b>Column</b>: EvidenceId</p>
-<p><b>Type</b>: uniqueidentifier</p>
-                    </td>
-                </tr></tbody></table>
-<h2 data-id="outcome-details">Outcome Details</h2>
-<p>The Outcome Details Brightspace Data Set provides details of the outcomes that are part of all registries in all your org units.</p>
-<p>User IDs and dates are only populated for authored outcomes because updates to ASN outcomes rely on the cache invalidation system (performed by a system user).</p>
-<p>The only available data for authored outcomes is from June 2021 onwards. All data for ASN imported outcomes is available, starting with your organization's first use of Learning Outcomes.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">
-<p>OutcomeId</p>
-                    </td>
-<td>
-<p>Unique outcome identifier.</p>
-                    </td>
-<td style="width: 125px;">
-<p>uniqueidentifier</p>
-                    </td>
-<td style="width: 125px;">
-<p>16</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">OutcomeDefinitionSource</td>
-<td>Provider for this outcome, e.g. ASN.</td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">1000</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>8.11 / 9.0 - Changed Description</td>
-<td style="width: 125px;">OutcomeDefinitionId</td>
-<td>
-<p>ID of outcome within provider (for example ASN or locally authored).</p>
-<p>Field can be an empty string.</p>
-                    </td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">128</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">ParentOutcomeId</td>
-<td>
-<p>ID of the parent outcome, if nested under a parent outcome object in the same org unit, or null for top level outcomes with no parent.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">Description</td>
-<td>Main body of this outcome. Truncated to 1000 characters.</td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">1000</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">Notation</td>
-<td>Outcome notation for ASN outcomes.</td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">1000</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">CreatedDate</td>
-<td>
-<p>For authored outcomes, date when this item was initially created (UTC). For imported outcomes, this field is null.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">CreatedBy</td>
-<td>
-<p>For authored outcomes, ID of user who initially created this item. For imported outcomes, this field is null.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">LastModifiedDate</td>
-<td>
-<p>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">LastModifiedBy</td>
-<td>
-<p>ID of user who last modified, created, or deleted this item.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">IsDeleted</td>
-<td>
-<p>Indicates if this item has been deleted for authored outcomes. This flag will be null for outcomes imported from external providers, e.g. ASN.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="outcomes-aligned-to-tool-objects">Outcomes Aligned to Tool Objects</h2>
-<p>The Outcomes Aligned to Tool Objects Brightspace Data Set provides details of which outcomes are aligned to which assessment tools for all your org units. It includes a row for every outcome aligned to an assessment activity, for both direct alignments and alignments references via rubrics. The data set only captures data from June 2021 onwards.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">ObjectType</td>
-<td>Type of tool this outcome is aligned to. See Tool-Specific Object Lookup for details.</td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>PK</td>
-                </tr><tr align="left" valign="top"><td>6.14 / 7.2 - Updated Column size</td>
-<td style="width: 125px;">ObjectId</td>
-<td>ID of the tool this outcome is aligned to. See Tool-Specific Object Lookup for details.</td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">255</td>
-<td>PK, FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">OutcomeId</td>
-<td>ID of this Outcome in the Outcome Details data set.</td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td>PK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">RegistryId</td>
-<td>ID of registry representing the context in which this alignment exists.</td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td>PK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">CreatedDate</td>
-<td>
-<p>Date when this item was initially created (UTC).</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">CreatedBy</td>
-<td>
-<p>ID of user who initially created this item.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">LastModifiedDate</td>
-<td>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.</td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">LastModifiedBy</td>
-<td>ID of user who last modified, created, or deleted this item.</td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">IsDeleted</td>
-<td>Indicates if this item has been deleted.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="outcomes-assessed-checkpoints">Outcomes Assessed Checkpoints</h2>
-<p>The Outcomes Assessed Checkpoints Brightspace Data Set provides details about the Overall Achievement Calculation Settings for a checkpoint. The data set only captures data from July 2021 onwards.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>6.9</td>
-<td>CheckpointId</td>
-<td>ID of this checkpoint.</td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td>PK</td>
-                </tr><tr align="left" valign="top"><td>6.9</td>
-<td>DemonstrationId</td>
-<td>ID of demonstration which assesses this outcome against the checkpoint.</td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td>PK, FK</td>
-                </tr><tr align="left" valign="top"><td>6.9</td>
-<td>Feedback</td>
-<td>Feedback left by assessor, truncated to 1000 characters.</td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">1000</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.9</td>
-<td>ConfigDecayRate</td>
-<td>Value of the decay rate in Mastery View Settings for checkpoint calculation.</td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.9</td>
-<td>ConfigAggregationMethod</td>
-<td>
-<p>Calculation method selected in Mastery View Settings.</p>
-<p>Possible values:</p>
-<ul><li>
-<p>No Automatic Calculation = 0</p>
-                            </li>
-<li>
-<p>Most Common = 1</p>
-                            </li>
-<li>
-<p>Most Recent = 2</p>
-                            </li>
-<li>
-<p>Highest = 3</p>
-                            </li>
-<li>
-<p>Decaying Average = 4</p>
-                            </li>
-                        </ul></td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.9</td>
-<td>ConfigIncludedActivities</td>
-<td>
-<p>Selected activities for use in calculation in Mastery View Settings. If Most Recently Assessed Activities is selected, the specific number of activities to include is stored in ConfigRecentlyAssessedActivityCount.</p>
-<p>Possible values:</p>
-<ul><li>
-<p>All Activities = 0</p>
-                            </li>
-<li>
-<p>Most Recently Assessed Activities = 1</p>
-                            </li>
-                        </ul></td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.9</td>
-<td>ConfigMultipleAttemptStrategy</td>
-<td>
-<p>Selected attempt for use in calculation in Mastery View Settings.</p>
-<p>Possible values:</p>
-<ul><li>
-<p>Highest Attempt = 0</p>
-                            </li>
-<li>
-<p>Last Attempt = 1</p>
-                            </li>
-<li>
-<p>Average of All Attempts = 2</p>
-                            </li>
-                        </ul></td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.9</td>
-<td>ConfigRecentlyAssessedActivityCount</td>
-<td>
-<p>The number of recently assessed activities to include in calculation, when Most Recently Assessed Activities is selected.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.9</td>
-<td>ConfigTieBreaker</td>
-<td>
-<p>Selected method for how to handle multiple items of the same count in calculating the overall level of achievement in Mastery View Settings.</p>
-<p>Possible values:</p>
-<ul><li>
-<p>Highest Level = 0</p>
-                            </li>
-<li>
-<p>Most Recent Level = 1</p>
-                            </li>
-                        </ul></td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.9</td>
-<td>LastModifiedDate</td>
-<td>
-<p>Date when this item was last modified. Contains created date upon creation and deleted date for deleted items.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.9</td>
-<td>LastModifiedBy</td>
-<td>
-<p>ID of user who last modified, created, or deleted this item.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.9</td>
-<td>IsDeleted</td>
-<td>Indicates if this item has been deleted.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="outcomes-course-specific-scales">Outcomes Course Specific Scales</h2>
-<p>The Outcomes Course Specific Scales Brightspace Data Set provides details on which achievement scales and achievement thresholds are being used in each of your courses. The only available data for course specific achievement scales is from May 2023 onwards.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>8.9</td>
-<td style="width: 125px;">OrgUnitId</td>
-<td>ID of the org unit this registry is associated with.</td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.9</td>
-<td style="width: 125px;">RegistryId</td>
-<td>
-<p>ID of the current registry.</p>
-                    </td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>8.9</td>
-<td style="width: 125px;">ScaleId</td>
-<td>ID of the scale set as the LOA for the current registry.</td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>8.9</td>
-<td style="width: 125px;">AchievementThreshold</td>
-<td>
-<p>Level ID representing the threshold of achievement for this registry.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>8.9</td>
-<td style="width: 125px;">CreatedDate</td>
-<td>
-<p>Date when this item was originally created (UTC).</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>8.9</td>
-<td style="width: 125px;">LastModifiedDate</td>
-<td>
-<p>Date when this item was last modified. Contains created date upon creation and deleted date for deleted items (UTC).</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>8.9</td>
-<td style="width: 125px;">LastModifiedBy</td>
-<td>
-<p>ID of user who last modified, created, or deleted this item.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>8.9</td>
-<td style="width: 125px;">IsDeleted</td>
-<td>Whether this item has been deleted.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="outcomes-demonstrations">Outcomes Demonstrations</h2>
-<p>In the Outcomes Demonstrations Brightspace Data Set, each entry represents an evaluation of an assessment activity that is aligned to a learning outcome. For most tool object types, assessments are only visible in this data set when they are made visible to learners. The data set only captures data from June 2021 onwards.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">DemonstrationId</td>
-<td>ID of this demonstration.</td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">ExplicitlyEnteredScaleLevelId</td>
-<td>
-<p>Result of this evaluation if manually entered by assessor.</p>
-<p>Field can be null if achieved level has not been manually overridden.</p>
-                    </td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">AutomaticallyGeneratedScaleLevelId</td>
-<td>
-<p>Result of this evaluation if automatically generated by LMS.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">AlignedObjectType</td>
-<td>Type of assessed tool for this demonstration. See Tool-Specific Object Lookup for details.</td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">AlignedObjectId</td>
-<td>ID of assessed tool for this demonstration. See Tool-Specific Object Lookup for details.</td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">1000</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">OutcomeId</td>
-<td>ID of assessed outcome.</td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">RegistryId</td>
-<td>ID of registry representing the context in which the demonstration was made.</td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">IsPublished</td>
-<td>
-<p>Indicates if this demonstration has been made available to the assessed learner.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">AssessedUserId</td>
-<td>ID of the user who made the submission.</td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">AssessedDate</td>
-<td>Date of initial assessment (UTC).</td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">AssessorUserId</td>
-<td>
-<p>ID of the user who initially evaluated the submission.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">LastModifiedDate</td>
-<td>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.</td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">LastModifiedBy</td>
-<td>ID of user who last modified, created, or deleted this item.</td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">IsDeleted</td>
-<td>Indicates if this item has been deleted.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="outcomes-in-registries">Outcomes in Registries</h2>
-<p>The Outcomes in Registries Brightspace Data Set provides details of which outcomes belong to which registries for all your org units. It can be used to list all outcomes in the intent list of a course, or all the outcomes in a program.</p>
-<p>The only available data for org unit owned registries is from June 2021 onwards. All data for program registries is available, starting with your organization's first use of Learning Outcomes.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>7.7 - Updated Type and Size</td>
-<td style="width: 125px;">OutcomeId</td>
-<td>ID of this Outcome in the Outcome Details data set.</td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td>PK, FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">RegistryId</td>
-<td>ID of registry representing the context in which this outcome exists.</td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td>PK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">CreatedDate</td>
-<td>
-<p>For imported outcomes, the date that this outcome was mapped to the registry (UTC). For authored outcomes, the date this outcome was created.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">CreatedBy</td>
-<td>
-<p>ID of user who imported or created the outcome in the registry.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">LastModifiedDate</td>
-<td>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.</td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">LastModifiedBy</td>
-<td>ID of user who last modified, created, or deleted this item.</td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">IsDeleted</td>
-<td>Indicates if this item has been deleted.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="outcomes-program-details">Outcomes Program Details</h2>
-<p>The Outcomes Program Details Brightspace Data Set provides details about the programs that are defined to hold a collection of outcomes (registry). All data for the data set is available, starting with your organization's first use of Learning Outcomes.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>7.6 - Updated Type</td>
-<td style="width: 125px;">ProgramId</td>
-<td>ID of this program which owns the registry.</td>
-<td style="width: 125px;">bigint</td>
-<td style="width: 125px;">16</td>
-<td>PK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">ProgramName</td>
-<td>The name of this program.</td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">1000</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">OrgUnitId</td>
-<td>ID of the org unit which owns this program.</td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">CreatedDate</td>
-<td>
-<p>Date when this item was initially created (UTC).</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">CreatedBy</td>
-<td>
-<p>ID of user who initially created this item.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">LastModifiedDate</td>
-<td>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.</td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">LastModifiedBy</td>
-<td>ID of user who last modified, created, or deleted this item.</td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">IsDeleted</td>
-<td>Indicates if this item has been deleted.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="outcomes-registry-owners">Outcomes Registry Owners</h2>
-<p>In the Outcomes Registry Owners Brightspace Data Set, each entry represents a registry for both program and org unit owned registries. The data set only captures data from June 2021 onwards.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">OwnerType</td>
-<td>Type of entity which owns this registry. Set to 1 if owner is org unit, set to 2 if owner is program.</td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>6.14 / 7.2 - Updated Column size</td>
-<td style="width: 125px;">OwnerId</td>
-<td>ID or org unit owner when OwnerType is 1. ID of program when OwnerType is 2.</td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">255</td>
-<td>PK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">RegistryId</td>
-<td>ID of registry for the org unit or program.</td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td>PK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">CreatedDate</td>
-<td>
-<p>Date when this item was initially created (UTC).</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">CreatedBy</td>
-<td>
-<p>ID of user who initially created this item.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">LastModifiedDate</td>
-<td>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.</td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">LastModifiedBy</td>
-<td>ID of user who last modified, created, or deleted this item.</td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">IsDeleted</td>
-<td>Indicates if this item has been deleted.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="outcomes-rubric-alignments">Outcomes Rubric Alignments</h2>
-<p>In the Outcomes Rubric Alignments Brightspace Data Set, each entry represents an alignment for a learning outcome to a rubric criterion row. The data set only captures data from June 2021 onwards.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>7.6</td>
-<td>RubricId</td>
-<td>Unique rubric identifier.</td>
-<td style="width: 125px;">bigint</td>
-<td style="width: 125px;">8</td>
-<td>PK, FK</td>
-                </tr><tr align="left" valign="top"><td>7.6</td>
-<td>CriterionId</td>
-<td>Identifier for the criterion row of the rubric.</td>
-<td style="width: 125px;">bigint</td>
-<td style="width: 125px;">8</td>
-<td>PK, FK</td>
-                </tr><tr align="left" valign="top"><td>7.6</td>
-<td>OutcomeId</td>
-<td>Unique identifier for the outcome object.</td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td>PK, FK</td>
-                </tr><tr align="left" valign="top"><td>7.6</td>
-<td>RegistryId</td>
-<td>ID of the registry for the org unit or program.</td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td>PK, FK</td>
-                </tr><tr align="left" valign="top"><td>7.6</td>
-<td>CreatedDate</td>
-<td>
-<p>The date when the alignment of this outcome was recorded for this rubric criterion row.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>7.6</td>
-<td>CreatedBy</td>
-<td>
-<p>ID of the user who initially created this alignment.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>7.6</td>
-<td>LastModifiedDate</td>
-<td>
-<p>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>7.6</td>
-<td>LastModifiedBy</td>
-<td>
-<p>ID of user who last modified, created, or deleted this item.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>7.6</td>
-<td>IsDeleted</td>
-<td>Set to true if the outcome alignment has been removed from the rubric or the rubric has been deleted.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="outcomes-scale-definition">Outcomes Scale Definition</h2>
-<p>In the Outcomes Scale Definition Brightspace Data Set, each entry represents an achievement scale defined at the organization level. All data for the data set is available, starting with your organization's first use of Learning Outcomes.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">
-<p>ScaleId</p>
-                    </td>
-<td>
-<p>ID for this scale.</p>
-                    </td>
-<td style="width: 125px;">
-<p>uniqueidentifier</p>
-                    </td>
-<td style="width: 125px;">
-<p>16</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">Name</td>
-<td>Name of this scale.</td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">1000</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">IsDefault</td>
-<td>Indicates if this is the scale used by default whenever an assessment of an outcome takes place.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">UsePercentages</td>
-<td>Indicates if percentage ranges are specified for each scale level. This is used when suggesting a scale level for an assessment. Specific percentage threshold values are associated with each Scale Level.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">CreatedDate</td>
-<td>
-<p>Date when this item was initially created (UTC).</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">CreatedBy</td>
-<td>
-<p>ID of user who initially created this item.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">LastModifiedDate</td>
-<td>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.</td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">LastModifiedBy</td>
-<td>ID of user who last modified, created, or deleted this item.</td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">IsDeleted</td>
-<td>Indicates if this item has been deleted.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">RegistryId</td>
-<td>ID of registry that owns this scale.</td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="outcomes-scale-level-definition">Outcomes Scale Level Definition</h2>
-<p>In the Outcomes Scale Level Definition Brightspace Data Set, each entry represents a scale level defined in your scales. On the evaluation UI, they are represented by a single, clickable "frame". Examples include "Not Yet Achieved", "Achieved", and "Mastered".</p>
-<p>Scale levels can't be deleted once created. Scale levels become inaccessible when their parent scale is deleted.</p>
-<p>All data for the data set is available, starting with your organization's first use of Learning Outcomes.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">
-<p>ScaleLevelId</p>
-                    </td>
-<td>
-<p>ID for this scale level.</p>
-                    </td>
-<td style="width: 125px;">
-<p>uniqueidentifier</p>
-                    </td>
-<td style="width: 125px;">
-<p>16</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">ScaleId</td>
-<td>ID of the parent scale.</td>
-<td style="width: 125px;">uniqueidentifier</td>
-<td style="width: 125px;">16</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">Name</td>
-<td>Name of this scale level.</td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">1000</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">SortOrder</td>
-<td>Determines ordering for this scale level.</td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">PercentageRangeStart</td>
-<td>
-<p>The score percentage threshold boundary for this scale level. This value is used when automatically suggesting a scale level from numeric assessment results.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.14 / 7.2 - Updated Column size</td>
-<td style="width: 125px;">RGB</td>
-<td>Color of this scale level in HTML hex notation.</td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">40</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">CreatedDate</td>
-<td>
-<p>Date when this item was initially created (UTC).</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">CreatedBy</td>
-<td>
-<p>ID of user who initially created this item.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">LastModifiedDate</td>
-<td>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.</td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.8</td>
-<td style="width: 125px;">LastModifiedBy</td>
-<td>ID of user who last modified, created, or deleted this item.</td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr></tbody></table>
-</article>
-</div>
-</section>
-</main>
-</div>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Outcome Details</h2>
+            <p>The Outcome Details Brightspace Data Set provides details of the outcomes that are part of all registries in all your org units. User IDs and dates are only populated for authored outcomes because updates to ASN outcomes rely on the cache invalidation system (performed by a system user). The only available data for authored outcomes is from June 2021 onwards. All data for ASN imported outcomes is available, starting with your organization&#039;s first use of Learning Outcomes.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>6.8</td>
+                  <td>OutcomeId</td>
+                  <td>Unique outcome identifier.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>OutcomeDefinitionSource</td>
+                  <td>Provider for this outcome, e.g. ASN.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.11 / 9.0 - Changed Description</td>
+                  <td>OutcomeDefinitionId</td>
+                  <td>ID of outcome within provider (for example ASN or locally authored). Field can be an empty string.</td>
+                  <td>nvarchar</td>
+                  <td>128</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>ParentOutcomeId</td>
+                  <td>ID of the parent outcome, if nested under a parent outcome object in the same org unit, or null for top level outcomes with no parent. Field can be null.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>Description</td>
+                  <td>Main body of this outcome. Truncated to 1000 characters.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>Notation</td>
+                  <td>Outcome notation for ASN outcomes.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>CreatedDate</td>
+                  <td>For authored outcomes, date when this item was initially created (UTC). For imported outcomes, this field is null. Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>CreatedBy</td>
+                  <td>For authored outcomes, ID of user who initially created this item. For imported outcomes, this field is null. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModifiedDate</td>
+                  <td>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items. Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModifiedBy</td>
+                  <td>ID of user who last modified, created, or deleted this item. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if this item has been deleted for authored outcomes. This flag will be null for outcomes imported from external providers, e.g. ASN. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Outcomes Aligned to Tool Objects</h2>
+            <p>The Outcomes Aligned to Tool Objects Brightspace Data Set provides details of which outcomes are aligned to which assessment tools for all your org units. It includes a row for every outcome aligned to an assessment activity, for both direct alignments and alignments references via rubrics. The data set only captures data from June 2021 onwards.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>6.8</td>
+                  <td>ObjectType</td>
+                  <td>Type of tool this outcome is aligned to. See Tool-Specific Object Lookup for details.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.14 / 7.2 - Updated Column size</td>
+                  <td>ObjectId</td>
+                  <td>ID of the tool this outcome is aligned to. See Tool-Specific Object Lookup for details.</td>
+                  <td>nvarchar</td>
+                  <td>255</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>OutcomeId</td>
+                  <td>ID of this Outcome in the Outcome Details data set.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>RegistryId</td>
+                  <td>ID of registry representing the context in which this alignment exists.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>CreatedDate</td>
+                  <td>Date when this item was initially created (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>CreatedBy</td>
+                  <td>ID of user who initially created this item. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModifiedDate</td>
+                  <td>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModifiedBy</td>
+                  <td>ID of user who last modified, created, or deleted this item.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if this item has been deleted.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Outcomes Assessed Checkpoints</h2>
+            <p>The Outcomes Assessed Checkpoints Brightspace Data Set provides details about the Overall Achievement Calculation Settings for a checkpoint. The data set only captures data from July 2021 onwards.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>6.9</td>
+                  <td>CheckpointId</td>
+                  <td>ID of this checkpoint.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.9</td>
+                  <td>DemonstrationId</td>
+                  <td>ID of demonstration which assesses this outcome against the checkpoint.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>6.9</td>
+                  <td>Feedback</td>
+                  <td>Feedback left by assessor, truncated to 1000 characters.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.9</td>
+                  <td>ConfigDecayRate</td>
+                  <td>Value of the decay rate in Mastery View Settings for checkpoint calculation.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.9</td>
+                  <td>ConfigAggregationMethod</td>
+                  <td>Calculation method selected in Mastery View Settings. Possible values:</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.9</td>
+                  <td>ConfigIncludedActivities</td>
+                  <td>Selected activities for use in calculation in Mastery View Settings. If Most Recently Assessed Activities is selected, the specific number of activities to include is stored in ConfigRecentlyAssessedActivityCount. Possible values:</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.9</td>
+                  <td>ConfigMultipleAttemptStrategy</td>
+                  <td>Selected attempt for use in calculation in Mastery View Settings. Possible values:</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.9</td>
+                  <td>ConfigRecentlyAssessedActivityCount</td>
+                  <td>The number of recently assessed activities to include in calculation, when Most Recently Assessed Activities is selected.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.9</td>
+                  <td>ConfigTieBreaker</td>
+                  <td>Selected method for how to handle multiple items of the same count in calculating the overall level of achievement in Mastery View Settings. Possible values:</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.9</td>
+                  <td>LastModifiedDate</td>
+                  <td>Date when this item was last modified. Contains created date upon creation and deleted date for deleted items. Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.9</td>
+                  <td>LastModifiedBy</td>
+                  <td>ID of user who last modified, created, or deleted this item. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.9</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if this item has been deleted.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Outcomes Course Specific Scales</h2>
+            <p>The Outcomes Course Specific Scales Brightspace Data Set provides details on which achievement scales and achievement thresholds are being used in each of your courses. The only available data for course specific achievement scales is from May 2023 onwards.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>8.9</td>
+                  <td>OrgUnitId</td>
+                  <td>ID of the org unit this registry is associated with.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>8.9</td>
+                  <td>RegistryId</td>
+                  <td>ID of the current registry.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>8.9</td>
+                  <td>ScaleId</td>
+                  <td>ID of the scale set as the LOA for the current registry.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>8.9</td>
+                  <td>AchievementThreshold</td>
+                  <td>Level ID representing the threshold of achievement for this registry. Field can be null.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>8.9</td>
+                  <td>CreatedDate</td>
+                  <td>Date when this item was originally created (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.9</td>
+                  <td>LastModifiedDate</td>
+                  <td>Date when this item was last modified. Contains created date upon creation and deleted date for deleted items (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.9</td>
+                  <td>LastModifiedBy</td>
+                  <td>ID of user who last modified, created, or deleted this item. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>8.9</td>
+                  <td>IsDeleted</td>
+                  <td>Whether this item has been deleted.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Outcomes Demonstrations</h2>
+            <p>In the Outcomes Demonstrations Brightspace Data Set, each entry represents an evaluation of an assessment activity that is aligned to a learning outcome. For most tool object types, assessments are only visible in this data set when they are made visible to learners. The data set only captures data from June 2021 onwards.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>6.8</td>
+                  <td>DemonstrationId</td>
+                  <td>ID of this demonstration.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>ExplicitlyEnteredScaleLevelId</td>
+                  <td>Result of this evaluation if manually entered by assessor. Field can be null if achieved level has not been manually overridden.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>AutomaticallyGeneratedScaleLevelId</td>
+                  <td>Result of this evaluation if automatically generated by LMS. Field can be null.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>AlignedObjectType</td>
+                  <td>Type of assessed tool for this demonstration. See Tool-Specific Object Lookup for details.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>AlignedObjectId</td>
+                  <td>ID of assessed tool for this demonstration. See Tool-Specific Object Lookup for details.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>OutcomeId</td>
+                  <td>ID of assessed outcome.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>RegistryId</td>
+                  <td>ID of registry representing the context in which the demonstration was made.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>IsPublished</td>
+                  <td>Indicates if this demonstration has been made available to the assessed learner. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>AssessedUserId</td>
+                  <td>ID of the user who made the submission.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>AssessedDate</td>
+                  <td>Date of initial assessment (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>AssessorUserId</td>
+                  <td>ID of the user who initially evaluated the submission. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModifiedDate</td>
+                  <td>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModifiedBy</td>
+                  <td>ID of user who last modified, created, or deleted this item.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if this item has been deleted.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Outcomes In Registries</h2>
+            <p>The Outcomes in Registries Brightspace Data Set provides details of which outcomes belong to which registries for all your org units. It can be used to list all outcomes in the intent list of a course, or all the outcomes in a program. The only available data for org unit owned registries is from June 2021 onwards. All data for program registries is available, starting with your organization&#039;s first use of Learning Outcomes.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>7.7 - Updated Type and Size</td>
+                  <td>OutcomeId</td>
+                  <td>ID of this Outcome in the Outcome Details data set.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>RegistryId</td>
+                  <td>ID of registry representing the context in which this outcome exists.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>CreatedDate</td>
+                  <td>For imported outcomes, the date that this outcome was mapped to the registry (UTC). For authored outcomes, the date this outcome was created. Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>CreatedBy</td>
+                  <td>ID of user who imported or created the outcome in the registry. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModifiedDate</td>
+                  <td>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModifiedBy</td>
+                  <td>ID of user who last modified, created, or deleted this item.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if this item has been deleted.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Outcomes Program Details</h2>
+            <p>The Outcomes Program Details Brightspace Data Set provides details about the programs that are defined to hold a collection of outcomes (registry). All data for the data set is available, starting with your organization&#039;s first use of Learning Outcomes.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>7.6 - Updated Type</td>
+                  <td>ProgramId</td>
+                  <td>ID of this program which owns the registry.</td>
+                  <td>bigint</td>
+                  <td>16</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>ProgramName</td>
+                  <td>The name of this program.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>OrgUnitId</td>
+                  <td>ID of the org unit which owns this program.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>CreatedDate</td>
+                  <td>Date when this item was initially created (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>CreatedBy</td>
+                  <td>ID of user who initially created this item. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModifiedDate</td>
+                  <td>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModifiedBy</td>
+                  <td>ID of user who last modified, created, or deleted this item.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if this item has been deleted.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Outcome Registry Owners</h2>
+            <p>In the Outcomes Registry Owners Brightspace Data Set, each entry represents a registry for both program and org unit owned registries. The data set only captures data from June 2021 onwards.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>6.8</td>
+                  <td>OwnerType</td>
+                  <td>Type of entity which owns this registry. Set to 1 if owner is org unit, set to 2 if owner is program.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.14 / 7.2 - Updated Column size</td>
+                  <td>OwnerId</td>
+                  <td>ID or org unit owner when OwnerType is 1. ID of program when OwnerType is 2.</td>
+                  <td>nvarchar</td>
+                  <td>255</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>RegistryId</td>
+                  <td>ID of registry for the org unit or program.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>CreatedDate</td>
+                  <td>Date when this item was initially created (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>CreatedBy</td>
+                  <td>ID of user who initially created this item. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModifiedDate</td>
+                  <td>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModifiedBy</td>
+                  <td>ID of user who last modified, created, or deleted this item.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if this item has been deleted.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Outcomes Rubric Alignments</h2>
+            <p>In the Outcomes Rubric Alignments Brightspace Data Set, each entry represents an alignment for a learning outcome to a rubric criterion row. The data set only captures data from June 2021 onwards.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>7.6</td>
+                  <td>RubricId</td>
+                  <td>Unique rubric identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>7.6</td>
+                  <td>CriterionId</td>
+                  <td>Identifier for the criterion row of the rubric.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>7.6</td>
+                  <td>OutcomeId</td>
+                  <td>Unique identifier for the outcome object.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>7.6</td>
+                  <td>RegistryId</td>
+                  <td>ID of the registry for the org unit or program.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>7.6</td>
+                  <td>CreatedDate</td>
+                  <td>The date when the alignment of this outcome was recorded for this rubric criterion row. Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>7.6</td>
+                  <td>CreatedBy</td>
+                  <td>ID of the user who initially created this alignment. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>7.6</td>
+                  <td>LastModifiedDate</td>
+                  <td>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>7.6</td>
+                  <td>LastModifiedBy</td>
+                  <td>ID of user who last modified, created, or deleted this item.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>7.6</td>
+                  <td>IsDeleted</td>
+                  <td>Set to true if the outcome alignment has been removed from the rubric or the rubric has been deleted.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Outcomes Scale Definition</h2>
+            <p>In the Outcomes Scale Definition Brightspace Data Set, each entry represents an achievement scale defined at the organization level. All data for the data set is available, starting with your organization&#039;s first use of Learning Outcomes.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>6.8</td>
+                  <td>ScaleId</td>
+                  <td>ID for this scale.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>Name</td>
+                  <td>Name of this scale.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>IsDefault</td>
+                  <td>Indicates if this is the scale used by default whenever an assessment of an outcome takes place.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>UsePercentages</td>
+                  <td>Indicates if percentage ranges are specified for each scale level. This is used when suggesting a scale level for an assessment. Specific percentage threshold values are associated with each Scale Level.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>CreatedDate</td>
+                  <td>Date when this item was initially created (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>CreatedBy</td>
+                  <td>ID of user who initially created this item. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModifiedDate</td>
+                  <td>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModifiedBy</td>
+                  <td>ID of user who last modified, created, or deleted this item.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if this item has been deleted.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>RegistryId</td>
+                  <td>ID of registry that owns this scale.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Outcomes Scale Level Definition</h2>
+            <p>In the Outcomes Scale Level Definition Brightspace Data Set, each entry represents a scale level defined in your scales. On the evaluation UI, they are represented by a single, clickable &quot;frame&quot;. Examples include &quot;Not Yet Achieved&quot;, &quot;Achieved&quot;, and &quot;Mastered&quot;. Scale levels can&#039;t be deleted once created. Scale levels become inaccessible when their parent scale is deleted. All data for the data set is available, starting with your organization&#039;s first use of Learning Outcomes.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>6.8</td>
+                  <td>ScaleLevelId</td>
+                  <td>ID for this scale level.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>ScaleId</td>
+                  <td>ID of the parent scale.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>Name</td>
+                  <td>Name of this scale level.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>SortOrder</td>
+                  <td>Determines ordering for this scale level.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>PercentageRangeStart</td>
+                  <td>The score percentage threshold boundary for this scale level. This value is used when automatically suggesting a scale level from numeric assessment results. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.14 / 7.2 - Updated Column size</td>
+                  <td>RGB</td>
+                  <td>Color of this scale level in HTML hex notation.</td>
+                  <td>nvarchar</td>
+                  <td>40</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>CreatedDate</td>
+                  <td>Date when this item was initially created (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>CreatedBy</td>
+                  <td>ID of user who initially created this item. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModifiedDate</td>
+                  <td>Date when this item was last modified (UTC). Contains created date upon creation and deleted date for deleted items.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModifiedBy</td>
+                  <td>ID of user who last modified, created, or deleted this item.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

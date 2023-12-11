@@ -1,172 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<div id="fallbackPageContent">
-<main>
-<section>
-<div class="mainColumn">
-<article>
-<h2 data-id="course-copy-logs">Course Copy Logs</h2>
-<p>The Course Copy Logs Brightspace Data Set returns a list of course copy jobs.</p>
-<p></p>
-<p>Returned Fields</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Column Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>SourceOrgUnitId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique source org unit identifier</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>DestinationOrgUnitId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique destination org unit identifier</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>UserId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique user identifier.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>Status</p>
-                    </td>
-<td style="width: 134px;">
-<p>Status of copy</p>
-                    </td>
-<td style="width: 134px;">
-<p>varchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>128</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>StartDate</p>
-                    </td>
-<td style="width: 134px;">
-<p>Start date time (UTC)</p>
-                    </td>
-<td style="width: 134px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>EndDate</p>
-                    </td>
-<td style="width: 134px;">
-<p>End date time (UTC).</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>IsDestinationNew</p>
-                    </td>
-<td style="width: 134px;">
-<p>Is the copy destination new</p>
-                    </td>
-<td style="width: 134px;">
-<p>bit</p>
-                    </td>
-<td style="width: 134px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>CopyProtectedResources</p>
-                    </td>
-<td style="width: 134px;">
-<p>Copy protected resources</p>
-                    </td>
-<td style="width: 134px;">
-<p>bit</p>
-                    </td>
-<td style="width: 134px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">CopyCourseJobId</td>
-<td style="width: 134px;">Unique copy course job identifier</td>
-<td style="width: 134px;">bigint</td>
-<td style="width: 134px;">8</td>
-<td>PK</td>
-                </tr></tbody></table>
-</article>
-</div>
-</section>
-</main>
-</div>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Course Copy Logs</h2>
+            <p>The Course Copy Logs Brightspace Data Set returns a list of course copy jobs.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.0</td>
+                  <td>SourceOrgUnitId</td>
+                  <td>Unique source org unit identifier</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>DestinationOrgUnitId</td>
+                  <td>Unique destination org unit identifier</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>Status</td>
+                  <td>Status of copy</td>
+                  <td>varchar</td>
+                  <td>128</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>StartDate</td>
+                  <td>Start date time (UTC)</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>EndDate</td>
+                  <td>End date time (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>IsDestinationNew</td>
+                  <td>Is the copy destination new</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>CopyProtectedResources</td>
+                  <td>Copy protected resources</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>CopyCourseJobId</td>
+                  <td>Unique copy course job identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

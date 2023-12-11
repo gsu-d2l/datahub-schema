@@ -1,1185 +1,847 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<div id="fallbackPageContent">
-<main>
-<section>
-<div class="mainColumn">
-<article>
-<h2 data-id="quiz-survey-sections">Quiz Survey Sections</h2>
-<p>The Quiz Survey Sections Brightspace Data Set returns information about all the sections and question pools that have been created in quizzes in the organization.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>
-<p>4.7 / 5.1 - Updated description</p>
-                    </td>
-<td style="width: 122px;">CollectionId</td>
-<td style="width: 122px;">Unique question collection identifier.</td>
-<td style="width: 122px;">bigint</td>
-<td style="width: 122px;">8</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>3.4</td>
-<td style="width: 122px;">SectionId</td>
-<td style="width: 122px;">Unique section identifier.</td>
-<td style="width: 122px;">bigint</td>
-<td style="width: 122px;">8</td>
-<td>PK</td>
-                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
-<td style="width: 122px;">Name</td>
-<td style="width: 122px;">
-<p>Name of the quiz section.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">nvarchar</td>
-<td style="width: 122px;">256</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>3.4</td>
-<td style="width: 122px;">NameIsDisplayed</td>
-<td style="width: 122px;">Indicates if the section name is hidden or shown.</td>
-<td style="width: 122px;">bit</td>
-<td style="width: 122px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>3.4</td>
-<td style="width: 122px;">IsQuestionPool</td>
-<td style="width: 122px;">Indicates if the question pool is a random section.</td>
-<td style="width: 122px;">bit</td>
-<td style="width: 122px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>3.4</td>
-<td style="width: 122px;">SectionText</td>
-<td style="width: 122px;">Field can be null.</td>
-<td style="width: 122px;">nvarchar</td>
-<td style="width: 122px;">1000</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>3.4</td>
-<td style="width: 122px;">SectionTextIsHTML</td>
-<td style="width: 122px;">Indicates if the section text is HTML or plain text.</td>
-<td style="width: 122px;">bit</td>
-<td style="width: 122px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>3.4</td>
-<td style="width: 122px;">IsSectionTextHidden</td>
-<td style="width: 122px;">
-<p>Indicates if the section text is hidden or shown. Values are 0 for hidden and 1 for shown.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">bit</td>
-<td style="width: 122px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>
-<p>4.8 / 5.2 - Updated column size</p>
-                    </td>
-<td style="width: 122px;">QuestionPoints</td>
-<td style="width: 122px;">
-<p>Indicates the number of points allotted to the question.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">decimal</td>
-<td style="width: 122px;">19, 9</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>3.4</td>
-<td style="width: 122px;">NumQuestions</td>
-<td style="width: 122px;">Indicates the number of questions in the quiz section.</td>
-<td style="width: 122px;">int</td>
-<td style="width: 122px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>3.4</td>
-<td style="width: 122px;">NumChoices</td>
-<td style="width: 122px;">Indicates the number of choices in the question pool from which the quiz can be created.</td>
-<td style="width: 122px;">int</td>
-<td style="width: 122px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>3.4</td>
-<td style="width: 122px;">Shuffle</td>
-<td style="width: 122px;">Indicates that the quiz questions in the pool are shuffled.</td>
-<td style="width: 122px;">bit</td>
-<td style="width: 122px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>3.4</td>
-<td style="width: 122px;">CreationDate</td>
-<td style="width: 122px;">Date the quiz was created (UTC).</td>
-<td style="width: 122px;">datetime2</td>
-<td style="width: 122px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>3.4</td>
-<td style="width: 122px;">CreatedBy</td>
-<td style="width: 122px;">
-<p>Id of the user who created the quiz.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">bigint</td>
-<td style="width: 122px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>3.4</td>
-<td style="width: 122px;">LastModified</td>
-<td style="width: 122px;">Date when the quiz was last modified (UTC).</td>
-<td style="width: 122px;">datetime2</td>
-<td style="width: 122px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>3.4</td>
-<td style="width: 122px;">LastModifiedBy</td>
-<td style="width: 122px;">
-<p>Id of the user who last modified the quiz.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">bigint</td>
-<td style="width: 122px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>3.4</td>
-<td style="width: 122px;">IsDeleted</td>
-<td style="width: 122px;">
-<p>Indicates that the quiz question is deleted.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">bit</td>
-<td style="width: 122px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>3.6 / 4.0</td>
-<td style="width: 122px;">Version</td>
-<td style="width: 122px;">
-<p>Indicates the version of the question. This column supports the Question Pools information in the Assessment Quality Dashboard.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 122px;">
-<p>8</p>
-                    </td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="survey-attempts">Survey Attempts</h2>
-<p>The Survey Attempts Brightspace Data Set returns details for each user survey attempt for all your org units. This data set includes completed survey attempts and in-progress survey attempts.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th>
-<p><b>Version <br>History</b><br></p>
-                    </th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td style="width: 134px;">
-<p>1.0</p>
-                    </td>
-<td>
-<p>AttemptId</p>
-                    </td>
-<td>
-<p>Unique attempt identifier</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td style="width: 95px;">
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td style="width: 134px;">
-<p>7.17 / 8.3 - Removed nullability and added FK</p>
-                    </td>
-<td>
-<p>SurveyId</p>
-                    </td>
-<td>
-<p>Unique survey identifier.</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td style="width: 95px;">
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td style="width: 134px;">
-<p>1.0</p>
-                    </td>
-<td>
-<p>UserId</p>
-                    </td>
-<td>
-<p>Unique user identifier.</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td style="width: 95px;">
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td style="width: 134px;">
-<p>1.0</p>
-                    </td>
-<td>
-<p>OrgUnitId</p>
-                    </td>
-<td>
-<p>Unique org unit identifier.</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td style="width: 95px;">
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td style="width: 134px;">
-<p>1.0</p>
-                    </td>
-<td>
-<p>AttemptNumber</p>
-                    </td>
-<td>
-<p>Attempt number for the survey.</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td style="width: 95px;">
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td style="width: 134px;">
-<p>1.0</p>
-                    </td>
-<td>
-<p>TimeStarted</p>
-                    </td>
-<td>
-<p>Survey attempt start time (UTC).</p>
-                    </td>
-<td style="width: 134px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td style="width: 95px;">
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td style="width: 134px;">
-<p>1.0</p>
-                    </td>
-<td>
-<p>TimeCompleted</p>
-                    </td>
-<td>
-<p>Survey attempt complete time (UTC).</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td style="width: 95px;">
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td style="width: 134px;">
-<p>1.1</p>
-                    </td>
-<td>AttemptedFromOrgUnitId</td>
-<td>
-<p>Org unit identifier where the survey was attempted from.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">int</td>
-<td style="width: 134px;">4</td>
-<td style="width: 95px;">FK</td>
-                </tr><tr align="left" valign="top"><td style="width: 134px;">1.10</td>
-<td>OldAttemptNumber</td>
-<td>
-<p>Number of previous times a learner has attempted the survey.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">int</td>
-<td style="width: 134px;">4</td>
-<td style="width: 95px;"></td>
-                </tr><tr align="left" valign="top"><td style="width: 134px;">1.10</td>
-<td>IsDeleted</td>
-<td>
-<p>Indicates that the survey attempt is deleted.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">bit</td>
-<td style="width: 134px;">1</td>
-<td style="width: 95px;"></td>
-                </tr><tr align="left" valign="top"><td style="width: 134px;">5.7 / 6.0</td>
-<td>Version</td>
-<td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
-<td style="width: 134px;">bigint</td>
-<td style="width: 134px;">8</td>
-<td style="width: 95px;"></td>
-                </tr></tbody></table>
-<h2 data-id="survey-objects">Survey Objects</h2>
-<p>The Survey Objects Brightspace Data Set describes all the surveys in the organization.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>
-<p>5.6</p>
-                    </td>
-<td style="width: 122px;">SurveyId</td>
-<td style="width: 122px;">Unique survey identifier.</td>
-<td style="width: 122px;">bigint</td>
-<td style="width: 122px;">8</td>
-<td>PK</td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">SurveyName</td>
-<td style="width: 122px;">Name of the survey.</td>
-<td style="width: 122px;">nvarchar</td>
-<td style="width: 122px;">1000</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">CategoryId</td>
-<td style="width: 122px;">
-<p>Category Id for the survey.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">bigint</td>
-<td style="width: 122px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">OrgUnitId</td>
-<td style="width: 122px;">Unique org unit identifier.</td>
-<td style="width: 122px;">int</td>
-<td style="width: 122px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">Description</td>
-<td style="width: 122px;">
-<p>Description of the survey.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">nvarchar</td>
-<td style="width: 122px;">1000</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">DescriptionEnabled</td>
-<td style="width: 122px;">Indicates if the survey description is enabled.</td>
-<td style="width: 122px;">bit</td>
-<td style="width: 122px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">HasInstantFeedback</td>
-<td style="width: 122px;">Indicates if the survey provides instant feedback.</td>
-<td style="width: 122px;">bit</td>
-<td style="width: 122px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">IsAnonymous</td>
-<td style="width: 122px;">Indicates if the survey results are anonymous.</td>
-<td style="width: 122px;">bit</td>
-<td style="width: 122px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>
-<p>5.6</p>
-                    </td>
-<td style="width: 122px;">IsVisible</td>
-<td style="width: 122px;">Indicates if the survey is visible or hidden from users.</td>
-<td style="width: 122px;">bit</td>
-<td style="width: 122px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">SubmissionMessage</td>
-<td style="width: 122px;">
-<p>Message provided when user submits survey.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">nvarchar</td>
-<td style="width: 122px;">1000</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">Footer</td>
-<td style="width: 122px;">
-<p>Footer of the survey.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">nvarchar</td>
-<td style="width: 122px;">1000</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">FooterIsDisplayed</td>
-<td style="width: 122px;">Indicates if the footer is displayed.</td>
-<td style="width: 122px;">bit</td>
-<td style="width: 122px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">StartDate</td>
-<td style="width: 122px;">
-<p>Start date and time of the survey (UTC).</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">datetime2</td>
-<td style="width: 122px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">EndDate</td>
-<td style="width: 122px;">
-<p>End date and time of the survey (UTC).</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">datetime2</td>
-<td style="width: 122px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">DisplayInCalendar</td>
-<td style="width: 122px;">Indicates if the survey is displayed in the calendar.</td>
-<td style="width: 122px;">bit</td>
-<td style="width: 122px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">ResultId</td>
-<td style="width: 122px;">
-<p>Unique release condition result identifier.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">bigint</td>
-<td style="width: 122px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.16 / 7.4 - Updated description</td>
-<td style="width: 122px;">AttemptsAllowed</td>
-<td style="width: 122px;">
-<p>Indicates the number of attempts of the survey that a user is allowed to take.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">int</td>
-<td style="width: 122px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">SortOrder</td>
-<td style="width: 122px;">Order in which surveys appear in the interface.</td>
-<td style="width: 122px;">int</td>
-<td style="width: 122px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">CreatedBy</td>
-<td style="width: 122px;">Id of the user who created the survey.</td>
-<td style="width: 122px;">int</td>
-<td style="width: 122px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">IsDeleted</td>
-<td style="width: 122px;">Indicates if the survey is deleted (1) or not (0).</td>
-<td style="width: 122px;">bit</td>
-<td style="width: 122px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">LastModified</td>
-<td style="width: 122px;">Date when the survey was last modified (UTC).</td>
-<td style="width: 122px;">datetime2</td>
-<td style="width: 122px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">LastModifiedBy</td>
-<td style="width: 122px;">Id of the user who last modified the survey.</td>
-<td style="width: 122px;">int</td>
-<td style="width: 122px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">Version</td>
-<td style="width: 122px;">Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
-<td style="width: 122px;">bigint</td>
-<td style="width: 122px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.10 / 6.3</td>
-<td style="width: 122px;">CategoryName</td>
-<td style="width: 122px;">
-<p>Name of the category in which the survey belongs.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">nvarchar</td>
-<td style="width: 122px;">256</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="survey-question-answer-options">Survey Question Answer Options</h2>
-<p>The Survey Question Answer Options Brightspace Data Set returns possible answers for a given survey question. Only includes answer options for these question types: Short Answer, Fill in the Blanks, and Multi-Short Answer. Rows in the data set are filtered out if they are associated with deleted survey questions.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>AnswerId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique answer identifier</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td style="width: 95px;">
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>AnswerText</p>
-                    </td>
-<td style="width: 134px;">
-<p>Answer the user entered.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>1000</p>
-                    </td>
-<td style="width: 95px;">
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.8 / 5.2 - Updated column size</td>
-<td style="width: 134px;">
-<p>Weight</p>
-                    </td>
-<td style="width: 134px;">
-<p>Weight associated with the answer.</p>
-                    </td>
-<td style="width: 134px;">
-<p>decimal</p>
-                    </td>
-<td style="width: 134px;">
-<p>19, 9</p>
-                    </td>
-<td style="width: 95px;">
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>QuestionId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique question identifier.</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td style="width: 95px;">
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>QuestionVersionId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique question version identifier.</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td style="width: 95px;">
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>2.5 / 3.0 - Added keys</td>
-<td style="width: 134px;">SurveyObjectId</td>
-<td style="width: 134px;">Unique survey object identifier.</td>
-<td style="width: 134px;">bigint</td>
-<td style="width: 134px;">8</td>
-<td style="width: 95px;">PK, FK</td>
-                </tr><tr align="left" valign="top"><td>1.2</td>
-<td style="width: 134px;">AnswerOptionId</td>
-<td style="width: 134px;">Unique survey answer identifier.</td>
-<td style="width: 134px;">bigint</td>
-<td style="width: 134px;">8</td>
-<td style="width: 95px;">PK</td>
-                </tr></tbody></table>
-<h2 data-id="survey-question-answers">Survey Question Answers</h2>
-<p>The Survey Question Answers Brightspace Data Set returns possible answers for a given survey. Rows in the data set are filtered out if they are associated with deleted survey questions.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>AnswerId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique answer identifier</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>QuestionId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique question identifier</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>QuestionVersionId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique question version identifier</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>SortOrder</p>
-                    </td>
-<td style="width: 134px;">
-<p>Order in which the survey answers are displayed or correct answer order for ordering questions</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>IsCorrect</p>
-                    </td>
-<td style="width: 134px;">
-<p>Is answer correct?</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>bit</p>
-                    </td>
-<td style="width: 134px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.8 / 5.2 - Updated column size</td>
-<td style="width: 134px;">
-<p>Weight</p>
-                    </td>
-<td style="width: 134px;">
-<p>Weight associated with answer.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>decimal</p>
-                    </td>
-<td style="width: 134px;">
-<p>19, 9</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
-<td style="width: 134px;">
-<p>Answer</p>
-                    </td>
-<td style="width: 134px;">
-<p>Answer text.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>1000</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>Comment</p>
-                    </td>
-<td style="width: 134px;">
-<p>Instructor comment on the answer.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>1000</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
-<td style="width: 134px;">
-<p>Description</p>
-                    </td>
-<td style="width: 134px;">
-<p>System description for the type of answer expected.</p>
-                    </td>
-<td style="width: 134px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>256</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.2</td>
-<td style="width: 134px;">SurveyObjectId</td>
-<td style="width: 134px;">Unique survey object identifier.</td>
-<td style="width: 134px;">bigint</td>
-<td style="width: 134px;">8</td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr></tbody></table>
-<h2 data-id="survey-user-answer-responses">Survey User Answer Responses</h2>
-<p>The Survey User Answer Responses Brightspace Data Set returns data to describe the options a user chose or the answers they provided to survey questions. Rows in the data set are filtered out if they are associated with deleted survey attempts.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>AttemptId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique attempt identifier.</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>AttemptNumber</p>
-                    </td>
-<td style="width: 134px;">
-<p>Attempt number associated with the attempt ID.</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>QuestionId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique question identifier.</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>QuestionVersionId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique question version identifier.</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>AnswerId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique answer identifier.</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Type and Column Size</td>
-<td style="width: 134px;">
-<p>SortOrder</p>
-                    </td>
-<td style="width: 134px;">
-<p>Sort order of the survey answer responses.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>IsCorrect</p>
-                    </td>
-<td style="width: 134px;">
-<p>Is user response correct.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>bit</p>
-                    </td>
-<td style="width: 134px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>UserSelection</p>
-                    </td>
-<td style="width: 134px;">
-<p>Option the user chose for the question.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>UserAnswer</p>
-                    </td>
-<td style="width: 134px;">
-<p>Answer the user entered.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>1000</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>5.8 / 6.1</td>
-<td style="width: 134px;">FileSetId</td>
-<td style="width: 134px;">Indicates the auto generated file set ID of uploaded file(s). Field can be null.</td>
-<td style="width: 134px;">bigint</td>
-<td style="width: 134px;">8</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="survey-user-answers">Survey User Answers</h2>
-<p>The Survey User Answers Brightspace Data Set returns data to describe how a user responded to a survey question. Rows in the data set are filtered out if they are associated with deleted survey attempts.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>AttemptId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique attempt identifier</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>6.7 - Updated description</td>
-<td style="width: 134px;">
-<p>QuestionId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique question identifier.</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>QuestionVersionId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique question version identifier.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.11 / 9.0 - Updated description</td>
-<td style="width: 134px;">
-<p>TimeCompleted</p>
-                    </td>
-<td style="width: 134px;">
-<p>Date/time when the question was completed (UTC). No data is provided for question pools or sections.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>QuestionNumber</p>
-                    </td>
-<td style="width: 134px;">
-<p>Question number in the survey.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>Comment</p>
-                    </td>
-<td style="width: 134px;">
-<p>Feedback left by instructor.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>1000</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>SortOrder</p>
-                    </td>
-<td style="width: 134px;">
-<p>Sort order of the question.</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.8 / 5.2 - Updated column size</td>
-<td style="width: 134px;">
-<p>Score</p>
-                    </td>
-<td style="width: 134px;">
-<p>Score the user received for the answer.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>decimal</p>
-                    </td>
-<td style="width: 134px;">
-<p>19, 9</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>Page</p>
-                    </td>
-<td style="width: 134px;">
-<p>Page the question appeared on when the user took the survey</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">Assigned</td>
-<td style="width: 134px;">
-<p>Indicates if the survey is assigned to a user.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">bit</td>
-<td style="width: 134px;">1</td>
-<td></td>
-                </tr></tbody></table>
-</article>
-</div>
-</section>
-</main>
-</div>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Quiz Survey Sections</h2>
+            <p>The Quiz Survey Sections Brightspace Data Set returns information about all the sections and question pools that have been created in quizzes in the organization.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4.7 / 5.1 - Updated description</td>
+                  <td>CollectionId</td>
+                  <td>Unique question collection identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>SectionId</td>
+                  <td>Unique section identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>Name</td>
+                  <td>Name of the quiz section. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>NameIsDisplayed</td>
+                  <td>Indicates if the section name is hidden or shown.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>IsQuestionPool</td>
+                  <td>Indicates if the question pool is a random section.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>SectionText</td>
+                  <td>Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>SectionTextIsHTML</td>
+                  <td>Indicates if the section text is HTML or plain text.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>IsSectionTextHidden</td>
+                  <td>Indicates if the section text is hidden or shown. Values are 0 for hidden and 1 for shown. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.8 / 5.2 - Updated column size</td>
+                  <td>QuestionPoints</td>
+                  <td>Indicates the number of points allotted to the question. Field can be null.</td>
+                  <td>decimal</td>
+                  <td>19, 9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>NumQuestions</td>
+                  <td>Indicates the number of questions in the quiz section.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>NumChoices</td>
+                  <td>Indicates the number of choices in the question pool from which the quiz can be created.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>Shuffle</td>
+                  <td>Indicates that the quiz questions in the pool are shuffled.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>CreationDate</td>
+                  <td>Date the quiz was created (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>CreatedBy</td>
+                  <td>Id of the user who created the quiz. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>LastModified</td>
+                  <td>Date when the quiz was last modified (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>LastModifiedBy</td>
+                  <td>Id of the user who last modified the quiz. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates that the quiz question is deleted. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.6 / 4.0</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the question. This column supports the Question Pools information in the Assessment Quality Dashboard. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Survey Attempts</h2>
+            <p>The Survey Attempts Brightspace Data Set returns details for each user survey attempt for all your org units. This data set includes completed survey attempts and in-progress survey attempts.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.0</td>
+                  <td>AttemptId</td>
+                  <td>Unique attempt identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>7.17 / 8.3 - Removed nullability and added FK</td>
+                  <td>SurveyId</td>
+                  <td>Unique survey identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique org unit identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>AttemptNumber</td>
+                  <td>Attempt number for the survey.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>TimeStarted</td>
+                  <td>Survey attempt start time (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>TimeCompleted</td>
+                  <td>Survey attempt complete time (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.1</td>
+                  <td>AttemptedFromOrgUnitId</td>
+                  <td>Org unit identifier where the survey was attempted from. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.10</td>
+                  <td>OldAttemptNumber</td>
+                  <td>Number of previous times a learner has attempted the survey. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.10</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates that the survey attempt is deleted. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Survey Objects</h2>
+            <p>The Survey Objects Brightspace Data Set describes all the surveys in the organization.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>5.6</td>
+                  <td>SurveyId</td>
+                  <td>Unique survey identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>SurveyName</td>
+                  <td>Name of the survey.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>CategoryId</td>
+                  <td>Category Id for the survey. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique org unit identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>Description</td>
+                  <td>Description of the survey. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>DescriptionEnabled</td>
+                  <td>Indicates if the survey description is enabled.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>HasInstantFeedback</td>
+                  <td>Indicates if the survey provides instant feedback.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>IsAnonymous</td>
+                  <td>Indicates if the survey results are anonymous.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>IsVisible</td>
+                  <td>Indicates if the survey is visible or hidden from users.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>SubmissionMessage</td>
+                  <td>Message provided when user submits survey. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>Footer</td>
+                  <td>Footer of the survey. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>FooterIsDisplayed</td>
+                  <td>Indicates if the footer is displayed.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>StartDate</td>
+                  <td>Start date and time of the survey (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>EndDate</td>
+                  <td>End date and time of the survey (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>DisplayInCalendar</td>
+                  <td>Indicates if the survey is displayed in the calendar.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>ResultId</td>
+                  <td>Unique release condition result identifier. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.16 / 7.4 - Updated description</td>
+                  <td>AttemptsAllowed</td>
+                  <td>Indicates the number of attempts of the survey that a user is allowed to take. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>SortOrder</td>
+                  <td>Order in which surveys appear in the interface.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>CreatedBy</td>
+                  <td>Id of the user who created the survey.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if the survey is deleted (1) or not (0).</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>LastModified</td>
+                  <td>Date when the survey was last modified (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>LastModifiedBy</td>
+                  <td>Id of the user who last modified the survey.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.10 / 6.3</td>
+                  <td>CategoryName</td>
+                  <td>Name of the category in which the survey belongs. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Survey Question Answer Options</h2>
+            <p>The Survey Question Answer Options Brightspace Data Set returns possible answers for a given survey question. Only includes answer options for these question types: Short Answer, Fill in the Blanks, and Multi-Short Answer. Rows in the data set are filtered out if they are associated with deleted survey questions.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.0</td>
+                  <td>AnswerId</td>
+                  <td>Unique answer identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>AnswerText</td>
+                  <td>Answer the user entered. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.8 / 5.2 - Updated column size</td>
+                  <td>Weight</td>
+                  <td>Weight associated with the answer.</td>
+                  <td>decimal</td>
+                  <td>19, 9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>QuestionId</td>
+                  <td>Unique question identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>QuestionVersionId</td>
+                  <td>Unique question version identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>2.5 / 3.0 - Added keys</td>
+                  <td>SurveyObjectId</td>
+                  <td>Unique survey object identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.2</td>
+                  <td>AnswerOptionId</td>
+                  <td>Unique survey answer identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Survey Question Answers</h2>
+            <p>The Survey Question Answers Brightspace Data Set returns possible answers for a given survey. Rows in the data set are filtered out if they are associated with deleted survey questions.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.0</td>
+                  <td>AnswerId</td>
+                  <td>Unique answer identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>QuestionId</td>
+                  <td>Unique question identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>QuestionVersionId</td>
+                  <td>Unique question version identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>SortOrder</td>
+                  <td>Order in which the survey answers are displayed or correct answer order for ordering questions</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>IsCorrect</td>
+                  <td>Is answer correct? Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.8 / 5.2 - Updated column size</td>
+                  <td>Weight</td>
+                  <td>Weight associated with answer. Field can be null.</td>
+                  <td>decimal</td>
+                  <td>19, 9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>Answer</td>
+                  <td>Answer text. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>Comment</td>
+                  <td>Instructor comment on the answer. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>Description</td>
+                  <td>System description for the type of answer expected.</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.2</td>
+                  <td>SurveyObjectId</td>
+                  <td>Unique survey object identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Survey User Answer Responses</h2>
+            <p>The Survey User Answer Responses Brightspace Data Set returns data to describe the options a user chose or the answers they provided to survey questions. Rows in the data set are filtered out if they are associated with deleted survey attempts.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.0</td>
+                  <td>AttemptId</td>
+                  <td>Unique attempt identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>AttemptNumber</td>
+                  <td>Attempt number associated with the attempt ID.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>QuestionId</td>
+                  <td>Unique question identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>QuestionVersionId</td>
+                  <td>Unique question version identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>AnswerId</td>
+                  <td>Unique answer identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Type and Column Size</td>
+                  <td>SortOrder</td>
+                  <td>Sort order of the survey answer responses. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>IsCorrect</td>
+                  <td>Is user response correct. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>UserSelection</td>
+                  <td>Option the user chose for the question. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>UserAnswer</td>
+                  <td>Answer the user entered. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.8 / 6.1</td>
+                  <td>FileSetId</td>
+                  <td>Indicates the auto generated file set ID of uploaded file(s). Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Survey User Answers</h2>
+            <p>The Survey User Answers Brightspace Data Set returns data to describe how a user responded to a survey question. Rows in the data set are filtered out if they are associated with deleted survey attempts.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.0</td>
+                  <td>AttemptId</td>
+                  <td>Unique attempt identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>6.7 - Updated description</td>
+                  <td>QuestionId</td>
+                  <td>Unique question identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>QuestionVersionId</td>
+                  <td>Unique question version identifier. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>8.11 / 9.0 - Updated description</td>
+                  <td>TimeCompleted</td>
+                  <td>Date/time when the question was completed (UTC). No data is provided for question pools or sections. Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>QuestionNumber</td>
+                  <td>Question number in the survey. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>Comment</td>
+                  <td>Feedback left by instructor. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>SortOrder</td>
+                  <td>Sort order of the question.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.8 / 5.2 - Updated column size</td>
+                  <td>Score</td>
+                  <td>Score the user received for the answer. Field can be null.</td>
+                  <td>decimal</td>
+                  <td>19, 9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>Page</td>
+                  <td>Page the question appeared on when the user took the survey</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>Assigned</td>
+                  <td>Indicates if the survey is assigned to a user. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

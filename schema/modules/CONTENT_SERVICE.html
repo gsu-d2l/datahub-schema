@@ -1,348 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<div id="fallbackPageContent">
-<main>
-<section>
-<div class="mainColumn">
-<article>
-<h2 data-id="audio-video-processed">Audio Video Processed</h2>
-<p>In the Audio Video Processed Brightspace Data Set, each row represents one completed media processing job. The data set captures events from January 2022 onwards.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">
-<p>ContentId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique content identifier.</p>
-                    </td>
-<td style="width: 125px;">
-<p>uniqueidentifier</p>
-                    </td>
-<td style="width: 125px;">
-<p>16</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">
-<p>RevisionId</p>
-                    </td>
-<td style="width: 125px;">Unique revision identifier.</td>
-<td style="width: 125px;">
-<p>uniqueidentifier</p>
-                    </td>
-<td style="width: 125px;">
-<p>16</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">RevisionNumber</td>
-<td style="width: 125px;">
-<p>Indicates the version of the media object that this processing job applies to. For example: for a video that's been edited 4 times, the row representing the media processing job for version 3 will have "3" in this column.</p>
-                    </td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">Type</td>
-<td style="width: 125px;">Type of content for this revision: Audio or Video.</td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>5</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">Source</td>
-<td style="width: 125px;">
-<p>Location in Brightspace from which the content was added.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>32</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">RevisionSize</td>
-<td style="width: 125px;">Size of all resources for this revision in bytes.</td>
-<td style="width: 125px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">Duration</td>
-<td style="width: 125px;">Duration of the revision in seconds.</td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">RequiredTranscoding</td>
-<td style="width: 125px;">True if the revision required transcoding.</td>
-<td style="width: 125px;">
-<p>bit</p>
-                    </td>
-<td style="width: 125px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">RequiredTranscribing</td>
-<td style="width: 125px;">True if the revision required transcribing.</td>
-<td style="width: 125px;">
-<p>bit</p>
-                    </td>
-<td style="width: 125px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>8.10</p>
-                    </td>
-<td style="width: 125px;">LastModified</td>
-<td style="width: 125px;">Date this revision was last modified (UTC).</td>
-<td style="width: 125px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr></tbody></table>
-<h2 data-id="media-consumption-log">Media Consumption Log</h2>
-<p>In the Media Consumption Log Brightspace Data Set, each row represents one session where a user interacted with a media object, beginning when the user starts playback and ending when the user stops engaging with the media object. The data set captures events from November 2023 onwards.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">
-<p>LogId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique identifier for this consumption session.</p>
-                    </td>
-<td style="width: 125px;">
-<p>uniqueidentifier</p>
-                    </td>
-<td style="width: 125px;">
-<p>16</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">UserId</td>
-<td style="width: 125px;">Unique identifier for the user who consumed the content.</td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">ContentId</td>
-<td style="width: 125px;">Unique identifier for the content that was consumed.</td>
-<td style="width: 125px;">
-<p>uniqueidentifier</p>
-                    </td>
-<td style="width: 125px;">
-<p>16</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">RevisionId</td>
-<td style="width: 125px;">Unique identifier for the revision of the content that was consumed.</td>
-<td style="width: 125px;">
-<p>uniqueidentifier</p>
-                    </td>
-<td style="width: 125px;">
-<p>16</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">ContentType</td>
-<td style="width: 125px;">Type of content for this revision: Audio or Video.</td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">5</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">ClientApp</td>
-<td style="width: 125px;">
-<p>Location in Brightspace from which the content was added.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">32</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">DateConsumed</td>
-<td style="width: 125px;">Date and time when the user started this consumption session (UTC).</td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">DurationPercentageWatched</td>
-<td style="width: 125px;">Percentage (from 0 to 100) of the content's duration that the user consumed in this session.</td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="media-objects">Media Objects</h2>
-<p>In the Media Objects Brightspace Data Set, each row represents one audio or video content object uploaded to Media Library. The data set captures media objects from January 2022 onwards.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">
-<p>ContentId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique content identifier.</p>
-                    </td>
-<td style="width: 125px;">
-<p>uniqueidentifier</p>
-                    </td>
-<td style="width: 125px;">
-<p>16</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">Title</td>
-<td style="width: 125px;">Title of the media object.</td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>1000</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">RevisionCount</td>
-<td style="width: 125px;">Number of revisions of this media object.</td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">OwnerId</td>
-<td style="width: 125px;">Brightspace user identifier for the owner of the media object.</td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>8.10</td>
-<td style="width: 125px;">LastModified</td>
-<td style="width: 125px;">Date the media object was last modified (UTC).</td>
-<td style="width: 125px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr></tbody></table>
-</article>
-</div>
-</section>
-</main>
-</div>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Audio Video Processed</h2>
+            <p>In the Audio Video Processed Brightspace Data Set, each row represents one completed media processing job. The data set captures events from January 2022 onwards.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>8.10</td>
+                  <td>ContentId</td>
+                  <td>Unique content identifier.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>RevisionId</td>
+                  <td>Unique revision identifier.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>RevisionNumber</td>
+                  <td>Indicates the version of the media object that this processing job applies to. For example: for a video that&#039;s been edited 4 times, the row representing the media processing job for version 3 will have &quot;3&quot; in this column.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>Type</td>
+                  <td>Type of content for this revision: Audio or Video.</td>
+                  <td>nvarchar</td>
+                  <td>5</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>Source</td>
+                  <td>Location in Brightspace from which the content was added. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>32</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>RevisionSize</td>
+                  <td>Size of all resources for this revision in bytes.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>Duration</td>
+                  <td>Duration of the revision in seconds.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>RequiredTranscoding</td>
+                  <td>True if the revision required transcoding.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>RequiredTranscribing</td>
+                  <td>True if the revision required transcribing.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>LastModified</td>
+                  <td>Date this revision was last modified (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Media Consumption Log</h2>
+            <p>In the Media Consumption Log Brightspace Data Set, each row represents one session where a user interacted with a media object, beginning when the user starts playback and ending when the user stops engaging with the media object. The data set captures events from November 2023 onwards.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>8.10</td>
+                  <td>LogId</td>
+                  <td>Unique identifier for this consumption session.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>UserId</td>
+                  <td>Unique identifier for the user who consumed the content.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>ContentId</td>
+                  <td>Unique identifier for the content that was consumed.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>RevisionId</td>
+                  <td>Unique identifier for the revision of the content that was consumed.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>ContentType</td>
+                  <td>Type of content for this revision: Audio or Video.</td>
+                  <td>nvarchar</td>
+                  <td>5</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>ClientApp</td>
+                  <td>Location in Brightspace from which the content was added. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>32</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>DateConsumed</td>
+                  <td>Date and time when the user started this consumption session (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>DurationPercentageWatched</td>
+                  <td>Percentage (from 0 to 100) of the content&#039;s duration that the user consumed in this session.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Media Objects</h2>
+            <p>In the Media Objects Brightspace Data Set, each row represents one audio or video content object uploaded to Media Library. The data set captures media objects from January 2022 onwards.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>8.10</td>
+                  <td>ContentId</td>
+                  <td>Unique content identifier.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>Title</td>
+                  <td>Title of the media object.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>RevisionCount</td>
+                  <td>Number of revisions of this media object.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>OwnerId</td>
+                  <td>Brightspace user identifier for the owner of the media object.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>8.10</td>
+                  <td>LastModified</td>
+                  <td>Date the media object was last modified (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

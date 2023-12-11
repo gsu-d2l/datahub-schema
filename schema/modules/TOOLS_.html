@@ -1,94 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<div id="fallbackPageContent">
-<main>
-<section>
-<div class="mainColumn">
-<article>
-<h2 data-id="tools">Tools</h2>
-<p>The Tools Brightspace Data Set retrieves the data on all the tools that exist in the organization.</p>
-<p></p>
-<p>Returned Fields</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Column Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>3.8 / 4.3</td>
-<td style="width: 125px;">
-<p>ToolId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique identifier for the tool</p>
-                    </td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>5.7 / 6.0 - Updated column size</p>
-                    </td>
-<td style="width: 125px;">
-<p>Name</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique tool name</p>
-                    </td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>50</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>7.18 / 8.4 - Updated column size</p>
-                    </td>
-<td style="width: 125px;">
-<p>DisplayName</p>
-                    </td>
-<td style="width: 125px;">
-<p>Display name of the tool</p>
-                    </td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>200</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>3.8 / 4.3</td>
-<td style="width: 125px;">Version</td>
-<td style="width: 125px;">Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
-<td style="width: 125px;">bigint</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr></tbody></table>
-</article>
-</div>
-</section>
-</main>
-</div>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Tools</h2>
+            <p>The Tools Brightspace Data Set retrieves the data on all the tools that exist in the organization.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>3.8 / 4.3</td>
+                  <td>ToolId</td>
+                  <td>Unique identifier for the tool</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Updated column size</td>
+                  <td>Name</td>
+                  <td>Unique tool name</td>
+                  <td>nvarchar</td>
+                  <td>50</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>7.18 / 8.4 - Updated column size</td>
+                  <td>DisplayName</td>
+                  <td>Display name of the tool</td>
+                  <td>nvarchar</td>
+                  <td>200</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.8 / 4.3</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

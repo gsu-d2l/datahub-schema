@@ -1,1150 +1,703 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<div id="fallbackPageContent">
-<main>
-<section>
-<div class="mainColumn">
-<article>
-<h2 data-id="auditor-relationships-log">Auditor Relationships Log</h2>
-<p>The Auditor Relationships Log Brightspace Data Set has a record of auditors and the users they audit in the organization. The User Auditors tool must be enabled to access this data.</p>
-<p>Note: The data set may appear blank unless new auditor-learner relationships are added. All historical data is populated 30 to 60 days after the November 2021/20.21.11 release.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>6.13 / 7.1</td>
-<td style="width: 134px;">
-<p>AuditorId</p>
-                    </td>
-<td style="width: 134px;">
-<p>UserId (unique identifier) of the auditor.</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>6.13 / 7.1</td>
-<td style="width: 134px;">
-<p>UserToAuditId</p>
-                    </td>
-<td style="width: 134px;">
-<p>UserId (unique identifier) of the user to be audited by the auditor.</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>6.15 / 7.3 - Updated description</td>
-<td style="width: 134px;">
-<p>OrgUnitId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Org Unit identifier where the auditor relationship exists.</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>6.13 / 7.1</td>
-<td style="width: 134px;">
-<p>Action</p>
-                    </td>
-<td style="width: 134px;">
-<p>The action performed on the relationship. Either Created or Deleted.</p>
-                    </td>
-<td style="width: 134px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>16</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>6.13 / 7.1</td>
-<td style="width: 134px;">
-<p>ModifiedBy</p>
-                    </td>
-<td style="width: 134px;">
-<p>UserId who modified the auditor relationship.</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>6.13 / 7.1</td>
-<td style="width: 134px;">
-<p>ModifiedDate</p>
-                    </td>
-<td style="width: 134px;">
-<p>Date and time when the auditor relationship was modified (UTC).</p>
-                    </td>
-<td style="width: 134px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr></tbody></table>
-<h2 data-id="course-access">Course Access</h2>
-<p>The Course Access Brightspace Data Set returns information on each day each user has accessed each course offering from the LMS (via a browser) across the organization. The data set does not include course access via any of our Apps.</p>
-<p>Note: If an administrator changes your time zone at the organization level, this can affect the calculation of DayAccessed because this field is in local time.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>2.4</td>
-<td style="width: 134px;">
-<p>OrgUnitId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique org unit identifier.</p>
-                    </td>
-<td>
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>2.4</td>
-<td style="width: 134px;">
-<p>UserId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique user identifier.</p>
-                    </td>
-<td>
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>7.5 - Updated description</td>
-<td style="width: 134px;">
-<p>DayAccessed</p>
-                    </td>
-<td style="width: 134px;">
-<p>Indicates the most recent day in local time when a user accessed the course.</p>
-                    </td>
-<td>
-<p>datetime2</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr></tbody></table>
-<h2 data-id="course-access-log">Course Access Log</h2>
-<p>The Course Access Log Brightspace Data Set returns information on users accessing their course offerings using the Pulse app. The data set creates a row with a timestamp when a user initially accesses a course, then creates additional rows for every 30 minutes that the user spends in the course.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>7.5</td>
-<td style="width: 134px;">
-<p>OrgUnitId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique identifier for the org unit.</p>
-                    </td>
-<td>
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>7.5</td>
-<td style="width: 134px;">
-<p>UserId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique identifier for the user.</p>
-                    </td>
-<td>
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>7.5</td>
-<td style="width: 134px;">
-<p>Timestamp</p>
-                    </td>
-<td style="width: 134px;">
-<p>Indicates the time in UTC that a user accessed the course.</p>
-                    </td>
-<td>
-<p>datetime2</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>7.5</td>
-<td style="width: 134px;">Source</td>
-<td style="width: 134px;">The source of the course access. Only Pulse data is available at this time.</td>
-<td>nvarchar</td>
-<td style="width: 134px;">20</td>
-<td>PK</td>
-                </tr></tbody></table>
-<h2 data-id="enrollments-and-withdrawals">Enrollments and Withdrawals</h2>
-<p>The Enrollments and Withdrawals Brightspace Data Set returns a list of enrollments and withdrawals for all users in your organization.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>
-<p>7.7 - Updated description</p>
-                    </td>
-<td style="width: 134px;">LogId</td>
-<td style="width: 134px;">
-<p>Unique log entry identifier for any change to the user enrollment.</p>
-                    </td>
-<td>bigint</td>
-<td style="width: 134px;">8</td>
-<td style="width: 95px;">PK</td>
-                </tr><tr align="left" valign="top"><td>
-<p>5.7 / 6.0 - Added FK</p>
-                    </td>
-<td style="width: 134px;">
-<p>UserId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique user identifier</p>
-                    </td>
-<td>
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td style="width: 95px;">
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>5.7 / 6.0 - Added FK</p>
-                    </td>
-<td style="width: 134px;">
-<p>OrgUnitId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique org unit identifier</p>
-                    </td>
-<td>
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td style="width: 95px;">
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>5.7 / 6.0 - Added FK</p>
-                    </td>
-<td style="width: 134px;">
-<p>RoleId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique role identifier.</p>
-<p>Field can be null.</p>
-                    </td>
-<td>
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td style="width: 95px;">
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>3.2</td>
-<td style="width: 134px;">Action</td>
-<td style="width: 134px;">Indicates whether the item is an enrollment or a withdrawal</td>
-<td>varchar</td>
-<td style="width: 134px;">50</td>
-<td style="width: 95px;"></td>
-                </tr><tr align="left" valign="top"><td>
-<p>9.0 - REMOVED COLUMN</p>
-                    </td>
-<td style="width: 134px;">
-<p>EnrollmentType</p>
-                    </td>
-<td style="width: 134px;">
-<p>Enrollment type.</p>
-<p>Field can be null.</p>
-                    </td>
-<td>
-<p>varchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>50</p>
-                    </td>
-<td style="width: 95px;">
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>3.2</td>
-<td style="width: 134px;">ModifiedByUserId</td>
-<td style="width: 134px;">
-<p>Identifies the last user who modified the enrollment status for the user.</p>
-<p>Field can be null.</p>
-                    </td>
-<td>int</td>
-<td style="width: 134px;">4</td>
-<td style="width: 95px;"></td>
-                </tr><tr align="left" valign="top"><td>3.2</td>
-<td style="width: 134px;">
-<p>EnrollmentDate</p>
-                    </td>
-<td style="width: 134px;">
-<p>Date enrolled (UTC)</p>
-                    </td>
-<td>
-<p>datetime2</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td style="width: 95px;">
-<p></p>
-                    </td>
-                </tr></tbody></table>
-<h2 data-id="user-attribute-definitions">User Attribute Definitions</h2>
-<p>The User Attribute Definitions Brightspace Data Set returns a list of all defined user attributes in your organization. If no user attributes are defined for your organization, the data set will not generate.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 134px;">AttributeId</td>
-<td style="width: 134px;">Unique identifier of the attribute.</td>
-<td style="width: 134px;">nvarchar</td>
-<td style="width: 134px;">128</td>
-<td style="width: 95px;">PK</td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 134px;">
-<p>Name</p>
-                    </td>
-<td style="width: 134px;">
-<p>Display name for the attribute.</p>
-                    </td>
-<td style="width: 134px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>128</p>
-                    </td>
-<td style="width: 95px;">
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 134px;">
-<p>Type</p>
-                    </td>
-<td style="width: 134px;">
-<p>Indicates the type of data stored in the attribute. Can be one of "string", "date", "user", or "org_unit".</p>
-                    </td>
-<td style="width: 134px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td style="width: 95px;">
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 134px;">
-<p>AllowMultiple</p>
-                    </td>
-<td style="width: 134px;">
-<p>Indicates if multiple values are allowed for the attribute (TRUE - 1) or not (FALSE - 0).</p>
-                    </td>
-<td style="width: 134px;">
-<p>bit</p>
-                    </td>
-<td style="width: 134px;">
-<p>1</p>
-                    </td>
-<td style="width: 95px;">
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 134px;">IsDefault</td>
-<td style="width: 134px;">Indicates if the attribute is a default (TRUE - 1) or a custom attribute (FALSE - 0).</td>
-<td style="width: 134px;">bit</td>
-<td style="width: 134px;">1</td>
-<td style="width: 95px;"></td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 134px;">
-<p>LastModified</p>
-                    </td>
-<td style="width: 134px;">
-<p>Date the attribute definition was last modified (UTC).</p>
-                    </td>
-<td style="width: 134px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td style="width: 95px;">
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 134px;">ModifiedBy</td>
-<td style="width: 134px;">User who last modified the attribute definition.</td>
-<td style="width: 134px;">int</td>
-<td style="width: 134px;">4</td>
-<td style="width: 95px;">FK</td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 134px;">
-<p>IsDeleted</p>
-                    </td>
-<td style="width: 134px;">
-<p>Indicates if the attribute definition is deleted (TRUE - 1) or not (FALSE - 0).</p>
-                    </td>
-<td style="width: 134px;">
-<p>bit</p>
-                    </td>
-<td style="width: 134px;">
-<p>1</p>
-                    </td>
-<td style="width: 95px;">
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 134px;">Version</td>
-<td style="width: 134px;">Indicates the version of the row. This information is used to determine which table row occurred first.</td>
-<td style="width: 134px;">bigint</td>
-<td style="width: 134px;">8</td>
-<td style="width: 95px;"></td>
-                </tr></tbody></table>
-<h2 data-id="user-attribute-values">User Attribute Values</h2>
-<p>The User Attribute Values Brightspace Data Set returns a list of all values for all defined user attributes for each user in your organization. If no user attributes are defined for your organization, the data set will not generate.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>
-<p>5.7 / 6.0 - Added FK</p>
-                    </td>
-<td style="width: 134px;">UserId</td>
-<td style="width: 134px;">Unique identifier of the user who the attribute is assigned to.</td>
-<td>int</td>
-<td style="width: 134px;">4</td>
-<td style="width: 95px;">PK, FK</td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 134px;">AttributeId</td>
-<td style="width: 134px;">Unique identifier of the attribute.</td>
-<td>nvarchar</td>
-<td style="width: 134px;">128</td>
-<td style="width: 95px;">PK, FK</td>
-                </tr><tr align="left" valign="top"><td>7.19 / 8.5 - Updated description</td>
-<td style="width: 134px;">
-<p>Value</p>
-                    </td>
-<td style="width: 134px;">
-<p>Value or list of values assigned to the user for the given attribute. Formatted as comma-separated values (CSV).</p>
-                    </td>
-<td>
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>4000</p>
-                    </td>
-<td style="width: 95px;">
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 134px;">
-<p>LastModified</p>
-                    </td>
-<td style="width: 134px;">
-<p>Date the attribute value was last modified (UTC).</p>
-                    </td>
-<td>
-<p>datetime2</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td style="width: 95px;">
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 134px;">ModifiedBy</td>
-<td style="width: 134px;">User who last modified the attribute value.</td>
-<td>int</td>
-<td style="width: 134px;">4</td>
-<td style="width: 95px;">FK</td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 134px;">
-<p>IsDeleted</p>
-                    </td>
-<td style="width: 134px;">
-<p>Indicates if the attribute value is deleted (TRUE - 1) or not (FALSE - 0).</p>
-                    </td>
-<td>
-<p>bit</p>
-                    </td>
-<td style="width: 134px;">
-<p>1</p>
-                    </td>
-<td style="width: 95px;">
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 134px;">Version</td>
-<td style="width: 134px;">Indicates the version of the row. This information is used to determine which row occurred first.</td>
-<td>int</td>
-<td style="width: 134px;">4</td>
-<td style="width: 95px;"></td>
-                </tr></tbody></table>
-<h2 data-id="user-enrollments">User Enrollments</h2>
-<p>The User Enrollments Brightspace Data Set returns a list of enrollments for all users in your organization.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
-<td>
-<p>OrgUnitId</p>
-                    </td>
-<td>
-<p>Unique org unit identifier</p>
-                    </td>
-<td>
-<p>int</p>
-                    </td>
-<td>
-<p>4</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td>
-<p>UserId</p>
-                    </td>
-<td>
-<p>Unique user identifier</p>
-                    </td>
-<td>
-<p>int</p>
-                    </td>
-<td>
-<p>4</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>5.7 / 6.0 - Updated column size</p>
-                    </td>
-<td>
-<p>RoleName</p>
-                    </td>
-<td>
-<p>Role name</p>
-                    </td>
-<td>
-<p>nvarchar</p>
-                    </td>
-<td>
-<p>60</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td>
-<p>EnrollmentDate</p>
-                    </td>
-<td>
-<p>Date enrolled (UTC)</p>
-                    </td>
-<td>
-<p>datetime2</p>
-                    </td>
-<td>
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>5.7 / 6.0 - Updated column size</p>
-                    </td>
-<td>
-<p>EnrollmentType</p>
-                    </td>
-<td>
-<p>Enrollment type.</p>
-<p>Field can be null.</p>
-                    </td>
-<td>
-<p>varchar</p>
-                    </td>
-<td>
-<p>50</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>5.7 and 6.0 - Added FK</p>
-                    </td>
-<td>RoleId</td>
-<td>Unique role identifier</td>
-<td>int</td>
-<td>4</td>
-<td>FK</td>
-                </tr></tbody></table>
-<h2 data-id="user-logins">User Logins</h2>
-<p>The User Logins Brightspace Data Set returns a list of all login attempts for your organization.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>9.0 - REMOVED COLUMN</td>
-<td style="width: 134px;">
-<p>OrgId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique org unit Identifier.</p>
-<p>Field can be null</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>9.0 - Updated description</td>
-<td style="width: 134px;">
-<p>UserId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique user identifier.</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>6.6 - Updated description</p>
-                    </td>
-<td style="width: 134px;">
-<p>UserName</p>
-                    </td>
-<td style="width: 134px;">
-<p>User name used to attempt log in.</p>
-                    </td>
-<td style="width: 134px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>256</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>IP</p>
-                    </td>
-<td style="width: 134px;">
-<p>IP address</p>
-                    </td>
-<td style="width: 134px;">
-<p>varchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>64</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>2.5 / 3.0 - Removed FK</td>
-<td style="width: 134px;">
-<p>SessionId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique session identifier.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>9.0 - Updated type</td>
-<td style="width: 134px;">
-<p>StatusType</p>
-                    </td>
-<td style="width: 134px;">
-<p>Login status</p>
-                    </td>
-<td style="width: 134px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>50</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>AttemptDate</p>
-                    </td>
-<td style="width: 134px;">
-<p>Attempt date (UTC)</p>
-                    </td>
-<td style="width: 134px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>ImpersonatingUserId</p>
-                    </td>
-<td style="width: 134px;">
-<p>User ID of impersonator.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>9.0 - REMOVED COLUMN</td>
-<td style="width: 134px;">
-<p>TimeOff</p>
-                    </td>
-<td style="width: 134px;">
-<p>Time elapsed in seconds since the last time a user logged in.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>9.0 - Updated type and size</td>
-<td style="width: 134px;">LoginAttemptId</td>
-<td style="width: 134px;">Unique login attempt identifier</td>
-<td style="width: 134px;">nvarchar</td>
-<td style="width: 134px;">36</td>
-<td>PK</td>
-                </tr><tr align="left" valign="top"><td>9.0</td>
-<td style="width: 134px;">LoginSource</td>
-<td style="width: 134px;">The source of the login attempt, for example: Brightspace.</td>
-<td style="width: 134px;">nvarchar</td>
-<td style="width: 134px;">50</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="users">Users</h2>
-<p>The Users Brightspace Data Set returns a list of users in your organization.</p>
-<p>Version 4.10 / 5.4 adds a system user entry with UserId = 0 to this data set. The system user is only included in the full CSV.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>UserId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Unique user identifier</p>
-                    </td>
-<td style="width: 134px;">
-<p>int</p>
-                    </td>
-<td style="width: 134px;">
-<p>4</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>5.7 / 6.0 - Updated column size</p>
-                    </td>
-<td style="width: 134px;">
-<p>UserName</p>
-                    </td>
-<td style="width: 134px;">
-<p>User name</p>
-                    </td>
-<td style="width: 134px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>270</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.9 / 5.3 - Corrected column size</td>
-<td style="width: 134px;">
-<p>OrgDefinedId</p>
-                    </td>
-<td style="width: 134px;">
-<p>Org defined ID.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>256</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>6.13 / 7.1 - Updated description</p>
-                    </td>
-<td style="width: 134px;">
-<p>FirstName</p>
-                    </td>
-<td style="width: 134px;">
-<p>User's first name. If a preferred first name is provided, it is used. If not, the legal first name is used.</p>
-                    </td>
-<td style="width: 134px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>64</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>5.7 / 6.0 - Updated column size</p>
-                    </td>
-<td style="width: 134px;">
-<p>MiddleName</p>
-                    </td>
-<td style="width: 134px;">
-<p>Middle name.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>64</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>6.13 / 7.1 - Updated description</p>
-                    </td>
-<td style="width: 134px;">
-<p>LastName</p>
-                    </td>
-<td style="width: 134px;">
-<p>User's last name. If a preferred last name is provided, it is used. If not, the legal last name is used.</p>
-                    </td>
-<td style="width: 134px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>64</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>IsActive</p>
-                    </td>
-<td style="width: 134px;">
-<p>Is user active?</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>bit</p>
-                    </td>
-<td style="width: 134px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>5.7 / 6.0 - Updated column size</p>
-                    </td>
-<td style="width: 134px;">
-<p>Organization</p>
-                    </td>
-<td style="width: 134px;">
-<p>Organization name.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>varchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>256</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>5.7 / 6.0 - Updated column size</p>
-                    </td>
-<td style="width: 134px;">
-<p>ExternalEmail</p>
-                    </td>
-<td style="width: 134px;">
-<p>External email address.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 134px;">
-<p>256</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 134px;">
-<p>SignupDate</p>
-                    </td>
-<td style="width: 134px;">
-<p>Date the user was created in the system (UTC).</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 134px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>3.0 - Added</td>
-<td style="width: 134px;">FirstLoginDate</td>
-<td style="width: 134px;">
-<p>Date when the user first logged in to the system (UTC).</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">datetime2</td>
-<td style="width: 134px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>
-<p>3.1 -Added</p>
-                    </td>
-<td style="width: 134px;">Version</td>
-<td style="width: 134px;">
-<p>Indicates the version of the content in the row.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">bigint</td>
-<td style="width: 134px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4 - Added</td>
-<td style="width: 134px;">OrgRoleId</td>
-<td style="width: 134px;">
-<p>The unique role identifier for the role of the user at the org level.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 134px;">int</td>
-<td style="width: 134px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.13 / 7.1 - Updated description</td>
-<td style="width: 134px;">LastAccessed</td>
-<td style="width: 134px;">
-<p>The date the user last accessed the system. If the user has never accessed the system, captures the date the user was created.</p>
-                    </td>
-<td style="width: 134px;">datetime2</td>
-<td style="width: 134px;">8</td>
-<td></td>
-                </tr></tbody></table>
-</article>
-</div>
-</section>
-</main>
-</div>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Auditor Relationships Log</h2>
+            <p>The Auditor Relationships Log Brightspace Data Set has a record of auditors and the users they audit in the organization. The User Auditors tool must be enabled to access this data. Note: The data set may appear blank unless new auditor-learner relationships are added. All historical data is populated 30 to 60 days after the November 2021/20.21.11 release.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>6.13 / 7.1</td>
+                  <td>AuditorId</td>
+                  <td>UserId (unique identifier) of the auditor.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>6.13 / 7.1</td>
+                  <td>UserToAuditId</td>
+                  <td>UserId (unique identifier) of the user to be audited by the auditor.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>6.15 / 7.3 - Updated description</td>
+                  <td>OrgUnitId</td>
+                  <td>Org Unit identifier where the auditor relationship exists.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>6.13 / 7.1</td>
+                  <td>Action</td>
+                  <td>The action performed on the relationship. Either Created or Deleted.</td>
+                  <td>nvarchar</td>
+                  <td>16</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.13 / 7.1</td>
+                  <td>ModifiedBy</td>
+                  <td>UserId who modified the auditor relationship.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.13 / 7.1</td>
+                  <td>ModifiedDate</td>
+                  <td>Date and time when the auditor relationship was modified (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Course Access</h2>
+            <p>The Course Access Brightspace Data Set returns information on each day each user has accessed each course offering from the LMS (via a browser) across the organization. The data set does not include course access via any of our Apps. Note: If an administrator changes your time zone at the organization level, this can affect the calculation of DayAccessed because this field is in local time.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2.4</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique org unit identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>2.4</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>7.5 - Updated description</td>
+                  <td>DayAccessed</td>
+                  <td>Indicates the most recent day in local time when a user accessed the course.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Course Access Log</h2>
+            <p>The Course Access Log Brightspace Data Set returns information on users accessing their course offerings using the Pulse app. The data set creates a row with a timestamp when a user initially accesses a course, then creates additional rows for every 30 minutes that the user spends in the course.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>7.5</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique identifier for the org unit.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>7.5</td>
+                  <td>UserId</td>
+                  <td>Unique identifier for the user.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>7.5</td>
+                  <td>Timestamp</td>
+                  <td>Indicates the time in UTC that a user accessed the course.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>7.5</td>
+                  <td>Source</td>
+                  <td>The source of the course access. Only Pulse data is available at this time.</td>
+                  <td>nvarchar</td>
+                  <td>20</td>
+                  <td>PK</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Enrollments and Withdrawals</h2>
+            <p>The Enrollments and Withdrawals Brightspace Data Set returns a list of enrollments and withdrawals for all users in your organization.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>7.7 - Updated description</td>
+                  <td>LogId</td>
+                  <td>Unique log entry identifier for any change to the user enrollment.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Added FK</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Added FK</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique org unit identifier</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Added FK</td>
+                  <td>RoleId</td>
+                  <td>Unique role identifier. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>3.2</td>
+                  <td>Action</td>
+                  <td>Indicates whether the item is an enrollment or a withdrawal</td>
+                  <td>varchar</td>
+                  <td>50</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0 - REMOVED COLUMN</td>
+                  <td>EnrollmentType</td>
+                  <td>Enrollment type. Field can be null.</td>
+                  <td>varchar</td>
+                  <td>50</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.2</td>
+                  <td>ModifiedByUserId</td>
+                  <td>Identifies the last user who modified the enrollment status for the user. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.2</td>
+                  <td>EnrollmentDate</td>
+                  <td>Date enrolled (UTC)</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>User Attribute Definitions</h2>
+            <p>The User Attribute Definitions Brightspace Data Set returns a list of all defined user attributes in your organization. If no user attributes are defined for your organization, the data set will not generate.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>AttributeId</td>
+                  <td>Unique identifier of the attribute.</td>
+                  <td>nvarchar</td>
+                  <td>128</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>Name</td>
+                  <td>Display name for the attribute.</td>
+                  <td>nvarchar</td>
+                  <td>128</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>Type</td>
+                  <td>Indicates the type of data stored in the attribute. Can be one of &quot;string&quot;, &quot;date&quot;, &quot;user&quot;, or &quot;org_unit&quot;.</td>
+                  <td>nvarchar</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>AllowMultiple</td>
+                  <td>Indicates if multiple values are allowed for the attribute (TRUE - 1) or not (FALSE - 0).</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>IsDefault</td>
+                  <td>Indicates if the attribute is a default (TRUE - 1) or a custom attribute (FALSE - 0).</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>LastModified</td>
+                  <td>Date the attribute definition was last modified (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>ModifiedBy</td>
+                  <td>User who last modified the attribute definition.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if the attribute definition is deleted (TRUE - 1) or not (FALSE - 0).</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the row. This information is used to determine which table row occurred first.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>User Attribute Values</h2>
+            <p>The User Attribute Values Brightspace Data Set returns a list of all values for all defined user attributes for each user in your organization. If no user attributes are defined for your organization, the data set will not generate.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>5.7 / 6.0 - Added FK</td>
+                  <td>UserId</td>
+                  <td>Unique identifier of the user who the attribute is assigned to.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>AttributeId</td>
+                  <td>Unique identifier of the attribute.</td>
+                  <td>nvarchar</td>
+                  <td>128</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>7.19 / 8.5 - Updated description</td>
+                  <td>Value</td>
+                  <td>Value or list of values assigned to the user for the given attribute. Formatted as comma-separated values (CSV).</td>
+                  <td>nvarchar</td>
+                  <td>4000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>LastModified</td>
+                  <td>Date the attribute value was last modified (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>ModifiedBy</td>
+                  <td>User who last modified the attribute value.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if the attribute value is deleted (TRUE - 1) or not (FALSE - 0).</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the row. This information is used to determine which row occurred first.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>User Enrollments</h2>
+            <p>The User Enrollments Brightspace Data Set returns a list of enrollments for all users in your organization.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.0</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique org unit identifier</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Updated column size</td>
+                  <td>RoleName</td>
+                  <td>Role name</td>
+                  <td>nvarchar</td>
+                  <td>60</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>EnrollmentDate</td>
+                  <td>Date enrolled (UTC)</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Updated column size</td>
+                  <td>EnrollmentType</td>
+                  <td>Enrollment type. Field can be null.</td>
+                  <td>varchar</td>
+                  <td>50</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 and 6.0 - Added FK</td>
+                  <td>RoleId</td>
+                  <td>Unique role identifier</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>User Logins</h2>
+            <p>The User Logins Brightspace Data Set returns a list of all login attempts for your organization.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>9.0 - REMOVED COLUMN</td>
+                  <td>OrgId</td>
+                  <td>Unique org unit Identifier. Field can be null</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0 - Updated description</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.6 - Updated description</td>
+                  <td>UserName</td>
+                  <td>User name used to attempt log in.</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>IP</td>
+                  <td>IP address</td>
+                  <td>varchar</td>
+                  <td>64</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>2.5 / 3.0 - Removed FK</td>
+                  <td>SessionId</td>
+                  <td>Unique session identifier. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0 - Updated type</td>
+                  <td>StatusType</td>
+                  <td>Login status</td>
+                  <td>nvarchar</td>
+                  <td>50</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>AttemptDate</td>
+                  <td>Attempt date (UTC)</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>ImpersonatingUserId</td>
+                  <td>User ID of impersonator. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>9.0 - REMOVED COLUMN</td>
+                  <td>TimeOff</td>
+                  <td>Time elapsed in seconds since the last time a user logged in. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0 - Updated type and size</td>
+                  <td>LoginAttemptId</td>
+                  <td>Unique login attempt identifier</td>
+                  <td>nvarchar</td>
+                  <td>36</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>9.0</td>
+                  <td>LoginSource</td>
+                  <td>The source of the login attempt, for example: Brightspace.</td>
+                  <td>nvarchar</td>
+                  <td>50</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Users</h2>
+            <p>The Users Brightspace Data Set returns a list of users in your organization. Version 4.10 / 5.4 adds a system user entry with UserId = 0 to this data set. The system user is only included in the full CSV.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.0</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Updated column size</td>
+                  <td>UserName</td>
+                  <td>User name</td>
+                  <td>nvarchar</td>
+                  <td>270</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.9 / 5.3 - Corrected column size</td>
+                  <td>OrgDefinedId</td>
+                  <td>Org defined ID. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.13 / 7.1 - Updated description</td>
+                  <td>FirstName</td>
+                  <td>User&#039;s first name. If a preferred first name is provided, it is used. If not, the legal first name is used.</td>
+                  <td>nvarchar</td>
+                  <td>64</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Updated column size</td>
+                  <td>MiddleName</td>
+                  <td>Middle name. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>64</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.13 / 7.1 - Updated description</td>
+                  <td>LastName</td>
+                  <td>User&#039;s last name. If a preferred last name is provided, it is used. If not, the legal last name is used.</td>
+                  <td>nvarchar</td>
+                  <td>64</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>IsActive</td>
+                  <td>Is user active? Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Updated column size</td>
+                  <td>Organization</td>
+                  <td>Organization name. Field can be null.</td>
+                  <td>varchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Updated column size</td>
+                  <td>ExternalEmail</td>
+                  <td>External email address. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>SignupDate</td>
+                  <td>Date the user was created in the system (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.0 - Added</td>
+                  <td>FirstLoginDate</td>
+                  <td>Date when the user first logged in to the system (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1 -Added</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the content in the row. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4 - Added</td>
+                  <td>OrgRoleId</td>
+                  <td>The unique role identifier for the role of the user at the org level. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.13 / 7.1 - Updated description</td>
+                  <td>LastAccessed</td>
+                  <td>The date the user last accessed the system. If the user has never accessed the system, captures the date the user was created.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

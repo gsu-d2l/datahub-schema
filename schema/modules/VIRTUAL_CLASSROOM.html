@@ -1,236 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<div id="fallbackPageContent">
-<main>
-<section>
-<div class="mainColumn">
-<article>
-<h2 data-id="virtual-classroom-usage">Virtual Classroom Usage</h2>
-<p>The Virtual Classroom Usage Brightspace Data Set returns information about how Virtual Classroom by Bongo is being used for Bongo Premium customers. The first data point is from July 1, 2018 and the data set will only appear for Bongo Premium customers if there is usage to retrieve.</p>
-<p>Note: The data includes all Virtual Classroom meetings that have ever been created. Cancelled meetings can be identified using the IsCancelled field, and do not appear in the LTI Links Brightspace Data Set. The Virtual Classroom UI only displays meetings that are scheduled to occur in the future, or have occurred and were recorded.</p>
-<p>Note: This data set is available as a FULL CSV containing all of the data and does not include a differential. Data is produced on a weekly basis, regardless of whether you purchased the hourly data freshness add-on. Since the data is owned by Bongo, data set generation is done on a region schedule and may not align to existing schedules.</p>
-<p></p>
-<p>Returned Fields</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Column Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>4.9 / 5.3</td>
-<td style="width: 125px;">
-<p>OrgUnitId</p>
-                    </td>
-<td>
-<p>Unique org unit identifier of the course where the meeting was scheduled.</p>
-<p>Will be null if the meeting was cancelled.</p>
-                    </td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>6.14 / 7.2 - Updated Column size</td>
-<td style="width: 125px;">
-<p>CourseName</p>
-                    </td>
-<td>
-<p>The name of the course where the meeting was scheduled.</p>
-<p>Will be null if the meeting was cancelled.</p>
-                    </td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>255</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.9 / 5.3</td>
-<td style="width: 125px;">
-<p>MeetingId</p>
-                    </td>
-<td>
-<p>Unique meeting identifier. If a meeting is reoccurring, each occurrence is represented in a new row.</p>
-                    </td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>36</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.9 / 5.3</td>
-<td style="width: 125px;">
-<p>MeetingName</p>
-                    </td>
-<td>
-<p>The name of the Virtual Classroom meeting.</p>
-                    </td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>255</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.9 / 5.3</td>
-<td style="width: 125px;">
-<p>CreationUserId</p>
-                    </td>
-<td>
-<p>Unique identifier of the user who scheduled the meeting.</p>
-                    </td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.9 / 5.3</td>
-<td style="width: 125px;">
-<p>CreationDate</p>
-                    </td>
-<td>
-<p>The date and time the meeting was created (UTC).</p>
-                    </td>
-<td style="width: 125px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.9 / 5.3</td>
-<td style="width: 125px;">
-<p>ScheduledDate</p>
-                    </td>
-<td>
-<p>The date and time the meeting is scheduled to start (UTC).</p>
-                    </td>
-<td style="width: 125px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.9 / 5.3</td>
-<td style="width: 125px;">
-<p>ScheduledDuration</p>
-                    </td>
-<td>
-<p>Planned length of the meeting in minutes.</p>
-                    </td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.9 / 5.3</td>
-<td style="width: 125px;">
-<p>IsPublished</p>
-                    </td>
-<td>
-<p>Indicates if the option to automatically publish the recording to attendees is enabled.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bit</p>
-                    </td>
-<td style="width: 125px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.9 / 5.3</td>
-<td style="width: 125px;">
-<p>ExternalLinksEnabled</p>
-                    </td>
-<td>
-<p>Indicates if the option to use external links to join the meeting was enabled when the Virtual Classroom session was scheduled.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bit</p>
-                    </td>
-<td style="width: 125px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.9 / 5.3</td>
-<td style="width: 125px;">WholeClassInvited</td>
-<td>Indicates if all users in an org unit were invited.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.9 / 5.3</td>
-<td style="width: 125px;">IsCancelled</td>
-<td>Indicates if the meeting is cancelled. Comparable to IsDeleted in other data sets.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.9 / 5.3</td>
-<td style="width: 125px;">StartDateTime</td>
-<td>
-<p>The DateTime that the Virtual Classroom session was started (UTC).</p>
-<p>Will be null if the meeting was not started or canceled.</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.9 / 5.3</td>
-<td style="width: 125px;">EndDateTime</td>
-<td>
-<p>The DateTime that the Virtual Classroom session was ended (UTC).</p>
-<p>Will be null if the meeting was not started or canceled.</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.9 / 5.3</td>
-<td style="width: 125px;">IsRecorded</td>
-<td>Indicates if the meeting was recorded.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr></tbody></table>
-</article>
-</div>
-</section>
-</main>
-</div>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Virtual Classroom Usage</h2>
+            <p>The Virtual Classroom Usage Brightspace Data Set returns information about how Virtual Classroom by Bongo is being used for Bongo Premium customers. The first data point is from July 1, 2018 and the data set will only appear for Bongo Premium customers if there is usage to retrieve. Note: The data includes all Virtual Classroom meetings that have ever been created. Cancelled meetings can be identified using the IsCancelled field, and do not appear in the LTI Links Brightspace Data Set. The Virtual Classroom UI only displays meetings that are scheduled to occur in the future, or have occurred and were recorded. Note: This data set is available as a FULL CSV containing all of the data and does not include a differential. Data is produced on a weekly basis, regardless of whether you purchased the hourly data freshness add-on. Since the data is owned by Bongo, data set generation is done on a region schedule and may not align to existing schedules.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4.9 / 5.3</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique org unit identifier of the course where the meeting was scheduled. Will be null if the meeting was cancelled.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.14 / 7.2 - Updated Column size</td>
+                  <td>CourseName</td>
+                  <td>The name of the course where the meeting was scheduled. Will be null if the meeting was cancelled.</td>
+                  <td>nvarchar</td>
+                  <td>255</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.9 / 5.3</td>
+                  <td>MeetingId</td>
+                  <td>Unique meeting identifier. If a meeting is reoccurring, each occurrence is represented in a new row.</td>
+                  <td>nvarchar</td>
+                  <td>36</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>4.9 / 5.3</td>
+                  <td>MeetingName</td>
+                  <td>The name of the Virtual Classroom meeting.</td>
+                  <td>nvarchar</td>
+                  <td>255</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.9 / 5.3</td>
+                  <td>CreationUserId</td>
+                  <td>Unique identifier of the user who scheduled the meeting.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>4.9 / 5.3</td>
+                  <td>CreationDate</td>
+                  <td>The date and time the meeting was created (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.9 / 5.3</td>
+                  <td>ScheduledDate</td>
+                  <td>The date and time the meeting is scheduled to start (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.9 / 5.3</td>
+                  <td>ScheduledDuration</td>
+                  <td>Planned length of the meeting in minutes.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.9 / 5.3</td>
+                  <td>IsPublished</td>
+                  <td>Indicates if the option to automatically publish the recording to attendees is enabled.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.9 / 5.3</td>
+                  <td>ExternalLinksEnabled</td>
+                  <td>Indicates if the option to use external links to join the meeting was enabled when the Virtual Classroom session was scheduled.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.9 / 5.3</td>
+                  <td>WholeClassInvited</td>
+                  <td>Indicates if all users in an org unit were invited.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.9 / 5.3</td>
+                  <td>IsCancelled</td>
+                  <td>Indicates if the meeting is cancelled. Comparable to IsDeleted in other data sets.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.9 / 5.3</td>
+                  <td>StartDateTime</td>
+                  <td>The DateTime that the Virtual Classroom session was started (UTC). Will be null if the meeting was not started or canceled.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.9 / 5.3</td>
+                  <td>EndDateTime</td>
+                  <td>The DateTime that the Virtual Classroom session was ended (UTC). Will be null if the meeting was not started or canceled.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.9 / 5.3</td>
+                  <td>IsRecorded</td>
+                  <td>Indicates if the meeting was recorded.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

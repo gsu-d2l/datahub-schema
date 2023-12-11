@@ -1,608 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<div id="fallbackPageContent">
-<main>
-<section>
-<div class="mainColumn">
-<article>
-<h2 data-id="intelligent-agent-objects">Intelligent Agent Objects</h2>
-<p>The Intelligent Agent Objects Brightspace Data Set describes all the intelligent agents created in your organization.</p>
-<p>Returned Fields</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Column Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>AgentId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique agent identifier.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>OrgUnitId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique org unit identifier where the agent was created.</p>
-                    </td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
-<td>
-<p>AgentName</p>
-                    </td>
-<td style="width: 125px;">
-<p>Name of intelligent agent.</p>
-                    </td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>128</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>Description</td>
-<td style="width: 125px;">
-<p>The description of the intelligent agent.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">1000</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>Enabled</td>
-<td style="width: 125px;">Indicates if the agent is enabled.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Updated Description</td>
-<td>
-<p>SpecificRoles</p>
-                    </td>
-<td style="width: 125px;">
-<p>Array of the roles the agent allies to. If null, it applies to all users visible in the Classlist.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>1000</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>LoginConditionEnabled</p>
-                    </td>
-<td style="width: 125px;">
-<p>Indicates if the agent looks at login activity.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bit</p>
-                    </td>
-<td style="width: 125px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>4.10 / 5.4</p>
-                    </td>
-<td>
-<p>LoginConditionThreshold</p>
-                    </td>
-<td style="width: 125px;">
-<p>Number of days the login threshold is set to.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>LoginConditionType</p>
-                    </td>
-<td style="width: 125px;">
-<p>The type of login activity: User has not logged in for at least X days or user has logged in during the past X days.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>14</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>AccessConditionEnabled</p>
-                    </td>
-<td style="width: 125px;">
-<p>Indicates if the agent looks at course access activity.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bit</p>
-                    </td>
-<td style="width: 125px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>4.10 / 5.4</p>
-                    </td>
-<td>AccessConditionThreshold</td>
-<td style="width: 125px;">
-<p>Number of days the course activity threshold is set to.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>AccessConditionType</td>
-<td style="width: 125px;">
-<p>The type of course activity: User has not accessed course in for at least X days or user has accessed course in during the past X days.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">20</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Type and Column Size</td>
-<td>ResultId</td>
-<td style="width: 125px;">
-<p>Unique release condition result identifier.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">bigint</td>
-<td style="width: 125px;">8</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>RepeatType</td>
-<td style="width: 125px;">Indicates whether the action is taken once or every time the criteria is met for a user.</td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">10</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>EmailWhenSatisfied</td>
-<td style="width: 125px;">Indicates if an email is sent when the criteria are satisfied.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>EnableSchedule</td>
-<td style="width: 125px;">Indicates if a schedule is used.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>ScheduleType</td>
-<td style="width: 125px;">
-<p>Defines the frequency the schedule runs on: daily, weekly, monthly, annually.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>ScheduleRepeatsEvery</td>
-<td style="width: 125px;">
-<p>The number of days, weeks, etc between runs.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>StartDate</td>
-<td style="width: 125px;">
-<p>When the schedule begins (UTC).</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>EndDate</p>
-                    </td>
-<td style="width: 125px;">
-<p>When the schedule ends (UTC).</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>LastModified</td>
-<td style="width: 125px;">
-<p>The date when the agent was last modified (UTC).</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>6.16 / 7.4 - Updated description</td>
-<td>LastModifiedBy</td>
-<td style="width: 125px;">
-<p>The unique user identifier of the user who last changed the agent.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>IsDeleted</td>
-<td style="width: 125px;">Indicates if the agent is deleted.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="intelligent-agent-run-log">Intelligent Agent Run Log</h2>
-<p>The Intelligent Agent Run Log Brightspace Data Set lists all the times, including practice runs, each intelligent agent has run in your organization.</p>
-<p>This data set captures data from November 2020 onwards.</p>
-<p>Returned Fields</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Column Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>AgentId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique intelligent agent identifier.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>AgentRunId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique intelligent agent run identifier.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>IsPracticeRun</p>
-                    </td>
-<td style="width: 125px;">
-<p>Indicates if it is a practice run.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bit</p>
-                    </td>
-<td style="width: 125px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>IsRunNow</td>
-<td style="width: 125px;">Indicates if it was an unscheduled run.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>NumUsers</td>
-<td style="width: 125px;">Count of the number of users affected by this run.</td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>NumUsersWithErrors</p>
-                    </td>
-<td style="width: 125px;">
-<p>The number of users where the action produced errors.</p>
-                    </td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>NumUsersWithInfos</p>
-                    </td>
-<td style="width: 125px;">
-<p>The number of users where the action produced informational messages.</p>
-                    </td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>4.10 / 5.4</p>
-                    </td>
-<td>
-<p>NumUsersWithWarnings</p>
-                    </td>
-<td style="width: 125px;">
-<p>The number of users where the action produced warning messages.</p>
-                    </td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Key</td>
-<td>
-<p>RunUserId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique identifier of the user who ran the agent. 0 for system.</p>
-                    </td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>RunDate</p>
-                    </td>
-<td style="width: 125px;">
-<p>The date the run occurred (UTC).</p>
-                    </td>
-<td style="width: 125px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr></tbody></table>
-<h2 data-id="intelligent-agent-run-users">Intelligent Agent Run Users</h2>
-<p>The Intelligent Agent Run Users Brightspace Data Set lists the users that each intelligent agent run affected and the resulting action. It does not include users that don't meet agent criteria or are part of a practice run.</p>
-<p>Returned Fields</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Column Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>AgentId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique intelligent agent identifier.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>AgentRunId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique intelligent agent run identifier.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>UserId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique user identifier.</p>
-                    </td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>OrgUnitId</td>
-<td style="width: 125px;">
-<p>Unique org unit identifier where the agent was run.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>FK</td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>ActionTypeName</td>
-<td style="width: 125px;">
-<p>The type of action that was taken.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">nvarchar</td>
-<td style="width: 125px;">50</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>ActionHasError</p>
-                    </td>
-<td style="width: 125px;">
-<p>Indicates if the intelligent agent run has errors.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bit</p>
-                    </td>
-<td style="width: 125px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>ActionHasInfo</p>
-                    </td>
-<td style="width: 125px;">
-<p>Indicates if the intelligent agent run has info messages.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bit</p>
-                    </td>
-<td style="width: 125px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>
-<p>4.10 / 5.4</p>
-                    </td>
-<td>
-<p>ActionHasWarning</p>
-                    </td>
-<td style="width: 125px;">
-<p>Indicates if the intelligent agent run has warnings.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bit</p>
-                    </td>
-<td style="width: 125px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td>
-<p>ShouldRetry</p>
-                    </td>
-<td style="width: 125px;">
-<p>Indicates if the run should be retried.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bit</p>
-                    </td>
-<td style="width: 125px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr></tbody></table>
-</article>
-</div>
-</section>
-</main>
-</div>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Intelligent Agent Objects</h2>
+            <p>The Intelligent Agent Objects Brightspace Data Set describes all the intelligent agents created in your organization.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>AgentId</td>
+                  <td>Unique agent identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique org unit identifier where the agent was created.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>AgentName</td>
+                  <td>Name of intelligent agent.</td>
+                  <td>nvarchar</td>
+                  <td>128</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>Description</td>
+                  <td>The description of the intelligent agent. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>Enabled</td>
+                  <td>Indicates if the agent is enabled.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Updated Description</td>
+                  <td>SpecificRoles</td>
+                  <td>Array of the roles the agent allies to. If null, it applies to all users visible in the Classlist. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>LoginConditionEnabled</td>
+                  <td>Indicates if the agent looks at login activity.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>LoginConditionThreshold</td>
+                  <td>Number of days the login threshold is set to. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>LoginConditionType</td>
+                  <td>The type of login activity: User has not logged in for at least X days or user has logged in during the past X days. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>14</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>AccessConditionEnabled</td>
+                  <td>Indicates if the agent looks at course access activity.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>AccessConditionThreshold</td>
+                  <td>Number of days the course activity threshold is set to. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>AccessConditionType</td>
+                  <td>The type of course activity: User has not accessed course in for at least X days or user has accessed course in during the past X days. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>20</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Type and Column Size</td>
+                  <td>ResultId</td>
+                  <td>Unique release condition result identifier. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>RepeatType</td>
+                  <td>Indicates whether the action is taken once or every time the criteria is met for a user.</td>
+                  <td>nvarchar</td>
+                  <td>10</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>EmailWhenSatisfied</td>
+                  <td>Indicates if an email is sent when the criteria are satisfied.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>EnableSchedule</td>
+                  <td>Indicates if a schedule is used.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>ScheduleType</td>
+                  <td>Defines the frequency the schedule runs on: daily, weekly, monthly, annually. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>ScheduleRepeatsEvery</td>
+                  <td>The number of days, weeks, etc between runs. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>StartDate</td>
+                  <td>When the schedule begins (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>EndDate</td>
+                  <td>When the schedule ends (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>LastModified</td>
+                  <td>The date when the agent was last modified (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.16 / 7.4 - Updated description</td>
+                  <td>LastModifiedBy</td>
+                  <td>The unique user identifier of the user who last changed the agent. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if the agent is deleted.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Intelligent Agent Run Log</h2>
+            <p>The Intelligent Agent Run Log Brightspace Data Set lists all the times, including practice runs, each intelligent agent has run in your organization. This data set captures data from November 2020 onwards.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>AgentId</td>
+                  <td>Unique intelligent agent identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>AgentRunId</td>
+                  <td>Unique intelligent agent run identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>IsPracticeRun</td>
+                  <td>Indicates if it is a practice run.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>IsRunNow</td>
+                  <td>Indicates if it was an unscheduled run.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>NumUsers</td>
+                  <td>Count of the number of users affected by this run.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>NumUsersWithErrors</td>
+                  <td>The number of users where the action produced errors.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>NumUsersWithInfos</td>
+                  <td>The number of users where the action produced informational messages.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>NumUsersWithWarnings</td>
+                  <td>The number of users where the action produced warning messages.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Key</td>
+                  <td>RunUserId</td>
+                  <td>Unique identifier of the user who ran the agent. 0 for system.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>RunDate</td>
+                  <td>The date the run occurred (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Intelligent Agent Run Users</h2>
+            <p>The Intelligent Agent Run Users Brightspace Data Set lists the users that each intelligent agent run affected and the resulting action. It does not include users that don&#039;t meet agent criteria or are part of a practice run.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>AgentId</td>
+                  <td>Unique intelligent agent identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>AgentRunId</td>
+                  <td>Unique intelligent agent run identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique org unit identifier where the agent was run.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>ActionTypeName</td>
+                  <td>The type of action that was taken. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>50</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>ActionHasError</td>
+                  <td>Indicates if the intelligent agent run has errors.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>ActionHasInfo</td>
+                  <td>Indicates if the intelligent agent run has info messages.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>ActionHasWarning</td>
+                  <td>Indicates if the intelligent agent run has warnings.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>ShouldRetry</td>
+                  <td>Indicates if the run should be retried.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

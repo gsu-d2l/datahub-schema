@@ -1,483 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<div id="fallbackPageContent">
-<main>
-<section>
-<div class="mainColumn">
-<article>
-<h2 data-id="attendance-registers">Attendance Registers</h2>
-<p>The Attendance Registers Brightspace Data Set describes the registers for taking attendance that exist in your organization.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">
-<p>AttendanceRegisterId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique attendance register identifier.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">
-<p>OrgUnitId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique org unit identifier.</p>
-                    </td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
-<td style="width: 125px;">
-<p>Name</p>
-                    </td>
-<td style="width: 125px;">
-<p>The name given to the register.</p>
-                    </td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>128</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">
-<p>Description</p>
-                    </td>
-<td style="width: 125px;">
-<p>The description of the attendance register.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>1000</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">
-<p>SchemeId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique identifier of the scheme used for the register.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">
-<p>IsVisible</p>
-                    </td>
-<td style="width: 125px;">
-<p>Indicates if users are allowed to view this register.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bit</p>
-                    </td>
-<td style="width: 125px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">IncludeAllUsers</td>
-<td style="width: 125px;">Indicates that all users in the course can be assessed with this register. If false, only specific groups/sections are included.</td>
-<td style="width: 125px;">bit</td>
-<td style="width: 125px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">CauseForConcern</td>
-<td style="width: 125px;">
-<p>The threshold at which users will be flagged as a concern.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">decimal</td>
-<td style="width: 125px;">19, 9</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">Version</td>
-<td style="width: 125px;">Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
-<td style="width: 125px;">bigint</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="attendance-schemes">Attendance Schemes</h2>
-<p>The Attendance Schemes Brightspace Data Set describes the schemes that are available for use with attendance registers in your organization.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">
-<p>SchemeId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique scheme identifier.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">
-<p>OrgUnitId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique org unit identifier.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
-<td style="width: 125px;">
-<p>SchemeName</p>
-                    </td>
-<td style="width: 125px;">
-<p>The given name of the scheme.</p>
-                    </td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>128</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">
-<p>SchemeSymbolId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique scheme symbol identifier.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
-<td style="width: 125px;">
-<p>SymbolName</p>
-                    </td>
-<td style="width: 125px;">
-<p>The name given to the symbol.</p>
-                    </td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>128</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
-<td style="width: 125px;">
-<p>SymbolValue</p>
-                    </td>
-<td style="width: 125px;">
-<p>The value used for the symbol.</p>
-                    </td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>50</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">Percentage</td>
-<td style="width: 125px;">
-<p>The score as a percentage that contributes towards the attendance score when a symbol is given.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">decimal</td>
-<td style="width: 125px;">19, 9</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">Version</td>
-<td style="width: 125px;">Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
-<td style="width: 125px;">bigint</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="attendance-sessions">Attendance Sessions</h2>
-<p>The Attendance Sessions Brightspace Data Set maps the sessions that exist for each register in your organization.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">
-<p>AttendanceSessionId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique identifier for the session.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">
-<p>AttendanceRegisterId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique attendance register identifier.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
-<td style="width: 125px;">
-<p>Name</p>
-                    </td>
-<td style="width: 125px;">
-<p>The given name of the session.</p>
-                    </td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>128</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>5.7 / 6.0 - Changed Column Size</td>
-<td style="width: 125px;">
-<p>Description</p>
-                    </td>
-<td style="width: 125px;">
-<p>The description of the session.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>256</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">
-<p>SortOrder</p>
-                    </td>
-<td style="width: 125px;">
-<p>The placement of the session in the register.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">Version</td>
-<td style="width: 125px;">Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
-<td style="width: 125px;">bigint</td>
-<td style="width: 125px;">8</td>
-<td></td>
-                </tr></tbody></table>
-<h2 data-id="attendance-user-sessions">Attendance User Sessions</h2>
-<p>The Attendance User Sessions Brightspace Data Set provides the result for each user's session in each register in your organization.</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version <br>History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">
-<p>UserId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique user identifier.</p>
-                    </td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">
-<p>AttendanceSessionId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique identifier for the session.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">
-<p>SchemeSymbolId</p>
-                    </td>
-<td style="width: 125px;">
-<p>Unique scheme symbol identifier given to the user for the session.</p>
-                    </td>
-<td style="width: 125px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>4.10 / 5.4</td>
-<td style="width: 125px;">
-<p>LastModified</p>
-                    </td>
-<td style="width: 125px;">
-<p>Date the symbol for the user in the session was last modified (UTC).</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 125px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>6.15 / 7.3</td>
-<td style="width: 125px;">LastModifiedBy</td>
-<td style="width: 125px;">
-<p>Unique identifier for the user who last modified the session.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td></td>
-                </tr></tbody></table>
-</article>
-</div>
-</section>
-</main>
-</div>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Attendance Registers</h2>
+            <p>The Attendance Registers Brightspace Data Set describes the registers for taking attendance that exist in your organization.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>AttendanceRegisterId</td>
+                  <td>Unique attendance register identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique org unit identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>Name</td>
+                  <td>The name given to the register.</td>
+                  <td>nvarchar</td>
+                  <td>128</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>Description</td>
+                  <td>The description of the attendance register. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>SchemeId</td>
+                  <td>Unique identifier of the scheme used for the register.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>IsVisible</td>
+                  <td>Indicates if users are allowed to view this register.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>IncludeAllUsers</td>
+                  <td>Indicates that all users in the course can be assessed with this register. If false, only specific groups/sections are included.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>CauseForConcern</td>
+                  <td>The threshold at which users will be flagged as a concern. Field can be null.</td>
+                  <td>decimal</td>
+                  <td>19, 9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Attendance Schemes</h2>
+            <p>The Attendance Schemes Brightspace Data Set describes the schemes that are available for use with attendance registers in your organization.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>SchemeId</td>
+                  <td>Unique scheme identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique org unit identifier. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>SchemeName</td>
+                  <td>The given name of the scheme.</td>
+                  <td>nvarchar</td>
+                  <td>128</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>SchemeSymbolId</td>
+                  <td>Unique scheme symbol identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>SymbolName</td>
+                  <td>The name given to the symbol.</td>
+                  <td>nvarchar</td>
+                  <td>128</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>SymbolValue</td>
+                  <td>The value used for the symbol.</td>
+                  <td>nvarchar</td>
+                  <td>50</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>Percentage</td>
+                  <td>The score as a percentage that contributes towards the attendance score when a symbol is given. Field can be null.</td>
+                  <td>decimal</td>
+                  <td>19, 9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Attendance Sessions</h2>
+            <p>The Attendance Sessions Brightspace Data Set maps the sessions that exist for each register in your organization.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>AttendanceSessionId</td>
+                  <td>Unique identifier for the session.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>AttendanceRegisterId</td>
+                  <td>Unique attendance register identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>Name</td>
+                  <td>The given name of the session.</td>
+                  <td>nvarchar</td>
+                  <td>128</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>Description</td>
+                  <td>The description of the session. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>SortOrder</td>
+                  <td>The placement of the session in the register. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Attendance User Sessions</h2>
+            <p>The Attendance User Sessions Brightspace Data Set provides the result for each user&#039;s session in each register in your organization.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>AttendanceSessionId</td>
+                  <td>Unique identifier for the session.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>SchemeSymbolId</td>
+                  <td>Unique scheme symbol identifier given to the user for the session.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>4.10 / 5.4</td>
+                  <td>LastModified</td>
+                  <td>Date the symbol for the user in the session was last modified (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.15 / 7.3</td>
+                  <td>LastModifiedBy</td>
+                  <td>Unique identifier for the user who last modified the session. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

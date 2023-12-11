@@ -1,98 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<div id="fallbackPageContent">
-<main>
-<section>
-<div class="mainColumn">
-<article>
-<h2 data-id="local-authentication-security-log">Local Authentication Security Log</h2>
-<p>The Local Authentication Security Log Brightspace Data Set has a record of users who are authorized for local login and whether two-factor authentication was enabled or disabled.</p>
-<p>This data set only captures data from May 2022 onwards.</p>
-<p></p>
-<p>Returned Fields</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Column Size</b><br></p>
-                    </th>
-<th>
-<p><b>Key</b><br></p>
-                    </th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>7.6</td>
-<td style="width: 125px;">
-<p>UserId</p>
-                    </td>
-<td>
-<p>Unique identifier of the user.</p>
-                    </td>
-<td style="width: 125px;">
-<p>int</p>
-                    </td>
-<td style="width: 125px;">
-<p>4</p>
-                    </td>
-<td>
-<p>PK, FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>7.6</td>
-<td style="width: 125px;">
-<p>Action</p>
-                    </td>
-<td>
-<p>The action performed for the user.</p>
-<p>Possible values:</p>
-<ul><li>
-<p>Authorized</p>
-                            </li>
-<li>
-<p>AuthorizationRemoved</p>
-                            </li>
-<li>
-<p>TwoFactorAuthEnabled</p>
-                            </li>
-<li>
-<p>TwoFactorAuthDisabled</p>
-                            </li>
-                        </ul></td>
-<td style="width: 125px;">
-<p>nvarchar</p>
-                    </td>
-<td style="width: 125px;">
-<p>70</p>
-                    </td>
-<td>
-<p>PK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>7.6</td>
-<td style="width: 125px;">ModifiedBy</td>
-<td>
-<p>UserId of the user who performed the action.</p>
-                    </td>
-<td style="width: 125px;">int</td>
-<td style="width: 125px;">4</td>
-<td>PK, FK</td>
-                </tr><tr align="left" valign="top"><td>7.6</td>
-<td style="width: 125px;">ModifiedDate</td>
-<td>
-<p>Date and time when the action was performed (UTC).</p>
-                    </td>
-<td style="width: 125px;">datetime2</td>
-<td style="width: 125px;">8</td>
-<td>PK</td>
-                </tr></tbody></table>
-</article>
-</div>
-</section>
-</main>
-</div>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Local Authentication Security Log</h2>
+            <p>The Local Authentication Security Log Brightspace Data Set has a record of users who are authorized for local login and whether two-factor authentication was enabled or disabled. This data set only captures data from May 2022 onwards.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>7.6</td>
+                  <td>UserId</td>
+                  <td>Unique identifier of the user.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>7.6</td>
+                  <td>Action</td>
+                  <td>The action performed for the user. Possible values:</td>
+                  <td>nvarchar</td>
+                  <td>70</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>7.6</td>
+                  <td>ModifiedBy</td>
+                  <td>UserId of the user who performed the action.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>7.6</td>
+                  <td>ModifiedDate</td>
+                  <td>Date and time when the action was performed (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

@@ -1,258 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<div id="fallbackPageContent">
-<main>
-<section>
-<div class="mainColumn">
-<article>
-<h2 data-id="session-history">Session History</h2>
-<p>The Session History Brightspace Data Set returns a list of login session histories for all users in your organization. Does not include app usage. The Session History data set and differential is limited to 3 years of data (all of the previous two calendar years and the current calendar year to date).</p>
-<p></p>
-<p>Returned Fields</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Column Size</b><br></p>
-                    </th>
-<th><b>Key</b><br></th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>7.19 / 8.5 - Updated type</td>
-<td style="width: 122px;">
-<p>SessionId</p>
-                    </td>
-<td style="width: 122px;">
-<p>Unique session identifier.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">
-<p>bigint</p>
-                    </td>
-<td style="width: 122px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 122px;">
-<p>OrgId</p>
-                    </td>
-<td style="width: 122px;">
-<p>Unique org unit Identifier.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">
-<p>int</p>
-                    </td>
-<td style="width: 122px;">
-<p>4</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 122px;">
-<p>UserId</p>
-                    </td>
-<td style="width: 122px;">
-<p>Unique user identifier.</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">
-<p>int</p>
-                    </td>
-<td style="width: 122px;">
-<p>4</p>
-                    </td>
-<td>
-<p>FK</p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 122px;">
-<p>DateStarted</p>
-                    </td>
-<td style="width: 122px;">
-<p>Session start date time (UTC).</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 122px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 122px;">
-<p>DateEnded</p>
-                    </td>
-<td style="width: 122px;">
-<p>Session end date time (UTC).</p>
-                    </td>
-<td style="width: 122px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 122px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 122px;">
-<p>LastAccessed</p>
-                    </td>
-<td style="width: 122px;">
-<p>Last access date time (UTC).</p>
-<p>Field can be null.</p>
-                    </td>
-<td style="width: 122px;">
-<p>datetime2</p>
-                    </td>
-<td style="width: 122px;">
-<p>8</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.0</td>
-<td style="width: 122px;">
-<p>TimedOut</p>
-                    </td>
-<td style="width: 122px;">
-<p>If session timed out.</p>
-                    </td>
-<td style="width: 122px;">
-<p>bit</p>
-                    </td>
-<td style="width: 122px;">
-<p>1</p>
-                    </td>
-<td>
-<p></p>
-                    </td>
-                </tr><tr align="left" valign="top"><td>1.6</td>
-<td style="width: 122px;">HistoryID</td>
-<td style="width: 122px;">Unique session history identifier.</td>
-<td style="width: 122px;">bigint</td>
-<td style="width: 122px;">8</td>
-<td>PK</td>
-                </tr></tbody></table>
-<h2 data-id="system-access-log">System Access Log</h2>
-<p>The System Access Log Brightspace Data Set captures each time a user accesses the system from the LMS via a browser (Brightspace), from the Pulse app (Pulse), or from the Brightspace Parent &amp; Guardian mobile app (BPG-mobile). System access using Brightspace Parent &amp; Guardian is represented in the data set twice: one where Source=Brightspace and one where Source=BPG-mobile.</p>
-<p>Data from Brightspace and Pulse is available from September 2020 onwards. Data from Brightspace Parent &amp; Guardian is only available from May 2022 onwards.</p>
-<p>Note: System access begins when the user logs in, returns after 30 minutes of inactivity, or opens the app. System access ends after 30 minutes of inactivity.</p>
-<p></p>
-<p>Returned Fields</p>
-<table cellpadding="2" border="1" style="border-spacing: 0px;"><col><col><col><col><col><col><thead><tr><th><span>Version History</span><br></th>
-<th>
-<p><b>Field</b><br></p>
-                    </th>
-<th>
-<p><b>Description</b><br></p>
-                    </th>
-<th>
-<p><b>Type</b><br></p>
-                    </th>
-<th>
-<p><b>Column Size</b><br></p>
-                    </th>
-<th><b>Key</b><br></th>
-                </tr></thead><tbody><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">SessionId</td>
-<td style="width: 122px;">Unique identifier for the session.</td>
-<td>nvarchar</td>
-<td style="width: 122px;">36</td>
-<td>PK</td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">UserId</td>
-<td style="width: 122px;">Unique identifier for the user.</td>
-<td>int</td>
-<td style="width: 122px;">4</td>
-<td>PK, FK</td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">Timestamp</td>
-<td style="width: 122px;">Date and time in which the system access changed state.</td>
-<td>datetime2</td>
-<td style="width: 122px;">8</td>
-<td>PK</td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">State</td>
-<td style="width: 122px;">Indicates whether a system access started or ended at the reported time.</td>
-<td>nvarchar</td>
-<td style="width: 122px;">20</td>
-<td>PK</td>
-                </tr><tr align="left" valign="top"><td>7.6 - Updated description</td>
-<td style="width: 122px;">Source</td>
-<td style="width: 122px;">
-<p>Source of the system access.</p>
-<p>Possible values:</p>
-<ul><li>
-<p>Brightspace (Brightspace LE in browser)</p>
-                            </li>
-<li>
-<p>Pulse (Pulse mobile app)</p>
-                            </li>
-<li>
-<p>BPG-mobile (Brightspace Parent &amp; Guardian mobile app)</p>
-                            </li>
-                        </ul></td>
-<td>nvarchar</td>
-<td style="width: 122px;">20</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">AppVersion</td>
-<td style="width: 122px;">
-<p>Version of the app, where applicable.</p>
-<p>Field will be null for Brightspace sources.</p>
-                    </td>
-<td>nvarchar</td>
-<td style="width: 122px;">20</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>
-<p>5.7 / 6.0 - Updated column size</p>
-                    </td>
-<td style="width: 122px;">Device</td>
-<td style="width: 122px;">
-<p>Device used in the system access.</p>
-<p>Field will be null for Brightspace sources.</p>
-                    </td>
-<td>nvarchar</td>
-<td style="width: 122px;">50</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">IsOfflineMode</td>
-<td style="width: 122px;">
-<p>Indicates if a portion or all of the system access occurred offline with no internet connection.</p>
-<p>Field will be null for Brightspace sources.</p>
-                    </td>
-<td>bit</td>
-<td style="width: 122px;">1</td>
-<td></td>
-                </tr><tr align="left" valign="top"><td>5.6</td>
-<td style="width: 122px;">IPAddress</td>
-<td style="width: 122px;">
-<p>IP Address at which the event occurred.</p>
-<p>Field can be null.</p>
-                    </td>
-<td>nvarchar</td>
-<td style="width: 122px;">45</td>
-<td></td>
-                </tr></tbody></table>
-</article>
-</div>
-</section>
-</main>
-</div>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Session History</h2>
+            <p>The Session History Brightspace Data Set returns a list of login session histories for all users in your organization. Does not include app usage. The Session History data set and differential is limited to 3 years of data (all of the previous two calendar years and the current calendar year to date).</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>7.19 / 8.5 - Updated type</td>
+                  <td>SessionId</td>
+                  <td>Unique session identifier. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>OrgId</td>
+                  <td>Unique org unit Identifier. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>DateStarted</td>
+                  <td>Session start date time (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>DateEnded</td>
+                  <td>Session end date time (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>LastAccessed</td>
+                  <td>Last access date time (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>TimedOut</td>
+                  <td>If session timed out.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.6</td>
+                  <td>HistoryID</td>
+                  <td>Unique session history identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>System Access Log</h2>
+            <p>The System Access Log Brightspace Data Set captures each time a user accesses the system from the LMS via a browser (Brightspace), from the Pulse app (Pulse), or from the Brightspace Parent &amp; Guardian mobile app (BPG-mobile). System access using Brightspace Parent &amp; Guardian is represented in the data set twice: one where Source=Brightspace and one where Source=BPG-mobile. Data from Brightspace and Pulse is available from September 2020 onwards. Data from Brightspace Parent &amp; Guardian is only available from May 2022 onwards. Note: System access begins when the user logs in, returns after 30 minutes of inactivity, or opens the app. System access ends after 30 minutes of inactivity.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>5.6</td>
+                  <td>SessionId</td>
+                  <td>Unique identifier for the session.</td>
+                  <td>nvarchar</td>
+                  <td>36</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>UserId</td>
+                  <td>Unique identifier for the user.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>Timestamp</td>
+                  <td>Date and time in which the system access changed state.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>State</td>
+                  <td>Indicates whether a system access started or ended at the reported time.</td>
+                  <td>nvarchar</td>
+                  <td>20</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>7.6 - Updated description</td>
+                  <td>Source</td>
+                  <td>Source of the system access. Possible values:</td>
+                  <td>nvarchar</td>
+                  <td>20</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>AppVersion</td>
+                  <td>Version of the app, where applicable. Field will be null for Brightspace sources.</td>
+                  <td>nvarchar</td>
+                  <td>20</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Updated column size</td>
+                  <td>Device</td>
+                  <td>Device used in the system access. Field will be null for Brightspace sources.</td>
+                  <td>nvarchar</td>
+                  <td>50</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>IsOfflineMode</td>
+                  <td>Indicates if a portion or all of the system access occurred offline with no internet connection. Field will be null for Brightspace sources.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.6</td>
+                  <td>IPAddress</td>
+                  <td>IP Address at which the event occurred. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>45</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
