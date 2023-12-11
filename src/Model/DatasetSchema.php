@@ -4,16 +4,17 @@ declare(strict_types=1);
 
 namespace GSU\D2L\DataHub\Schema\Model;
 
-use mjfklib\Container\ArrayValue;
+use mjfklib\Utils\ArrayValue;
 
 class DatasetSchema
 {
     /**
-     * @param mixed[] $values
+     * @param mixed $values
      * @return self
      */
-    public static function create(array $values): self
+    public static function create(mixed $values): self
     {
+        $values = ArrayValue::convertToArray($values);
         return new self(
             type: DatasetSchemaType::getType(ArrayValue::getStringNull($values, 'type') ?? DatasetSchemaType::BDS),
             name: ArrayValue::getString($values, 'name'),

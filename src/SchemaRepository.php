@@ -6,6 +6,9 @@ namespace GSU\D2L\DataHub\Schema;
 
 use GSU\D2L\DataHub\Schema\Model\DatasetSchema;
 use GSU\D2L\DataHub\Schema\Model\DatasetSchemaType;
+use mjfklib\Utils\ArrayValue;
+use mjfklib\Utils\FileMethods;
+use mjfklib\Utils\JSON;
 
 class SchemaRepository
 {
@@ -45,12 +48,12 @@ class SchemaRepository
      */
     protected function initSchemaMap(string $schemaDir): array
     {
-        $schemaMap = file_get_contents("{$schemaDir}/schema_map.json");
-        $schemaMap = is_string($schemaMap) ? json_decode($schemaMap, true, 2, JSON_THROW_ON_ERROR) : null;
-        return array_filter(
-            is_array($schemaMap) ? $schemaMap : [],
-            fn($v, $k) => is_string($v) && is_string($k),
-            ARRAY_FILTER_USE_BOTH
+        return ArrayValue::convertToStringArray(
+            JSON::decodeArray(
+                FileMethods::getContents(
+                    "{$schemaDir}/schema_map.json"
+                )
+            )
         );
     }
 
@@ -147,25 +150,7 @@ class SchemaRepository
      */
     protected function readFile(string $path): array
     {
-        if (!is_file($path) || !is_readable($path)) {
-            throw new \RuntimeException("File not found: {$path}");
-        }
-
-        $contents = file_get_contents($path);
-        if (!is_string($contents)) {
-            throw new \RuntimeException("Error reading file: {$path}");
-        }
-
-        try {
-            $values = json_decode($contents, true, 16, JSON_THROW_ON_ERROR);
-            if (!is_array($values)) {
-                throw new \RuntimeException("Not an array");
-            }
-        } catch (\Throwable $t) {
-            throw new \RuntimeException("Error parsing file contents", 0, $t);
-        }
-
-        return $values;
+        return JSON::decodeArray(FileMethods::getContents($path));
     }
 
 
@@ -178,16 +163,9 @@ class SchemaRepository
         string $path,
         DatasetSchema $dataset
     ): void {
-        $contents = json_encode($dataset, JSON_PRETTY_PRINT, 16);
-        if (!is_string($contents)) {
-            throw new \RuntimeException(
-                message: "Error serializing dataset: {$dataset->type->value}_{$dataset->getSimpleName()}"
-            );
-        }
-
-        $bytes = file_put_contents($path, $contents);
-        if (!(is_int($bytes) &&  $bytes === strlen($contents))) {
-            throw new \RuntimeException("Error writing file: {$path}");
-        }
+        FileMethods::putContents(
+            $path,
+            JSON::encode($dataset, 512, JSON_PRETTY_PRINT)
+        );
     }
 }
