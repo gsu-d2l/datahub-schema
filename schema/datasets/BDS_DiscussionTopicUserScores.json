@@ -36,7 +36,7 @@
         },
         {
             "name": "IsGraded",
-            "description": "If topic was graded",
+            "description": "Indicates if the topic was graded",
             "type": "bit",
             "size": "1",
             "isPrimary": false,

@@ -86,7 +86,7 @@
         },
         {
             "name": "DeploymentId",
-            "description": "The unique identifier of the link's deployment that was used for the LTI launch. This is only available for 1.3 links. Field can be null.",
+            "description": "The unique identifier of the link's deployment that was used for the LTI launch. This is only available for LTI 1.3 links. Field can be null.",
             "type": "uniqueidentifier",
             "size": "16",
             "isPrimary": false,
@@ -96,7 +96,7 @@
         },
         {
             "name": "ClientId",
-            "description": "The unique identifier of the link's registration that was used for the LTI launch. This is only available for 1.3 links. Field can be null.",
+            "description": "The unique identifier of the link's registration that was used for the LTI launch. This is only available for LTI 1.3 links. Field can be null.",
             "type": "uniqueidentifier",
             "size": "16",
             "isPrimary": false,
@@ -106,7 +106,7 @@
         },
         {
             "name": "ToolProviderId",
-            "description": "The id of the link's tool provider that was used for the LTI launch. This is only available for 1.1 links. Field can be null.",
+            "description": "The id of the link's tool provider that was used for the LTI launch. This is only available for LTI 1.1 links. Field can be null.",
             "type": "nvarchar",
             "size": "300",
             "isPrimary": false,

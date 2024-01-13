@@ -1,8 +1,8 @@
 {
-  "version": "20.23.11",
-  "dataSetVersion": "8.10",
-  "modules": [
-    {
+  "version": "20.24.1",
+  "dataSetVersion": "8.11 / 9.1",
+  "modules": {
+    "Advanced Data Sets": {
       "name": "Advanced Data Sets",
       "type": "ADS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets",
@@ -25,7 +25,7 @@
         "Terms & Conditions - Version History Report"
       ]
     },
-    {
+    "Accommodations": {
       "name": "Accommodations",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4752-accommodations-data-sets",
@@ -33,7 +33,7 @@
         "Accommodations Profile Log"
       ]
     },
-    {
+    "Activity Feed": {
       "name": "Activity Feed",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4712-activity-feed-data-sets",
@@ -44,7 +44,7 @@
         "Activity Feed Post Objects"
       ]
     },
-    {
+    "Announcements": {
       "name": "Announcements",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4723-announcements-data-sets",
@@ -52,7 +52,7 @@
         "Announcements"
       ]
     },
-    {
+    "Assignments": {
       "name": "Assignments",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4767-assignments-data-sets",
@@ -64,7 +64,7 @@
         "TurnItIn Submissions"
       ]
     },
-    {
+    "Attendance": {
       "name": "Attendance",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4519-attendance-data-sets",
@@ -75,7 +75,7 @@
         "Attendance User Sessions"
       ]
     },
-    {
+    "Awards": {
       "name": "Awards",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4520-awards-data-sets",
@@ -85,7 +85,7 @@
         "Award Objects"
       ]
     },
-    {
+    "Calendar": {
       "name": "Calendar",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4521-calendar-data-sets",
@@ -93,16 +93,7 @@
         "Calendar Events"
       ]
     },
-    {
-      "name": "Chat",
-      "type": "BDS",
-      "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4522-chat-data-sets",
-      "datasets": [
-        "Chat Objects",
-        "Chat Session Log"
-      ]
-    },
-    {
+    "Checklist": {
       "name": "Checklist",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4523-checklist-data-sets",
@@ -113,7 +104,7 @@
         "Checklist Objects"
       ]
     },
-    {
+    "Competency": {
       "name": "Competency",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4754-competency-data-sets",
@@ -126,7 +117,7 @@
         "Competency Structure"
       ]
     },
-    {
+    "Content": {
       "name": "Content",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4713-content-data-sets",
@@ -137,7 +128,7 @@
         "Content User Progress"
       ]
     },
-    {
+    "Content Service": {
       "name": "Content Service",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/22812-content-service-data-sets",
@@ -147,7 +138,7 @@
         "Media Objects"
       ]
     },
-    {
+    "Course Copy": {
       "name": "Course Copy",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4725-course-copy-data-sets",
@@ -155,7 +146,7 @@
         "Course Copy Logs"
       ]
     },
-    {
+    "Course Publisher": {
       "name": "Course Publisher",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4524-course-publisher-data-sets",
@@ -164,7 +155,7 @@
         "Course Publisher Recipients"
       ]
     },
-    {
+    "Discussions": {
       "name": "Discussions",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4525-discussions-data-sets",
@@ -176,7 +167,7 @@
         "Discussion Topic User Scores"
       ]
     } ,
-    {
+    "Exemptions": {
       "name": "Exemptions",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4526-exemptions-data-sets",
@@ -184,7 +175,7 @@
         "Activity Exemptions Log"
       ]
     },
-    {
+    "Grades": {
       "name": "Grades",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4527-grades-data-sets",
@@ -197,7 +188,7 @@
         "Grade Scheme Ranges"
       ]
     },
-    {
+    "Intelligent Agents": {
       "name": "Intelligent Agents",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4528-intelligent-agents-data-sets",
@@ -207,7 +198,7 @@
         "Intelligent Agent Run Users"
       ]
     },
-    {
+    "JIT Provisioning": {
       "name": "JIT Provisioning",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/5782-jit-provisioning-data-sets",
@@ -215,7 +206,7 @@
         "JIT Provisioned Users Log"
       ]
     },
-    {
+    "Local Authentication": {
       "name": "Local Authentication",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4714-local-authentication-data-sets",
@@ -223,7 +214,7 @@
         "Local Authentication Security Log"
       ]
     },
-    {
+    "LTI": {
       "name": "LTI",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4727-lti-data-sets",
@@ -234,7 +225,7 @@
         "LTI Links Shared"
       ]
     },
-    {
+    "Organizational Units": {
       "name": "Organizational Units",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4529-organizational-units-data-sets",
@@ -246,7 +237,7 @@
         "Organizational Unit Recent Access"
       ]
     },
-    {
+    "Outcomes": {
       "name": "Outcomes",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4796-outcomes-data-sets",
@@ -264,7 +255,7 @@
         "Outcomes Scale Level Definition"
       ]
     },
-    {
+    "Portfolio": {
       "name": "Portfolio",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4530-portfolio-data-sets",
@@ -275,7 +266,7 @@
         "Portfolio Evidence Objects"
       ]
     },
-    {
+    "Questions": {
       "name": "Questions",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4531-questions-data-sets",
@@ -284,7 +275,7 @@
         "Question Relationships"
       ]
     },
-    {
+    "Quizzes": {
       "name": "Quizzes",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4532-quizzes-data-sets",
@@ -299,7 +290,7 @@
         "Quiz User Answers"
       ]
     },
-    {
+    "Release Conditions": {
       "name": "Release Conditions",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4533-release-conditions-data-sets",
@@ -309,7 +300,7 @@
         "Release Condition Results"
       ]
     },
-    {
+    "Role Details": {
       "name": "Role Details",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4534-role-details-data-sets",
@@ -317,7 +308,7 @@
         "Role Details"
       ]
     },
-    {
+    "Rubrics": {
       "name": "Rubrics",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4535-rubrics-data-sets",
@@ -331,7 +322,7 @@
         "Rubrics Edit"
       ]
     },
-    {
+    "SCORM": {
       "name": "SCORM",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4536-scorm-data-sets",
@@ -347,7 +338,7 @@
         "SCORM Visits"
       ]
     },
-    {
+    "Sessions and System Access": {
       "name": "Sessions and System Access",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4537-sessions-and-system-access-data-sets",
@@ -356,7 +347,7 @@
         "System Access Log"
       ]
     },
-    {
+    "SIS Course Merge": {
       "name": "SIS Course Merge",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/19147-sis-course-merge-data-sets",
@@ -364,7 +355,7 @@
         "SIS Course Merge Log"
       ]
     },
-    {
+    "Surveys": {
       "name": "Surveys",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4538-surveys-data-sets",
@@ -378,15 +369,15 @@
         "Survey User Answers"
       ]
     },
-    {
-      "name": "Tools ",
+    "Tools": {
+      "name": "Tools",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4540-tools-data-sets",
       "datasets": [
         "Tools"
       ]
     },
-    {
+    "Users": {
       "name": "Users",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4740-users-data-sets",
@@ -402,7 +393,7 @@
         "Users"
       ]
     },
-    {
+    "Virtual Classroom": {
       "name": "Virtual Classroom",
       "type": "BDS",
       "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4541-virtual-classroom-data-sets",
@@ -410,5 +401,5 @@
         "Virtual Classroom Usage"
       ]
     }
-  ]
+  }
 }

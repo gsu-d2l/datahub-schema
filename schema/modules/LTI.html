@@ -87,7 +87,7 @@
                 <tr>
                   <td>5.5</td>
                   <td>DeploymentId</td>
-                  <td>The unique identifier of the link&#039;s deployment that was used for the LTI launch. This is only available for 1.3 links. Field can be null.</td>
+                  <td>The unique identifier of the link&#039;s deployment that was used for the LTI launch. This is only available for LTI 1.3 links. Field can be null.</td>
                   <td>uniqueidentifier</td>
                   <td>16</td>
                   <td></td>
@@ -95,7 +95,7 @@
                 <tr>
                   <td>5.5</td>
                   <td>ClientId</td>
-                  <td>The unique identifier of the link&#039;s registration that was used for the LTI launch. This is only available for 1.3 links. Field can be null.</td>
+                  <td>The unique identifier of the link&#039;s registration that was used for the LTI launch. This is only available for LTI 1.3 links. Field can be null.</td>
                   <td>uniqueidentifier</td>
                   <td>16</td>
                   <td></td>
@@ -103,7 +103,7 @@
                 <tr>
                   <td>5.5</td>
                   <td>ToolProviderId</td>
-                  <td>The id of the link&#039;s tool provider that was used for the LTI launch. This is only available for 1.1 links. Field can be null.</td>
+                  <td>The id of the link&#039;s tool provider that was used for the LTI launch. This is only available for LTI 1.1 links. Field can be null.</td>
                   <td>nvarchar</td>
                   <td>300</td>
                   <td></td>
@@ -151,7 +151,7 @@
               </tbody>
             </table>
             <h2>LTI Link Migration Audit</h2>
-            <p>The LTI Link Migration Audit Brightspace Data Set logs all attempted LTI link migrations. Each row in the data set represents an attempted link migration from LTI 1.1 (legacy) to LTI 1.3 (advantage).</p>
+            <p>The LTI Link Migration Audit Brightspace Data Set logs all attempted LTI link migrations. Each row in the data set represents an attempted link migration from LTI 1.1 to LTI 1.3.</p>
             <table>
               <thead>
                 <tr>
@@ -327,7 +327,7 @@
                 <tr>
                   <td>5.7 / 6.0 - Changed Column Size</td>
                   <td>LTIVersion</td>
-                  <td>Indicates whether the link is Legacy or LTI Advantage.</td>
+                  <td>Indicates whether the link is LTI 1.1 or LTI 1.3.</td>
                   <td>varchar</td>
                   <td>12</td>
                   <td></td>
@@ -351,7 +351,7 @@
                 <tr>
                   <td>3.6 / 4.1</td>
                   <td>IsVisible</td>
-                  <td>Determines if the link is displayed when adding to course content in the course. For Legacy LTI, this is called IsVisible in the UI.</td>
+                  <td>Determines if the link is displayed when adding to course content in the course. For LTI 1.1, this is called IsVisible in the UI.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -359,7 +359,7 @@
                 <tr>
                   <td>3.6 / 4.1</td>
                   <td>SendTCInfo</td>
-                  <td>If true, determines if the tool_consumer variables are allowed to be included in the LTI launch. Legacy LTI only.</td>
+                  <td>If true, determines if the tool_consumer variables are allowed to be included in the LTI launch. LTI 1.1 only.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -367,7 +367,7 @@
                 <tr>
                   <td>3.6 / 4.1</td>
                   <td>SendContextInfo</td>
-                  <td>If true, determines if context_id, context_title, context_label, and context_type variables are included in the LTI launch. Legacy LTI only.</td>
+                  <td>If true, determines if context_id, context_title, context_label, and context_type variables are included in the LTI launch. LTI 1.1 only.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -375,7 +375,7 @@
                 <tr>
                   <td>3.6 / 4.1</td>
                   <td>SendCourseInfo</td>
-                  <td>If true, determines if LISSourcedId is included in the launch. Legacy LTI only.</td>
+                  <td>If true, determines if LISSourcedId is included in the launch. LTI 1.1 only.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -383,7 +383,7 @@
                 <tr>
                   <td>3.6 / 4.1</td>
                   <td>SendOrgUnitInfo</td>
-                  <td>If true, determines if Org Unit Id, Course Name, Course Code, Org Unit Type, LIS Course Offering Sourcedid, and LIS Course Section Sourcedid are included in the LTI launch. LTIAdvantage only. Field can be null.</td>
+                  <td>If true, determines if Org Unit Id, Course Name, Course Code, Org Unit Type, LIS Course Offering Sourcedid, and LIS Course Section Sourcedid are included in the LTI launch. LTI 1.3 only. Field can be null.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -391,7 +391,7 @@
                 <tr>
                   <td>3.6 / 4.1</td>
                   <td>SendUserId</td>
-                  <td>If true, determines a unique identifier for the user, generated on the user&#039;s first launch. Legacy LTI only. This is always sent to LTIAdvantage and cannot be turned off unless Anonymous launch is used.</td>
+                  <td>If true, determines a unique identifier for the user, generated on the user&#039;s first launch. LTI 1.1 only. This is always sent to LTI 1.3 and cannot be turned off unless Anonymous launch is used.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -415,7 +415,7 @@
                 <tr>
                   <td>3.6 / 4.1</td>
                   <td>SendLinkTitle</td>
-                  <td>If true, determines if the LTI Link Title is sent during launch. Legacy LTI only.</td>
+                  <td>If true, determines if the LTI Link Title is sent during launch. LTI 1.1 only.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -423,7 +423,7 @@
                 <tr>
                   <td>3.6 / 4.1</td>
                   <td>SendLinkDescription</td>
-                  <td>If true, determines if the LTI Link Description is sent during launch. Legacy LTI only.</td>
+                  <td>If true, determines if the LTI Link Description is sent during launch. LTI 1.1 only.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -447,7 +447,7 @@
                 <tr>
                   <td>3.6 / 4.1</td>
                   <td>SendD2LOrgRoleId</td>
-                  <td>If true, determines if the custom Brightspace D2L role is sent during launch. Legacy LTI only.</td>
+                  <td>If true, determines if the custom Brightspace D2L role is sent during launch. LTI 1.1 only.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -455,7 +455,7 @@
                 <tr>
                   <td>3.6 / 4.1</td>
                   <td>SendBrightspaceUserId</td>
-                  <td>If true, determines if the D2L User Id is sent during the launch. LTIAdvantage only. Field can be null.</td>
+                  <td>If true, determines if the D2L User Id is sent during the launch. LTI 1.3 only. Field can be null.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -463,7 +463,7 @@
                 <tr>
                   <td>3.6 / 4.1</td>
                   <td>Anonymous</td>
-                  <td>If true, no user information is sent during the launch. LTIAdvantage only. Field can be null.</td>
+                  <td>If true, no user information is sent during the launch. LTI 1.3 only. Field can be null.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -479,7 +479,7 @@
                 <tr>
                   <td>3.6 / 4.1</td>
                   <td>UseToolProviderSecuritySettings</td>
-                  <td>If true, uses the Tool Provider security settings versus link security settings based on domain matching. Legacy LTI only.</td>
+                  <td>If true, uses the Tool Provider security settings versus link security settings based on domain matching. LTI 1.1 only.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>

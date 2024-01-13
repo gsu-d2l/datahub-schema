@@ -123,6 +123,16 @@
             "isForeign": false,
             "canBeNull": false,
             "versionHistory": "6.9"
+        },
+        {
+            "name": "HasMetAchievementThreshold",
+            "description": "Indicates whether a learner has met the achievement threshold. Field can be null.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "8.12 \/ 9.1"
         }
     ]
 }

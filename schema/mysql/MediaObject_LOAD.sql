@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS `MediaObject_LOAD`;
+
+CREATE TABLE `MediaObject_LOAD` (
+  `ContentId` VARCHAR(36) NOT NULL,
+  `Title` VARCHAR(1000) DEFAULT NULL,
+  `RevisionCount` INT DEFAULT NULL,
+  `OwnerId` INT DEFAULT NULL,
+  `LastModified` DATETIME DEFAULT NULL,
+  UNIQUE KEY (`ContentId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

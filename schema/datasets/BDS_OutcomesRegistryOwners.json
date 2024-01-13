@@ -1,6 +1,6 @@
 {
     "type": "BDS",
-    "name": "Outcome Registry Owners",
+    "name": "Outcomes Registry Owners",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4796-outcomes-data-sets#outcomes-registry-owners",
     "description": "In the Outcomes Registry Owners Brightspace Data Set, each entry represents a registry for both program and org unit owned registries. The data set only captures data from June 2021 onwards.",
     "columns": [

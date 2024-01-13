@@ -13,5 +13,6 @@ CREATE TABLE `OutcomeAssessedCheckpoint` (
   `LastModifiedDate` DATETIME DEFAULT NULL,
   `LastModifiedBy` INT DEFAULT NULL,
   `IsDeleted` TINYINT DEFAULT NULL,
+  `HasMetAchievementThreshold` TINYINT DEFAULT NULL,
   UNIQUE KEY (`CheckpointId`, `DemonstrationId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

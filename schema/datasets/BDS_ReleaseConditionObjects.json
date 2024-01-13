@@ -86,7 +86,7 @@
         },
         {
             "name": "ResultToolId",
-            "description": "Unique result tool identifier.",
+            "description": "Unique identifier for the result tool.",
             "type": "int",
             "size": "4",
             "isPrimary": false,

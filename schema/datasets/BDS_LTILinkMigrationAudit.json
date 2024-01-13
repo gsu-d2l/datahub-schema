@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "LTI Link Migration Audit",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4727-lti-data-sets#lti-link-migration-audit",
-    "description": "The LTI Link Migration Audit Brightspace Data Set logs all attempted LTI link migrations. Each row in the data set represents an attempted link migration from LTI 1.1 (legacy) to LTI 1.3 (advantage).",
+    "description": "The LTI Link Migration Audit Brightspace Data Set logs all attempted LTI link migrations. Each row in the data set represents an attempted link migration from LTI 1.1 to LTI 1.3.",
     "columns": [
         {
             "name": "LTIMigrationId",

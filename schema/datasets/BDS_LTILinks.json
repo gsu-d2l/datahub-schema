@@ -46,7 +46,7 @@
         },
         {
             "name": "LTIVersion",
-            "description": "Indicates whether the link is Legacy or LTI Advantage.",
+            "description": "Indicates whether the link is LTI 1.1 or LTI 1.3.",
             "type": "varchar",
             "size": "12",
             "isPrimary": false,
@@ -76,7 +76,7 @@
         },
         {
             "name": "IsVisible",
-            "description": "Determines if the link is displayed when adding to course content in the course. For Legacy LTI, this is called IsVisible in the UI.",
+            "description": "Determines if the link is displayed when adding to course content in the course. For LTI 1.1, this is called IsVisible in the UI.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
@@ -86,7 +86,7 @@
         },
         {
             "name": "SendTCInfo",
-            "description": "If true, determines if the tool_consumer variables are allowed to be included in the LTI launch. Legacy LTI only.",
+            "description": "If true, determines if the tool_consumer variables are allowed to be included in the LTI launch. LTI 1.1 only.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
@@ -96,7 +96,7 @@
         },
         {
             "name": "SendContextInfo",
-            "description": "If true, determines if context_id, context_title, context_label, and context_type variables are included in the LTI launch. Legacy LTI only.",
+            "description": "If true, determines if context_id, context_title, context_label, and context_type variables are included in the LTI launch. LTI 1.1 only.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
@@ -106,7 +106,7 @@
         },
         {
             "name": "SendCourseInfo",
-            "description": "If true, determines if LISSourcedId is included in the launch. Legacy LTI only.",
+            "description": "If true, determines if LISSourcedId is included in the launch. LTI 1.1 only.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
@@ -116,7 +116,7 @@
         },
         {
             "name": "SendOrgUnitInfo",
-            "description": "If true, determines if Org Unit Id, Course Name, Course Code, Org Unit Type, LIS Course Offering Sourcedid, and LIS Course Section Sourcedid are included in the LTI launch. LTIAdvantage only. Field can be null.",
+            "description": "If true, determines if Org Unit Id, Course Name, Course Code, Org Unit Type, LIS Course Offering Sourcedid, and LIS Course Section Sourcedid are included in the LTI launch. LTI 1.3 only. Field can be null.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
@@ -126,7 +126,7 @@
         },
         {
             "name": "SendUserId",
-            "description": "If true, determines a unique identifier for the user, generated on the user's first launch. Legacy LTI only. This is always sent to LTIAdvantage and cannot be turned off unless Anonymous launch is used.",
+            "description": "If true, determines a unique identifier for the user, generated on the user's first launch. LTI 1.1 only. This is always sent to LTI 1.3 and cannot be turned off unless Anonymous launch is used.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
@@ -156,7 +156,7 @@
         },
         {
             "name": "SendLinkTitle",
-            "description": "If true, determines if the LTI Link Title is sent during launch. Legacy LTI only.",
+            "description": "If true, determines if the LTI Link Title is sent during launch. LTI 1.1 only.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
@@ -166,7 +166,7 @@
         },
         {
             "name": "SendLinkDescription",
-            "description": "If true, determines if the LTI Link Description is sent during launch. Legacy LTI only.",
+            "description": "If true, determines if the LTI Link Description is sent during launch. LTI 1.1 only.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
@@ -196,7 +196,7 @@
         },
         {
             "name": "SendD2LOrgRoleId",
-            "description": "If true, determines if the custom Brightspace D2L role is sent during launch. Legacy LTI only.",
+            "description": "If true, determines if the custom Brightspace D2L role is sent during launch. LTI 1.1 only.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
@@ -206,7 +206,7 @@
         },
         {
             "name": "SendBrightspaceUserId",
-            "description": "If true, determines if the D2L User Id is sent during the launch. LTIAdvantage only. Field can be null.",
+            "description": "If true, determines if the D2L User Id is sent during the launch. LTI 1.3 only. Field can be null.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
@@ -216,7 +216,7 @@
         },
         {
             "name": "Anonymous",
-            "description": "If true, no user information is sent during the launch. LTIAdvantage only. Field can be null.",
+            "description": "If true, no user information is sent during the launch. LTI 1.3 only. Field can be null.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
@@ -236,7 +236,7 @@
         },
         {
             "name": "UseToolProviderSecuritySettings",
-            "description": "If true, uses the Tool Provider security settings versus link security settings based on domain matching. Legacy LTI only.",
+            "description": "If true, uses the Tool Provider security settings versus link security settings based on domain matching. LTI 1.1 only.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,

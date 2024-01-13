@@ -1,6 +1,6 @@
 {
     "type": "BDS",
-    "name": "Gradebook Settings",
+    "name": "Grade Book Settings",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4527-grades-data-sets#grade-book-settings",
     "description": "The Grade Book Settings Brightspace Data Set returns all the grade book settings for your org units.",
     "columns": [

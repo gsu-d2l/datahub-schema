@@ -63,6 +63,46 @@
             "isForeign": false,
             "canBeNull": true,
             "versionHistory": "4.0"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date when the award was last changed (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "8.12 \/ 9.1"
+        },
+        {
+            "name": "Credits",
+            "description": "Indicates if the award has credits, and how many. Field can be null.",
+            "type": "decimal",
+            "size": "9, 2",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "8.12 \/ 9.1"
+        },
+        {
+            "name": "IsAssociated",
+            "description": "Indicates whether the award is associated to the course.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.12 \/ 9.1"
+        },
+        {
+            "name": "Version",
+            "description": "Version number for the course award.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.12 \/ 9.1"
         }
     ]
 }
