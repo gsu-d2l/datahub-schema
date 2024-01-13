@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace GSU\D2L\DataHub\Schema;
 
+use GSU\D2L\DataHub\Schema\Model\DatabaseSchemaType;
 use GSU\D2L\DataHub\Schema\Model\DatasetSchema;
 use GSU\D2L\DataHub\Schema\Model\DatasetSchemaType;
 use mjfklib\Utils\ArrayValue;
@@ -12,6 +13,9 @@ use mjfklib\Utils\JSON;
 
 class SchemaRepository
 {
+    /** @var array<string,array<string,string>> $tableMaps */
+    private array $tableMaps = [];
+
     private string $schemaDir;
 
     /** @var array<string,string> $schemaMap */
@@ -73,6 +77,33 @@ class SchemaRepository
     public function getDatasetsDir(): string
     {
         return $this->getSchemaDir() . '/datasets';
+    }
+
+
+    /**
+     * @param DatasetSchema $datasetSchema
+     * @param DatabaseSchemaType $type
+     * @return string
+     */
+    public function getTableName(
+        DatasetSchema $datasetSchema,
+        DatabaseSchemaType $type
+    ): string {
+        if (!isset($this->tableMaps[$type->value])) {
+            $tableMapPath = "{$this->getSchemaDir()}/{$type->value}/table_map.json";
+            if (!is_file($tableMapPath)) {
+                throw new \RuntimeException("Unable to load table map: {$type->value}");
+            }
+
+            $this->tableMaps[$type->value] = ArrayValue::convertToStringArray(
+                JSON::decodeArray(
+                    FileMethods::getContents($tableMapPath)
+                )
+            );
+        }
+
+        return $this->tableMaps[$type->value][$datasetSchema->name]
+            ?? throw new \RuntimeException("Dataset not found: {$datasetSchema->name}, {$type->value}");
     }
 
 
