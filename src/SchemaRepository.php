@@ -24,6 +24,9 @@ final class SchemaRepository implements SchemaRepositoryInterface
     /** @var array<string,string> $datasetMap */
     private array $datasetMap;
 
+    /** @var array<string,string> $simpleDatasetMap */
+    private array $simpleDatasetMap;
+
     /** @var array<string,array<string,string>> $sqlTableMap */
     private array $sqlTableMap = [];
 
@@ -50,6 +53,17 @@ final class SchemaRepository implements SchemaRepositoryInterface
                 )
             )
         );
+
+        $this->simpleDatasetMap = array_column(
+            array_map(
+                fn (string $v, string $k) => [DatasetSchema::getName($v), DatasetSchema::getName($k)],
+                array_values($this->datasetMap),
+                array_keys($this->datasetMap)
+            ),
+            0,
+            1
+        );
+
         foreach (SQLType::cases() as $sqlType) {
             $this->sqlTableMap[$sqlType->value] = ArrayValue::convertToStringArray(
                 JSON::decodeArray(
@@ -277,7 +291,9 @@ final class SchemaRepository implements SchemaRepositoryInterface
     private function getDatasetName(string $datasetName): string|null
     {
         return $this->datasetMap[$datasetName]
-            ?? (in_array($datasetName, $this->datasetMap, true) ? $datasetName : null);
+            ?? (in_array($datasetName, $this->datasetMap, true) ? $datasetName : null)
+            ?? $this->simpleDatasetMap[$datasetName]
+            ?? (in_array($datasetName, $this->simpleDatasetMap, true) ? $datasetName : null);
     }
 
 
