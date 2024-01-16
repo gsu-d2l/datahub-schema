@@ -6,7 +6,7 @@ namespace GSU\D2L\DataHub\Schema\Model;
 
 use mjfklib\Utils\ArrayValue;
 
-class ColumnSchema
+final class ColumnSchema
 {
     /**
      * @param mixed $values

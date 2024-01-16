@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace GSU\D2L\DataHub\Schema\Model;
 
-enum DatabaseSchemaType: string
+enum SQLType: string
 {
     case ORACLE = "oracle";
     case MYSQL = "mysql";

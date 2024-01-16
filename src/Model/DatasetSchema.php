@@ -6,7 +6,7 @@ namespace GSU\D2L\DataHub\Schema\Model;
 
 use mjfklib\Utils\ArrayValue;
 
-class DatasetSchema
+final class DatasetSchema
 {
     /**
      * @param mixed $values
@@ -21,7 +21,7 @@ class DatasetSchema
             url: ArrayValue::getString($values, 'url'),
             description: ArrayValue::getString($values, 'description'),
             columns: array_values(array_map(
-                fn($col) => is_array($col) ? ColumnSchema::create($col) : throw new \RuntimeException(),
+                fn ($col) => is_array($col) ? ColumnSchema::create($col) : throw new \RuntimeException(),
                 ArrayValue::getArray($values, 'columns')
             ))
         );
@@ -83,7 +83,7 @@ class DatasetSchema
     {
         /** @var string[] $columns */
         $columns = array_values(array_map(
-            fn(string|ColumnSchema $c): string => match (true) {
+            fn (string|ColumnSchema $c): string => match (true) {
                 $c instanceof ColumnSchema => $c->name,
                 default => $c
             },
