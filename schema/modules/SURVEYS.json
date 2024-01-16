@@ -1,0 +1,14 @@
+{
+    "name": "Surveys",
+    "type": "BDS",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4538-surveys-data-sets",
+    "datasets": [
+        "Quiz Survey Sections",
+        "Survey Attempts",
+        "Survey Objects",
+        "Survey Question Answer Options",
+        "Survey Question Answers",
+        "Survey User Answer Responses",
+        "Survey User Answers"
+    ]
+}

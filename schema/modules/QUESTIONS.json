@@ -1,0 +1,9 @@
+{
+    "name": "Questions",
+    "type": "BDS",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4531-questions-data-sets",
+    "datasets": [
+        "Question Library",
+        "Question Relationships"
+    ]
+}

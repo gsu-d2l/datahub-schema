@@ -1,0 +1,12 @@
+{
+    "name": "Organizational Units",
+    "type": "BDS",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4529-organizational-units-data-sets",
+    "datasets": [
+        "Organizational Units",
+        "Organizational Unit Ancestors",
+        "Organizational Unit Descendants",
+        "Organizational Unit Parents",
+        "Organizational Unit Recent Access"
+    ]
+}

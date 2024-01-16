@@ -1,0 +1,14 @@
+{
+    "name": "Rubrics",
+    "type": "BDS",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4535-rubrics-data-sets",
+    "datasets": [
+        "Rubric Assessment",
+        "Rubric Assessment Criteria",
+        "Rubric Criteria Levels",
+        "Rubric Objects",
+        "Rubric Object Criteria",
+        "Rubric Object Levels",
+        "Rubrics Edit"
+    ]
+}

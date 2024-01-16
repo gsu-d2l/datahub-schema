@@ -1,0 +1,10 @@
+{
+    "name": "Content Service",
+    "type": "BDS",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/22812-content-service-data-sets",
+    "datasets": [
+        "Audio Video Processed",
+        "Media Consumption Log",
+        "Media Objects"
+    ]
+}

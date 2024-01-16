@@ -1,0 +1,23 @@
+{
+    "name": "Advanced Data Sets",
+    "type": "ADS",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets",
+    "datasets": [
+        "All Grades",
+        "Attendance",
+        "Awards Issued",
+        "Content Progress",
+        "Course Learning Outcome Evaluation",
+        "Course Offering Enrollments",
+        "Enrollments and Withdrawals",
+        "Final Grades",
+        "Impersonated Session History",
+        "Instructor Usage",
+        "Learner Usage",
+        "Program Level Outcomes Evaluation (PLOE)",
+        "Rubric Assessments",
+        "Survey Results",
+        "Terms & Conditions - Activity Report",
+        "Terms & Conditions - Version History Report"
+    ]
+}

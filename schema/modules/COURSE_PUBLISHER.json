@@ -1,0 +1,9 @@
+{
+    "name": "Course Publisher",
+    "type": "BDS",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4524-course-publisher-data-sets",
+    "datasets": [
+        "Course Publisher Launches",
+        "Course Publisher Recipients"
+    ]
+}

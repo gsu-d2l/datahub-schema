@@ -1,0 +1,8 @@
+{
+    "name": "JIT Provisioning",
+    "type": "BDS",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/5782-jit-provisioning-data-sets",
+    "datasets": [
+        "JIT Provisioned Users Log"
+    ]
+}

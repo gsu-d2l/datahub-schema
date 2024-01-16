@@ -1,0 +1,10 @@
+{
+    "name": "Release Conditions",
+    "type": "BDS",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4533-release-conditions-data-sets",
+    "datasets": [
+        "PreRequisite Conditions Met",
+        "Release Condition Objects",
+        "Release Condition Results"
+    ]
+}

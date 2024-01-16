@@ -1,0 +1,8 @@
+{
+    "name": "SIS Course Merge",
+    "type": "BDS",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/19147-sis-course-merge-data-sets",
+    "datasets": [
+        "SIS Course Merge Log"
+    ]
+}

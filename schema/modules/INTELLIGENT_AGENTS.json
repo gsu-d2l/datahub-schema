@@ -1,0 +1,10 @@
+{
+    "name": "Intelligent Agents",
+    "type": "BDS",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4528-intelligent-agents-data-sets",
+    "datasets": [
+        "Intelligent Agent Objects",
+        "Intelligent Agent Run Log",
+        "Intelligent Agent Run Users"
+    ]
+}

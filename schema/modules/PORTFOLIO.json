@@ -1,0 +1,11 @@
+{
+    "name": "Portfolio",
+    "type": "BDS",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4530-portfolio-data-sets",
+    "datasets": [
+        "Portfolio Categories",
+        "Portfolio Evidence Categories",
+        "Portfolio Evidence Log",
+        "Portfolio Evidence Objects"
+    ]
+}

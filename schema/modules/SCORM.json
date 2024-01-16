@@ -1,0 +1,16 @@
+{
+    "name": "SCORM",
+    "type": "BDS",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4536-scorm-data-sets",
+    "datasets": [
+        "SCORM Activities",
+        "SCORM Activity Attempts",
+        "SCORM Interaction Attempts",
+        "SCORM Interaction Objectives",
+        "SCORM Interactions",
+        "SCORM Objective Attempts",
+        "SCORM Objectives",
+        "SCORM Objects",
+        "SCORM Visits"
+    ]
+}

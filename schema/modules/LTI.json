@@ -1,0 +1,11 @@
+{
+    "name": "LTI",
+    "type": "BDS",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4727-lti-data-sets",
+    "datasets": [
+        "LTI Launches",
+        "LTI Link Migration Audit",
+        "LTI Links",
+        "LTI Links Shared"
+    ]
+}

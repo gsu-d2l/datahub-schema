@@ -1,0 +1,11 @@
+{
+    "name": "Activity Feed",
+    "type": "BDS",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4712-activity-feed-data-sets",
+    "datasets": [
+        "Activity Feed Comment Log",
+        "Activity Feed Comment Objects",
+        "Activity Feed Post Log",
+        "Activity Feed Post Objects"
+    ]
+}

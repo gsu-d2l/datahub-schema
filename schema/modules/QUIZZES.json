@@ -1,0 +1,15 @@
+{
+    "name": "Quizzes",
+    "type": "BDS",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4532-quizzes-data-sets",
+    "datasets": [
+        "Quiz Attempts",
+        "Quiz Attempts Log",
+        "Quiz Objects",
+        "Quiz Question Answer Options",
+        "Quiz Question Answers",
+        "Quiz Survey Sections",
+        "Quiz User Answer Responses",
+        "Quiz User Answers"
+    ]
+}

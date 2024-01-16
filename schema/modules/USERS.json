@@ -1,0 +1,16 @@
+{
+    "name": "Users",
+    "type": "BDS",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4740-users-data-sets",
+    "datasets": [
+        "Auditor Relationships Log",
+        "Course Access",
+        "Course Access Log",
+        "Enrollments and Withdrawals",
+        "User Attribute Definitions",
+        "User Attribute Values",
+        "User Enrollments",
+        "User Logins",
+        "Users"
+    ]
+}
