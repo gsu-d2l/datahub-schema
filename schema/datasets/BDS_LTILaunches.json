@@ -45,7 +45,7 @@
             "versionHistory": "5.5"
         },
         {
-            "name": "ImpersonatingUserIMSRoleName",
+            "name": "ImpersonatingUserIMSRoleNames",
             "description": "A list of impersonating user's IMS roles. Field can be null.",
             "type": "nvarchar",
             "size": "10000",
