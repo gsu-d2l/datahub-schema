@@ -169,7 +169,7 @@
             "description": "Unique identifier of the question.",
             "type": "bigint",
             "size": "8",
-            "isPrimary": false,
+            "isPrimary": true,
             "isForeign": false,
             "canBeNull": false,
             "versionHistory": "7.6 -Updated key"

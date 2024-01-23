@@ -17,5 +17,6 @@ CREATE TABLE `QuestionRelationship_LOAD` (
   `IsMandatory` TINYINT DEFAULT NULL,
   `IsDeleted` TINYINT DEFAULT NULL,
   `Version` BIGINT DEFAULT NULL,
-  `ObjectId` BIGINT DEFAULT NULL
+  `ObjectId` BIGINT NOT NULL,
+  UNIQUE KEY (`ObjectId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

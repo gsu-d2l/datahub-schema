@@ -9,7 +9,7 @@
             "description": "Unique sharing identifier. Can be used to join on LTI Links.",
             "type": "bigint",
             "size": "8",
-            "isPrimary": false,
+            "isPrimary": true,
             "isForeign": true,
             "canBeNull": false,
             "versionHistory": "7.6 - Updated Key"
@@ -19,7 +19,7 @@
             "description": "Identifier for the Org Unit where the sharing occurred.",
             "type": "int",
             "size": "4",
-            "isPrimary": false,
+            "isPrimary": true,
             "isForeign": true,
             "canBeNull": false,
             "versionHistory": "7.6 - Updated Key"
@@ -29,7 +29,7 @@
             "description": "Explicit or inherited sharing.",
             "type": "varchar",
             "size": "9",
-            "isPrimary": false,
+            "isPrimary": true,
             "isForeign": false,
             "canBeNull": false,
             "versionHistory": "7.6 - Updated Key"
@@ -39,7 +39,7 @@
             "description": "Identifier of the descendant org unit type. Field can be null.",
             "type": "int",
             "size": "4",
-            "isPrimary": false,
+            "isPrimary": true,
             "isForeign": true,
             "canBeNull": true,
             "versionHistory": "7.6 - Updated Key"
