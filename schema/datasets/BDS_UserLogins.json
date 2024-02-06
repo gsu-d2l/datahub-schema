@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "User Logins",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4740-users-data-sets#user-logins",
-    "description": "The User Logins Brightspace Data Set returns a list of all login attempts for your organization.",
+    "description": "The User Logins Brightspace Data Set returns a list of all login attempts for your organization. The User Logins Brightspace Data Set contains data from 1 January 2021 onwards and adheres to the default system limit of 150 million rows of the most recent data.",
     "columns": [
         {
             "name": "OrgId",

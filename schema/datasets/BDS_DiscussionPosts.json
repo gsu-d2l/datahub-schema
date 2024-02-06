@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Discussion Posts",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4525-discussions-data-sets#discussion-posts",
-    "description": "The Discussion Posts Brightspace Data Set returns details on discussion posts, ordered from newest to oldest. Note: You can extract the body of the discussion post through the API.",
+    "description": "The Discussion Posts Brightspace Data Set returns details on discussion posts, ordered from newest to oldest. The Discussion Posts Brightspace Data Set contains data from 1 January 2021 onwards and adheres to the default system limit of 150 million rows of the most recent data. Note: You can extract the body of the discussion post through the API.",
     "columns": [
         {
             "name": "OrgUnitId",

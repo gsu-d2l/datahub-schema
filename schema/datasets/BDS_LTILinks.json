@@ -58,11 +58,11 @@
             "name": "Url",
             "description": "The URL used during the launch. Field can be null.",
             "type": "nvarchar",
-            "size": "1000",
+            "size": "2000",
             "isPrimary": false,
             "isForeign": false,
             "canBeNull": true,
-            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+            "versionHistory": "8.13 \/ 9.2 - Changed Column Size"
         },
         {
             "name": "Description",
@@ -262,7 +262,27 @@
             "isPrimary": false,
             "isForeign": false,
             "canBeNull": true,
-            "versionHistory": "4.7 \/ 5.1"
+            "versionHistory": "5.7 \/ 5.1"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "User ID of user who last modified the LTI link.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "8.13 \/ 9.2"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates if the LTI link is deleted.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.13 \/ 9.2"
         }
     ]
 }

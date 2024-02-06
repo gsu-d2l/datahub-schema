@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Discussion Posts Read Status",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4525-discussions-data-sets#discussion-posts-read-status",
-    "description": "The Discussion Posts Read Status Brightspace Data Set returns details on discussion posts read by users for your org units.",
+    "description": "The Discussion Posts Read Status Brightspace Data Set returns details on discussion posts read by users for your org units. The Discussion Posts Read Status Brightspace Data Set contains data from 1 January 2021 onwards and adheres to the default system limit of 150 million rows of the most recent data.",
     "columns": [
         {
             "name": "TopicId",

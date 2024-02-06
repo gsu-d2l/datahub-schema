@@ -41,7 +41,7 @@
                   <td>IMSRoleNames</td>
                   <td>A list of user&#039;s IMS roles.</td>
                   <td>nvarchar</td>
-                  <td>10000</td>
+                  <td>5000</td>
                   <td></td>
                 </tr>
                 <tr>
@@ -54,10 +54,10 @@
                 </tr>
                 <tr>
                   <td>5.5</td>
-                  <td>ImpersonatingUserIMSRoleName</td>
+                  <td>ImpersonatingUserIMSRoleNames</td>
                   <td>A list of impersonating user&#039;s IMS roles. Field can be null.</td>
                   <td>nvarchar</td>
-                  <td>10000</td>
+                  <td>5000</td>
                   <td></td>
                 </tr>
                 <tr>
@@ -333,11 +333,11 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>8.13 / 9.2 - Changed Column Size</td>
                   <td>Url</td>
                   <td>The URL used during the launch. Field can be null.</td>
                   <td>nvarchar</td>
-                  <td>1000</td>
+                  <td>2000</td>
                   <td></td>
                 </tr>
                 <tr>
@@ -493,67 +493,27 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td>4.7 / 5.1</td>
+                  <td>5.7 / 5.1</td>
                   <td>OuAvailabilitySetId</td>
                   <td>Unique sharing identifier. Can be used to join on LTI Links Shared. Field can be null.</td>
                   <td>bigint</td>
                   <td>8</td>
                   <td></td>
                 </tr>
-              </tbody>
-            </table>
-            <h2>LTI Links Shared</h2>
-            <p>The LTI Links Shared Brightspace Data Set lists the parent Org Units that a link is shared with and can be used within the organization. LTI Links can be shared explicitly with an org unit or be shared with an org unit&#039;s descendants, which is called inherited sharing. When an LTI 1.1 link is shared, users have the option to share with descendants of a specific type such as course offering. Note: You can be assured of unique rows within the data set by using the following four fields: OuAvailabilitySetId, OrgUnitId, SharingType, and DescendantTypeId. These may be considered a composite unique identifier for the data set.</p>
-            <table>
-              <thead>
                 <tr>
-                  <th>Version History</th>
-                  <th>Field</th>
-                  <th>Description</th>
-                  <th>Type</th>
-                  <th>Column Size</th>
-                  <th>Key</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>7.6 - Updated Key</td>
-                  <td>OuAvailabilitySetId</td>
-                  <td>Unique sharing identifier. Can be used to join on LTI Links.</td>
-                  <td>bigint</td>
-                  <td>8</td>
-                  <td>FK</td>
-                </tr>
-                <tr>
-                  <td>7.6 - Updated Key</td>
-                  <td>OrgUnitId</td>
-                  <td>Identifier for the Org Unit where the sharing occurred.</td>
+                  <td>8.13 / 9.2</td>
+                  <td>LastModifiedBy</td>
+                  <td>User ID of user who last modified the LTI link.</td>
                   <td>int</td>
                   <td>4</td>
                   <td>FK</td>
                 </tr>
                 <tr>
-                  <td>7.6 - Updated Key</td>
-                  <td>SharingType</td>
-                  <td>Explicit or inherited sharing.</td>
-                  <td>varchar</td>
-                  <td>9</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>7.6 - Updated Key</td>
-                  <td>DescendantTypeId</td>
-                  <td>Identifier of the descendant org unit type. Field can be null.</td>
-                  <td>int</td>
-                  <td>4</td>
-                  <td>FK</td>
-                </tr>
-                <tr>
-                  <td>4.7 / 5.1</td>
-                  <td>LastModified</td>
-                  <td>The last time a link was updated. Field can be null.</td>
-                  <td>datetime2</td>
-                  <td>8</td>
+                  <td>8.13 / 9.2</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if the LTI link is deleted.</td>
+                  <td>bit</td>
+                  <td>1</td>
                   <td></td>
                 </tr>
               </tbody>

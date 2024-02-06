@@ -93,6 +93,16 @@
             "isForeign": false,
             "canBeNull": false,
             "versionHistory": "1.0"
+        },
+        {
+            "name": "StatusId",
+            "description": "Status ID of copy",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "8.13 \/ 9.2"
         }
     ]
 }
