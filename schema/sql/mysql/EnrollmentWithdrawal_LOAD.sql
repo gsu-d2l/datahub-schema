@@ -6,7 +6,6 @@ CREATE TABLE `EnrollmentWithdrawal_LOAD` (
   `OrgUnitId` INT DEFAULT NULL,
   `RoleId` INT DEFAULT NULL,
   `Action` VARCHAR(50) DEFAULT NULL,
-  `EnrollmentType` VARCHAR(50) DEFAULT NULL,
   `ModifiedByUserId` INT DEFAULT NULL,
   `EnrollmentDate` DATETIME DEFAULT NULL,
   UNIQUE KEY (`LogId`)

@@ -15,5 +15,6 @@ CREATE TABLE `LTILinkMigrationAudit` (
   `Status` SMALLINT DEFAULT NULL,
   `FailureCode` SMALLINT DEFAULT NULL,
   `MigrationType` SMALLINT DEFAULT NULL,
+  `LegacyURL` VARCHAR(2083) DEFAULT NULL,
   UNIQUE KEY (`LTIMigrationId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

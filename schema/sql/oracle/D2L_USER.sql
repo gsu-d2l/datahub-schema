@@ -1,3 +1,5 @@
+-- gsu mods
+
 DROP TABLE D2L_USER;
 
 CREATE TABLE D2L_USER (

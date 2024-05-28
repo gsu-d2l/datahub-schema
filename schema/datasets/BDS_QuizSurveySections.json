@@ -26,43 +26,43 @@
         },
         {
             "name": "Name",
-            "description": "Name of the quiz section. Field can be null.",
+            "description": "Name of the section (title). Field can be null.",
             "type": "nvarchar",
             "size": "256",
             "isPrimary": false,
             "isForeign": false,
             "canBeNull": true,
-            "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
+            "versionHistory": "9.4 - Updated description"
         },
         {
             "name": "NameIsDisplayed",
-            "description": "Indicates if the section name is hidden or shown.",
+            "description": "Indicates if the section name (title) is hidden or shown. Values are 0 for hidden, and 1 for shown.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
             "isForeign": false,
             "canBeNull": false,
-            "versionHistory": "3.4"
+            "versionHistory": "9.4 - Updated description"
         },
         {
             "name": "IsQuestionPool",
-            "description": "Indicates if the question pool is a random section.",
+            "description": "Indicates if the section is a question pool.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
             "isForeign": false,
             "canBeNull": false,
-            "versionHistory": "3.4"
+            "versionHistory": "9.4 - Updated description"
         },
         {
             "name": "SectionText",
-            "description": "Field can be null.",
+            "description": "Section text. Field can be null.",
             "type": "nvarchar",
             "size": "1000",
             "isPrimary": false,
             "isForeign": false,
             "canBeNull": true,
-            "versionHistory": "3.4"
+            "versionHistory": "9.4 - Updated description"
         },
         {
             "name": "SectionTextIsHTML",
@@ -76,113 +76,113 @@
         },
         {
             "name": "IsSectionTextHidden",
-            "description": "Indicates if the section text is hidden or shown. Values are 0 for hidden and 1 for shown. Field can be null.",
+            "description": "Indicates if the section text is hidden or shown. Values are 0 for hidden, and 1 for shown.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
             "isForeign": false,
-            "canBeNull": true,
-            "versionHistory": "3.4"
+            "canBeNull": false,
+            "versionHistory": "9.4 - Updated description"
         },
         {
             "name": "QuestionPoints",
-            "description": "Indicates the number of points allotted to the question. Field can be null.",
+            "description": "Number of points the section is worth when the section is a question pool. Sections that are not question pools will show as null. Field can be null.",
             "type": "decimal",
             "size": "19, 9",
             "isPrimary": false,
             "isForeign": false,
             "canBeNull": true,
-            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+            "versionHistory": "9.4 - Updated description"
         },
         {
             "name": "NumQuestions",
-            "description": "Indicates the number of questions in the quiz section.",
+            "description": "Indicates the number of questions in the section if the section is a question pool. If the section is not a question pool, 0 is displayed.",
             "type": "int",
             "size": "4",
             "isPrimary": false,
             "isForeign": false,
             "canBeNull": false,
-            "versionHistory": "3.4"
+            "versionHistory": "9.4 - Updated description"
         },
         {
             "name": "NumChoices",
-            "description": "Indicates the number of choices in the question pool from which the quiz can be created.",
+            "description": "Indicates the number of choices in the question pool (pool size).",
             "type": "int",
             "size": "4",
             "isPrimary": false,
             "isForeign": false,
             "canBeNull": false,
-            "versionHistory": "3.4"
+            "versionHistory": "9.4 - Updated description"
         },
         {
             "name": "Shuffle",
-            "description": "Indicates that the quiz questions in the pool are shuffled.",
+            "description": "Indicates that the questions in the section are shuffled. Not to be confused with a question pool; a shuffled section displays the questions shuffled randomly.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
             "isForeign": false,
             "canBeNull": false,
-            "versionHistory": "3.4"
+            "versionHistory": "9.4 - Updated description"
         },
         {
             "name": "CreationDate",
-            "description": "Date the quiz was created (UTC).",
+            "description": "Date the section was created (UTC).",
             "type": "datetime2",
             "size": "8",
             "isPrimary": false,
             "isForeign": false,
             "canBeNull": false,
-            "versionHistory": "3.4"
+            "versionHistory": "9.4 - Updated description"
         },
         {
             "name": "CreatedBy",
-            "description": "Id of the user who created the quiz. Field can be null.",
+            "description": "Id of the user who created the section. Field can be null.",
             "type": "bigint",
             "size": "8",
             "isPrimary": false,
-            "isForeign": false,
+            "isForeign": true,
             "canBeNull": true,
-            "versionHistory": "3.4"
+            "versionHistory": "9.4 - Updated description & key"
         },
         {
             "name": "LastModified",
-            "description": "Date when the quiz was last modified (UTC).",
+            "description": "Date when the section was last modified (UTC).",
             "type": "datetime2",
             "size": "8",
             "isPrimary": false,
             "isForeign": false,
             "canBeNull": false,
-            "versionHistory": "3.4"
+            "versionHistory": "9.4 - Updated description"
         },
         {
             "name": "LastModifiedBy",
-            "description": "Id of the user who last modified the quiz. Field can be null.",
+            "description": "Id of the user who last modified the section. If questions are imported into the section, this will be null. Field can be null.",
             "type": "bigint",
             "size": "8",
             "isPrimary": false,
-            "isForeign": false,
+            "isForeign": true,
             "canBeNull": true,
-            "versionHistory": "3.4"
+            "versionHistory": "9.4 - Updated description & key"
         },
         {
             "name": "IsDeleted",
-            "description": "Indicates that the quiz question is deleted. Field can be null.",
+            "description": "Indicates that the section is deleted. Field can be null.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
             "isForeign": false,
             "canBeNull": true,
-            "versionHistory": "3.4"
+            "versionHistory": "9.4 - Updated description"
         },
         {
             "name": "Version",
-            "description": "Indicates the version of the question. This column supports the Question Pools information in the Assessment Quality Dashboard. Field can be null.",
+            "description": "Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets. Field can be null.",
             "type": "bigint",
             "size": "8",
             "isPrimary": false,
             "isForeign": false,
             "canBeNull": true,
-            "versionHistory": "3.6 \/ 4.0"
+            "versionHistory": "9.4 - Updated description"
         }
     ]
 }

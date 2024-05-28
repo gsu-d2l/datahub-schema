@@ -2,7 +2,6 @@ DROP TABLE IF EXISTS `RoleDetail_LOAD`;
 
 CREATE TABLE `RoleDetail_LOAD` (
   `RoleId` INT NOT NULL,
-  `OrgId` INT DEFAULT NULL,
   `RoleName` VARCHAR(120) DEFAULT NULL,
   `Description` VARCHAR(400) DEFAULT NULL,
   `IsCascading` TINYINT DEFAULT NULL,
@@ -17,9 +16,6 @@ CREATE TABLE `RoleDetail_LOAD` (
   `CanBeAutoEnrolledIntoGroups` TINYINT DEFAULT NULL,
   `AddToCourseOfferingSections` TINYINT DEFAULT NULL,
   `CanBeAutoEnrolledIntoSections` TINYINT DEFAULT NULL,
-  `ClassListDisplayRoleCategory` TINYINT DEFAULT NULL,
-  `ClassListRoleCategory` VARCHAR(50) DEFAULT NULL,
-  `ClassListRoleCategoryOrder` INT DEFAULT NULL,
   `AccessPastCourses` TINYINT DEFAULT NULL,
   `AccessFutureCourses` TINYINT DEFAULT NULL,
   `SortOrder` INT DEFAULT NULL,
@@ -32,7 +28,6 @@ CREATE TABLE `RoleDetail_LOAD` (
   `ShowInRegistration` TINYINT DEFAULT NULL,
   `ShowInUserProgress` TINYINT DEFAULT NULL,
   `RoleAlias` VARCHAR(120) DEFAULT NULL,
-  `Version` BIGINT DEFAULT NULL,
   `RoleCode` VARCHAR(100) DEFAULT NULL,
   `LastModifiedDate` DATETIME DEFAULT NULL,
   `DeletedBy` INT DEFAULT NULL,

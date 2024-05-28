@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Checklist Completions",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4523-checklist-data-sets#checklist-completions",
-    "description": "The Checklist Completions Brightspace Data Set returns the completion status of each checklist item.",
+    "description": "The Checklist Completions Brightspace Data Set returns the completion status of each checklist item. Note: The IsCompleted column is set to TRUE in all data prior to 20.23.8.",
     "columns": [
         {
             "name": "UserId",
@@ -36,13 +36,53 @@
         },
         {
             "name": "LastModified",
-            "description": "Date the content user completion was last modified (UTC). Field can be null.",
+            "description": "Date the content user completion was last modified (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.4 - Changed description"
+        },
+        {
+            "name": "IsCompleted",
+            "description": "Indicates whether the checklist item is currently complete or incomplete in the user's copy of the checklist.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.4"
+        },
+        {
+            "name": "DateDeleted",
+            "description": "Date the completion status was deleted (UTC). Field can be null.",
             "type": "datetime2",
             "size": "8",
             "isPrimary": false,
             "isForeign": false,
             "canBeNull": true,
-            "versionHistory": "6.8"
+            "versionHistory": "9.4"
+        },
+        {
+            "name": "DeletedBy",
+            "description": "User who deleted the completion status. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "9.4"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version of the completion status.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.4"
         }
     ]
 }

@@ -55,16 +55,6 @@
             "versionHistory": "3.2"
         },
         {
-            "name": "EnrollmentType",
-            "description": "Enrollment type. Field can be null.",
-            "type": "varchar",
-            "size": "50",
-            "isPrimary": false,
-            "isForeign": false,
-            "canBeNull": true,
-            "versionHistory": "9.0 - REMOVED COLUMN"
-        },
-        {
             "name": "ModifiedByUserId",
             "description": "Identifies the last user who modified the enrollment status for the user. Field can be null.",
             "type": "int",

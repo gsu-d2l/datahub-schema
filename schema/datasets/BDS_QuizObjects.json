@@ -205,26 +205,6 @@
             "versionHistory": "1.7"
         },
         {
-            "name": "TimeLimitExceededBehavior",
-            "description": "Are learners taking this quiz permitted to exceed the time limit. Possible values: Field can be null.",
-            "type": "int",
-            "size": "4",
-            "isPrimary": false,
-            "isForeign": false,
-            "canBeNull": true,
-            "versionHistory": "9.0 - REMOVED COLUMN"
-        },
-        {
-            "name": "TimeLimitGracePeriod",
-            "description": "Is there a grace period at the end of the time limit on this quiz. Field can be null.",
-            "type": "int",
-            "size": "4",
-            "isPrimary": false,
-            "isForeign": false,
-            "canBeNull": true,
-            "versionHistory": "9.0 - REMOVED COLUMN"
-        },
-        {
             "name": "AttemptsAllowed",
             "description": "Number of times learners are permitted to attempt the quiz. Field can be null.",
             "type": "int",
@@ -283,16 +263,6 @@
             "isForeign": false,
             "canBeNull": true,
             "versionHistory": "1.7"
-        },
-        {
-            "name": "ShowClock",
-            "description": "Indicates whether there is a quiz clock visible while learners are taking the quiz.",
-            "type": "bit",
-            "size": "1",
-            "isPrimary": false,
-            "isForeign": false,
-            "canBeNull": false,
-            "versionHistory": "9.0 - REMOVED COLUMN"
         },
         {
             "name": "IsAttemptRldb",

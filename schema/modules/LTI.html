@@ -41,7 +41,7 @@
                   <td>IMSRoleNames</td>
                   <td>A list of user&#039;s IMS roles.</td>
                   <td>nvarchar</td>
-                  <td>5000</td>
+                  <td>10000</td>
                   <td></td>
                 </tr>
                 <tr>
@@ -54,10 +54,10 @@
                 </tr>
                 <tr>
                   <td>5.5</td>
-                  <td>ImpersonatingUserIMSRoleNames</td>
+                  <td>ImpersonatingUserIMSRoleName</td>
                   <td>A list of impersonating user&#039;s IMS roles. Field can be null.</td>
                   <td>nvarchar</td>
-                  <td>5000</td>
+                  <td>10000</td>
                   <td></td>
                 </tr>
                 <tr>
@@ -274,6 +274,14 @@
                   <td>How migration was triggered. Possible values: 0 = Link API 1 = Copy Course 2 = Course Migration Button 3 = Course Migration API</td>
                   <td>smallint</td>
                   <td>2</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.4</td>
+                  <td>LegacyURL</td>
+                  <td>The legacy domain the link was migrated from. Only populates if the legacy domain is different than the registration domain. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>2083</td>
                   <td></td>
                 </tr>
               </tbody>

@@ -127,7 +127,7 @@
               </tbody>
             </table>
             <h2>Awards Issued</h2>
-            <p>The Awards Issued Brightspace Data Set returns a list of all the awards that have been issued for your org units.</p>
+            <p>The Awards Issued Brightspace Data Set returns a list of all the awards that have been issued for your org units. The only available data for the LastModifiedDate field is from August 2023 onwards.</p>
             <table>
               <thead>
                 <tr>
@@ -165,14 +165,6 @@
                   <td>FK</td>
                 </tr>
                 <tr>
-                  <td>9.0 - REMOVED COLUMN</td>
-                  <td>Type</td>
-                  <td>Award type</td>
-                  <td>nvarchar</td>
-                  <td>128</td>
-                  <td></td>
-                </tr>
-                <tr>
                   <td>1.0</td>
                   <td>IssuedBy</td>
                   <td>Issued by user ID</td>
@@ -197,28 +189,12 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td>9.0 - REMOVED COLUMN</td>
-                  <td>IsRevoked</td>
-                  <td>Is award revoked</td>
-                  <td>int</td>
-                  <td>4</td>
-                  <td></td>
-                </tr>
-                <tr>
                   <td>1.4</td>
                   <td>IssuedId</td>
                   <td>Unique issued identifier</td>
                   <td>bigint</td>
                   <td>8</td>
                   <td>PK</td>
-                </tr>
-                <tr>
-                  <td>9.0 - REMOVED COLUMN</td>
-                  <td>Credits</td>
-                  <td>Indicates if the award has credits, and how many.</td>
-                  <td>decimal</td>
-                  <td>9, 2</td>
-                  <td></td>
                 </tr>
                 <tr>
                   <td>9.0 - Changed Description</td>
@@ -269,9 +245,9 @@
                   <td>FK</td>
                 </tr>
                 <tr>
-                  <td>9.0</td>
+                  <td>9.5 - Updated Description</td>
                   <td>LastModifiedDate</td>
-                  <td>Date the issued award object was last modified (UTC). Field can be null.</td>
+                  <td>Date the issued award object was last modified (UTC). Only captures data from August 2023 onwards. Field can be null.</td>
                   <td>datetime2</td>
                   <td>8</td>
                   <td></td>

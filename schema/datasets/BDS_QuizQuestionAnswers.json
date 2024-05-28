@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Quiz Question Answers",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4532-quizzes-data-sets#quiz-question-answers",
-    "description": "The Quiz Question Answers Brightspace Data Set returns possible answers for a given quiz question. Rows in the data set are filtered out if they are associated with deleted quiz attempts.",
+    "description": "The Quiz Question Answers Brightspace Data Set returns possible answers for a given quiz question. Rows in the data set are filtered out if they are associated with deleted quiz attempts. Quiz questions in sections or question pools are not displayed in the Quiz Question Answers Brightspace Data Set.",
     "columns": [
         {
             "name": "AnswerId",

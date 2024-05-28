@@ -17,10 +17,8 @@ CREATE TABLE `QuizAttempt` (
   `DueDate` DATETIME DEFAULT NULL,
   `TimeLimit` INT DEFAULT NULL,
   `TimeLimitEnforced` TINYINT DEFAULT NULL,
-  `GracePeriod` INT DEFAULT NULL,
   `TimeLimitExceededBehaviour` VARCHAR(128) DEFAULT NULL,
   `IsSynchronous` TINYINT DEFAULT NULL,
-  `ExtendedDeadline` INT DEFAULT NULL,
   `DeductionPercentage` INT DEFAULT NULL,
   UNIQUE KEY (`AttemptId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

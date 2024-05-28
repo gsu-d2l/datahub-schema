@@ -149,14 +149,6 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td>9.0 - REMOVED COLUMN</td>
-                  <td>GracePeriod</td>
-                  <td>Amount of time, in minutes, that a learner has to complete the quiz attempt in addition to the time limit. Based on when the learner begins the attempt, even if the instructor changes the quiz grace period later. Field can be null.</td>
-                  <td>int</td>
-                  <td>4</td>
-                  <td></td>
-                </tr>
-                <tr>
                   <td>9.0 - Changed Field name and Description</td>
                   <td>TimeLimitExceededBehaviour</td>
                   <td>If the time limit is enforced for this attempt, indicates the desired behavior when the time limit is exceeded. Field can be null.</td>
@@ -170,14 +162,6 @@
                   <td>Indicates that a quiz attempt is synchronous. A synchronous quiz&#039;s timer starts on the start date.</td>
                   <td>bit</td>
                   <td>1</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>9.0 - REMOVED COLUMN</td>
-                  <td>ExtendedDeadline</td>
-                  <td>The extended deadline learners are allowed beyond the grace period for this attempt, in minutes. Based on when the learner begins the attempt, even if the instructor changes the quiz&#039;s extended deadline later. Beyond this extended deadline, the learner&#039;s attempt is graded as 0. Field can be null.</td>
-                  <td>int</td>
-                  <td>4</td>
                   <td></td>
                 </tr>
                 <tr>
@@ -437,22 +421,6 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td>9.0 - REMOVED COLUMN</td>
-                  <td>TimeLimitExceededBehavior</td>
-                  <td>Are learners taking this quiz permitted to exceed the time limit. Possible values: Field can be null.</td>
-                  <td>int</td>
-                  <td>4</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>9.0 - REMOVED COLUMN</td>
-                  <td>TimeLimitGracePeriod</td>
-                  <td>Is there a grace period at the end of the time limit on this quiz. Field can be null.</td>
-                  <td>int</td>
-                  <td>4</td>
-                  <td></td>
-                </tr>
-                <tr>
                   <td>1.7</td>
                   <td>AttemptsAllowed</td>
                   <td>Number of times learners are permitted to attempt the quiz. Field can be null.</td>
@@ -496,14 +464,6 @@
                   <td>1.7</td>
                   <td>DisplayInCalendar</td>
                   <td>The quiz is not turned on in the calendar. Field can be null.</td>
-                  <td>bit</td>
-                  <td>1</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>9.0 - REMOVED COLUMN</td>
-                  <td>ShowClock</td>
-                  <td>Indicates whether there is a quiz clock visible while learners are taking the quiz.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -655,7 +615,7 @@
               </tbody>
             </table>
             <h2>Quiz Question Answers</h2>
-            <p>The Quiz Question Answers Brightspace Data Set returns possible answers for a given quiz question. Rows in the data set are filtered out if they are associated with deleted quiz attempts.</p>
+            <p>The Quiz Question Answers Brightspace Data Set returns possible answers for a given quiz question. Rows in the data set are filtered out if they are associated with deleted quiz attempts. Quiz questions in sections or question pools are not displayed in the Quiz Question Answers Brightspace Data Set.</p>
             <table>
               <thead>
                 <tr>
@@ -765,7 +725,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>3.4</td>
+                  <td>4.7 / 5.1 - Updated description</td>
                   <td>CollectionId</td>
                   <td>Unique question collection identifier</td>
                   <td>bigint</td>
@@ -781,33 +741,33 @@
                   <td>PK</td>
                 </tr>
                 <tr>
-                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>9.4 - Updated description</td>
                   <td>Name</td>
-                  <td>Field can be null.</td>
+                  <td>Name of the section (title). Field can be null.</td>
                   <td>nvarchar</td>
                   <td>256</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>NameIsDisplayed</td>
-                  <td>Indicates if the section name is hidden or shown.</td>
+                  <td>Indicates if the section name (title) is hidden or shown. Values are 0 for hidden, and 1 for shown.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>IsQuestionPool</td>
-                  <td>Indicates if the question pool is a random section.</td>
+                  <td>Indicates if the section is a question pool.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>SectionText</td>
-                  <td>Field can be null.</td>
+                  <td>Section text. Field can be null.</td>
                   <td>nvarchar</td>
                   <td>1000</td>
                   <td></td>
@@ -821,89 +781,89 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>IsSectionTextHidden</td>
-                  <td>Indicates if the section text is hidden or shown. Values are 0 for hidden, and 1 for shown. Field can be null.</td>
+                  <td>Indicates if the section text is hidden or shown. Values are 0 for hidden, and 1 for shown.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>4.8 / 5.2 - Updated column size</td>
+                  <td>9.4 - Updated description</td>
                   <td>QuestionPoints</td>
-                  <td>Field can be null.</td>
+                  <td>Number of points the section is worth when the section is a question pool. Sections that are not question pools will show as null. Field can be null.</td>
                   <td>decimal</td>
                   <td>19, 9</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>NumQuestions</td>
-                  <td>Indicates the number of questions in the quiz section.</td>
+                  <td>Indicates the number of questions in the section if the section is a question pool. If the section is not a question pool, 0 is displayed.</td>
                   <td>int</td>
                   <td>4</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>NumChoices</td>
-                  <td>Indicates the number of choices in the question pool from which the quiz can be created.</td>
+                  <td>Indicates the number of choices in the question pool (pool size).</td>
                   <td>int</td>
                   <td>4</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>Shuffle</td>
-                  <td>Indicates that the quiz questions in the pool are shuffled.</td>
+                  <td>Indicates that the questions in the section are shuffled. Not to be confused with a question pool; a shuffled section displays the questions shuffled randomly.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>CreationDate</td>
-                  <td>Date the quiz was created (UTC).</td>
+                  <td>Date the section was created (UTC).</td>
                   <td>datetime2</td>
                   <td>8</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>6.7 - Updated key</td>
+                  <td>9.4 - Updated description</td>
                   <td>CreatedBy</td>
-                  <td>Id of the user who created the quiz. Field can be null.</td>
+                  <td>Id of the user who created the section. Field can be null.</td>
                   <td>bigint</td>
                   <td>8</td>
                   <td>FK</td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>LastModified</td>
-                  <td>Date when the quiz was last modified (UTC).</td>
+                  <td>Date when the section was last modified (UTC).</td>
                   <td>datetime2</td>
                   <td>8</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>6.7 - Updated key</td>
+                  <td>9.4 - Updated description</td>
                   <td>LastModifiedBy</td>
-                  <td>Id of the user who last modified the quiz. Field can be null.</td>
+                  <td>Id of the user who last modified the section. If questions are imported into the section, this will be null. Field can be null.</td>
                   <td>bigint</td>
                   <td>8</td>
                   <td>FK</td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>IsDeleted</td>
-                  <td>Indicates that the quiz question is deleted. Field can be null.</td>
+                  <td>Indicates that the section is deleted. Field can be null.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.6 / 4.0</td>
+                  <td>9.4 - Updated description</td>
                   <td>Version</td>
-                  <td>Indicates the version of the question. This column supports the Question Pools information in the Assessment Quality Dashboard. Field can be null.</td>
+                  <td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets. Field can be null.</td>
                   <td>bigint</td>
                   <td>8</td>
                   <td></td>

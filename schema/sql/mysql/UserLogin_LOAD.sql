@@ -1,7 +1,6 @@
 DROP TABLE IF EXISTS `UserLogin_LOAD`;
 
 CREATE TABLE `UserLogin_LOAD` (
-  `OrgId` INT DEFAULT NULL,
   `UserId` INT DEFAULT NULL,
   `UserName` VARCHAR(256) DEFAULT NULL,
   `IP` VARCHAR(64) DEFAULT NULL,
@@ -9,7 +8,6 @@ CREATE TABLE `UserLogin_LOAD` (
   `StatusType` VARCHAR(50) DEFAULT NULL,
   `AttemptDate` DATETIME DEFAULT NULL,
   `ImpersonatingUserId` INT DEFAULT NULL,
-  `TimeOff` INT DEFAULT NULL,
   `LoginAttemptId` VARCHAR(36) NOT NULL,
   `LoginSource` VARCHAR(50) DEFAULT NULL,
   UNIQUE KEY (`LoginAttemptId`)

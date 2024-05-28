@@ -35,26 +35,6 @@
             "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
         },
         {
-            "name": "GradeSchemeRangeId",
-            "description": "Unique grade scheme range identifier",
-            "type": "bigint",
-            "size": "8",
-            "isPrimary": true,
-            "isForeign": false,
-            "canBeNull": false,
-            "versionHistory": "9.0 - REMOVED COLUMN"
-        },
-        {
-            "name": "IsDeleted",
-            "description": "Indicates that the grade scheme is deleted. Field can be null.",
-            "type": "bit",
-            "size": "1",
-            "isPrimary": false,
-            "isForeign": false,
-            "canBeNull": true,
-            "versionHistory": "9.0 - REMOVED COLUMN"
-        },
-        {
             "name": "DeletedDate",
             "description": "Date when the scheme was deleted (UTC). Field can be null.",
             "type": "datetime2",

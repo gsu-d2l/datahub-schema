@@ -29,7 +29,7 @@
             "description": "Unique question version identifier. Each time you edit a quiz, survey, or self-assessment question, a new version of that question is created, indicated by the QuestionVersionID field. Field can be null.",
             "type": "bigint",
             "size": "8",
-            "isPrimary": false,
+            "isPrimary": true,
             "isForeign": true,
             "canBeNull": true,
             "versionHistory": "7.6 -Updated key"

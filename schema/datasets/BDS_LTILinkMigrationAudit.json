@@ -143,6 +143,16 @@
             "isForeign": false,
             "canBeNull": false,
             "versionHistory": "7.14 \/ 8.0"
+        },
+        {
+            "name": "LegacyURL",
+            "description": "The legacy domain the link was migrated from. Only populates if the legacy domain is different than the registration domain. Field can be null.",
+            "type": "nvarchar",
+            "size": "2083",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.4"
         }
     ]
 }

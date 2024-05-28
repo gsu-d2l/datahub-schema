@@ -165,16 +165,6 @@
             "versionHistory": "6.11"
         },
         {
-            "name": "GracePeriod",
-            "description": "Amount of time, in minutes, that a learner has to complete the quiz attempt in addition to the time limit. Based on when the learner begins the attempt, even if the instructor changes the quiz grace period later. Field can be null.",
-            "type": "int",
-            "size": "4",
-            "isPrimary": false,
-            "isForeign": false,
-            "canBeNull": true,
-            "versionHistory": "9.0 - REMOVED COLUMN"
-        },
-        {
             "name": "TimeLimitExceededBehaviour",
             "description": "If the time limit is enforced for this attempt, indicates the desired behavior when the time limit is exceeded. Field can be null.",
             "type": "nvarchar",
@@ -193,16 +183,6 @@
             "isForeign": false,
             "canBeNull": false,
             "versionHistory": "9.0"
-        },
-        {
-            "name": "ExtendedDeadline",
-            "description": "The extended deadline learners are allowed beyond the grace period for this attempt, in minutes. Based on when the learner begins the attempt, even if the instructor changes the quiz's extended deadline later. Beyond this extended deadline, the learner's attempt is graded as 0. Field can be null.",
-            "type": "int",
-            "size": "4",
-            "isPrimary": false,
-            "isForeign": false,
-            "canBeNull": true,
-            "versionHistory": "9.0 - REMOVED COLUMN"
         },
         {
             "name": "DeductionPercentage",

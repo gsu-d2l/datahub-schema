@@ -37,33 +37,33 @@
                   <td>PK</td>
                 </tr>
                 <tr>
-                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>9.4 - Updated description</td>
                   <td>Name</td>
-                  <td>Name of the quiz section. Field can be null.</td>
+                  <td>Name of the section (title). Field can be null.</td>
                   <td>nvarchar</td>
                   <td>256</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>NameIsDisplayed</td>
-                  <td>Indicates if the section name is hidden or shown.</td>
+                  <td>Indicates if the section name (title) is hidden or shown. Values are 0 for hidden, and 1 for shown.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>IsQuestionPool</td>
-                  <td>Indicates if the question pool is a random section.</td>
+                  <td>Indicates if the section is a question pool.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>SectionText</td>
-                  <td>Field can be null.</td>
+                  <td>Section text. Field can be null.</td>
                   <td>nvarchar</td>
                   <td>1000</td>
                   <td></td>
@@ -77,89 +77,89 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>IsSectionTextHidden</td>
-                  <td>Indicates if the section text is hidden or shown. Values are 0 for hidden and 1 for shown. Field can be null.</td>
+                  <td>Indicates if the section text is hidden or shown. Values are 0 for hidden, and 1 for shown.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>4.8 / 5.2 - Updated column size</td>
+                  <td>9.4 - Updated description</td>
                   <td>QuestionPoints</td>
-                  <td>Indicates the number of points allotted to the question. Field can be null.</td>
+                  <td>Number of points the section is worth when the section is a question pool. Sections that are not question pools will show as null. Field can be null.</td>
                   <td>decimal</td>
                   <td>19, 9</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>NumQuestions</td>
-                  <td>Indicates the number of questions in the quiz section.</td>
+                  <td>Indicates the number of questions in the section if the section is a question pool. If the section is not a question pool, 0 is displayed.</td>
                   <td>int</td>
                   <td>4</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>NumChoices</td>
-                  <td>Indicates the number of choices in the question pool from which the quiz can be created.</td>
+                  <td>Indicates the number of choices in the question pool (pool size).</td>
                   <td>int</td>
                   <td>4</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>Shuffle</td>
-                  <td>Indicates that the quiz questions in the pool are shuffled.</td>
+                  <td>Indicates that the questions in the section are shuffled. Not to be confused with a question pool; a shuffled section displays the questions shuffled randomly.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>CreationDate</td>
-                  <td>Date the quiz was created (UTC).</td>
+                  <td>Date the section was created (UTC).</td>
                   <td>datetime2</td>
                   <td>8</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description &amp; key</td>
                   <td>CreatedBy</td>
-                  <td>Id of the user who created the quiz. Field can be null.</td>
+                  <td>Id of the user who created the section. Field can be null.</td>
                   <td>bigint</td>
                   <td>8</td>
-                  <td></td>
+                  <td>FK</td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>LastModified</td>
-                  <td>Date when the quiz was last modified (UTC).</td>
+                  <td>Date when the section was last modified (UTC).</td>
                   <td>datetime2</td>
                   <td>8</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description &amp; key</td>
                   <td>LastModifiedBy</td>
-                  <td>Id of the user who last modified the quiz. Field can be null.</td>
+                  <td>Id of the user who last modified the section. If questions are imported into the section, this will be null. Field can be null.</td>
                   <td>bigint</td>
                   <td>8</td>
-                  <td></td>
+                  <td>FK</td>
                 </tr>
                 <tr>
-                  <td>3.4</td>
+                  <td>9.4 - Updated description</td>
                   <td>IsDeleted</td>
-                  <td>Indicates that the quiz question is deleted. Field can be null.</td>
+                  <td>Indicates that the section is deleted. Field can be null.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>3.6 / 4.0</td>
+                  <td>9.4 - Updated description</td>
                   <td>Version</td>
-                  <td>Indicates the version of the question. This column supports the Question Pools information in the Assessment Quality Dashboard. Field can be null.</td>
+                  <td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets. Field can be null.</td>
                   <td>bigint</td>
                   <td>8</td>
                   <td></td>

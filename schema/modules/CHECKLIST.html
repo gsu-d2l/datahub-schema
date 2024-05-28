@@ -103,7 +103,7 @@
               </tbody>
             </table>
             <h2>Checklist Completions</h2>
-            <p>The Checklist Completions Brightspace Data Set returns the completion status of each checklist item.</p>
+            <p>The Checklist Completions Brightspace Data Set returns the completion status of each checklist item. Note: The IsCompleted column is set to TRUE in all data prior to 20.23.8.</p>
             <table>
               <thead>
                 <tr>
@@ -141,10 +141,42 @@
                   <td>PK, FK</td>
                 </tr>
                 <tr>
-                  <td>6.8</td>
+                  <td>9.4 - Changed description</td>
                   <td>LastModified</td>
-                  <td>Date the content user completion was last modified (UTC). Field can be null.</td>
+                  <td>Date the content user completion was last modified (UTC).</td>
                   <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.4</td>
+                  <td>IsCompleted</td>
+                  <td>Indicates whether the checklist item is currently complete or incomplete in the user&#039;s copy of the checklist.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.4</td>
+                  <td>DateDeleted</td>
+                  <td>Date the completion status was deleted (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.4</td>
+                  <td>DeletedBy</td>
+                  <td>User who deleted the completion status. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>9.4</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the completion status.</td>
+                  <td>bigint</td>
                   <td>8</td>
                   <td></td>
                 </tr>

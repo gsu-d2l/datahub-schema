@@ -2,7 +2,7 @@
     "type": "ADS",
     "name": "Content Progress",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4539-list-of-advanced-data-sets#content-progress",
-    "description": "Content Progress provides insight on the content viewed and not viewed by users in a selection of org units during a specified date range. Only active users are included in this report. This advanced data set is intended to replace the corresponding standard data exports so that all analytics reside in a single tool. Required Permission Advanced Data Sets > Can execute Content Progress (Organization level)",
+    "description": "Content Progress provides insight on the content viewed by users in a selection of org units during a specified date range. Only active users are included in this report. This advanced data set is intended to replace the corresponding standard data exports so that all analytics reside in a single tool. Required Permission Advanced Data Sets > Can execute Content Progress (Organization level)",
     "columns": [
         {
             "name": "Course Offering ID",

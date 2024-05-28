@@ -5,16 +5,6 @@
     "description": "The User Logins Brightspace Data Set returns a list of all login attempts for your organization. The User Logins Brightspace Data Set contains data from 1 January 2021 onwards and adheres to the default system limit of 150 million rows of the most recent data.",
     "columns": [
         {
-            "name": "OrgId",
-            "description": "Unique org unit Identifier. Field can be null",
-            "type": "int",
-            "size": "4",
-            "isPrimary": false,
-            "isForeign": false,
-            "canBeNull": true,
-            "versionHistory": "9.0 - REMOVED COLUMN"
-        },
-        {
             "name": "UserId",
             "description": "Unique user identifier.",
             "type": "int",
@@ -83,16 +73,6 @@
             "isForeign": true,
             "canBeNull": true,
             "versionHistory": "1.0"
-        },
-        {
-            "name": "TimeOff",
-            "description": "Time elapsed in seconds since the last time a user logged in. Field can be null.",
-            "type": "int",
-            "size": "4",
-            "isPrimary": false,
-            "isForeign": false,
-            "canBeNull": true,
-            "versionHistory": "9.0 - REMOVED COLUMN"
         },
         {
             "name": "LoginAttemptId",

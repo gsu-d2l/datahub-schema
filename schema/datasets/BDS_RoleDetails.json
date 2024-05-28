@@ -15,16 +15,6 @@
             "versionHistory": "3.1"
         },
         {
-            "name": "OrgId",
-            "description": "Unique org unit identifier. Field can be null.",
-            "type": "int",
-            "size": "4",
-            "isPrimary": false,
-            "isForeign": true,
-            "canBeNull": true,
-            "versionHistory": "9.0 - REMOVED COLUMN"
-        },
-        {
             "name": "RoleName",
             "description": "Name of the role.",
             "type": "nvarchar",
@@ -165,36 +155,6 @@
             "versionHistory": "3.1"
         },
         {
-            "name": "ClassListDisplayRoleCategory",
-            "description": "Attributing that this role category appears in class lists.",
-            "type": "bit",
-            "size": "1",
-            "isPrimary": false,
-            "isForeign": false,
-            "canBeNull": false,
-            "versionHistory": "9.0 - REMOVED COLUMN"
-        },
-        {
-            "name": "ClassListRoleCategory",
-            "description": "Attribute indicating this is a role that can be used to sort members of a class list.",
-            "type": "nvarchar",
-            "size": "50",
-            "isPrimary": false,
-            "isForeign": false,
-            "canBeNull": false,
-            "versionHistory": "9.0 - REMOVED COLUMN"
-        },
-        {
-            "name": "ClassListRoleCategoryOrder",
-            "description": "Attribute indicating the order in which the role categories should appear in the class list.",
-            "type": "int",
-            "size": "4",
-            "isPrimary": false,
-            "isForeign": false,
-            "canBeNull": false,
-            "versionHistory": "9.0 - REMOVED COLUMN"
-        },
-        {
             "name": "AccessPastCourses",
             "description": "Attribute indicating that this role can access past courses.",
             "type": "bit",
@@ -313,16 +273,6 @@
             "isForeign": false,
             "canBeNull": true,
             "versionHistory": "9.0 - Updated size"
-        },
-        {
-            "name": "Version",
-            "description": "Indicates the version for this row entry.",
-            "type": "bigint",
-            "size": "8",
-            "isPrimary": false,
-            "isForeign": false,
-            "canBeNull": false,
-            "versionHistory": "9.0 - REMOVED COLUMN"
         },
         {
             "name": "RoleCode",
