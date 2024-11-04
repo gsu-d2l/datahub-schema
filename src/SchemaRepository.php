@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace GSU\D2L\DataHub\Schema;
 
+use GSU\D2L\DataHub\Schema\Model\ColumnSchema;
 use GSU\D2L\DataHub\Schema\Model\DatasetModule;
 use GSU\D2L\DataHub\Schema\Model\DatasetSchema;
 use GSU\D2L\DataHub\Schema\Model\DatasetSchemaType;
@@ -56,7 +57,7 @@ final class SchemaRepository implements SchemaRepositoryInterface
 
         $this->simpleDatasetMap = array_column(
             array_map(
-                fn (string $v, string $k) => [DatasetSchema::getName($v), DatasetSchema::getName($k)],
+                fn(string $v, string $k) => [DatasetSchema::getName($v), DatasetSchema::getName($k)],
                 array_values($this->datasetMap),
                 array_keys($this->datasetMap)
             ),
@@ -158,8 +159,55 @@ final class SchemaRepository implements SchemaRepositoryInterface
             throw new \RuntimeException("Schema not found: {$datasetName}",);
         }
 
+        $overridePath = $this->getDatasetPath(
+            DatasetSchemaType::getType($datasetType),
+            DatasetSchema::getName($datasetName) . '.override'
+        );
+
         try {
-            return DatasetSchema::create($datasetPath);
+            if (!is_file($overridePath)) {
+                return DatasetSchema::create($datasetPath);
+            }
+
+            $base = ArrayValue::convertToArray($datasetPath);
+            $baseColumns = array_column(
+                array_map(
+                    fn ($col) => is_array($col)
+                        ? ColumnSchema::create($col)
+                        : throw new \RuntimeException(),
+                    ArrayValue::getArray($base, 'columns')
+                ),
+                null,
+                'name'
+            );
+
+            $override = ArrayValue::convertToArray($overridePath);
+            $overrideColumns = array_column(
+                array_map(
+                    fn ($col) => is_array($col)
+                        ? ColumnSchema::create($col)
+                        : throw new \RuntimeException(),
+                    ArrayValue::getArray($override, 'columns')
+                ),
+                null,
+                'name'
+            );
+
+            $columns = [];
+            foreach (array_keys($baseColumns) as $name) {
+                if (isset($overrideColumns[$name])) {
+                    $baseColumns[$name] = $overrideColumns[$name];
+                }
+            }
+            foreach (array_keys($overrideColumns) as $name) {
+                if (!isset($baseColumns[$name])) {
+                    $baseColumns[$name] = $overrideColumns[$name];
+                }
+            }
+
+            $base['columns'] = array_values($baseColumns);
+
+            return DatasetSchema::create($base);
         } catch (\Throwable $t) {
             $datasetType = $datasetType instanceof DatasetSchemaType ? $datasetType->value : $datasetType;
             throw new \RuntimeException(
@@ -290,10 +338,13 @@ final class SchemaRepository implements SchemaRepositoryInterface
      */
     private function getDatasetName(string $datasetName): string|null
     {
-        return $this->datasetMap[$datasetName]
-            ?? (in_array($datasetName, $this->datasetMap, true) ? $datasetName : null)
-            ?? $this->simpleDatasetMap[$datasetName]
-            ?? (in_array($datasetName, $this->simpleDatasetMap, true) ? $datasetName : null);
+        return match (true) {
+            isset($this->datasetMap[$datasetName])                => $this->datasetMap[$datasetName],
+            isset($this->simpleDatasetMap[$datasetName])          => $this->simpleDatasetMap[$datasetName],
+            in_array($datasetName, $this->datasetMap, true)       => $datasetName,
+            in_array($datasetName, $this->simpleDatasetMap, true) => $datasetName,
+            default                                               => null
+        };
     }
 
 

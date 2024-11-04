@@ -21,7 +21,11 @@ final class DatasetSchema
             url: ArrayValue::getString($values, 'url'),
             description: ArrayValue::getString($values, 'description'),
             columns: array_values(array_map(
-                fn ($col) => is_array($col) ? ColumnSchema::create($col) : throw new \RuntimeException(),
+                fn ($col) => match (true) {
+                    $col instanceof ColumnSchema => $col,
+                    is_array($col) => ColumnSchema::create($col),
+                    default => throw new \RuntimeException(print_r($col, true))
+                },
                 ArrayValue::getArray($values, 'columns')
             ))
         );
