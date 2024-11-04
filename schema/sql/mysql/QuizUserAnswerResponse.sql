@@ -11,5 +11,7 @@ CREATE TABLE `QuizUserAnswerResponse` (
   `UserSelection` BIGINT DEFAULT NULL,
   `UserAnswer` VARCHAR(1000) DEFAULT NULL,
   `FileSetId` BIGINT DEFAULT NULL,
+  `LastModified` DATETIME DEFAULT NULL,
+  `IsDeleted` TINYINT DEFAULT NULL,
   UNIQUE KEY (`AttemptId`, `QuestionId`, `QuestionVersionId`, `AnswerId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

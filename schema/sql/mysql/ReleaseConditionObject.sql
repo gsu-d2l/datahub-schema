@@ -13,5 +13,7 @@ CREATE TABLE `ReleaseConditionObject` (
   `UsesPercentage` TINYINT DEFAULT NULL,
   `OperatorTypeDesc` VARCHAR(3) DEFAULT NULL,
   `Version` BIGINT DEFAULT NULL,
+  `Guid1` VARCHAR(36) DEFAULT NULL,
+  `Guid2` VARCHAR(36) DEFAULT NULL,
   UNIQUE KEY (`PreRequisiteId`, `ResultId`, `OrgUnitId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

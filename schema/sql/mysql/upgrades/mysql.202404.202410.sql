@@ -1,0 +1,116 @@
+ALTER TABLE AssignmentSummary_LOAD
+    ADD `AIUtilization` INT DEFAULT NULL
+;
+ALTER TABLE AssignmentSummary
+    ADD `AIUtilization` INT DEFAULT NULL
+;
+
+
+ALTER TABLE AttendanceRegister_LOAD
+  ADD `DateDeleted` DATETIME DEFAULT NULL,
+  ADD `DeletedBy` INT DEFAULT NULL
+;
+ALTER TABLE AttendanceRegister
+  ADD `DateDeleted` DATETIME DEFAULT NULL,
+  ADD `DeletedBy` INT DEFAULT NULL
+;
+
+
+ALTER TABLE AttendanceSession_LOAD
+  ADD `DateDeleted` DATETIME DEFAULT NULL,
+  ADD `DeletedBy` INT DEFAULT NULL
+;
+ALTER TABLE AttendanceSession
+  ADD `DateDeleted` DATETIME DEFAULT NULL,
+  ADD `DeletedBy` INT DEFAULT NULL
+;
+
+
+ALTER TABLE AttendanceUserSession_LOAD
+  ADD `IsDeleted` TINYINT DEFAULT NULL,
+  ADD `Version` BIGINT DEFAULT NULL
+;
+ALTER TABLE AttendanceUserSession
+  ADD `IsDeleted` TINYINT DEFAULT NULL,
+  ADD `Version` BIGINT DEFAULT NULL
+;
+
+
+ALTER TABLE ContentUserProgress_LOAD
+  ADD `Version` BIGINT DEFAULT NULL
+;
+ALTER TABLE ContentUserProgress
+  ADD `Version` BIGINT DEFAULT NULL
+;
+
+
+ALTER TABLE QuestionLibrary_LOAD
+    ADD `AIUtilization` INT DEFAULT NULL
+;
+ALTER TABLE QuestionLibrary
+    ADD `AIUtilization` INT DEFAULT NULL
+;
+
+
+ALTER TABLE QuizUserAnswer_LOAD
+  ADD `OutOf` DECIMAL(19, 9) DEFAULT NULL,
+  ADD `TimeStarted` DATETIME DEFAULT NULL,
+  ADD `IsBonus` TINYINT DEFAULT NULL,
+  ADD `IsDeleted` TINYINT DEFAULT NULL,
+  ADD `LastModified` DATETIME DEFAULT NULL,
+  ADD `LastModifiedBy` INT DEFAULT NULL,
+  ADD `QuizTimeCompleted` DATETIME DEFAULT NULL
+;
+ALTER TABLE QuizUserAnswer
+  ADD `OutOf` DECIMAL(19, 9) DEFAULT NULL,
+  ADD `TimeStarted` DATETIME DEFAULT NULL,
+  ADD `IsBonus` TINYINT DEFAULT NULL,
+  ADD `IsDeleted` TINYINT DEFAULT NULL,
+  ADD `LastModified` DATETIME DEFAULT NULL,
+  ADD `LastModifiedBy` INT DEFAULT NULL,
+  ADD `QuizTimeCompleted` DATETIME DEFAULT NULL
+;
+
+
+ALTER TABLE QuizUserAnswerResponse_LOAD
+  ADD `LastModified` DATETIME DEFAULT NULL,
+  ADD `IsDeleted` TINYINT DEFAULT NULL
+;
+ALTER TABLE QuizUserAnswerResponse
+  ADD `LastModified` DATETIME DEFAULT NULL,
+  ADD `IsDeleted` TINYINT DEFAULT NULL
+;
+
+
+ALTER TABLE ReleaseConditionObject_LOAD
+  ADD `Guid1` VARCHAR(36) DEFAULT NULL,
+  ADD `Guid2` VARCHAR(36) DEFAULT NULL
+;
+ALTER TABLE ReleaseConditionObject
+  ADD `Guid1` VARCHAR(36) DEFAULT NULL,
+  ADD `Guid2` VARCHAR(36) DEFAULT NULL
+;
+
+
+ALTER TABLE SurveyUserAnswer_LOAD
+  ADD `IsDeleted` TINYINT DEFAULT NULL,
+  ADD `LastModified` DATETIME DEFAULT NULL,
+  ADD `LastModifiedBy` INT DEFAULT NULL,
+  ADD `SurveyTimeCompleted` DATETIME DEFAULT NULL
+;
+ALTER TABLE SurveyUserAnswer
+  ADD `IsDeleted` TINYINT DEFAULT NULL,
+  ADD `LastModified` DATETIME DEFAULT NULL,
+  ADD `LastModifiedBy` INT DEFAULT NULL,
+  ADD `SurveyTimeCompleted` DATETIME DEFAULT NULL
+;
+
+
+ALTER TABLE SurveyUserAnswerResponse_LOAD
+  ADD `LastModified` DATETIME DEFAULT NULL,
+  ADD `IsDeleted` TINYINT DEFAULT NULL
+;
+ALTER TABLE SurveyUserAnswerResponse
+  ADD `LastModified` DATETIME DEFAULT NULL,
+  ADD `IsDeleted` TINYINT DEFAULT NULL
+;

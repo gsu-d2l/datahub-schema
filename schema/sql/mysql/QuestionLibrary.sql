@@ -13,5 +13,6 @@ CREATE TABLE `QuestionLibrary` (
   `CreationDate` DATETIME DEFAULT NULL,
   `Version` BIGINT DEFAULT NULL,
   `AllowsAttachments` TINYINT DEFAULT NULL,
+  `AIUtilization` INT DEFAULT NULL,
   UNIQUE KEY (`QuestionId`, `QuestionVersionId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

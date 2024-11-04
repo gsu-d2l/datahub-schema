@@ -12,5 +12,12 @@ CREATE TABLE `QuizUserAnswer` (
   `Page` INT DEFAULT NULL,
   `SectionId` BIGINT DEFAULT NULL,
   `ObjectId` BIGINT NOT NULL,
+  `OutOf` DECIMAL(19, 9) DEFAULT NULL,
+  `TimeStarted` DATETIME DEFAULT NULL,
+  `IsBonus` TINYINT DEFAULT NULL,
+  `IsDeleted` TINYINT DEFAULT NULL,
+  `LastModified` DATETIME DEFAULT NULL,
+  `LastModifiedBy` INT DEFAULT NULL,
+  `QuizTimeCompleted` DATETIME DEFAULT NULL,
   UNIQUE KEY (`AttemptId`, `ObjectId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

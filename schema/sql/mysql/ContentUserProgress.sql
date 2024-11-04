@@ -13,5 +13,6 @@ CREATE TABLE `ContentUserProgress` (
   `IsCurrentBookmark` TINYINT DEFAULT NULL,
   `IsSelfAssessComplete` TINYINT DEFAULT NULL,
   `LastModified` DATETIME DEFAULT NULL,
+  `Version` BIGINT DEFAULT NULL,
   UNIQUE KEY (`ContentObjectId`, `UserId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

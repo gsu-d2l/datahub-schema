@@ -11,5 +11,9 @@ CREATE TABLE `SurveyUserAnswer` (
   `Score` DECIMAL(19, 9) DEFAULT NULL,
   `Page` INT DEFAULT NULL,
   `Assigned` TINYINT DEFAULT NULL,
+  `IsDeleted` TINYINT DEFAULT NULL,
+  `LastModified` DATETIME DEFAULT NULL,
+  `LastModifiedBy` INT DEFAULT NULL,
+  `SurveyTimeCompleted` DATETIME DEFAULT NULL,
   UNIQUE KEY (`AttemptId`, `QuestionId`, `QuestionVersionId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

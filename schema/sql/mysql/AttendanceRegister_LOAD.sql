@@ -10,5 +10,7 @@ CREATE TABLE `AttendanceRegister_LOAD` (
   `IncludeAllUsers` TINYINT DEFAULT NULL,
   `CauseForConcern` DECIMAL(19, 9) DEFAULT NULL,
   `Version` BIGINT DEFAULT NULL,
+  `DateDeleted` DATETIME DEFAULT NULL,
+  `DeletedBy` INT DEFAULT NULL,
   UNIQUE KEY (`AttendanceRegisterId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
