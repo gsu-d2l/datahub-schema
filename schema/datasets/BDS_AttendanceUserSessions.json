@@ -53,6 +53,26 @@
             "isForeign": false,
             "canBeNull": true,
             "versionHistory": "6.15 \/ 7.3"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates if the user session has been deleted.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.9"
+        },
+        {
+            "name": "Version",
+            "description": "Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.9"
         }
     ]
 }

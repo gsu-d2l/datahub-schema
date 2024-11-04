@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Quiz User Answer Responses",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4532-quizzes-data-sets#quiz-user-answer-responses",
-    "description": "The Quiz User Answer Responses Brightspace Data Set returns details on how a user answered a specific quiz question. Data includes whether an answer is correct and details around the quiz score. Rows in the data set are filtered out if they are associated with deleted quiz questions. The Quiz User Answer Responses data set and differential is limited to 3 years of data (all of the previous two calendar years and the current calendar year to date).",
+    "description": "The Quiz User Answer Responses Brightspace Data Set returns details on how a user answered a specific quiz question. Data includes whether an answer is correct and details around the quiz score. Rows in the data set are filtered out if they are associated with deleted quiz questions. The Quiz User Answer Responses Brightspace Data Set contains data from 1 January 2021 onwards and adheres to the default system limit of 150 million rows of the most recent data.",
     "columns": [
         {
             "name": "AttemptId",
@@ -76,7 +76,7 @@
         },
         {
             "name": "UserSelection",
-            "description": "Option the user chose for the question. Field can be null.",
+            "description": "Indicates the option a user chose for a block question type (ie. True and False, Multiple Choice, Multi-Select). Field can be null.",
             "type": "bigint",
             "size": "8",
             "isPrimary": false,
@@ -86,7 +86,7 @@
         },
         {
             "name": "UserAnswer",
-            "description": "User answer. Field can be null.",
+            "description": "Indicates the user answer for written question types (ie. Short Answer, Written Response). Field can be null.",
             "type": "nvarchar",
             "size": "1000",
             "isPrimary": false,
@@ -103,6 +103,26 @@
             "isForeign": false,
             "canBeNull": true,
             "versionHistory": "5.8 \/ 6.1"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date and time when the question answer response was last modified (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.10"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates if the question answer response is deleted. Field can be null.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.10"
         }
     ]
 }

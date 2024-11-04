@@ -136,7 +136,7 @@
         },
         {
             "name": "DueDate",
-            "description": "Quiz attempt due date (UTC). Based on when the learner begins the attempt, even if the instructor changes the quiz due date later. Field can be null.",
+            "description": "Quiz attempt due date (UTC). Based on when the learner begins the attempt, even if the instructor changes the quiz due date later. This does not take any special access time limit into account. Field can be null.",
             "type": "datetime2",
             "size": "8",
             "isPrimary": false,
@@ -146,7 +146,7 @@
         },
         {
             "name": "TimeLimit",
-            "description": "Amount of time, in minutes, that a learner has to complete the quiz attempt. Based on when the learner begins the attempt, even if the instructor changes the quiz time limit later. Field can be null.",
+            "description": "Amount of time, in minutes, that a learner has to complete the quiz attempt. Based on when the learner begins the attempt, even if the instructor changes the quiz time limit later. This does not take any special access time limit into account. Field can be null.",
             "type": "int",
             "size": "4",
             "isPrimary": false,

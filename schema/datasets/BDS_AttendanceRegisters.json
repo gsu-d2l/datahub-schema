@@ -93,6 +93,26 @@
             "isForeign": false,
             "canBeNull": false,
             "versionHistory": "4.10 \/ 5.4"
+        },
+        {
+            "name": "DateDeleted",
+            "description": "Deleted date of the attendance register (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.9"
+        },
+        {
+            "name": "DeletedBy",
+            "description": "Unique identifier of the user who performed the delete action. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.9"
         }
     ]
 }

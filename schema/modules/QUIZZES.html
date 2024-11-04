@@ -127,7 +127,7 @@
                 <tr>
                   <td>6.11</td>
                   <td>DueDate</td>
-                  <td>Quiz attempt due date (UTC). Based on when the learner begins the attempt, even if the instructor changes the quiz due date later. Field can be null.</td>
+                  <td>Quiz attempt due date (UTC). Based on when the learner begins the attempt, even if the instructor changes the quiz due date later. This does not take any special access time limit into account. Field can be null.</td>
                   <td>datetime2</td>
                   <td>8</td>
                   <td></td>
@@ -135,7 +135,7 @@
                 <tr>
                   <td>6.11</td>
                   <td>TimeLimit</td>
-                  <td>Amount of time, in minutes, that a learner has to complete the quiz attempt. Based on when the learner begins the attempt, even if the instructor changes the quiz time limit later. Field can be null.</td>
+                  <td>Amount of time, in minutes, that a learner has to complete the quiz attempt. Based on when the learner begins the attempt, even if the instructor changes the quiz time limit later. This does not take any special access time limit into account. Field can be null.</td>
                   <td>int</td>
                   <td>4</td>
                   <td></td>
@@ -215,7 +215,7 @@
                 <tr>
                   <td>5.7 / 6.0 - Changed Column Size</td>
                   <td>Name</td>
-                  <td>Name of the event. Field can be null.</td>
+                  <td>Name of the event.</td>
                   <td>nvarchar</td>
                   <td>256</td>
                   <td></td>
@@ -239,7 +239,7 @@
                 <tr>
                   <td>3.6 / 4.1</td>
                   <td>IPAddress</td>
-                  <td>IPAddress at which the event occurred. Field can be null.</td>
+                  <td>IPAddress at which the event occurred. Field may be null for quiz submit events where the quiz was auto-submitted.</td>
                   <td>varchar</td>
                   <td>15</td>
                   <td></td>
@@ -287,7 +287,7 @@
                 <tr>
                   <td>1.7</td>
                   <td>QuizCategory</td>
-                  <td>Category assigned to the quiz. Field can be null.</td>
+                  <td>Name of category quiz is assigned to. Field can be null.</td>
                   <td>nvarchar</td>
                   <td>256</td>
                   <td></td>
@@ -346,7 +346,7 @@
                   <td>Id of the user who created the quiz. Field can be null.</td>
                   <td>bigint</td>
                   <td>8</td>
-                  <td></td>
+                  <td>FK</td>
                 </tr>
                 <tr>
                   <td>1.7</td>
@@ -362,7 +362,7 @@
                   <td>Id of the user who last modified the quiz. Field can be null.</td>
                   <td>bigint</td>
                   <td>8</td>
-                  <td></td>
+                  <td>FK</td>
                 </tr>
                 <tr>
                   <td>1.7</td>
@@ -370,7 +370,7 @@
                   <td>Grade object identifier associated with the quiz. Field can be null.</td>
                   <td>bigint</td>
                   <td>8</td>
-                  <td></td>
+                  <td>FK</td>
                 </tr>
                 <tr>
                   <td>5.7 / 6.0 - Changed Column Size</td>
@@ -391,7 +391,7 @@
                 <tr>
                   <td>1.7</td>
                   <td>HasPassword</td>
-                  <td>Is a password required to access this quiz. Field can be null.</td>
+                  <td>Indicates if a password is required to access this quiz. Field can be null.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -399,7 +399,7 @@
                 <tr>
                   <td>1.7</td>
                   <td>IPRestricted</td>
-                  <td>Is this quiz available to only certain IP Addresses. Field can be null.</td>
+                  <td>Indicates if this quiz is available only to certain IP Addresses. Field can be null.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -407,7 +407,7 @@
                 <tr>
                   <td>1.7</td>
                   <td>TimeLimit</td>
-                  <td>Does this quiz have a time limit.</td>
+                  <td>Time limit for the quiz in minutes.</td>
                   <td>int</td>
                   <td>4</td>
                   <td></td>
@@ -415,7 +415,7 @@
                 <tr>
                   <td>1.7</td>
                   <td>TimeLimitEnforced</td>
-                  <td>Is the time limit assigned to this quiz enforced.</td>
+                  <td>Indicates if the time limit assigned to the quiz is enforced.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -423,7 +423,7 @@
                 <tr>
                   <td>1.7</td>
                   <td>AttemptsAllowed</td>
-                  <td>Number of times learners are permitted to attempt the quiz. Field can be null.</td>
+                  <td>Number of times learners are permitted to attempt the quiz. Null indicates unlimited attempts.</td>
                   <td>int</td>
                   <td>4</td>
                   <td></td>
@@ -447,7 +447,7 @@
                 <tr>
                   <td>5.7 / 6.0 - Changed Column Size</td>
                   <td>NotificationEmail</td>
-                  <td>Indicates that there is a notification email for this quiz. Field can be null.</td>
+                  <td>Indicates that there is a notification email for this quiz if present. Field can be null.</td>
                   <td>nvarchar</td>
                   <td>1000</td>
                   <td></td>
@@ -463,7 +463,7 @@
                 <tr>
                   <td>1.7</td>
                   <td>DisplayInCalendar</td>
-                  <td>The quiz is not turned on in the calendar. Field can be null.</td>
+                  <td>Indicates if the quiz is displayed in the Calendar. Field can be null.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -471,7 +471,7 @@
                 <tr>
                   <td>2.2</td>
                   <td>IsAttemptRldb</td>
-                  <td>Indicates that a quiz was attempted using Respondus.</td>
+                  <td>Indicates if Respondus LockDown Browser is required to attempt this quiz.</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -479,7 +479,7 @@
                 <tr>
                   <td>2.2</td>
                   <td>IsSubviewRldb</td>
-                  <td>Indicates that a portion of the quiz was attempted using Respondus</td>
+                  <td>Indicates if Respondus LockDown Browser is required to see quiz results (submission view).</td>
                   <td>bit</td>
                   <td>1</td>
                   <td></td>
@@ -487,7 +487,7 @@
                 <tr>
                   <td>2.2</td>
                   <td>SortOrder</td>
-                  <td>Display sort order used for the content objects</td>
+                  <td>Display sort order for quizzes (when not alphabetical).</td>
                   <td>int</td>
                   <td>4</td>
                   <td></td>
@@ -519,7 +519,7 @@
                 <tr>
                   <td>7.14 / 8.0 - Updated field description</td>
                   <td>PagingTypeId</td>
-                  <td>Exposes page break information from the New Quiz Experience. Possible values: Field can be null.</td>
+                  <td>Exposes page break information. Possible values: Field can be null.</td>
                   <td>int</td>
                   <td>4</td>
                   <td></td>
@@ -615,7 +615,7 @@
               </tbody>
             </table>
             <h2>Quiz Question Answers</h2>
-            <p>The Quiz Question Answers Brightspace Data Set returns possible answers for a given quiz question. Rows in the data set are filtered out if they are associated with deleted quiz attempts. Quiz questions in sections or question pools are not displayed in the Quiz Question Answers Brightspace Data Set.</p>
+            <p>The Quiz Question Answers Brightspace Data Set returns possible answers for a given quiz question. This includes questions in sections or question pools.</p>
             <table>
               <thead>
                 <tr>
@@ -871,7 +871,7 @@
               </tbody>
             </table>
             <h2>Quiz User Answer Responses</h2>
-            <p>The Quiz User Answer Responses Brightspace Data Set returns details on how a user answered a specific quiz question. Data includes whether an answer is correct and details around the quiz score. Rows in the data set are filtered out if they are associated with deleted quiz questions. The Quiz User Answer Responses data set and differential is limited to 3 years of data (all of the previous two calendar years and the current calendar year to date).</p>
+            <p>The Quiz User Answer Responses Brightspace Data Set returns details on how a user answered a specific quiz question. Data includes whether an answer is correct and details around the quiz score. Rows in the data set are filtered out if they are associated with deleted quiz questions. The Quiz User Answer Responses Brightspace Data Set contains data from 1 January 2021 onwards and adheres to the default system limit of 150 million rows of the most recent data.</p>
             <table>
               <thead>
                 <tr>
@@ -943,7 +943,7 @@
                 <tr>
                   <td>1.0</td>
                   <td>UserSelection</td>
-                  <td>Option the user chose for the question. Field can be null.</td>
+                  <td>Indicates the option a user chose for a block question type (ie. True and False, Multiple Choice, Multi-Select). Field can be null.</td>
                   <td>bigint</td>
                   <td>8</td>
                   <td></td>
@@ -951,7 +951,7 @@
                 <tr>
                   <td>1.0</td>
                   <td>UserAnswer</td>
-                  <td>User answer. Field can be null.</td>
+                  <td>Indicates the user answer for written question types (ie. Short Answer, Written Response). Field can be null.</td>
                   <td>nvarchar</td>
                   <td>1000</td>
                   <td></td>
@@ -964,10 +964,26 @@
                   <td>8</td>
                   <td></td>
                 </tr>
+                <tr>
+                  <td>9.10</td>
+                  <td>LastModified</td>
+                  <td>Date and time when the question answer response was last modified (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.10</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if the question answer response is deleted. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
               </tbody>
             </table>
             <h2>Quiz User Answers</h2>
-            <p>The Quiz User Answers Brightspace Data Set returns data to describe the option a user chose or the answer a user provided for a question. Rows in the data set are filtered out if they are associated with deleted quiz questions. The Quiz User Answers data set is limited to 3 years of data (all of the previous two calendar years and the current calendar year to date).</p>
+            <p>The Quiz User Answers Brightspace Data Set returns data that describes the question and score the user received. Rows in the data set are filtered out if they are associated with deleted quiz questions. The Quiz User Answers Brightspace Data Set contains data from 1 January 2021 onwards and adheres to the default system limit of 150 million rows of the most recent data.</p>
             <table>
               <thead>
                 <tr>
@@ -1067,6 +1083,62 @@
                   <td>bigint</td>
                   <td>8</td>
                   <td>PK</td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>OutOf</td>
+                  <td>The denominator of the quiz score. Field can be null.</td>
+                  <td>decimal</td>
+                  <td>19, 9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>TimeStarted</td>
+                  <td>Quiz attempt start date and time (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>IsBonus</td>
+                  <td>Indicates if the question is a bonus question. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if the answer is deleted.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>LastModified</td>
+                  <td>Date and time when the question answer was last modified (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>LastModifiedBy</td>
+                  <td>Id of the user or task who last modified the question.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>QuizTimeCompleted</td>
+                  <td>Date and time a quiz attempt was completed (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
                 </tr>
               </tbody>
             </table>

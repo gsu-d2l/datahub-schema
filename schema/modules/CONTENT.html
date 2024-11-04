@@ -367,7 +367,7 @@
               </tbody>
             </table>
             <h2>Content User Progress</h2>
-            <p>The Content User Progress Brightspace Data Set returns user progress records modified in the past three calendar years. Results are ordered from newest to oldest. The data set is limited to 3 years of data (all of the previous two calendar years and the current calendar year to date).</p>
+            <p>The Content User Progress Brightspace Data Set returns user progress records modified in the past three calendar years. Results are ordered from newest to oldest. The Content User Progress Brightspace Data Set contains data from 1 January 2021 onwards and adheres to the default system limit of 150 million rows of the most recent data.</p>
             <table>
               <thead>
                 <tr>
@@ -473,6 +473,14 @@
                   <td>LastModified</td>
                   <td>Indicates the last time the user progress record was changed.</td>
                   <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.10</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
+                  <td>bigint</td>
                   <td>8</td>
                   <td></td>
                 </tr>

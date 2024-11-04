@@ -92,6 +92,22 @@
                   <td>8</td>
                   <td></td>
                 </tr>
+                <tr>
+                  <td>9.9</td>
+                  <td>DateDeleted</td>
+                  <td>Deleted date of the attendance register (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.9</td>
+                  <td>DeletedBy</td>
+                  <td>Unique identifier of the user who performed the delete action. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
               </tbody>
             </table>
             <h2>Attendance Schemes</h2>
@@ -236,6 +252,22 @@
                   <td>8</td>
                   <td></td>
                 </tr>
+                <tr>
+                  <td>9.9</td>
+                  <td>DateDeleted</td>
+                  <td>Date the session was deleted (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.9</td>
+                  <td>DeletedBy</td>
+                  <td>Unique identifier of the user who performed the delete action. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
               </tbody>
             </table>
             <h2>Attendance User Sessions</h2>
@@ -290,6 +322,22 @@
                   <td>Unique identifier for the user who last modified the session. Field can be null.</td>
                   <td>int</td>
                   <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.9</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if the user session has been deleted.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.9</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
+                  <td>bigint</td>
+                  <td>8</td>
                   <td></td>
                 </tr>
               </tbody>

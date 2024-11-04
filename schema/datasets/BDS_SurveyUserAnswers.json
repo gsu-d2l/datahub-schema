@@ -103,6 +103,46 @@
             "isForeign": false,
             "canBeNull": true,
             "versionHistory": "1.0"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates if the answer is deleted.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.8"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date and time when the question answer was last modified (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.8"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "Id of the user or task who last modified the question.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "9.8"
+        },
+        {
+            "name": "SurveyTimeCompleted",
+            "description": "Date and time the survey attempt was completed (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.8"
         }
     ]
 }

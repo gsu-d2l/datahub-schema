@@ -36,12 +36,12 @@
         },
         {
             "name": "Name",
-            "description": "Name of the event. Field can be null.",
+            "description": "Name of the event.",
             "type": "nvarchar",
             "size": "256",
             "isPrimary": false,
             "isForeign": false,
-            "canBeNull": true,
+            "canBeNull": false,
             "versionHistory": "5.7 \/ 6.0 - Changed Column Size"
         },
         {
@@ -66,12 +66,12 @@
         },
         {
             "name": "IPAddress",
-            "description": "IPAddress at which the event occurred. Field can be null.",
+            "description": "IPAddress at which the event occurred. Field may be null for quiz submit events where the quiz was auto-submitted.",
             "type": "varchar",
             "size": "15",
             "isPrimary": false,
             "isForeign": false,
-            "canBeNull": true,
+            "canBeNull": false,
             "versionHistory": "3.6 \/ 4.1"
         }
     ]

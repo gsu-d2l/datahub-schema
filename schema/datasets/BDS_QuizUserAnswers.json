@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Quiz User Answers",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4532-quizzes-data-sets#quiz-user-answers",
-    "description": "The Quiz User Answers Brightspace Data Set returns data to describe the option a user chose or the answer a user provided for a question. Rows in the data set are filtered out if they are associated with deleted quiz questions. The Quiz User Answers data set is limited to 3 years of data (all of the previous two calendar years and the current calendar year to date).",
+    "description": "The Quiz User Answers Brightspace Data Set returns data that describes the question and score the user received. Rows in the data set are filtered out if they are associated with deleted quiz questions. The Quiz User Answers Brightspace Data Set contains data from 1 January 2021 onwards and adheres to the default system limit of 150 million rows of the most recent data.",
     "columns": [
         {
             "name": "AttemptId",
@@ -113,6 +113,76 @@
             "isForeign": false,
             "canBeNull": false,
             "versionHistory": "6.7 - Updated key"
+        },
+        {
+            "name": "OutOf",
+            "description": "The denominator of the quiz score. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.8"
+        },
+        {
+            "name": "TimeStarted",
+            "description": "Quiz attempt start date and time (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.8"
+        },
+        {
+            "name": "IsBonus",
+            "description": "Indicates if the question is a bonus question. Field can be null.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.8"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates if the answer is deleted.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.8"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date and time when the question answer was last modified (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.8"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "Id of the user or task who last modified the question.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "9.8"
+        },
+        {
+            "name": "QuizTimeCompleted",
+            "description": "Date and time a quiz attempt was completed (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.8"
         }
     ]
 }

@@ -668,6 +668,22 @@
                   <td>8</td>
                   <td></td>
                 </tr>
+                <tr>
+                  <td>9.10</td>
+                  <td>LastModified</td>
+                  <td>Date and time when the question answer response was last modified (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.10</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if the question answer response is deleted. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
               </tbody>
             </table>
             <h2>Survey User Answers</h2>
@@ -762,6 +778,38 @@
                   <td>Indicates if the survey is assigned to a user. Field can be null.</td>
                   <td>bit</td>
                   <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if the answer is deleted.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>LastModified</td>
+                  <td>Date and time when the question answer was last modified (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>LastModifiedBy</td>
+                  <td>Id of the user or task who last modified the question.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>SurveyTimeCompleted</td>
+                  <td>Date and time the survey attempt was completed (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
                   <td></td>
                 </tr>
               </tbody>

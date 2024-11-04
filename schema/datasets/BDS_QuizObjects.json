@@ -36,7 +36,7 @@
         },
         {
             "name": "QuizCategory",
-            "description": "Category assigned to the quiz. Field can be null.",
+            "description": "Name of category quiz is assigned to. Field can be null.",
             "type": "nvarchar",
             "size": "256",
             "isPrimary": false,
@@ -110,7 +110,7 @@
             "type": "bigint",
             "size": "8",
             "isPrimary": false,
-            "isForeign": false,
+            "isForeign": true,
             "canBeNull": true,
             "versionHistory": "1.7"
         },
@@ -130,7 +130,7 @@
             "type": "bigint",
             "size": "8",
             "isPrimary": false,
-            "isForeign": false,
+            "isForeign": true,
             "canBeNull": true,
             "versionHistory": "1.7"
         },
@@ -140,7 +140,7 @@
             "type": "bigint",
             "size": "8",
             "isPrimary": false,
-            "isForeign": false,
+            "isForeign": true,
             "canBeNull": true,
             "versionHistory": "1.7"
         },
@@ -166,7 +166,7 @@
         },
         {
             "name": "HasPassword",
-            "description": "Is a password required to access this quiz. Field can be null.",
+            "description": "Indicates if a password is required to access this quiz. Field can be null.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
@@ -176,7 +176,7 @@
         },
         {
             "name": "IPRestricted",
-            "description": "Is this quiz available to only certain IP Addresses. Field can be null.",
+            "description": "Indicates if this quiz is available only to certain IP Addresses. Field can be null.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
@@ -186,7 +186,7 @@
         },
         {
             "name": "TimeLimit",
-            "description": "Does this quiz have a time limit.",
+            "description": "Time limit for the quiz in minutes.",
             "type": "int",
             "size": "4",
             "isPrimary": false,
@@ -196,7 +196,7 @@
         },
         {
             "name": "TimeLimitEnforced",
-            "description": "Is the time limit assigned to this quiz enforced.",
+            "description": "Indicates if the time limit assigned to the quiz is enforced.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
@@ -206,12 +206,12 @@
         },
         {
             "name": "AttemptsAllowed",
-            "description": "Number of times learners are permitted to attempt the quiz. Field can be null.",
+            "description": "Number of times learners are permitted to attempt the quiz. Null indicates unlimited attempts.",
             "type": "int",
             "size": "4",
             "isPrimary": false,
             "isForeign": false,
-            "canBeNull": true,
+            "canBeNull": false,
             "versionHistory": "1.7"
         },
         {
@@ -236,7 +236,7 @@
         },
         {
             "name": "NotificationEmail",
-            "description": "Indicates that there is a notification email for this quiz. Field can be null.",
+            "description": "Indicates that there is a notification email for this quiz if present. Field can be null.",
             "type": "nvarchar",
             "size": "1000",
             "isPrimary": false,
@@ -256,7 +256,7 @@
         },
         {
             "name": "DisplayInCalendar",
-            "description": "The quiz is not turned on in the calendar. Field can be null.",
+            "description": "Indicates if the quiz is displayed in the Calendar. Field can be null.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
@@ -266,7 +266,7 @@
         },
         {
             "name": "IsAttemptRldb",
-            "description": "Indicates that a quiz was attempted using Respondus.",
+            "description": "Indicates if Respondus LockDown Browser is required to attempt this quiz.",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
@@ -276,7 +276,7 @@
         },
         {
             "name": "IsSubviewRldb",
-            "description": "Indicates that a portion of the quiz was attempted using Respondus",
+            "description": "Indicates if Respondus LockDown Browser is required to see quiz results (submission view).",
             "type": "bit",
             "size": "1",
             "isPrimary": false,
@@ -286,7 +286,7 @@
         },
         {
             "name": "SortOrder",
-            "description": "Display sort order used for the content objects",
+            "description": "Display sort order for quizzes (when not alphabetical).",
             "type": "int",
             "size": "4",
             "isPrimary": false,
@@ -326,7 +326,7 @@
         },
         {
             "name": "PagingTypeId",
-            "description": "Exposes page break information from the New Quiz Experience. Possible values: Field can be null.",
+            "description": "Exposes page break information. Possible values: Field can be null.",
             "type": "int",
             "size": "4",
             "isPrimary": false,

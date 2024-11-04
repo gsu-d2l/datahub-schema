@@ -2,7 +2,7 @@
     "type": "BDS",
     "name": "Release Condition Objects",
     "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4533-release-conditions-data-sets#release-condition-objects",
-    "description": "The Release Condition Objects Brightspace Data Set returns all the release conditions (pre-requisites and results) that have been created in the organization.",
+    "description": "The Release Condition Objects Brightspace Data Set returns all the release conditions (prerequisites and results) that have been created in the organization.",
     "columns": [
         {
             "name": "PreRequisiteId",
@@ -123,6 +123,26 @@
             "isForeign": false,
             "canBeNull": false,
             "versionHistory": "3.7 \/ 4.2"
+        },
+        {
+            "name": "Guid1",
+            "description": "Unique identifier for the pre-requisite tool. For a release condition object based on Outcomes, value will match the ObjectId of the Outcome.Field can be null",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.8"
+        },
+        {
+            "name": "Guid2",
+            "description": "Unique identifier for the pre-requisite tool. For a release condition object based on Outcomes, value will match the ScaleLevelId of the Outcome.Field can be null.",
+            "type": "uniqueidentifier",
+            "size": "16",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.8"
         }
     ]
 }

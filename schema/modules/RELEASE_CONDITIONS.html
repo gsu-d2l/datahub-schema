@@ -63,7 +63,7 @@
               </tbody>
             </table>
             <h2>Release Condition Objects</h2>
-            <p>The Release Condition Objects Brightspace Data Set returns all the release conditions (pre-requisites and results) that have been created in the organization.</p>
+            <p>The Release Condition Objects Brightspace Data Set returns all the release conditions (prerequisites and results) that have been created in the organization.</p>
             <table>
               <thead>
                 <tr>
@@ -170,6 +170,22 @@
                   <td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
                   <td>bigint</td>
                   <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>Guid1</td>
+                  <td>Unique identifier for the pre-requisite tool. For a release condition object based on Outcomes, value will match the ObjectId of the Outcome.Field can be null</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>Guid2</td>
+                  <td>Unique identifier for the pre-requisite tool. For a release condition object based on Outcomes, value will match the ScaleLevelId of the Outcome.Field can be null.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
                   <td></td>
                 </tr>
               </tbody>

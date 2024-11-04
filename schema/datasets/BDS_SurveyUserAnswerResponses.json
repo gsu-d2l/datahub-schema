@@ -103,6 +103,26 @@
             "isForeign": false,
             "canBeNull": true,
             "versionHistory": "5.8 \/ 6.1"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date and time when the question answer response was last modified (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.10"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates if the question answer response is deleted. Field can be null.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.10"
         }
     ]
 }

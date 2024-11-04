@@ -6,6 +6,438 @@
       <section>
         <div class="mainColumn">
           <article>
+            <h2>LTI Advantage Deployment Audit</h2>
+            <p>The LTI Advantage Deployment Audit Brightspace Data Set logs the details of each time a user creates, updates, or deletes an LTI deployment. The data set captures events from October 2019 onwards.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>9.7</td>
+                  <td>Action</td>
+                  <td>The action completed by the event: Deployed, Updated, or Deleted.</td>
+                  <td>nvarchar</td>
+                  <td>10</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>DeploymentID</td>
+                  <td>Unique identifier for the LTI Advantage deployment.</td>
+                  <td>nvarchar</td>
+                  <td>36</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>ClientID</td>
+                  <td>Unique identifier used in OAuth2 authentication, assigned by the platform when the LTI tool is registered.</td>
+                  <td>nvarchar</td>
+                  <td>36</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>DeploymentName</td>
+                  <td>The name for the deployment.</td>
+                  <td>nvarchar</td>
+                  <td>200</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>IsDeploymentEnabled</td>
+                  <td>If false, it is not possible to do any launches for this tool or make any API calls for the extensions.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>HasAssignmentsAndGrades</td>
+                  <td>If true, the Assignments and grades services (AGS) extension is enabled for this deployment.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>HasDeepLinking</td>
+                  <td>If true, the Deep Linking extension is enabled for this deployment.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>HasNamesAndRoles</td>
+                  <td>If true, the Names and Roles Provisioning Services (NPRS) extension is enabled for this deployment.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>HasSubmissionReview</td>
+                  <td>If true, the Submission Review extension is enabled for this deployment.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>HasActivityItemProfile</td>
+                  <td>If true, the Activity Item Profile extension is enabled for this deployment.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>HasPlatformNotificationService</td>
+                  <td>If true, the Platform Notification Service is enabled for this deployment.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>HasContextCopy</td>
+                  <td>If true, the Context Copy message is enabled for this deployment. The Platform Notification Service must also be enabled.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>ModifiedBy</td>
+                  <td>The ID of the Brightspace user that modified the deployment record.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>Anonymous</td>
+                  <td>If true, no user information is sent during launch.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>PreProvisioningEnabled</td>
+                  <td>If true, all users in the course are included whether they have performed a launch or not. If false, only users that have performed a launch are included for NRPS and AGS Services.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>SendOrgUnitInfo</td>
+                  <td>If true, Org Unit Id, Course Name, Course Code, Org Unit Type, LIS Course Offering Sourcedid, and LIS Course Section Sourcedid can be included in the launch.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>SendUserFirstName</td>
+                  <td>If true, user first name can be sent during launch.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>SendUserMiddleName</td>
+                  <td>If true, user middle name is included in the data sent via NPRS.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>SendUserLastName</td>
+                  <td>If true, user last name can be sent during launch.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>SendUserEmail</td>
+                  <td>If true, user email address can be sent during launch.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>SendBrightspaceUserID</td>
+                  <td>If true, D2L user ID can be sent during launch.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>SendBrightspaceUsername</td>
+                  <td>If true, D2L username is sent during launch.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>SendBrightspaceOrgDefinedId</td>
+                  <td>If true, D2L Org Defined ID can be sent for this deployment.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>SendLinkTitle</td>
+                  <td>If true, LTI Link Title is sent during launch.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>SendLinkDescription</td>
+                  <td>If true, LTI Link Description is sent during launch.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>OpenAsExternal</td>
+                  <td>If true, the majority of new links created under the deployment open in an external window. If false, new links open inline.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>AutoMigrateLinks</td>
+                  <td>If true, automatic migration can occur for links that match this deployment.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>IsSharedToManyOrgUnits</td>
+                  <td>If true, the deployment is shared to multiple org units.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>AutoCreateGrades</td>
+                  <td>If true, the Auto Create Grade Items setting is enabled.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>IncludeInFinalGrade</td>
+                  <td>If true, grades created by LTI links for this deployment are included in the final grade calculation.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>Timestamp</td>
+                  <td>Date and time (UTC) when the user created or modified the deployment.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>LTI Advantage Registration Audit</h2>
+            <p>The LTI Advantage Registration Audit Brightspace Data Set logs the details of each time a user creates, updates, or deletes an LTI registration. The data set captures events from June 2019 onwards.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>9.7</td>
+                  <td>Action</td>
+                  <td>The action completed by the event: Registered, Updated, or Deleted.</td>
+                  <td>nvarchar</td>
+                  <td>10</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>ClientId</td>
+                  <td>Unique customer facing identifier assigned by the platform when the LTI tool is registered.</td>
+                  <td>nvarchar</td>
+                  <td>255</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>ToolName</td>
+                  <td>The name of the external learning tool.</td>
+                  <td>nvarchar</td>
+                  <td>200</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>Domain</td>
+                  <td>Domain for the registered tool.</td>
+                  <td>nvarchar</td>
+                  <td>2083</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>RedirectURLs</td>
+                  <td>List of Redirect URLs provided by the tool, formatted as comma-separated values (CSV) list. The list is truncated to the max length allowed in the BDS field.</td>
+                  <td>nvarchar</td>
+                  <td>2083</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>KeysetURL</td>
+                  <td>The Keyset URL needed to complete the launch. The value is truncated to the max length allowed in the BDS field. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>255</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>LoginURL</td>
+                  <td>The Initial LTI login request endpoint as by the tool. The value is truncated to the max length allowed in the BDS field.</td>
+                  <td>nvarchar</td>
+                  <td>255</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>LTIVersion</td>
+                  <td>Indicates whether the registration is for LTI 1.1 or LTI 1.3.</td>
+                  <td>varchar</td>
+                  <td>12</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>IsRegistrationEnabled</td>
+                  <td>If true, the tool registration is enabled for the organization.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>SendInstitutionRole</td>
+                  <td>If true, the registration includes both contextual and institutional roles. If false, the registration only includes contextual roles.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>TargetLinkURI</td>
+                  <td>Optional Target Link URI used during the Deep Linking workflow when the tool doesn&#039;t provide a launch URL for the returned LTI Resource Link. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>255</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>ModifiedBy</td>
+                  <td>The ID of the Brightspace user that updated the tool registration data.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>HasAssignmentAndGradeServices</td>
+                  <td>If true, the Assignments and grades services (AGS) extension is enabled for this registration.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>HasSubmissionReview</td>
+                  <td>If true, the Submission Review extension is enabled for this registration.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>HasDeepLinking</td>
+                  <td>If true, the Deep Linking extension is enabled for this registration.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>HasNamesAndRoleProvisioningServices</td>
+                  <td>If true, the Names and Roles Provisioning Services (NPRS) extension is enabled for this registration.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>HasActivityItemProfile</td>
+                  <td>If true, the Activity Item Profile extension is enabled for this registration.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>HasPlatformNotificationService</td>
+                  <td>If true, the Platform Notification Service is enabled for this registration.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.7</td>
+                  <td>Timestamp</td>
+                  <td>Date and time (UTC) when the user created or modified the registration.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+              </tbody>
+            </table>
             <h2>LTI Launches</h2>
             <p>The LTI Launches Brightspace Data Set logs details of each time a user launches an LTI link in the organization.</p>
             <table>
